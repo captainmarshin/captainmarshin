@@ -335,22 +335,7 @@
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<div class="share">
-			<a id='answer-example-share-button'><div class="button share-color"><i class="demo-icon icon-share-icon">&#xe800;</i>Поделиться</div></a>
-						<script type="text/javascript">
-		$('#answer-example-share-button').on('click', () => {
-  if (navigator.share) {
-    navigator.share({
-        title: 'Web Share API Draft',
-        text: 'Take a look at this spec!',
-        url: 'https://wicg.github.io/web-share/#share-method',
-      })
-      .then(() => console.log('Successful share'))
-      .catch((error) => console.log('Error sharing', error));
-  } else {
-    console.log('Share not supported on this browser, do it the old way.');
-  }
-});
-</script>
+			<a onclick="prompt('Song Name by Капитан Маршин','http://captainmarshin.com/songname')"><div class="button share-color"><i class="demo-icon icon-share-icon">&#xe800;</i>Поделиться</div></a>
 		</div>
 	</div>
 
