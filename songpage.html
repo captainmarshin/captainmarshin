@@ -247,9 +247,14 @@
 
         .video{
         	margin-top: 30px;
-        	border-radius: 10px;
-        	-webkit-border-radius: 10px;
-        	-moz-border-radius: 10px;
+        	width: 100%;
+    		-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+    		-webkit-transform: rotate(0.000001deg);
+    		-webkit-border-radius: 10px;
+    		-moz-border-radius: 10px;
+    		border-radius: 10px;
+    		overflow: hidden;
+    		display: inline-flex;
         }
 
         iframe,
@@ -257,10 +262,10 @@
         embed{
         	width: 330px;
         	height: 185px;
-        	-webkit-border-radius: 20px !important; 
-            -ms-border-radius: 20px !important; 
-            -o-border-radius: 20px !important;  
-            border-radius: 20px !important;   
+        	-webkit-border-radius: 10px !important; 
+            -ms-border-radius: 10px !important; 
+            -o-border-radius: 10px !important;  
+            border-radius: 10px !important;   
         	border: 1px solid #ffffff;
         }
 
