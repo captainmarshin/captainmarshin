@@ -289,6 +289,51 @@
         	border: 1px solid #ffffff;
         }
 
+        .event{
+        	margin-top: 30px;
+        	width: 300px;
+        	height: 60px;
+    		border-radius: 10px;
+    		background-color: #f2f1f6;
+        	position: relative;
+        	padding: 15px;
+        }
+
+        .event:hover{
+        	background-color: #e7e6ed;
+        	opacity: 1;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .event-img {
+        	background-image: url("images/events/Не могу полюбить-cover.jpg");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 60px;
+        	height: 60px;
+        	position: absolute;
+        	top: 15px;
+        	left: 15px;
+        	border-radius: 50%;
+        }
+
+        .event-name{
+        	font-size: 11pt;
+        	margin-left: 75px;
+        	padding-top: 5px;
+        	text-align: left;
+        }
+
+        .event-date{
+        	font-size: 8pt;
+        	color: #757479;
+        	padding-top: 3px; 
+        	margin-left: 75px;
+        	text-align: left;
+        }
+
         .lyrics{
         	margin-top: 30px;
         	width: auto;
@@ -361,6 +406,13 @@
 		<div class="lyrics">
 			<a href="#"><div class="button"><span class="icon-6"></span>Текст песни</div></a>
 		</div>
+		<a href="#">
+		<div class="event">
+			<div class="event-img"></div>
+			<div class="event-name">Marshin's Family: The Mansion Party</div>
+			<div class="event-date">26 May 2019</div>
+		</div>
+	    </a>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<div class="share">
 			<a onclick="prompt('Song Name by Капитан Маршин','http://captainmarshin.com/songname')"><div class="button share-color"><i class="demo-icon icon-share-icon">&#xe800;</i>Поделиться</div></a>

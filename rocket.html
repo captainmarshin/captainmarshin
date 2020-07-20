@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Рокет by Капитан Маршин</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="title" content="Рокет by Капитан Маршин">
+	<meta name="description" content="Listen on Apple Music, Spotify, VK, BOOM. Watch on YouTube. Read song lyrics.">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://captainmarshin.com">
+	<meta property="og:title" content="Рокет by Капитан Маршин">
+	<meta property="og:description" content="Listen on Apple Music, Spotify, VK, BOOM. Watch on YouTube. Read song lyrics.">
+	<meta property="og:image" content="images/graphics/grapweb-meta-img.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://captainmarshin.com/">
+	<meta property="twitter:title" content="Рокет by Капитан Маршин">
+	<meta property="twitter:description" content="Listen on Apple Music, Spotify, VK, BOOM. Watch on YouTube. Read song lyrics.">
+	<meta property="twitter:image" content="images/graphics/grapweb-meta-img.jpg">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="favicon_io/site.webmanifest">
+
+	<style type="text/css">
+		html{ 
+			margin:0; 
+			padding: 0; 
+		}
+		
+		body { 
+			background-color: #000000; 
+			background-image: url("images/bg/bg-rocket.jpg");
+			background-size: 100%; 
+			background-repeat: no-repeat; 
+			background-attachment: fixed;
+			font-family: Helvetica, Arial, sans-serif; 
+			-webkit-background-size: cover;
+      		-moz-background-size: cover;
+      		-o-background-size: cover;
+      		background-size: cover;
+		}
+
+		body:after{
+      		content:"";
+      		position:fixed; /* stretch a fixed position to the whole screen */
+      		top:0;
+      		height:100vh; /* fix for mobile browser address bar appearing disappearing */
+      		left:0;
+      		right:0;
+      		z-index:-1; /* needed to keep in the background */
+      		background: url("images/bg/bg-rocket.jpg") center center;
+      		-webkit-background-size: cover;
+      		-moz-background-size: cover;
+      		-o-background-size: cover;
+      		background-size: cover;
+		}
+
+		@font-face {
+      		font-family: 'fontello';
+      		src: url('./font/fontello.eot?5599820');
+      		src: url('./font/fontello.eot?5599820#iefix') format('embedded-opentype'),
+            url('./font/fontello.woff?5599820') format('woff'),
+            url('./font/fontello.ttf?5599820') format('truetype'),
+            url('./font/fontello.svg?5599820#fontello') format('svg');
+      		font-weight: normal;
+            font-style: normal;
+    	}
+     
+    	.demo-icon
+    	{
+      		font-family: "fontello";
+      		font-style: normal;
+      		font-weight: normal;
+      		speak: never;
+     
+      		display: inline-block;
+      		text-decoration: inherit;
+      		width: 1em;
+      		margin-right: .2em;
+      		text-align: center;
+      		/* opacity: .8; */
+     
+      		/* For safety - reset parent styles, that can break glyph codes*/
+      		font-variant: normal;
+      		text-transform: none;
+     
+      		/* fix buttons height, for twitter bootstrap */
+      		line-height: 1em;
+     
+      		/* Animation center compensation - margins should be symmetric */
+      		/* remove if not needed */
+      		margin-left: .2em;
+     
+      		/* You can be more comfortable with increased icons size */
+      		/* font-size: 120%; */
+     
+      		/* Font smoothing. That was taken from TWBS */
+      		-webkit-font-smoothing: antialiased;
+      		-moz-osx-font-smoothing: grayscale;
+     
+      		/* Uncomment for 3D effect */
+      		/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    	}
+
+		.card { 
+			width: 330px; 
+			height: auto; 
+			background-color: #ffffff;  
+			margin: 0 auto; 
+			margin-top: 50px; 
+			margin-bottom: 50px; 
+			border-radius: 20px; 
+		    -webkit-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.39);
+            -moz-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.39);
+            box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.39); 
+            padding: 30px;
+        }
+
+        .cover {
+        	width: 330px;
+        	height: 330px;
+        	background-color: #000000;  
+        	background-image: url("images/covers/cover-rocket.jpg");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;  
+        	margin-left: auto;
+        	margin-right: auto;
+        	border-radius: 10px;
+        	-webkit-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.39);
+            -moz-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.39);
+            box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.39); 
+        }
+
+        .title{
+        	margin-top: 30px;
+        	text-align: center;
+        }
+
+        .name{
+        	font-weight: bold;
+        	font-size: 16pt;
+        	padding-bottom: 8px;
+        }
+
+        .artist{
+        	padding-bottom: 9px;
+        	text-decoration: underline;
+        }
+
+        .artist-style{
+        	text-decoration: underline;
+        }
+
+        .info{
+        	font-size: 10pt;
+        }
+
+        .listen{
+        	margin-top: 30px;
+        	width: auto;
+        	height: auto;
+        }
+
+        .button{
+        	background-color: #f2f1f6;
+        	width: auto;
+        	height: 60px;
+        	border-radius: 10px;
+        	text-align: center;
+        	vertical-align: middle;
+        	line-height: 60px;
+        	position: relative;
+        }
+
+        .button:hover{
+        	background-color: #e7e6ed;
+        	width: auto;
+        	height: 60px;
+        	border-radius: 10px;
+        	text-align: center;
+        	vertical-align: middle;
+        	line-height: 60px;
+        	position: relative;
+        	opacity: 1;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .icon-1 {
+        	background-image: url("images/graphics/apple-music-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 18px;
+        	height: 18px;
+        	position: absolute;
+        	top: 20px;
+        	left: 20px;
+        }
+
+        .icon-2 {
+        	background-image: url("images/graphics/spotify-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 18px;
+        	height: 18px;
+        	position: absolute;
+        	top: 20px;
+        	left: 20px;
+        }
+
+        .icon-3 {
+        	background-image: url("images/graphics/vk-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 18px;
+        	height: 18px;
+        	position: absolute;
+        	top: 20px;
+        	left: 20px;
+        }
+
+        .icon-4 {
+        	background-image: url("images/graphics/boom-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 18px;
+        	height: 18px;
+        	position: absolute;
+        	top: 20px;
+        	left: 20px;
+        }
+
+        .icon-5 {
+        	background-image: url("images/graphics/youtube-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 18px;
+        	height: 18px;
+        	position: absolute;
+        	top: 20px;
+        	left: 20px;
+        }
+
+        .icon-6 {
+        	background-image: url("images/graphics/telegraph-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 18px;
+        	height: 18px;
+        	position: absolute;
+        	top: 20px;
+        	left: 20px;
+        }
+
+        .space{
+        	margin-top: 12px;
+        }
+
+        .video{
+        	margin-top: 30px;
+        	width: 100%;
+    		-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+    		-webkit-transform: rotate(0.000001deg);
+    		-webkit-border-radius: 10px;
+    		-moz-border-radius: 10px;
+    		border-radius: 10px;
+    		overflow: hidden;
+    		display: inline-flex;
+        }
+
+        iframe,
+        object,
+        embed{
+        	width: 330px;
+        	height: 185px;
+        	-webkit-border-radius: 10px !important; 
+            -ms-border-radius: 10px !important; 
+            -o-border-radius: 10px !important;  
+            border-radius: 10px !important;   
+        	border: 1px solid #ffffff;
+        }
+
+
+        .event{
+        	margin-top: 30px;
+        	width: 300px;
+        	height: 60px;
+    		border-radius: 10px;
+    		background-color: #f2f1f6;
+        	position: relative;
+        	padding: 15px;
+        }
+
+        .event:hover{
+        	background-color: #e7e6ed;
+        	opacity: 1;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .event-img {
+        	background-image: url("images/events/rocket-cover.jpg");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 60px;
+        	height: 60px;
+        	position: absolute;
+        	top: 15px;
+        	left: 15px;
+        	border-radius: 50%;
+        }
+
+        .event-name{
+        	font-size: 11pt;
+        	margin-left: 75px;
+        	padding-top: 5px;
+        	text-align: left;
+        }
+
+        .event-date{
+        	font-size: 8pt;
+        	color: #757479;
+        	padding-top: 3px; 
+        	margin-left: 75px;
+        	text-align: left;
+        }
+
+        .lyrics{
+        	margin-top: 30px;
+        	width: auto;
+        	height: auto;
+        }
+
+        .share{
+        	margin-top: 30px;
+        	width: auto;
+        	height: auto;
+        	color: #3176ef;
+        	font-weight: bold;
+        }
+
+        .share-color{
+        	color: #3176ef;
+        }
+
+        a {
+        	text-decoration: none;
+        	color: #000000;
+        }
+
+        a:link {
+        	text-decoration: none;
+        	color: #000000;
+        }
+
+        a:visited {
+        	text-decoration: none;
+        	color: #000000;
+        }
+
+        a:focus {
+        	text-decoration: none;
+        	color: #000000;
+        }
+
+        a:hover {
+        	text-decoration: none;
+        	color: #000000;
+        }
+
+        a:active {
+        	text-decoration: none;
+        	color: #000000;
+        }
+
+	</style>
+
+</head>
+<body>
+	<div class="card">
+		<div class="cover"></div>
+		<div class="title">
+			<div class="name">Рокет</div>
+			<a href="https://vk.com/captainmarshin" target="_blank"><div class="artist">Капитан Маршин</div></a>
+			<div class="info">2020 • Single</div>
+		</div>
+		<div class="listen">
+			<a href="https://music.apple.com/ru/album/рокет-single/1518607674?l=en" target="_blank">
+				<div class="button"><span class="icon-1"></span>Apple Music</div>
+			</a>
+			<a href="https://open.spotify.com/album/2Ycc37E2uzuDjBSYUn6Z7L?si=0jwN3A1oSqumomd6rgaBQQ" target="_blank">
+				<div class="button space"><span class="icon-2"></span>Spotify</div>
+			</a>
+			<a href="https://vk.com/music?z=audio_playlist-2000820485_7820485/de98b8e45c04d101a4" target="_blank">
+				<div class="button space"><span class="icon-3"></span>VK</div>
+			</a>
+			<a href="https://vk.cc/avPZS9" target="_blank">
+				<div class="button space"><span class="icon-4"></span>BOOM</div>
+			</a>
+			<a href="https://www.youtube.com/watch?v=whQPzDCMkc0" target="_blank">
+				<div class="button space"><span class="icon-5"></span>YouTube</div>
+			</a>
+		</div>
+		<div class="video">
+			<iframe width="300" height="190" src="https://www.youtube.com/embed/8q2Vh8TdksU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="video">
+			<iframe width="300" height="190" src="https://www.youtube.com/embed/whQPzDCMkc0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="lyrics">
+			<a href="https://telegra.ph/Roket-06-17" target="_blank"><div class="button"><span class="icon-6"></span>Текст песни</div></a>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<div class="share">
+			<a onclick="prompt('Рокет by Капитан Маршин','http://captainmarshin.com/rocket')"><div class="button share-color"><i class="demo-icon icon-share-icon">&#xe800;</i>Поделиться</div></a>
+		</div>
+	</div>
+
+</body>
+</html>
