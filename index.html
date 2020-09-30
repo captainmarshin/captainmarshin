@@ -319,14 +319,27 @@ Copyright. All rights reserved.
 			border-radius: 5px;
 			height: 180px;
 			width: 180px;
+			transition: transform 1s;
         }
+
+  img.mmcover:hover{
+  	cursor: pointer;
+  	transform:scale(0.97,0.97);
+  }
+
 
         img.vmcover{
         	border: 1px solid #464646;
 			border-radius: 5px;
-			height: 146px;
+			height: auto;
 			width: 250px;
+			transition: transform 1s;
         }
+
+          img.vmcover:hover{
+  	cursor: pointer;
+  	transform:scale(0.97,0.97);
+  }
 
         .pagem{
         	margin: 0 auto;
@@ -366,6 +379,7 @@ Copyright. All rights reserved.
 		}
 
 		.mmc{display: inline-block; margin-right: 20px;}
+
 		.mmtt{
 			margin-top: 8px;
 			font-size: 11pt;
