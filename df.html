@@ -27,8 +27,6 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
 	<link rel="manifest" href="favicon_io/site.webmanifest">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 	<style type="text/css">
 		html{ 
 			margin:0; 
@@ -409,28 +407,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<div class="share">
 			<a onclick="prompt('Dynamite Freestyle by Капитан Маршин','http://captainmarshin.com/df')"><div class="button share-color"><i class="demo-icon icon-share-icon">&#xe800;</i>Поделиться</div></a>
-
-			<button id="share">Share My Blog</button>
 		</div>
-
-		<script type="text/javascript">
-			const share = e => {
-  			if (navigator.share) {
-    	navigator
-      .share({
-        title: "Share my blog",
-        text: "Web development tutorial blogs",
-        url: "https://justforuse.github.io/blog/en-us/"
-      })
-      .then(() => console.log("thanks for share"))
-      .catch(error => console.log("error", error));
-  }
-};
-if(!navigator.share) {
-  document.getElementById('tip').className = 'show'
-}
-document.getElementById("share").addEventListener("click", share);
-		</script>
 	</div>
 
 </body>
