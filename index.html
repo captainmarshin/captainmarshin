@@ -73,11 +73,11 @@ Copyright. All rights reserved.
 		}
 
 		.title{
+			
 		}
 
 		.category{
-			padding-bottom: 20px;
-			width: 811px;
+			width: 831px;
 		}
 
 		.cat-title{
@@ -89,13 +89,13 @@ Copyright. All rights reserved.
 		}
 
 		.table{
-			display: flex;
-  			flex-wrap: wrap;
+			display: table;
+  			border-collapse: separate;
+      		border-spacing: 0px;
 		}
 
 		.row{
-  			display: inline-block;
-  			float: left;
+			display:table-row;
 		}
 
 		.music-cover{
@@ -103,9 +103,15 @@ Copyright. All rights reserved.
 			width: 116px;
 			border: 1px solid #464646;
 			border-radius: 5px;
-			display: inline-block;
+			display:table-cell;
 			float: left;
+			margin-right: 20px;
+			margin-bottom: 20px;
 		}
+
+		.music-cover:last-child {
+  			
+}
 
 		img.m-cover{
 			border-radius: 5px;
@@ -165,7 +171,7 @@ Copyright. All rights reserved.
 		/* New Release Banner */
 
 		.fresh{
-			padding-bottom: 20px;
+			padding-bottom: 25px;
 			width: 100%;
 		}
 
@@ -486,26 +492,22 @@ Copyright. All rights reserved.
 			<div class="cat-content">
 				<div class="table">
 					<div class="row">
-						<div class="music-cover space"><a href="http://captainmarshin.com/df"><img class="m-cover" src="images/covers/music/cover-df.jpg"></a></div>
-						<div class="music-cover space"><a href="http://captainmarshin.com/lera"><img class="m-cover" src="images/covers/music/cover-lera.jpg"></a></div>
-						<div class="music-cover space"><a href="http://captainmarshin.com/cantlove"><img class="m-cover" src="images/covers/music/cover-cantlove.jpg"></a></div>
-						<div class="music-cover space"><a href="http://captainmarshin.com/mr3m"><img class="m-cover" src="images/covers/music/cover-mr3m.jpg"></a></div>
-						<div class="music-cover space"><a href="http://captainmarshin.com/tacm"><img class="m-cover" src="images/covers/music/cover-tacm.jpg"></a></div>	
+						<div class="music-cover"><a href="http://captainmarshin.com/df"><img class="m-cover" src="images/covers/music/cover-df.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/lera"><img class="m-cover" src="images/covers/music/cover-lera.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/cantlove"><img class="m-cover" src="images/covers/music/cover-cantlove.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/mr3m"><img class="m-cover" src="images/covers/music/cover-mr3m.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/tacm"><img class="m-cover" src="images/covers/music/cover-tacm.jpg"></a></div>	
 						<div class="music-cover"><a href="http://captainmarshin.com/rocket"><img class="m-cover" src="images/covers/music/cover-rocket.jpg"></a></div>	
-					</div>
-					<div class="row spacetop">
-						<div class="music-cover space"><a href="http://captainmarshin.com/pool"><img class="m-cover" src="images/covers/music/cover-pool.jpg"></a></div>
-						<div class="music-cover space"><a href="http://captainmarshin.com/lvstories"><img class="m-cover" src="images/covers/music/cover-lvstories.jpg"></a></div>
-						<div class="music-cover space"><a href="http://captainmarshin.com/meetdawn"><img class="m-cover" src="images/covers/music/cover-meetdawn.jpg"></a></div>
-						<div class="music-cover space"><a href="http://captainmarshin.com/lifeway"><img class="m-cover" src="images/covers/music/cover-lifeway.jpg"></a></div>
-						<div class="music-cover space"><a href="http://captainmarshin.com/jrr"><img class="m-cover" src="images/covers/music/cover-jrr.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/pool"><img class="m-cover" src="images/covers/music/cover-pool.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/lvstories"><img class="m-cover" src="images/covers/music/cover-lvstories.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/meetdawn"><img class="m-cover" src="images/covers/music/cover-meetdawn.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/lifeway"><img class="m-cover" src="images/covers/music/cover-lifeway.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/jrr"><img class="m-cover" src="images/covers/music/cover-jrr.jpg"></a></div>
 						<div class="music-cover"><a href="http://captainmarshin.com/mftmp"><img class="m-cover" src="images/covers/music/cover-sb.jpg"></a></div>		
-					</div>
-					<div class="row spacetop">
-						<div class="music-cover space"><a href="http://captainmarshin.com/rise"><img class="m-cover" src="images/covers/music/cover-rise.jpg"></a></div>
-						<div class="music-cover space"><a href="http://captainmarshin.com/jordan"><img class="m-cover" src="images/covers/music/cover-jordan.jpg"></a></div>
-						<div class="music-cover space"><a href="http://captainmarshin.com/claudebonnie"><img class="m-cover" src="images/covers/music/cover-claudebonnie.jpg"></a></div>
-						<div class="music-cover space"><a href="http://captainmarshin.com/gmfire"><img class="m-cover" src="images/covers/music/cover-gmfire.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/rise"><img class="m-cover" src="images/covers/music/cover-rise.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/jordan"><img class="m-cover" src="images/covers/music/cover-jordan.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/claudebonnie"><img class="m-cover" src="images/covers/music/cover-claudebonnie.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/gmfire"><img class="m-cover" src="images/covers/music/cover-gmfire.jpg"></a></div>
 						<div class="music-cover"><a href="http://captainmarshin.com/gornoe"><img class="m-cover" src="images/covers/music/cover-gornoe.jpg"></a></div>
 					</div>
 				</div>
