@@ -34,31 +34,10 @@
 		}
 		
 		body { 
+			margin:0; 
+			padding: 0; 
 			background-color: #000000; 
-			background-image: url("images/bg/bg-df.jpg");
-			background-size: 100%; 
-			background-repeat: no-repeat; 
-			background-attachment: fixed;
 			font-family: Helvetica, Arial, sans-serif; 
-			-webkit-background-size: cover;
-      		-moz-background-size: cover;
-      		-o-background-size: cover;
-      		background-size: cover;
-		}
-
-		body:after{
-      		content:"";
-      		position:fixed; /* stretch a fixed position to the whole screen */
-      		top:0;
-      		height:100vh; /* fix for mobile browser address bar appearing disappearing */
-      		left:0;
-      		right:0;
-      		z-index:-1; /* needed to keep in the background */
-      		background: url("images/bg/bg-df.jpg") center center;
-      		-webkit-background-size: cover;
-      		-moz-background-size: cover;
-      		-o-background-size: cover;
-      		background-size: cover;
 		}
 
 		@font-face {
@@ -109,24 +88,26 @@
     	}
 
 		.card { 
-			width: 330px; 
-			height: auto; 
-			background-color: #ffffff;  
 			margin: 0 auto; 
-			margin-top: 20px; 
-			margin-bottom: 20px; 
-			border-radius: 20px; 
-		    -webkit-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.39);
-            -moz-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.39);
-            box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.39); 
-            padding: 30px;
+            color: #FFFFFF;
+            width: 330px;
+            min-width: 330px;
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
+
+        .head{
+			padding-left: 20px; 
+			font-size: 25pt;
+			text-align: left;
+		}
 
         .cover {
         	width: 330px;
         	height: 330px;
+        	border: 1px solid #464646;
         	background-color: #000000;  
-        	background-image: url("images/covers/cover-df.jpg");
+        	background-image: url("images/covers/music/cover-df.jpg");
         	background-repeat: no-repeat;
         	background-size: cover;
         	background-position: center;  
@@ -169,7 +150,8 @@
         }
 
         .button{
-        	background-color: #f2f1f6;
+        	background-color: #000000;
+        	border: 1px solid #464646;
         	width: auto;
         	height: 60px;
         	border-radius: 10px;
@@ -191,6 +173,7 @@
         	opacity: 1;
             transition: 0.3s;
             cursor: pointer;
+            color: #464646;
         }
 
         .icon-1 {
@@ -290,7 +273,7 @@
             -ms-border-radius: 10px !important; 
             -o-border-radius: 10px !important;  
             border-radius: 10px !important;   
-        	border: 1px solid #ffffff;
+        	border: 1px solid #464646;
         }
 
 
@@ -359,32 +342,32 @@
 
         a {
         	text-decoration: none;
-        	color: #000000;
+        	color: #FFFFFF;
         }
 
         a:link {
         	text-decoration: none;
-        	color: #000000;
+        	color: #FFFFFF;
         }
 
         a:visited {
         	text-decoration: none;
-        	color: #000000;
+        	color: #FFFFFF;
         }
 
         a:focus {
         	text-decoration: none;
-        	color: #000000;
+        	color: #FFFFFF;
         }
 
         a:hover {
         	text-decoration: none;
-        	color: #000000;
+        	color: #FFFFFF;
         }
 
         a:active {
         	text-decoration: none;
-        	color: #000000;
+        	color: #FFFFFF;
         }
 
 	</style>
