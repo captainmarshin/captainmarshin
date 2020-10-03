@@ -38,7 +38,103 @@ Copyright. All rights reserved.
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
 	<link rel="manifest" href="favicon_io/site.webmanifest">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		function onReady(callback) {
+  var intervalId = window.setInterval(function() {
+    if (document.getElementsByTagName('body')[0] !== undefined) {
+      window.clearInterval(intervalId);
+      callback.call(this);
+    }
+  }, 1000);
+}
+
+function setVisible(selector, visible) {
+  document.querySelector(selector).style.display = visible ? 'block' : 'none';
+}
+
+	onReady(function() {
+  	setVisible('#loading', false);
+	});
+	</script>
+
 	<style type="text/css">
+
+	#loading {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #ffffff;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 0.7em;
+  height: 4em;
+}
+.loader {
+  color: #ffffff;
+  text-indent: -9999em;
+  font-size: 11px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -2.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 2.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
 
 		html{
 			margin: 0;
@@ -73,7 +169,7 @@ Copyright. All rights reserved.
 		}
 
 		.title{
-			
+			font-weight: bold;
 		}
 
 		.category{
@@ -423,7 +519,9 @@ Copyright. All rights reserved.
 			width: 17px;
 		}
 
-		.vvc{display: inline-block; margin-right: 20px;}
+		.vvc{
+			display: inline-block; 
+			margin-right: 20px;}
 		.footm{
 			color: #464646;
 			font-size: 14px;
@@ -585,7 +683,7 @@ Copyright. All rights reserved.
 			<div class="vt">Video</div>
 			<div class="vtabt">
 				<div class="mvce"></div>
-				<div class="vvc"><a href="https://www.youtube.com/watch?v=8q2Vh8TdksU"><img class="vmcover" src="images/covers/video/cover-rocket.jpg"></a><div class="mvvt">Рокет Music Video</div></div>
+				<div class="vvc"><a href="https://www.youtube.com/watch?v=8q2Vh8TdksU"><img class="vmcover" width="250px" src="images/covers/video/cover-rocket.jpg"></a><div class="mvvt">Рокет Music Video</div></div>
 				<div class="vvc"><a href="https://www.youtube.com/watch?v=I1MyTEwOheY"><img class="vmcover" src="images/covers/video/cover-pooligtv.jpg"></a><div class="mvvt">PART OF OUR LIFE MUSIC VIDEO</div></div>
 				<div class="vvc"><a href="https://www.youtube.com/watch?v=2JFWy1DoKj4"><img class="vmcover" src="images/covers/video/cover-sbigtv.jpg"></a><div class="mvvt">The Mansion Party Music Video</div></div>
 			</div>
@@ -612,6 +710,7 @@ Copyright. All rights reserved.
 		</div>
 
 	</div>
+	<div id="loading"><div class="loader">Loading...</div></div>
 
 
 </body>
