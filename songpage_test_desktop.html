@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Part of Our Life by Капитан Маршин</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="title" content="Part of Our Life by Капитан Маршин">
+	<meta name="description" content="Listen on Apple Music, Spotify, VK, BOOM. Watch on YouTube. Read song lyrics.">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://captainmarshin.com">
+	<meta property="og:title" content="Part of Our Life by Капитан Маршин">
+	<meta property="og:description" content="Listen on Apple Music, Spotify, VK, BOOM. Watch on YouTube. Read song lyrics.">
+	<meta property="og:image" content="images/graphics/grapweb-meta-img.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://captainmarshin.com/">
+	<meta property="twitter:title" content="Part of Our Life by Капитан Маршин">
+	<meta property="twitter:description" content="Listen on Apple Music, Spotify, VK, BOOM. Watch on YouTube. Read song lyrics.">
+	<meta property="twitter:image" content="images/graphics/grapweb-meta-img.jpg">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="favicon_io/site.webmanifest">
+
+	<style type="text/css">
+		html{ 
+			margin:0; 
+			padding: 0; 
+		}
+		
+		body { 
+			background-color: #F5B52F; 
+			font-family: Helvetica, Arial, sans-serif; 
+		}
+
+		@font-face {
+      		font-family: 'fontello';
+      		src: url('./font/fontello.eot?5599820');
+      		src: url('./font/fontello.eot?5599820#iefix') format('embedded-opentype'),
+            url('./font/fontello.woff?5599820') format('woff'),
+            url('./font/fontello.ttf?5599820') format('truetype'),
+            url('./font/fontello.svg?5599820#fontello') format('svg');
+      		font-weight: normal;
+            font-style: normal;
+    	}
+     
+    	.demo-icon
+    	{
+      		font-family: "fontello";
+      		font-style: normal;
+      		font-weight: normal;
+      		speak: never;
+     
+      		display: inline-block;
+      		text-decoration: inherit;
+      		width: 1em;
+      		margin-right: .2em;
+      		text-align: center;
+      		/* opacity: .8; */
+     
+      		/* For safety - reset parent styles, that can break glyph codes*/
+      		font-variant: normal;
+      		text-transform: none;
+     
+      		/* fix buttons height, for twitter bootstrap */
+      		line-height: 1em;
+     
+      		/* Animation center compensation - margins should be symmetric */
+      		/* remove if not needed */
+      		margin-left: .2em;
+     
+      		/* You can be more comfortable with increased icons size */
+      		/* font-size: 120%; */
+     
+      		/* Font smoothing. That was taken from TWBS */
+      		-webkit-font-smoothing: antialiased;
+      		-moz-osx-font-smoothing: grayscale;
+     
+      		/* Uncomment for 3D effect */
+      		/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    	}
+
+        .card { 
+            margin: 0 auto; 
+            color: #FFFFFF;
+            width: 330px;
+            min-width: 330px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .cover {
+            width: 250px;
+            height: 250px;
+            border: 1px solid #464646;
+            background-color: #000000;  
+            background-image: url("images/covers/music/cover-df.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;  
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.39);
+            -moz-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.39);
+            box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.39); 
+        }
+
+        .name{
+        	font-weight: bold;
+        	font-size: 16pt;
+        	padding-bottom: 8px;
+        }
+
+        .artist{
+        	padding-bottom: 9px;
+        	text-decoration: underline;
+        }
+
+        .artist-style{
+        	text-decoration: underline;
+        }
+
+        .info{
+        	font-size: 10pt;
+        }
+
+        .listen{
+        	margin-top: 30px;
+        	width: auto;
+        	height: auto;
+        }
+
+/*        .button{
+        	background-color: #f2f1f6;
+        	width: auto;
+        	height: 60px;
+        	border-radius: 10px;
+        	text-align: center;
+        	vertical-align: middle;
+        	line-height: 60px;
+        	position: relative;
+        }
+
+        .button:hover{
+        	background-color: #e7e6ed;
+        	width: auto;
+        	height: 60px;
+        	border-radius: 10px;
+        	text-align: center;
+        	vertical-align: middle;
+        	line-height: 60px;
+        	position: relative;
+        	opacity: 1;
+            transition: 0.3s;
+            cursor: pointer;
+        }*/
+
+/*        .icon-1 {
+        	background-image: url("images/graphics/apple-music-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 18px;
+        	height: 18px;
+        	position: absolute;
+        	top: 20px;
+        	left: 20px;
+        }
+
+        .icon-2 {
+        	background-image: url("images/graphics/spotify-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 18px;
+        	height: 18px;
+        	position: absolute;
+        	top: 20px;
+        	left: 20px;
+        }
+
+        .icon-3 {
+        	background-image: url("images/graphics/vk-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 18px;
+        	height: 18px;
+        	position: absolute;
+        	top: 20px;
+        	left: 20px;
+        }
+
+        .icon-4 {
+        	background-image: url("images/graphics/boom-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 18px;
+        	height: 18px;
+        	position: absolute;
+        	top: 20px;
+        	left: 20px;
+        }
+
+        .icon-5 {
+        	background-image: url("images/graphics/youtube-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 18px;
+        	height: 18px;
+        	position: absolute;
+        	top: 20px;
+        	left: 20px;
+        }
+
+        .icon-6 {
+        	background-image: url("images/graphics/telegraph-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 18px;
+        	height: 18px;
+        	position: absolute;
+        	top: 20px;
+        	left: 20px;
+        }*/
+
+        .space{
+        	margin-top: 12px;
+        }
+
+        .video{
+        	margin-top: 30px;
+        	width: 100%;
+    		-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+    		-webkit-transform: rotate(0.000001deg);
+    		-webkit-border-radius: 10px;
+    		-moz-border-radius: 10px;
+    		border-radius: 10px;
+    		overflow: hidden;
+    		display: inline-flex;
+        }
+
+        iframe,
+        object,
+        embed{
+        	-webkit-border-radius: 10px !important; 
+            -ms-border-radius: 10px !important; 
+            -o-border-radius: 10px !important;  
+            border-radius: 10px !important;   
+        	border: 1px solid #464646;
+        }
+
+
+        .event{
+        	margin-top: 30px;
+        	width: 300px;
+        	height: 60px;
+    		border-radius: 10px;
+    		background-color: #f2f1f6;
+        	position: relative;
+        	padding: 15px;
+        }
+
+        .event:hover{
+        	background-color: #e7e6ed;
+        	opacity: 1;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .event-img {
+        	background-image: url("images/events/Part of Our Life-cover.jpg");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 60px;
+        	height: 60px;
+        	position: absolute;
+        	top: 15px;
+        	left: 15px;
+        	border-radius: 50%;
+        }
+
+        .event-name{
+        	font-size: 11pt;
+        	margin-left: 75px;
+        	padding-top: 5px;
+        	text-align: left;
+        }
+
+        .event-date{
+        	font-size: 8pt;
+        	color: #757479;
+        	padding-top: 3px; 
+        	margin-left: 75px;
+        	text-align: left;
+        }
+
+        .lyrics{
+        	margin-top: 30px;
+        	width: auto;
+        	height: auto;
+        }
+
+        .share{
+        	margin-top: 30px;
+        	width: auto;
+        	height: auto;
+        	color: #3176ef;
+        	font-weight: bold;
+        }
+
+        .share-color{
+        	color: #3176ef;
+        }
+
+        a {
+        	text-decoration: none;
+        	color: #FFFFFF;
+        }
+
+        a:link {
+        	text-decoration: none;
+        	color: #FFFFFF;
+        }
+
+        a:visited {
+        	text-decoration: none;
+        	color: #FFFFFF;
+        }
+
+        a:focus {
+        	text-decoration: none;
+        	color: #FFFFFF;
+        }
+
+        a:hover {
+        	text-decoration: none;
+        	color: #FFFFFF;
+        }
+
+        a:active {
+        	text-decoration: none;
+        	color: #FFFFFF;
+        }
+
+	</style>
+
+</head>
+<body>
+<!-- 	<div class="card">
+		<div class="cover"></div>
+		<div class="title">
+			<div class="name">Part of Our Life</div>
+			<a href="https://vk.com/captainmarshin" target="_blank"><div class="artist">Капитан Маршин</div></a>
+			<div class="info">2020 • Single</div>
+		</div>
+		<div class="listen">
+			<a href="https://music.apple.com/us/album/part-of-our-life-single/1521172037" target="_blank">
+				<div class="button"><span class="icon-1"></span>Apple Music</div>
+			</a>
+			<a href="https://open.spotify.com/album/2RA6Y4G4blgaeqvNMquJbu?si=VRr4nuFcQXGF47FMdgGiFw" target="_blank">
+				<div class="button space"><span class="icon-2"></span>Spotify</div>
+			</a>
+			<a href="https://vk.com/music/album/-2000940576_7940576_25f570d9acd857b946" target="_blank">
+				<div class="button space"><span class="icon-3"></span>VK</div>
+			</a>
+			<a href="https://vk.cc/awoxPE" target="_blank">
+				<div class="button space"><span class="icon-4"></span>BOOM</div>
+			</a>
+			<a href="https://www.youtube.com/watch?v=m5QCHD2dG24" target="_blank">
+				<div class="button space"><span class="icon-5"></span>YouTube</div>
+			</a>
+		</div>
+		<div class="video">
+			<iframe width="300" height="190" src="https://www.youtube.com/embed/I1MyTEwOheY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="video">
+			<iframe width="300" height="190" src="https://www.youtube.com/embed/m5QCHD2dG24" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="lyrics">
+			<a href="https://telegra.ph/PART-OF-OUR-LIFE-03-19" target="_blank"><div class="button"><span class="icon-6"></span>Текст песни</div></a>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<div class="share">
+			<a onclick="prompt('Part of Our Life by Капитан Маршин','http://captainmarshin.com/pool')"><div class="button share-color"><i class="demo-icon icon-share-icon">&#xe800;</i>Поделиться</div></a>
+		</div>
+	</div> -->
+
+	<style type="text/css">
+	body{
+		background-color: black;
+		color: white;
+	}
+
+
+		.pp{
+			margin: 0 auto;
+			width: 810px;
+			min-width: 810px;
+		}
+
+		.p1{
+			width: 280px;
+			float: left;
+		}
+
+		.p1_cover{
+			width: 250px;
+			height: 250px;
+			border: 1px solid #464646;
+			border-radius: 5px;
+		}
+
+		img.p1_ac{
+			width: 250px;
+			height: 250px;
+			border-radius: 5px;
+		}
+
+		.p1_links{
+			margin-top: 20px;
+			text-align: center;
+			width: 252px;
+			
+			margin-bottom: 20px;
+		}
+
+		.p1_hr{
+			margin-top: 10px;
+			background-color: #464646;
+			width: 252px;
+			height: 1px;
+			margin-bottom: 20px;
+		}
+
+		.p1_info_date{
+			font-size: 11pt;
+			padding-bottom: 7px;
+			width: 252px;
+		}
+
+		.p1_info_record{
+			font-size: 11pt;
+			padding-bottom: 7px;
+			width: 252px;
+		}
+
+		.p1_info_copy{
+			font-size: 11pt;
+			margin-bottom: 20px;
+			width: 252px;
+		}
+
+		.p1_info_expimg{
+			display: inline;
+		}
+
+		.p1_morespace{
+			height: 5px;
+		}
+
+		.p2{
+			width: 530px;
+			float: left;
+		}
+
+	/*	.release_background_mask{
+			width: 530px;
+			height: 200px;
+			background-image: url('');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}*/
+
+		.release_background2{
+			padding-top: 30px;
+		}
+		.release_background{
+			border-radius: 0 20px 0 0;
+			padding-top: 30px;
+			width: 530px;
+			height: 164px;
+			 background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(121deg, rgba(0,0,0,1) 34%, rgba(0,0,0,0) 100%),
+    /* bottom, image */
+    url('images/pagebackground/ytmp-pool.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		.p2_morespace{
+			height: 30px;
+		}
+
+		.p2_title{
+			font-size: 20pt;
+			margin-bottom: 7px;
+		}
+
+		.p2_artist{
+			font-size: 12pt;
+			margin-bottom: 44px;
+		}
+
+		#p2_tabs{
+			width: 100%;
+			height:  50px;
+			display: inline;
+		}
+
+		.p2_description{
+			margin-top: 10px;
+			margin-bottom: 10px;
+			font-size: 11pt;
+		}
+
+		.p2_tabs_songs{
+			display: inline-block;
+			border-radius: 5px;
+			font-size: 11pt;
+			padding: 3px 12px 3px 12px;
+		}
+
+		.selected{
+			background-color: #464646;
+		}
+
+		.button{
+        	background-color: #FFFFFF;
+        	border: 1px solid #464646;
+        	height: 35px;
+        	border-radius: 10px;
+        	text-align: center;
+        	vertical-align: middle;
+        	line-height: 35px;
+        	width: 250px;
+        	font-size: 14px;
+        	color: #000;
+        	margin: 0 auto;
+        }
+
+        .button:hover{
+        	background-color: #e7e6ed;
+        	height: 35px;
+        	border-radius: 10px;
+        	text-align: center;
+        	vertical-align: middle;
+        	line-height: 35px;
+        	opacity: 1;
+            transition: 0.3s;
+            cursor: pointer;
+        	width: 250px;
+        	font-size: 14px;
+        	color: black;
+        }
+
+        img{
+
+        }
+
+        .icon-1 {
+        	background-image: url("images/graphics/apple-music-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 20px;
+        	height: 20px;
+        	/*position: absolute;*/
+        	left: 12px;
+        }
+
+        .icon-2 {
+        	background-image: url("images/graphics/spotify-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 20px;
+        	height: 20px;
+        	/*position: absolute;*/
+        	top: 12px;
+        	left: 12px;
+        }
+
+        .icon-3 {
+        	background-image: url("images/graphics/vk-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 20px;
+        	height: 20px;
+        	/*position: absolute;*/
+        	top: 12px;
+        	left: 12px;
+        }
+
+        .icon-4 {
+        	background-image: url("images/graphics/boom-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 20px;
+        	height: 20px;
+        	/*position: absolute;*/
+        	top: 12px;
+        	left: 12px;
+        }
+
+        .icon-5 {
+        	background-image: url("images/graphics/youtube-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 20px;
+        	height: 20px;
+        	/*position: absolute;*/
+        	top: 12px;
+        	left: 12px;
+        }
+
+        .icon-6 {
+        	background-image: url("images/graphics/telegraph-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 16px;
+        	height: 16px;
+        	position: absolute;
+        	top: 12px;
+        	left: 12px;
+        }
+
+        .p2_hr{
+        	margin-top: 10px;
+        	width: 100%;
+        	height: 1px;
+        	background-color: #464646;
+        	margin-bottom: 10px;
+        }
+
+        .exc{
+        	background-color: red;
+        	color: black;
+        	font-size: 6pt;
+        	width: 10px;
+        	height: 10px;
+        	font-weight: bold;
+        	display: flex; 
+        	align-items: center; 
+        	justify-content: center;
+        	margin: 0 auto;
+        }
+
+        .reconi{
+        	margin-left: 10px;
+        }
+
+        .page{
+			margin: 0 auto;
+			width: 810px;
+			min-width: 810px;
+		}
+
+		.head{
+			padding-top: 50px;
+		}
+
+		.title{
+			font-weight: bold;
+		}
+
+
+		.space{
+			margin-right: 20px;
+		}
+
+		.spacetop{
+			margin-top: 20px;
+		}
+
+		.foot{
+			padding-bottom: 80px;
+			width: 260px;
+		}
+
+		.foot-text{
+			color: #464646;
+			font-size: 14px;
+		}
+
+		.space-2{
+			margin-right: 5px;
+		}
+
+		a.space-2{
+			color: #464646;
+			text-decoration: underline;
+		}
+
+		.spacetop-2{
+			padding-top: 10px;
+		}
+
+		.spacebottom{
+			margin-bottom: 20px;
+		}
+
+	</style>
+
+
+	<div class="pp">
+		<div class="head"></div>
+		<div class="p1 release_background2"> <!-- Левый столбец -->
+			<div class="p1_cover"><img class="p1_ac" src="images/covers/music/cover-pool.jpg"></div> <!-- Обложка релиза -->
+
+			<div class="p1_links"> <!-- Ссылки на площадки -->
+					<a href="https://apple.co/32NR6Oh" target="_blank">
+                	<div class="button">Buy</div>
+            		</a>
+			</div>
+
+			<div class="p1_hr"></div> <!-- Горизонтальный разделитель -->
+
+			<div class="p1_info"> <!-- Блок с инфо -->
+				<div class="p1_info_date">Released  28 Jun, 2020</div> <!-- Дата выпуска трека -->
+				<!-- <div class="p1_info_record">Recorded in GarageBand on iPhone</div> Плейсхолдер + копирайт -->
+				<div class="p1_info_copy">℗ 2020 Капитан Маршин / prod. by balance cooper</div> <!-- Плейсхолдер + копирайт -->
+
+				<div class="p1_info_expimg"><img src="images/graphics/Parental_Advisory_Label.png" title="Parental Advisory" width="63" height="40"></div> <img src="images/graphics/reconiphone.png" width="40" class="reconi" title="Recorded on iPhone"><!-- Иконка Advisory Content -->
+				<div class="p1_morespace"></div>
+			</div>
+
+			<!-- Footer -->
+		<div class="foot spacetop">
+			<div class="foot-text">
+				Маршин Entertainment<br>
+				2014-2020 Copyright. All rights reserved.
+			</div>
+
+			<div class="foot-text spacetop-2"> <!-- Social Links -->
+				<a class="space-2" href="https://t.me/captainmarshin">Telegram</a>
+				<a class="space-2" href="https://www.instagram.com/captainmarshin/">Instagram</a>
+				<a class="space-2" href="https://www.youtube.com/channel/UCKSLYkGgjVIrLP-sPSSnygQ/featured">YouTube</a>
+				<a class="space-2" href="https://vk.com/captainmarshin">VK</a>
+				<a class="space-2" href="https://twitter.com/captainmarshin">Twitter</a>
+				<a class="space-2" href="https://music.apple.com/artist/captain-marshin/1486687033">Apple Music</a>
+				<a class="space-2" href="https://open.spotify.com/artist/7jeV7Ofu7JdWCPqEohb8Uo">Spotify</a>
+				<a class="space-2" href="https://vk.com/artist/kapitanmarshin">VK Music</a>
+				<a class="space-2" href="https://vk.cc/avPZHv">BOOM</a>
+				<a class="space-2" href="https://te.legra.ph/Kapitan-Marshin---Lyrics-06-15">Telegraph (Lyrics)</a>
+			</div>
+		</div>
+
+		</div>
+		<div class="p2 release_background"> <!-- Правый столбец -->
+			<div class="p2_title">PART OF OUR LIFE</div> <!-- Заголовок (Song Name - Название релиза, Type - Тип (например Single) ) -->
+			<div class="p2_artist"><a class="url_1" href="#">Капитан Маршин</a></div> <!-- Артисты релиза -->
+			<div class="p2_morespace"></div>
+			<div id="p2_tabs"> <!-- Вкладки релиза -->
+				<a href="#" onclick="openCity(event, 'SongPage')" id="defaultOpen"><div class="p2_tabs_songs selected">Songs</div></a>
+				<a href="#" onclick="openCity(event, 'VideoPage')"><div class="p2_tabs_songs">Video</div></a>
+				<a href="#" onclick="openCity(event, 'LyricsPage')"><div class="p2_tabs_songs">Lyrics</div></a>
+			</div> 
+
+			<div class="p2_hr"></div> <!-- Горизонтальный разделитель -->
+
+<style type="text/css">
+	/* Style the tab content */
+.tabcontent {
+  display: none;
+}
+</style>
+
+<script type="text/javascript">
+	// Add active class to the current button (highlight it)
+var header = document.getElementById("p2_tabs");
+var btns = header.getElementsByClassName("p2_tabs_songs");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("selected");
+  current[0].className = current[0].className.replace(" selected", "");
+  this.className += " selected";
+  });
+}
+</script>
+
+
+			<style type="text/css">
+				.tracklist{
+					width: 100%;
+				}
+
+			    th, td {
+ 					 border: 1px solid #464646;
+ 					 font-size: 11pt;
+				}
+
+				td{
+					padding: 3px;
+				}
+
+				th{
+					padding: 3px;
+				}
+
+				.s1{
+					width: 20px;
+					text-align: center;
+				}
+
+				p {float: left;
+					margin-right: 5px;}
+
+				img.listenicon{
+					width: 20px;
+					height: 20px;
+					margin-top: 2px;
+					margin-left: 3px;
+				}
+
+				.listenservices{
+					width: 135px;
+					min-width: 135px;
+					max-width: 135px;;
+				}
+
+				.lyricspage{
+					white-space: pre-wrap;
+					line-height: 25px;
+					max-width: 529px;
+					min-width: 529px;
+					width: 529px;
+				}
+
+				a.url_1{
+			color: #FFFFFF;
+		}
+
+		a.url_1:visited, a.url_1:active{
+			color: #FFFFFF;
+		}
+
+		a.url_1:hover{
+			text-decoration: underline;
+		}
+
+		.total_tracks_in_release{
+			text-align: center;
+			margin-top: 7px;
+			font-size: 10pt;
+		}
+
+			</style>
+
+				<div id="SongPage" class="tabcontent">
+				<table class="tracklist">
+					<!-- <tr>
+    					<th>№</th> <th style="text-align: left;">NAME</th> <th>!?</th> <th style="text-align: left;">LISTEN</th>
+  					</tr> -->
+  					<tr>
+    				<td class="s1">1.</td> 
+    				<td>PART OF OUR LIFE - Single</td> 
+    				<td><div class="exc">E</div></td>
+    				<td class="listenservices">
+    					<a href="#" title="Listen on Apple Music"><img class="listenicon" src="images/graphics/applemusic.svg"></a>
+    					<a href="#" title="Listen on Spotify"><img class="listenicon" src="images/graphics/spotify.png"></a>
+    					<a href="#" title="Listen on VK Music"><img class="listenicon" src="images/graphics/vk.svg"></a>
+    					<a href="#" title="Listen on BOOM"><img class="listenicon" src="images/graphics/boom.png"></a>
+    					<a href="#" title="Listen on YouTube"><img class="listenicon" src="images/graphics/youtube.png"></a>
+    				</td>
+  					</tr>
+  					
+					</table>
+
+					<div class="total_tracks_in_release">TOTAL: 1 ITEM</div>
+		</div>
+
+		<style type="text/css">
+			.videopage{
+				padding-bottom: 100px;
+			}
+		</style>
+		<div class="videopage tabcontent" id="VideoPage">
+			<h3>Official Music Video</h3>
+			<iframe width="529" height="290" src="https://www.youtube.com/embed/I1MyTEwOheY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+			<h3>Audio Version</h3>
+			<iframe width="529" height="290" src="https://www.youtube.com/embed/m5QCHD2dG24" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+
+<style type="text/css">
+	.annotation{
+		/*background-color: blue;*/
+		font-style: italic;
+		background-color: yellow;
+		color: black;
+		cursor: help;
+	}
+
+	.annotation:hover + .annotation_body{
+		display: block;
+		cursor: help;
+		transition: all .4s ease;
+-webkit-transition: all .4s ease;
+	}
+
+	.annotation_body{
+		display: none;
+		padding: 30px;
+		background-color: yellow;
+		z-index: 1;
+		color: black;
+		white-space: pre-wrap;
+		width: 468px;
+		line-height: 20px;
+		margin-top: 10px;
+		margin-bottom: -15px;
+	}
+
+	.annotation_title{
+		font-size: 10pt;
+		margin-bottom: 10px;
+	}
+
+	.annotation_text{
+	}
+
+	.lyrics_author{
+		margin-top: 16px;
+	}
+
+
+
+</style>
+
+		<div class="lyricspage tabcontent" id="LyricsPage">[Припев]
+Этот стиль в крови уже
+Part of our life 
+Мы с района на район
+<span class="annotation">В ролле только конопля</span><div class="annotation_body"><div class="annotation_title">Author Annotation</div><div class="annotation_text">Только чистая конопля в скрученном косяке</div></div>
+Тачки, звук, магнитофон
+<span class="annotation">Praise the Lord, а не попса</span><div class="annotation_body"><div class="annotation_title">Author Annotation</div><div class="annotation_text">Praise the Lord - трек A$AP  Rocky. В машине играет только музыка такого типа, а не попса.</div></div>
+Весь балкон опять в дыму
+Это part of our life
+
+Мы с района на район
+В ролле только конопля
+Этот стиль в крови уже
+Just a part of our life
+Тачки, звук, магнитофон
+Praise the Lord, а не попса
+Солнца свет сквозь облака
+Это part of our life
+
+[Куплет]
+Вид из окон опьяняет
+Weed из бонга окрыляет
+В GarageBand опять влипаю
+МС крутит новый блант
+
+По ночным дорогам с дачи
+В зеркале рассвет встречаем
+На колонках тихий саунд
+Дым сочится сквозь окно 
+
+Crazy bastards, but so funny
+На угаре каждый в здании
+С Данчиком на связи
+Brother, возвращайся поскорей
+
+Дым пускаем на квадрате
+Разговоры, чашка чая
+На часах 4:20
+Это more than interest
+
+Дай огня мне, больше шума
+Дикий ор во всей округе
+Ты пропал с своей жирухой
+С нами сестры, их подруги
+
+Дым клубится в облака
+Тут семья, а не шпана
+Провода сквозь города
+Gang по жизни - навсегда
+
+[Припев]
+Этот стиль в крови уже
+Part of our life 
+Мы с района на район
+В ролле только конопля
+Тачки, звук, магнитофон
+Praise the Lord, а не попса
+Весь балкон опять в дыму
+Это part of our life
+
+Мы с района на район
+В ролле только конопля
+Этот стиль в крови уже
+Just a part of our life
+Тачки, звук, магнитофон
+Praise the Lord, а не попса
+Солнца свет сквозь облака
+Это part of our life
+<div class="lyrics_author"><b>Автор:</b> Капитан Маршин</div>
+			<!-- <span class="annotation"> -->
+
+		</div>
+
+		<script type="text/javascript">
+	
+		</script>
+
+
+								<script type="text/javascript">
+
+				function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+
+</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>
