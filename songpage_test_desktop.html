@@ -1077,7 +1077,7 @@ Praise the Lord, а не попса
 
 	.mobile_song_header_info_small{
 		margin-top: 23px;
-		width: 250px;
+		width: 200px;
 		height: 118px;
 		padding-right: 20px;
 		float:left;
@@ -1122,6 +1122,7 @@ Praise the Lord, а не попса
 		border-radius: 5px;
 		border: 1px solid #464646;
 	}
+
 	.mobile_song_artist_big{
 
 	}
@@ -1190,12 +1191,43 @@ Praise the Lord, а не попса
 	}
 
 	.mlyricspage{
-		white-space: pre-wrap;
+		/*white-space: pre-wrap;*/
 		line-height: 25px;
-		max-width: 529px;
-		min-width: 529px;
-		width: 529px;
+		width: 100%;
 	}
+
+
+@media only screen and (max-width: 320px) {
+   .mobile_small_cover{
+   	width: 80px;
+   	height: 80px;
+   }
+
+   .mobile_song_header_cover_small{
+   	width: 90px;
+   }
+
+   .mobile_song_header_info_small{
+   	width: 170px;
+   }
+
+   	.mobile_song_name{
+		font-size: 15px;
+	}
+
+	.mobile_song_artist{
+		font-size: 12px;
+	}
+
+	.mobile_buyin_button{
+		bottom: 40px;
+	}
+
+	#mobile_song_header{
+		height: 120px;
+	}	
+
+}
 
 </style>
 
@@ -1279,7 +1311,8 @@ Praise the Lord, а не попса
     			<iframe class="mobile_video" src="https://www.youtube.com/embed/m5QCHD2dG24" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     		</div>
 
-<div class="mlyricspage mobile_tabcontent" id="mobile_LyricsPage">[Припев]
+<div class="mlyricspage mobile_tabcontent" id="mobile_LyricsPage">
+[Припев]
 Этот стиль в крови уже
 Part of our life 
 Мы с района на район
