@@ -63,7 +63,7 @@ function setVisible(selector, visible) {
 
 	#loading {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
@@ -203,6 +203,7 @@ function setVisible(selector, visible) {
 			float: left;
 			margin-right: 20px;
 			margin-bottom: 20px;
+			background-color: #222222;
 		}
 
 		.music-cover:last-child {
@@ -231,7 +232,9 @@ function setVisible(selector, visible) {
 			border: 1px solid gray;
 			border-radius: 5px;
 			display: inline-block;
+			margin-bottom: 20px;
 			float: left;
+			background-color: #222222;
 		}
 
 		.space{
@@ -239,14 +242,19 @@ function setVisible(selector, visible) {
 		}
 
 		.spacetop{
-			margin-top: 20px;
+			margin-top: 40px;
+		}
+
+		.spacetopv{
+			margin-top: 25px;
 		}
 
 		.foot{
-			padding-bottom: 50px;
+			padding-bottom: 80px;
 		}
 
 		.foot-text{
+			line-height: 20px;
 			color: #464646;
 			font-size: 14px;
 		}
@@ -256,7 +264,7 @@ function setVisible(selector, visible) {
 		}
 
 		.spacetop-2{
-			padding-top: 10px;
+			padding-top: 15px;
 		}
 
 		.spacebottom{
@@ -298,19 +306,23 @@ function setVisible(selector, visible) {
 		}
 
 		.fresh-desc{
-			margin-top: 15px;
+			margin-top: 7px;
 			font-size: 12pt;
+		}
 
+		a.frsa, a.frsf{
+			color: #FFFFFF;
 		}
 
 		.fresh-buts{
-			margin-top: 2px;
+			margin-top: 10px;
 		}
 
 		/* Music Services Buttons */
 
 		.button{
         	background-color: #000000;
+        	color: white;
         	border: 1px solid #464646;
         	height: 41px;
         	border-radius: 10px;
@@ -326,6 +338,7 @@ function setVisible(selector, visible) {
         }
 
         .button:hover{
+        	color: black;
         	background-color: #e7e6ed;
         	height: 41px;
         	border-radius: 10px;
@@ -342,7 +355,7 @@ function setVisible(selector, visible) {
         }
 
         .icon-1 {
-        	background-image: url("images/graphics/apple-music-icon.png");
+        	background-image: url("images/graphics/applemusic.svg");
         	background-repeat: no-repeat;
         	background-size: cover;
         	background-position: center;
@@ -354,7 +367,7 @@ function setVisible(selector, visible) {
         }
 
         .icon-2 {
-        	background-image: url("images/graphics/spotify-icon.png");
+        	background-image: url("images/graphics/spotify.png");
         	background-repeat: no-repeat;
         	background-size: cover;
         	background-position: center;
@@ -366,7 +379,7 @@ function setVisible(selector, visible) {
         }
 
         .icon-3 {
-        	background-image: url("images/graphics/vk-icon.png");
+        	background-image: url("images/graphics/vk.svg");
         	background-repeat: no-repeat;
         	background-size: cover;
         	background-position: center;
@@ -378,7 +391,7 @@ function setVisible(selector, visible) {
         }
 
         .icon-4 {
-        	background-image: url("images/graphics/boom-icon.png");
+        	background-image: url("images/graphics/boom.png");
         	background-repeat: no-repeat;
         	background-size: cover;
         	background-position: center;
@@ -390,7 +403,7 @@ function setVisible(selector, visible) {
         }
 
         .icon-5 {
-        	background-image: url("images/graphics/youtube-icon.png");
+        	background-image: url("images/graphics/youtube.png");
         	background-repeat: no-repeat;
         	background-size: cover;
         	background-position: center;
@@ -531,8 +544,20 @@ function setVisible(selector, visible) {
 		padding-left: 20px}
 		.fs{padding-left: 20px;
 		padding-right: 20px; 
-			padding-bottom: 50px; line-height: 20px;}
+			padding-bottom: 80px; line-height: 20px;}
 
+
+.adbanner{
+width: 804px; 
+height: 250px;
+ border-radius: 5px;
+  background-color:#222222;
+   margin-bottom: 45px;
+    background-image: url('images/pagebackground/ad-cover.png');
+     border: 1px solid #464646;
+      background-size: cover;
+       background-position: center;
+}
 
         /*Media*/
 
@@ -556,13 +581,18 @@ function setVisible(selector, visible) {
 		<div class="head">
 			<div class="title">Капитан Маршин &nbsp;/&nbsp; Captain Marshin</div>
 		</div>
-		<!-- New Release Banner -->
+
+		<div class="adbanner">
+			<!-- <div class="textadbanner" style=" align-self: flex-end; margin-left: 20px; margin-bottom: 40px; font-size: 30pt; color: black; float: bottom;">Удивительный Капитан Маршин</div> -->
+		</div>
+
+		<!--
 		<div class="fresh spacebottom">
 			<div class="fresh-content">
 				<div class="fresh-cover"><a href="#"><img class="cover" width="250px" height="250px" src="images/covers/music/cover-cantlove.jpg"></a></div>
 				<div class="fresh-title">
-					<div class="fresh-name">Капитан Маршин - Не могу полюбить</div>
-					<div class="fresh-desc">feat. Twenty-4</div>
+					<div class="fresh-name">Не могу полюбить</div>
+					<div class="fresh-desc"><a class="frsa" href="#">Капитан Маршин</a> feat. <a class="frsf" href="#">Twenty-4</a></div>
 					<div class="fresh-buts">
 					<a href="https://apple.co/32NR6Oh" target="_blank">
                 	<div class="button"><span class="icon-1"></span>&nbsp;Apple Music</div>
@@ -582,7 +612,7 @@ function setVisible(selector, visible) {
 				    </div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- Music Banner -->
 		<div class="category">
@@ -590,23 +620,23 @@ function setVisible(selector, visible) {
 			<div class="cat-content">
 				<div class="table">
 					<div class="row">
-						<div class="music-cover"><a href="http://captainmarshin.com/df"><img class="m-cover" src="images/covers/music/cover-df.jpg"></a></div>
-						<div class="music-cover"><a href="http://captainmarshin.com/lera"><img class="m-cover" src="images/covers/music/cover-lera.jpg"></a></div>
-						<div class="music-cover"><a href="http://captainmarshin.com/cantlove"><img class="m-cover" src="images/covers/music/cover-cantlove.jpg"></a></div>
-						<div class="music-cover"><a href="http://captainmarshin.com/mr3m"><img class="m-cover" src="images/covers/music/cover-mr3m.jpg"></a></div>
-						<div class="music-cover"><a href="http://captainmarshin.com/tacm"><img class="m-cover" src="images/covers/music/cover-tacm.jpg"></a></div>	
-						<div class="music-cover"><a href="http://captainmarshin.com/rocket"><img class="m-cover" src="images/covers/music/cover-rocket.jpg"></a></div>	
-						<div class="music-cover"><a href="http://captainmarshin.com/pool"><img class="m-cover" src="images/covers/music/cover-pool.jpg"></a></div>
-						<div class="music-cover"><a href="http://captainmarshin.com/lvstories"><img class="m-cover" src="images/covers/music/cover-lvstories.jpg"></a></div>
-						<div class="music-cover"><a href="http://captainmarshin.com/meetdawn"><img class="m-cover" src="images/covers/music/cover-meetdawn.jpg"></a></div>
-						<div class="music-cover"><a href="http://captainmarshin.com/lifeway"><img class="m-cover" src="images/covers/music/cover-lifeway.jpg"></a></div>
-						<div class="music-cover"><a href="http://captainmarshin.com/jrr"><img class="m-cover" src="images/covers/music/cover-jrr.jpg"></a></div>
-						<div class="music-cover"><a href="http://captainmarshin.com/mftmp"><img class="m-cover" src="images/covers/music/cover-sb.jpg"></a></div>		
-						<div class="music-cover"><a href="http://captainmarshin.com/rise"><img class="m-cover" src="images/covers/music/cover-rise.jpg"></a></div>
-						<div class="music-cover"><a href="http://captainmarshin.com/jordan"><img class="m-cover" src="images/covers/music/cover-jordan.jpg"></a></div>
-						<div class="music-cover"><a href="http://captainmarshin.com/claudebonnie"><img class="m-cover" src="images/covers/music/cover-claudebonnie.jpg"></a></div>
-						<div class="music-cover"><a href="http://captainmarshin.com/gmfire"><img class="m-cover" src="images/covers/music/cover-gmfire.jpg"></a></div>
-						<div class="music-cover"><a href="http://captainmarshin.com/gornoe"><img class="m-cover" src="images/covers/music/cover-gornoe.jpg"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/df"><img class="m-cover" src="images/covers/music/cover-df.jpg" title="Dynamite Freestyle"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/lera"><img class="m-cover" src="images/covers/music/cover-lera.jpg" title="Девочка с падика"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/cantlove"><img class="m-cover" src="images/covers/music/cover-cantlove.jpg" title="Не могу полюбить"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/mr3m"><img class="m-cover" src="images/covers/music/cover-mr3m.jpg" title="Мистер 3 Мульта"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/tacm"><img class="m-cover" src="images/covers/music/cover-tacm.jpg" title="Удивительный Капитан Маршин"></a></div>	
+						<div class="music-cover"><a href="http://captainmarshin.com/rocket"><img class="m-cover" src="images/covers/music/cover-rocket.jpg" title="Рокет"></a></div>	
+						<div class="music-cover"><a href="http://captainmarshin.com/pool"><img class="m-cover" src="images/covers/music/cover-pool.jpg" title="PART OF OUR LIFE"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/lvstories"><img class="m-cover" src="images/covers/music/cover-lvstories.jpg" title="Love Stories"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/meetdawn"><img class="m-cover" src="images/covers/music/cover-meetdawn.jpg" title="Встречаю рассвет"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/lifeway"><img class="m-cover" src="images/covers/music/cover-lifeway.jpg" title="Lifeway"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/jrr"><img class="m-cover" src="images/covers/music/cover-jrr.jpg" title="Просто почитаем рэп"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/mftmp"><img class="m-cover" src="images/covers/music/cover-sb.jpg" title="Спортболид"></a></div>		
+						<div class="music-cover"><a href="http://captainmarshin.com/rise"><img class="m-cover" src="images/covers/music/cover-rise.jpg" title="Rise"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/jordan"><img class="m-cover" src="images/covers/music/cover-jordan.jpg" title="Jordan"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/claudebonnie"><img class="m-cover" src="images/covers/music/cover-claudebonnie.jpg" title="Клайд и Бонни"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/gmfire"><img class="m-cover" src="images/covers/music/cover-gmfire.jpg" title="Дай малышка мне огня"></a></div>
+						<div class="music-cover"><a href="http://captainmarshin.com/gornoe"><img class="m-cover" src="images/covers/music/cover-gornoe.jpg" title="Я ещё вернусь"></a></div>
 					</div>
 				</div>
 			</div>
@@ -614,13 +644,13 @@ function setVisible(selector, visible) {
 
 		<!-- Video Banner -->
 		<div class="category">
-			<div class="cat-title spacetop">Video</div>
+			<div class="cat-title spacetopv">Video</div>
 			<div class="cat-content">
 				<div class="table">
 					<div class="row">
-						<div class="video-cover space"><a href="https://www.youtube.com/watch?v=8q2Vh8TdksU"><img class="v-cover" src="images/covers/video/cover-rocket.jpg"></a></div>
-						<div class="video-cover space"><a href="https://www.youtube.com/watch?v=I1MyTEwOheY"><img class="v-cover" src="images/covers/video/cover-pooligtv.jpg"></a></div>
-						<div class="video-cover"><a href="https://www.youtube.com/watch?v=2JFWy1DoKj4"><img class="v-cover" src="images/covers/video/cover-sbigtv.jpg"></a></div>
+						<div class="video-cover space"><a href="https://www.youtube.com/watch?v=8q2Vh8TdksU"><img class="v-cover" src="images/covers/video/cover-rocket.jpg" title="Рокет"></a></div>
+						<div class="video-cover space"><a href="https://www.youtube.com/watch?v=I1MyTEwOheY"><img class="v-cover" src="images/covers/video/cover-pooligtv.jpg" title="PART OF OUR LIFE"></a></div>
+						<div class="video-cover"><a href="https://www.youtube.com/watch?v=2JFWy1DoKj4"><img class="v-cover" src="images/covers/video/cover-sbigtv.jpg" title="Спортболид"></a></div>
 					</div>
 				</div>
 			</div>
