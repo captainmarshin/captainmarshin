@@ -205,6 +205,7 @@ function setVisible(selector, visible) {
 
 	.pp{
 		margin: 0 auto;
+		padding-top: 8px;
 		width: 810px;
 		min-width: 810px;
 	}
@@ -474,20 +475,19 @@ function setVisible(selector, visible) {
 	}
 
 	.page{
-		left: 50%;
-		position: absolute;
+		/*position: absolute;*/
 		width: 810px;
 		min-width: 810px;
 	}
 
 	.head{
-		position: relative;
-		left: -50%;
+		margin-right: auto;
+		margin-left: auto;
 		padding-top: 42px;
 	}
 
 	.heads{
-		padding-top: 80px;
+		padding-top: 20px;
 	}
 
 	.title{
@@ -824,13 +824,14 @@ function setVisible(selector, visible) {
 <body>
 
 	<!-- Header -->
-	<div class="page">
+
+	<div class="pp">
+			<div class="page">
 		<div class="head">
 			<div class="title">Капитан Маршин &nbsp;/&nbsp; Captain Marshin</div>
 		</div>
 	</div>
 
-	<div class="pp">
 		<div class="heads"></div>
 		<div class="p1 release_background2"> <!-- Левый столбец -->
 			<div class="p1_cover"><img class="p1_ac" src="images/covers/music/cover-pool.jpg"></div> <!-- Обложка релиза -->
@@ -1049,13 +1050,13 @@ Praise the Lord, а не попса
 	
 	#mobile_song_header{
 		width: 100%;
-		height: 160px;
+		height: 200px;
 		background-color: rgba(0, 0, 0, 0.70);
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
-  border-bottom: 1px solid #464646;
-  position:fixed;
-  top: 0;
+  /*border-bottom: 1px solid #464646;*/
+  /*position:fixed;
+  top: 0;*/
 
 	}
 
@@ -1066,20 +1067,19 @@ Praise the Lord, а не попса
 	}
 
 	#mobile_head_fix{
-		height: 160px;
+		/*height: 300px;*/
 	}
 
 	.mobile_song_header_cover_small{
-		margin-left: 20px;
+		margin-left: 21px;
 		margin-top: 20px;
-		width: 132px;
+		width: 200px;
 		float: left;
 	}
 
 	.mobile_song_header_info_small{
 		margin-top: 23px;
-		width: 200px;
-		height: 118px;
+		/*height: 200px;*/
 		padding-right: 20px;
 		float:left;
 		position: relative;
@@ -1118,8 +1118,8 @@ Praise the Lord, а не попса
 	}
 
 	.mobile_small_cover{
-		width: 120px;
-		height: 120px;
+		width: 180px;
+		height: 180px;
 		border-radius: 5px;
 		border: 1px solid #464646;
 	}
@@ -1132,14 +1132,11 @@ Praise the Lord, а не попса
 		background-color: #FFFFFF;
 		border-radius: 20px;
 		color: #000000;
-		font-size: 12px;
-		width: 90px;
+		font-size: 14px;
+		width: 110px;
 		text-align: center;
-		padding: 6px 10px 5px 10px;
+		padding: 11px 10px 10px 10px;
 		margin-top: 20px;
-		position: absolute;
-		left: 0;
-		bottom: 20px;
 	}
 
 	.mobile_content{
@@ -1174,7 +1171,7 @@ Praise the Lord, а не попса
 
 	#m_p2_tabs{
 		width: 100%;
-		height:  50px;
+		height: 50px;
 		display: inline;
 	}
 
@@ -1197,27 +1194,31 @@ Praise the Lord, а не попса
 		width: 100%;
 	}
 
+	.cat-title{
+		padding-left: 20px;
+	}
 
-@media only screen and (max-width: 320px) {
+
+@media only screen and (max-width: 414px) {
    .mobile_small_cover{
-   	width: 80px;
-   	height: 80px;
+   	width: 120px;
+   	height: 120px;
    }
 
    .mobile_song_header_cover_small{
-   	width: 90px;
+   	width: 140px;
    }
 
    .mobile_song_header_info_small{
-   	width: 170px;
+   	/*font-size: 14px;*/
    }
 
    	.mobile_song_name{
-		font-size: 15px;
+		/*font-size: 15px;*/
 	}
 
 	.mobile_song_artist{
-		font-size: 12px;
+	/*	font-size: 12px;*/
 	}
 
 	.mobile_buyin_button{
@@ -1225,7 +1226,39 @@ Praise the Lord, а не попса
 	}
 
 	#mobile_song_header{
-		height: 120px;
+		/*height: 180px;*/
+	}	
+
+}
+
+@media only screen and (max-width: 375px) {
+   .mobile_small_cover{
+   	width: 100px;
+   	height: 100px;
+   }
+
+   .mobile_song_header_cover_small{
+   	width: 120px;
+   }
+
+   .mobile_song_header_info_small{
+   	font-size: 14px;
+   }
+
+   	.mobile_song_name{
+		font-size: 15px;
+	}
+
+	.mobile_song_artist{
+	/*	font-size: 12px;*/
+	}
+
+	.mobile_buyin_button{
+		bottom: 40px;
+	}
+
+	#mobile_song_header{
+		/*height: 140px;*/
 	}	
 
 }
@@ -1234,10 +1267,10 @@ Praise the Lord, а не попса
 
 
 	<div class="pagem">
-<!-- 		<div class="headm">
+		<div class="headm">
 			<div class="t">Капитан Маршин &nbsp;/&nbsp; Captain Marshin</div>
-		</div> -->
-
+		</div>
+		<div class="cat-title">Music</div>
 		<div id="mobile_song_header" class="mobile_header_blur_background">
 			<div class="mobile_song_header_cover_small">
 				<img src="images/covers/music/cover-pool.jpg" class="mobile_small_cover">
@@ -1246,7 +1279,7 @@ Praise the Lord, а не попса
 				<div class="mobile_song_name">PART OF OUR LIFE <img class="mobile_song_explicit" src="images/graphics/explicit_content.png"></div>
 				<div class="mobile_song_artist">Капитан Маршин</div>
 
-				<div class="mobile_buyin_button">Buy on iTunes</div>
+				<!-- <div class="mobile_buyin_button">Buy on iTunes</div> -->
 			</div>
 		</div>
 
@@ -1270,38 +1303,42 @@ Praise the Lord, а не попса
 }
 </script>
  -->
-<div id="mobile_head_fix"></div>
+<!-- <div id="mobile_head_fix"></div> -->
 
 <div class="mobile_content">
 	<div id="m_p2_tabs"> <!-- Вкладки релиза -->
-				<a href="#msongs" onclick="Mobile_Tabs(event, 'mobile_SongPage')" id="m_defaultOpen"><div class="m_p2_tabs_songs mselected">Songs</div></a>
-				<a href="#mvideo" onclick="Mobile_Tabs(event, 'mobile_VideoPage')"><div class="m_p2_tabs_songs">Video</div></a>
-				<a href="#mlyrics" onclick="Mobile_Tabs(event, 'mobile_LyricsPage')"><div class="m_p2_tabs_songs">Lyrics</div></a>
+				<a href="#" onclick="Mobile_Tabs(event, 'mobile_SongPage')" id="m_defaultOpen"><div class="m_p2_tabs_songs mselected">Songs</div></a>
+				<a href="#" onclick="Mobile_Tabs(event, 'mobile_VideoPage')"><div class="m_p2_tabs_songs">Video</div></a>
+				<a href="#" onclick="Mobile_Tabs(event, 'mobile_LyricsPage')"><div class="m_p2_tabs_songs">Lyrics</div></a>
 			</div> 
 </div>
 
-<div class="mobile_design_hr"></div>
+<!-- <div class="mobile_design_hr"></div> -->
 
 <div class="mobile_content">
 	<div id="mobile_SongPage" class="mobile_tabcontent">
-	<table class="tracklist">
+
+		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; background-color: #FFFFFF; color: #000;">Apple Music </div>
+		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; background-color: #FFFFFF; color: #000;">Spotify </div>
+		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; background-color: #FFFFFF; color: #000;">VK Music </div>
+		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; background-color: #FFFFFF; color: #000;">BOOM </div>
+		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; background-color: #FFFFFF; color: #000;">YouTube </div>
+
+<!-- 	<table class="tracklist">
     				<tr>
     					<td class="s1">1.</td> 
     					<td>PART OF OUR LIFE - Single</td> 
-    					<!-- <td><div class="exc">E</div></td> -->
-    					<!-- <td class="listenservices"> -->
     					<td style="text-align: center;"><a href="#" title="Listen on Apple Music"><img class="listenicon" src="images/graphics/applemusic.svg"></a></td>
     					<td style="text-align: center;"><a href="#" title="Listen on Spotify"><img class="listenicon" src="images/graphics/spotify.png"></a></td>
     					<td style="text-align: center;"><a href="#" title="Listen on VK Music"><img class="listenicon" src="images/graphics/vk.svg"></a></td>
     					<td style="text-align: center;"><a href="#" title="Listen on BOOM"><img class="listenicon" src="images/graphics/boom.png"></a></td>
     					<td style="text-align: center;"><a href="#" title="Listen on YouTube"><img class="listenicon" src="images/graphics/youtube.png"></a></td>
-    					<!-- </td> -->
     				</tr>
 
 
     			</table>
 
-    			<div class="total_tracks_in_release">TOTAL: 1 ITEM</div>
+    			<div class="total_tracks_in_release">TOTAL: 1 ITEM</div> -->
     </div>
 
     <div class="mobile_tabcontent" id="mobile_VideoPage">
