@@ -1139,7 +1139,7 @@ Praise the Lord, а не попса
 	}
 
 	.mobile_content{
-		margin-top: 40px;
+		margin-top: 35px;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -1170,8 +1170,8 @@ Praise the Lord, а не попса
 
 	#m_p2_tabs{
 		width: 100%;
-		border: 1px solid #464646;
-		background-color: gray;
+		border: 1px solid gray;
+		background-color: #161616;
 		border-radius: 20px;
 		height: 40px;
 		display: flex;
@@ -1181,13 +1181,13 @@ Praise the Lord, а не попса
 
 	.m_p2_tabs_songs{
 		color: white;
-		border-radius: 5px;
+		border-radius: 20px;
 		font-size: 11pt;
-		padding: 3px 12px 3px 12px;
+		padding: 5px 25px 5px 25px;
 		cursor: pointer;
 		margin: 0 auto;
 		text-align: center;
-		width: 80px;
+		width: 90px;
 	}
 
 	.mselected{
@@ -1196,7 +1196,7 @@ Praise the Lord, а не попса
 	}
 
 	.mlyricspage{
-		/*white-space: pre-wrap;*/
+		white-space: pre-wrap;
 		line-height: 25px;
 		width: 100%;
 	}
@@ -1212,13 +1212,13 @@ Praise the Lord, а не попса
 
 	.m_info_date{
 		font-size: 14px;
-		padding-top: 7px;
+		padding-top: 20px;
 		color: #464646;
 	}
 
 	.m_info_expimg{
 		display: inline;
-		padding-bottom: 7px;
+		padding-bottom: 30px;
 	}
 
 	.m_page_selector{
@@ -1314,7 +1314,7 @@ Praise the Lord, а не попса
 		<div class="headm">
 			<div class="t">Капитан Маршин &nbsp;/&nbsp; Captain Marshin</div>
 		</div>
-		<div class="cat-title">Music</div>
+		<div class="cat-title">Single</div>
 		<div id="mobile_song_header" class="mobile_header_blur_background">
 			<div class="mobile_song_header_cover_small">
 				<img src="images/covers/music/cover-pool.jpg" class="mobile_small_cover">
@@ -1353,11 +1353,11 @@ Praise the Lord, а не попса
 	<div id="m_p2_tabs"> <!-- Вкладки релиза -->
 				<div class="m_menu_table">
 					<div class="m_menu_table_col">
-						<div class="m_p2_tabs_songs mselected" onclick="Mobile_Tabs(event, 'mobile_SongPage')" id="m_defaultOpen">Songs</div>
+						<div class="m_p2_tabs_songs mselected" onclick="Mobile_Tabs(event, 'mobile_SongPage')" id="m_defaultOpen">Listen</div>
 					</div>
 
 					<div class="m_menu_table_col">
-						<div class="m_p2_tabs_songs" onclick="Mobile_Tabs(event, 'mobile_VideoPage')">Video</div>
+						<div class="m_p2_tabs_songs" onclick="Mobile_Tabs(event, 'mobile_VideoPage')">Videos</div>
 					</div>
 
 					<div class="m_menu_table_col">
@@ -1377,6 +1377,8 @@ Praise the Lord, а не попса
 		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; background-color: #FFFFFF; color: #000;">VK Music </div>
 		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; background-color: #FFFFFF; color: #000;">BOOM </div>
 		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; background-color: #FFFFFF; color: #000;">YouTube </div>
+		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; background-color: #FFFFFF; color: #000;">Buy on iTunes </div>
+		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; border: 1px solid white; color: #FFF;">Download </div>
 
 <!-- 	<table class="tracklist">
     				<tr>
@@ -1403,14 +1405,14 @@ Praise the Lord, а не попса
     			<iframe class="mobile_video" src="https://www.youtube.com/embed/m5QCHD2dG24" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     		</div>
 
-<div class="mlyricspage mobile_tabcontent" id="mobile_LyricsPage">
-[Припев]
+<div class="mobile_tabcontent" id="mobile_LyricsPage">
+<span class="mlyricspage">[Припев]
 Этот стиль в крови уже
 Part of our life 
 Мы с района на район
-<span name="annotation" class="annotation">В ролле только конопля</span><div class="annotation_body"><div class="annotation_title">Author Annotation</div><div class="annotation_text">Только чистая конопля в скрученном косяке</div></div>
+В ролле только конопля
 Тачки, звук, магнитофон
-<span name="annotation" class="annotation">Praise the Lord, а не попса</span><div class="annotation_body"><div class="annotation_title">Author Annotation</div><div class="annotation_text">Praise the Lord - трек A$AP  Rocky. В машине играет только музыка такого типа, а не попса.</div></div>
+Praise the Lord, а не попса
 Весь балкон опять в дыму
 Это part of our life
 
@@ -1472,6 +1474,7 @@ Just a part of our life
 Praise the Lord, а не попса
 Солнца свет сквозь облака
 Это part of our life
+</span>
     			</div>
 
 </div>
@@ -1523,7 +1526,7 @@ Praise the Lord, а не попса
 
 		<div class="footm">
 			<div class="fi">
-				<div class="m_info_expimg"><img src="images/graphics/Parental_Advisory_Label.png" title="Parental Advisory" width="63" height="40"></div> <img src="images/graphics/reconiphone.png" width="40" class="reconi" title="Recorded on iPhone"><!-- Иконка Advisory Content -->
+				<div class="m_info_expimg"><img style="border: 1px solid #363636;" src="images/graphics/Parental_Advisory_Label.png" title="Parental Advisory" width="63" height="37"></div> <img src="images/graphics/reconiphone.png" width="40" class="reconi" title="Recorded on iPhone"><!-- Иконка Advisory Content -->
 
 				<div class="m_info_date">Released  28 Jun, 2020</div> <!-- Дата выпуска трека -->
 				<!-- <div class="p1_info_record">Recorded in GarageBand on iPhone</div> Плейсхолдер + копирайт -->
