@@ -1165,27 +1165,29 @@ Praise the Lord, а не попса
 		display: inline-block;
 		border-radius: 5px;
 		font-size: 11pt;
-		padding: 3px 12px 3px 12px;
+		/*padding: 3px 12px 3px 12px;*/
 	}
 
 	#m_p2_tabs{
 		width: 100%;
-		/*margin-top: 20px;*/
-		margin-left: 20px;
-		margin-right: 20px;
-		display: inline;
+		border: 1px solid #464646;
 		background-color: gray;
 		border-radius: 20px;
-		padding: 10px;
-
+		height: 40px;
+		display: flex;
+    align-items: center;
+    text-align:center;
 	}
 
 	.m_p2_tabs_songs{
 		color: white;
-		display: inline-block;
 		border-radius: 5px;
 		font-size: 11pt;
 		padding: 3px 12px 3px 12px;
+		cursor: pointer;
+		margin: 0 auto;
+		text-align: center;
+		width: 80px;
 	}
 
 	.mselected{
@@ -1220,7 +1222,24 @@ Praise the Lord, а не попса
 	}
 
 	.m_page_selector{
-		text-align: center;
+		margin-right: 20px;
+		margin-left: 20px;
+		/*text-align: center;*/
+		/*width: 100%;*/
+	}
+
+	.m_menu_table{
+		display: table;
+    width: 100%;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+	}
+
+	.m_menu_table_col{
+		margin: 0 auto;
+		text-align:center;
+		display: table-cell;
+		/*border: 1px solid red;*/
 	}
 
 
@@ -1332,9 +1351,19 @@ Praise the Lord, а не попса
 
 <div class="m_page_selector">
 	<div id="m_p2_tabs"> <!-- Вкладки релиза -->
-				<a href="#" onclick="Mobile_Tabs(event, 'mobile_SongPage')" id="m_defaultOpen"><div class="m_p2_tabs_songs mselected">Songs</div></a>
-				<a href="#" onclick="Mobile_Tabs(event, 'mobile_VideoPage')"><div class="m_p2_tabs_songs">Video</div></a>
-				<a href="#" onclick="Mobile_Tabs(event, 'mobile_LyricsPage')"><div class="m_p2_tabs_songs">Lyrics</div></a>
+				<div class="m_menu_table">
+					<div class="m_menu_table_col">
+						<div class="m_p2_tabs_songs mselected" onclick="Mobile_Tabs(event, 'mobile_SongPage')" id="m_defaultOpen">Songs</div>
+					</div>
+
+					<div class="m_menu_table_col">
+						<div class="m_p2_tabs_songs" onclick="Mobile_Tabs(event, 'mobile_VideoPage')">Video</div>
+					</div>
+
+					<div class="m_menu_table_col">
+						<div class="m_p2_tabs_songs" onclick="Mobile_Tabs(event, 'mobile_LyricsPage')">Lyrics</div>
+					</div>
+				</div>
 			</div> 
 </div>
 
