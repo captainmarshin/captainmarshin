@@ -765,7 +765,13 @@ function setVisible(selector, visible) {
 			color: #464646;
 			font-size: 14px;
 		}
-		.ft{padding-top: 50px;
+		.fi{
+			padding-top: 50px;
+			padding-bottom: 20px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.ft{
 			padding-bottom: 20px;
 		padding-left: 20px}
 		.fs{padding-left: 20px;
@@ -1049,21 +1055,10 @@ Praise the Lord, а не попса
 <style type="text/css">
 	
 	#mobile_song_header{
+		margin-top: 20px;
+		margin-bottom: 30px;
 		width: 100%;
-		height: 200px;
-		background-color: rgba(0, 0, 0, 0.70);
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
-  /*border-bottom: 1px solid #464646;*/
-  /*position:fixed;
-  top: 0;*/
-
-	}
-
-	#mobile_song_header.stick{
-		position:fixed;
-    	top:0;
-    	width: 100%;
+		display: flex;
 	}
 
 	#mobile_head_fix{
@@ -1072,28 +1067,30 @@ Praise the Lord, а не попса
 
 	.mobile_song_header_cover_small{
 		margin-left: 21px;
-		margin-top: 20px;
-		width: 200px;
-		float: left;
+		/*margin-top: 20px;*/
+		display: inline-block;
+		width: 210px;
 	}
 
 	.mobile_song_header_info_small{
-		margin-top: 23px;
+		/*margin-top: 23px;*/
 		/*height: 200px;*/
-		padding-right: 20px;
-		float:left;
-		position: relative;
+		vertical-align:top;
+		height: 100px;
+		width: 60%;
 	}
 
 	.mobile_song_name{
 		font-size: 20px;
-		height: auto;
+		width: 100%;
 		white-space: pre-line;
 	}
 
 	.mobile_song_artist{
+		margin-top: 5px;
+		text-decoration: underline;
 		font-size: 15px;
-		height: auto;
+		width: 100%;
 		white-space: pre-line;
 	}
 
@@ -1110,6 +1107,7 @@ Praise the Lord, а не попса
 		background-repeat: no-repeat;
 		background-position: center;*/
 		padding-bottom: 2px;
+		padding-left: 4px;
 		border: 0;
 	}
 
@@ -1140,7 +1138,7 @@ Praise the Lord, а не попса
 	}
 
 	.mobile_content{
-		margin-top: 20px;
+		margin-top: 40px;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -1171,8 +1169,14 @@ Praise the Lord, а не попса
 
 	#m_p2_tabs{
 		width: 100%;
-		height: 50px;
+		/*margin-top: 20px;*/
+		margin-left: 20px;
+		margin-right: 20px;
 		display: inline;
+		background-color: gray;
+		border-radius: 20px;
+		padding: 10px;
+
 	}
 
 	.m_p2_tabs_songs{
@@ -1196,6 +1200,26 @@ Praise the Lord, а не попса
 
 	.cat-title{
 		padding-left: 20px;
+	}
+
+	.m_info_copy{
+		font-size: 14px;
+		color: #464646;
+	}
+
+	.m_info_date{
+		font-size: 14px;
+		padding-top: 7px;
+		color: #464646;
+	}
+
+	.m_info_expimg{
+		display: inline;
+		padding-bottom: 7px;
+	}
+
+	.m_page_selector{
+		text-align: center;
 	}
 
 
@@ -1276,7 +1300,7 @@ Praise the Lord, а не попса
 				<img src="images/covers/music/cover-pool.jpg" class="mobile_small_cover">
 			</div>
 			<div class="mobile_song_header_info_small">
-				<div class="mobile_song_name">PART OF OUR LIFE <img class="mobile_song_explicit" src="images/graphics/explicit_content.png"></div>
+				<div class="mobile_song_name">Удивительный Капитан Маршин<img class="mobile_song_explicit" src="images/graphics/explicit_content.png"></div>
 				<div class="mobile_song_artist">Капитан Маршин</div>
 
 				<!-- <div class="mobile_buyin_button">Buy on iTunes</div> -->
@@ -1305,7 +1329,7 @@ Praise the Lord, а не попса
  -->
 <!-- <div id="mobile_head_fix"></div> -->
 
-<div class="mobile_content">
+<div class="m_page_selector">
 	<div id="m_p2_tabs"> <!-- Вкладки релиза -->
 				<a href="#" onclick="Mobile_Tabs(event, 'mobile_SongPage')" id="m_defaultOpen"><div class="m_p2_tabs_songs mselected">Songs</div></a>
 				<a href="#" onclick="Mobile_Tabs(event, 'mobile_VideoPage')"><div class="m_p2_tabs_songs">Video</div></a>
@@ -1468,6 +1492,14 @@ Praise the Lord, а не попса
 		
 
 		<div class="footm">
+			<div class="fi">
+				<div class="m_info_expimg"><img src="images/graphics/Parental_Advisory_Label.png" title="Parental Advisory" width="63" height="40"></div> <img src="images/graphics/reconiphone.png" width="40" class="reconi" title="Recorded on iPhone"><!-- Иконка Advisory Content -->
+
+				<div class="m_info_date">Released  28 Jun, 2020</div> <!-- Дата выпуска трека -->
+				<!-- <div class="p1_info_record">Recorded in GarageBand on iPhone</div> Плейсхолдер + копирайт -->
+				<div class="m_info_copy">℗ 2020 Капитан Маршин / prod. by balance cooper</div> <!-- Плейсхолдер + копирайт -->
+			</div>
+
 			<div class="ft">
 				Маршин Entertainment<br>
 				2014-2020 Copyright. All rights reserved.
