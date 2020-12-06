@@ -1,0 +1,1146 @@
+
+		#loading {
+   display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #ffffff;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 0.7em;
+  height: 4em;
+}
+.loader {
+  color: #ffffff;
+  text-indent: -9999em;
+  font-size: 11px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -2.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 2.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+	html{ 
+		margin:0; 
+		padding: 0; 
+	}
+
+	body { 
+		margin: 0;
+ 		padding: 0;
+		background-color: #000000;
+		color: #FFFFFF; 
+		font-family: Helvetica, Arial, sans-serif; 
+	}
+
+	.video{
+		margin-top: 30px;
+		width: 100%;
+		-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+		-webkit-transform: rotate(0.000001deg);
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		overflow: hidden;
+		display: inline-flex;
+	}
+
+	iframe,
+	object,
+	embed{
+		-webkit-border-radius: 10px !important; 
+		-ms-border-radius: 10px !important; 
+		-o-border-radius: 10px !important;  
+		border-radius: 10px !important;   
+		border: 1px solid #464646;
+	}
+
+
+	a {
+		text-decoration: none;
+		color: #FFFFFF;
+	}
+
+	a:link {
+		text-decoration: none;
+		color: #FFFFFF;
+	}
+
+	a:visited {
+		text-decoration: none;
+		color: #FFFFFF;
+	}
+
+	a:focus {
+		text-decoration: none;
+		color: #FFFFFF;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: #FFFFFF;
+	}
+
+	a:active {
+		text-decoration: none;
+		color: #FFFFFF;
+	}
+
+
+	.pp{
+		margin: 0 auto;
+		padding-top: 8px;
+		width: 810px;
+		min-width: 810px;
+	}
+
+	.p1{
+		width: 280px;
+		float: left;
+	}
+
+	.p1_cover{
+		width: 250px;
+		height: 250px;
+		border: 1px solid #464646;
+		border-radius: 5px;
+	}
+
+	img.p1_ac{
+		width: 250px;
+		height: 250px;
+		border-radius: 5px;
+	}
+
+	.p1_links{
+		margin-top: 20px;
+		text-align: center;
+		width: 252px;
+
+		margin-bottom: 20px;
+	}
+
+	.p1_hr{
+		margin-top: 10px;
+		background-color: #464646;
+		width: 252px;
+		height: 1px;
+		margin-bottom: 20px;
+	}
+
+	.p1_info_date{
+		font-size: 11pt;
+		padding-bottom: 7px;
+		width: 252px;
+		color: #464646;
+	}
+
+	.p1_info_record{
+		font-size: 11pt;
+		padding-bottom: 7px;
+		width: 252px;
+		color: #464646;
+	}
+
+	.p1_info_copy{
+		font-size: 11pt;
+		margin-bottom: 25px;
+		width: 252px;
+		color: #464646;
+	}
+
+	.p1_info_expimg{
+		display: inline;
+	}
+
+	.p1_morespace{
+		height: 5px;
+	}
+
+	.p2{
+		width: 530px;
+		float: left;
+	}
+
+	/*	.release_background_mask{
+			width: 530px;
+			height: 200px;
+			background-image: url('');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			}*/
+
+	.release_background2{
+		padding-top: 30px;
+	}
+			
+	.release_background{
+		border-radius: 0 20px 0 0;
+		padding-top: 30px;
+		width: 530px;
+		height: 164px;
+		background: 
+		/* top, transparent red, faked with gradient */ 
+		linear-gradient(121deg, rgba(0,0,0,1) 34%, rgba(0,0,0,0) 100%),
+		/* bottom, image */
+		url('images/pagebackground/ytmp-pool.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.p2_morespace{
+		height: 30px;
+	}
+
+	.p2_title{
+		font-size: 20pt;
+		margin-bottom: 7px;
+	}
+
+	.p2_artist{
+		font-size: 12pt;
+		margin-bottom: 44px;
+	}
+
+	#p2_tabs{
+		width: 100%;
+		height:  50px;
+		display: inline;
+	}
+
+	.p2_description{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 11pt;
+	}
+
+	.p2_tabs_songs{
+		color: white;
+		display: inline-block;
+		border-radius: 5px;
+		font-size: 11pt;
+		padding: 3px 12px 3px 12px;
+	}
+
+	.selected{
+		color: black;
+		background-color: white;
+	}
+
+	.button{
+		background-color: #FFFFFF;
+		border: 1px solid #464646;
+		height: 35px;
+		border-radius: 10px;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 35px;
+		width: 250px;
+		font-size: 14px;
+		color: #000;
+		margin: 0 auto;
+	}
+
+	.button:hover{
+		background-color: #e7e6ed;
+		height: 35px;
+		border-radius: 10px;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 35px;
+		opacity: 1;
+		transition: 0.3s;
+		cursor: pointer;
+		width: 250px;
+		font-size: 14px;
+		color: black;
+	}
+
+	img{
+
+	}
+
+	.icon-1 {
+		background-image: url("images/graphics/apple-music-icon.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 20px;
+		height: 20px;
+		/*position: absolute;*/
+		left: 12px;
+	}
+
+	.icon-2 {
+		background-image: url("images/graphics/spotify-icon.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 20px;
+		height: 20px;
+		/*position: absolute;*/
+		top: 12px;
+		left: 12px;
+	}
+
+	.icon-3 {
+		background-image: url("images/graphics/vk-icon.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 20px;
+		height: 20px;
+		/*position: absolute;*/
+		top: 12px;
+		left: 12px;
+	}
+
+	.icon-4 {
+		background-image: url("images/graphics/boom-icon.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 20px;
+		height: 20px;
+		/*position: absolute;*/
+		top: 12px;
+		left: 12px;
+	}
+
+	.icon-5 {
+		background-image: url("images/graphics/youtube-icon.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 20px;
+		height: 20px;
+		/*position: absolute;*/
+		top: 12px;
+		left: 12px;
+	}
+
+	.icon-6 {
+		background-image: url("images/graphics/telegraph-icon.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 12px;
+		left: 12px;
+	}
+
+	.p2_hr{
+		margin-top: 10px;
+		width: 100%;
+		height: 1px;
+		background-color: #464646;
+		margin-bottom: 10px;
+	}
+
+	.exc{
+		background-color: red;
+		color: black;
+		font-size: 6pt;
+		width: 10px;
+		height: 10px;
+		font-weight: bold;
+		display: flex; 
+		align-items: center; 
+		justify-content: center;
+		margin: 0 auto;
+	}
+
+	.reconi{
+		margin-left: 10px;
+	}
+
+	.page{
+		/*position: absolute;*/
+		width: 810px;
+		min-width: 810px;
+	}
+
+	.head{
+		margin-right: auto;
+		margin-left: auto;
+		padding-top: 42px;
+	}
+
+	.heads{
+		padding-top: 20px;
+	}
+
+	.title{
+		font-weight: bold;
+	}
+
+
+	.space{
+		margin-right: 20px;
+	}
+
+	.spacetop{
+		margin-top: 20px;
+	}
+
+	.foot{
+		padding-bottom: 80px;
+		width: 260px;
+	}
+
+	.foot-text{
+		color: #464646;
+		font-size: 14px;
+	}
+
+	.foot-text2{
+		color: #464646;
+		font-size: 14px;
+		line-height: 19px;
+	}
+
+	.space-2{
+		margin-right: 5px;
+	}
+
+	a.space-2{
+		color: #464646;
+		text-decoration: underline;
+	}
+
+	.spacetop-2{
+		padding-top: 10px;
+	}
+
+	.spacebottom{
+		margin-bottom: 20px;
+	}
+
+	/* Style the tab content */
+	.tabcontent {
+		display: none;
+	}
+
+	.tracklist{
+		width: 100%;
+	}
+
+	th, td {
+		border: 1px solid #464646;
+		font-size: 11pt;
+	}
+
+	td{
+		padding: 3px;
+	}
+
+	th{
+		padding: 3px;
+	}
+
+	.s1{
+		width: 20px;
+		text-align: center;
+	}
+
+	p {
+		float: left;
+		margin-right: 5px;
+	}
+
+	img.listenicon{
+		width: 20px;
+		height: 20px;
+		margin-top: 2px;
+	}
+
+	.listenservices{
+		width: 135px;
+		min-width: 135px;
+		max-width: 135px;;
+	}
+
+	.lyricspage{
+		white-space: pre-wrap;
+		line-height: 25px;
+		max-width: 529px;
+		min-width: 529px;
+		width: 529px;
+	}
+
+	a.url_1{
+		color: #FFFFFF;
+		text-decoration: underline;
+	}
+
+	a.url_1:visited, a.url_1:active{
+		color: #FFFFFF;
+		text-decoration: underline;
+	}
+
+	a.url_1:hover{
+		text-decoration: underline;
+	}
+
+	.total_tracks_in_release{
+		text-align: center;
+		margin-top: 7px;
+		font-size: 10pt;
+	}
+
+	.videopage{
+		padding-bottom: 100px;
+	}
+
+	.annotation{
+		/*background-color: blue;*/
+		font-style: italic;
+		background-color: yellow;
+		color: black;
+		cursor: help;
+	}
+
+	.annotation:active + .annotation_body{
+		display: block;
+		cursor: help;
+		transition: all .4s ease;
+		-webkit-transition: all .4s ease;
+	}
+
+	.annotation_body{
+		display: none;
+		padding: 30px;
+		background-color: yellow;
+		z-index: 1;
+		color: black;
+		white-space: pre-wrap;
+		width: 468px;
+		line-height: 20px;
+		margin-top: 10px;
+		margin-bottom: -15px;
+	}
+
+	.annotation_title{
+		font-size: 10pt;
+		margin-bottom: 10px;
+	}
+
+	.annotation_text{
+	}
+
+	.lyrics_author{
+		margin-top: 16px;
+	}
+
+
+       /*Mobile Site*/
+
+        img.mmcover{
+        	border: 1px solid #464646;
+			border-radius: 5px;
+			height: 180px;
+			width: 180px;
+			transition: transform 1s;
+        }
+
+  img.mmcover:hover{
+  	cursor: pointer;
+  	transform:scale(0.97,0.97);
+  }
+
+
+        img.vmcover{
+        	border: 1px solid #464646;
+			border-radius: 5px;
+			height: auto;
+			width: 250px;
+			transition: transform 1s;
+        }
+
+          img.vmcover:hover{
+  	cursor: pointer;
+  	transform:scale(0.97,0.97);
+  }
+
+        .pagem{
+        	margin: 0 auto;
+        	display: none;
+        }
+
+		.headm{
+        	padding-top: 50px;
+			padding-bottom: 50px;
+        }
+
+		.t{ padding-left: 20px; font-size: 25pt;}
+		.nr{}
+
+		.nrimg{text-align: center;}
+		.nrt{text-align: center;}
+		.nrd{text-align: center;}
+		.nrb{text-align: center;}
+
+		.mtab{}
+		.mt{padding-bottom: 20px; padding-left: 20px;}
+		.mtabt{
+			width: 100%;
+			overflow-x: scroll;
+  			overflow-y: hidden;
+  			white-space: nowrap;
+  			-ms-overflow-style: none;  /* IE and Edge */
+  			scrollbar-width: none;
+		}
+		.mtabt::-webkit-scrollbar {
+ 			 display: none;
+		}
+
+		.mmce{
+			display: inline-block;
+			width: 17px;
+		}
+
+		.mmc{display: inline-block; margin-right: 20px;}
+
+		.mmtt{
+			margin-top: 8px;
+			font-size: 11pt;
+			overflow: hidden;
+			width: 180px;
+			text-overflow: ellipsis;
+			color: #464646;
+		}
+		.vtab{
+		}
+		.vt{padding-top: 50px;
+			padding-bottom: 20px; padding-left: 20px;}
+		.vtabt{		
+			width: 100%;
+			overflow-x: scroll;
+  			overflow-y: hidden;
+  			white-space: nowrap;
+  			-ms-overflow-style: none;  /* IE and Edge */
+  			scrollbar-width: none;
+  		}
+  		.vtabt::-webkit-scrollbar {
+ 			 display: none;
+		}
+		.mvvt{
+			margin-top: 8px;
+			font-size: 11pt;
+			overflow: hidden;
+			width: 250px;
+			text-overflow: ellipsis;
+			color: #464646;
+		}
+
+		.mvce{
+			display: inline-block;
+			width: 17px;
+		}
+
+		.vvc{
+			display: inline-block; 
+			margin-right: 20px;}
+		.footm{
+			color: #464646;
+			font-size: 14px;
+		}
+		.fi{
+			padding-top: 50px;
+			padding-bottom: 20px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.ft{
+			padding-bottom: 20px;
+		padding-left: 20px}
+		.fs{padding-left: 20px;
+		padding-right: 20px; 
+			padding-bottom: 80px; line-height: 20px;}
+
+
+			.mobile_song_fb{
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			.mobile_big_cover{
+				width: 100%;
+  				height: auto;
+				border: 1px solid #464646;
+				border-radius: 5px;
+			}
+
+/*			img.mobile_big_cover_img{
+				width: 400px;
+				border-radius: 5px;
+			}*/
+
+			.mobile_song_title_big{
+				text-align: center;
+				font-size: 30px;
+				margin-top: 15px;
+			}
+			.mobile_song_artist_big{
+				text-align: center;
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+
+
+
+ @media only screen and (max-width: 768px) {
+   .pagem{
+    display: initial;
+
+  }
+
+  .page{
+  	display: none;
+  }
+
+  .pp{
+  	display: none;
+  }
+}
+
+
+
+	#mobile_song_header{
+		margin-top: 20px;
+		margin-bottom: 40px;
+		width: 100%;
+		text-align: center;
+	}
+
+	#mobile_head_fix{
+		/*height: 300px;*/
+	}
+
+	.mobile_song_header_cover_small{
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.mobile_song_header_info_small{
+		/*margin-top: 23px;*/
+		/*height: 200px;*/
+		text-align: center;
+	}
+
+	.mobile_song_name{
+		font-size: 20px;
+		width: 100%;
+		white-space: pre-line;
+	}
+
+	.mobile_song_artist{
+		margin-top: 5px;
+		text-decoration: underline;
+		font-size: 17px;
+		width: 100%;
+		white-space: pre-line;
+	}
+
+	.mobile_song_header_explicit{
+		float: left;
+		border: 1px solid red;
+	}
+
+	.mobile_song_explicit{
+		width: 11px;
+		height: 11px;
+		/*background-image: url('images/graphics/explicit_content.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;*/
+		padding-bottom: 2px;
+		padding-left: 4px;
+		border: 0;
+	}
+
+	.mobile_song_title_big{
+
+	}
+
+	.mobile_small_cover{
+		width: 180px;
+		height: 180px;
+		border-radius: 5px;
+		border: 1px solid #464646;
+	}
+
+	.mobile_song_artist_big{
+
+	}
+
+	.mobile_buyin_button{
+		background-color: #FFFFFF;
+		border-radius: 20px;
+		color: #000000;
+		font-size: 14px;
+		width: 110px;
+		text-align: center;
+		padding: 11px 10px 10px 10px;
+		margin-top: 20px;
+	}
+
+	.mobile_content{
+		margin-top: 50px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.mobile_design_hr{
+		margin-top: 19px;
+		background-color: #464646;
+		height: 1px;
+		margin-bottom: 20px;
+	}
+
+	.mobile_tabcontent{
+		display: none;
+	}
+
+	.mobile_video{
+		width: 100%;
+		height: 250px;
+	}
+
+	.mobile_p2_tabs_songs{
+		color: white;
+		display: inline-block;
+		border-radius: 5px;
+		font-size: 11pt;
+		/*padding: 3px 12px 3px 12px;*/
+	}
+
+	#m_p2_tabs{
+		width: 100%;
+		border: 1px solid gray;
+		background-color: black;
+		border-radius: 20px;
+		height: 40px;
+		display: flex;
+    align-items: center;
+    text-align:center;
+	}
+
+	.m_p2_tabs_songs{
+		color: white;
+		border-radius: 20px;
+		font-size: 11pt;
+		padding: 5px 25px 5px 25px;
+		cursor: pointer;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.mselected{
+		color: black;
+		background-color: white;
+	}
+
+	.mlyricspage{
+		white-space: pre-wrap;
+		line-height: 25px;
+		font-size: 17px;
+		width: 100%;
+	}
+
+	.cat-title{
+		padding-left: 20px;
+	}
+
+	.m_info_copy{
+		font-size: 14px;
+		color: #464646;
+	}
+
+	.m_info_date{
+		font-size: 14px;
+		padding-top: 20px;
+		color: #464646;
+	}
+
+	.m_info_expimg{
+		display: inline;
+		padding-bottom: 30px;
+	}
+
+	.m_page_selector{
+		margin-right: 20px;
+		margin-left: 20px;
+		/*text-align: center;*/
+		/*width: 100%;*/
+	}
+
+	.m_menu_table{
+		display: table;
+    width: 97%;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+	}
+
+	.m_menu_table_col{
+		margin: 0 auto;
+		text-align:center;
+		display: table-cell;
+		/*border: 1px solid red;*/
+	}
+
+	.m_listen_service_block{
+		text-align: center;
+	}
+
+	.m_listen_table{
+		width: 100%;
+		display: table;
+  	border-collapse: separate;
+    border-spacing: 0px;
+    border: 1px solid red;
+	}
+
+	.m_listen_table_col{
+    width: 100%;
+		border: 1px solid yellow;
+		padding: 10px;
+	}
+
+	.m_listen_service{
+		width: 60px;
+		height: 100px;
+		margin-bottom: 20px;
+		display: inline-block;
+	}
+
+	.m_lis_ser_name{
+		text-align: center;
+		font-size: 14px;
+		color: #464646;
+		margin-top: 5px;
+		white-space: pre-wrap;
+	}
+
+	.m_lis_ser_applemusic{
+		background-image: url('images/graphics/applemusic.svg');
+		width: 60px;
+		height: 60px;
+		background-size: cover;
+		border-radius: 14px;
+		background-repeat: no-repeat;
+	}
+
+	.m_lis_ser_spotify{
+		background-image: url('images/graphics/spotifym.jpeg');
+		width: 60px;
+		height: 60px;
+		border-radius: 10px;
+		border-radius: 14px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.m_lis_ser_vkmusic{
+		background-image: url('images/graphics/vk.svg');
+		width: 60px;
+		height: 60px;
+		border-radius: 14px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+		.m_lis_ser_boom{
+		background-image: url('images/graphics/boom.png');
+		width: 60px;
+		height: 60px;
+		border-radius: 14px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+		.m_lis_ser_youtube{
+		background-image: url('images/graphics/youtube.png');
+		width: 60px;
+		height: 60px;
+		border-radius: 14px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+		.m_lis_ser_itunes{
+		background-image: url('images/graphics/itunes.png');
+		width: 60px;
+		height: 60px;
+		border-radius: 14px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+		.m_lis_ser_download{
+		background-image: url('images/graphics/download.png');
+		width: 60px;
+		height: 60px;
+		border-radius: 14px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.mcolumn {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.mrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.mobile_song_lyrics{
+	text-align: center;
+}
+
+
+@media only screen and (max-width: 414px) {
+   .mobile_small_cover{
+   	/*width: 120px;
+   	height: 120px;*/
+   }
+
+   .mobile_song_header_cover_small{
+   	/*width: 140px;*/
+   }
+
+   .mobile_song_header_info_small{
+   	/*font-size: 14px;*/
+   }
+
+   	.mobile_song_name{
+		/*font-size: 15px;*/
+	}
+
+	.m_p2_tabs_songs{
+		width: auto;
+		font-size: 16px;
+	}
+
+	.m_menu_table{
+		
+	}
+
+	.mobile_song_artist{
+	/*	font-size: 12px;*/
+	}
+
+	.mobile_buyin_button{
+		bottom: 40px;
+	}
+
+	#mobile_song_header{
+		/*height: 180px;*/
+	}	
+
+}
+
+@media only screen and (max-width: 375px) {
+   .mobile_small_cover{
+   	/*width: 100px;
+   	height: 100px;*/
+   }
+
+   .mobile_song_header_cover_small{
+   	/*width: 120px;*/
+   }
+
+   .mobile_song_header_info_small{
+   	font-size: 14px;
+   }
+
+   	.mobile_song_name{
+		font-size: 15px;
+	}
+
+	.m_p2_tabs_songs{
+		width: auto;
+		font-size: 14px;
+	}
+
+	.mobile_song_artist{
+	/*	font-size: 12px;*/
+	}
+
+	.m_menu_table{
+		/*width: 97%;*/
+	}
+
+	.mobile_buyin_button{
+		bottom: 40px;
+	}
+
+	#mobile_song_header{
+		/*height: 140px;*/
+	}	
+
+}

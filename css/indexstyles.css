@@ -1,0 +1,511 @@
+
+	#loading {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #ffffff;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 0.7em;
+  height: 4em;
+}
+.loader {
+  color: #ffffff;
+  text-indent: -9999em;
+  font-size: 11px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -2.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 2.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+		html{
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+			margin:0; 
+			padding: 0; 
+			background-color: #000000;
+			color: #FFFFFF; 
+			font-family: Helvetica, Arial, sans-serif; 
+		}
+
+		a{
+			color: #464646;
+		}
+
+		a:visited, a:hover, a:active{
+			color: #464646;
+		}
+
+		.page{
+			margin: 0 auto;
+			width: 810px;
+			min-width: 810px;
+		}
+
+		.head{
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+		.title{
+			font-weight: bold;
+		}
+
+		.category{
+			width: 831px;
+		}
+
+		.cat-title{
+			padding-bottom: 20px;
+		}
+
+		.cat-content{
+			
+		}
+
+		.table{
+			display: table;
+  			border-collapse: separate;
+      		border-spacing: 0px;
+		}
+
+		.row{
+			display:table-row;
+		}
+
+		.music-cover{
+			height: 116px;
+			width: 116px;
+			border: 1px solid #464646;
+			border-radius: 5px;
+			display:table-cell;
+			float: left;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			background-color: #222222;
+		}
+
+		.music-cover:last-child {
+  			
+}
+
+		img.m-cover{
+			border-radius: 5px;
+			height: 116px;
+			width: 116px;
+		}
+
+		img.v-cover{
+			border-radius: 5px;
+			height: 146px;
+			width: 255px;
+		}
+
+		img.cover{
+			border-radius: 5px;
+		}
+
+		.video-cover{
+			height: 146px;
+			width: 255px;
+			border: 1px solid gray;
+			border-radius: 5px;
+			display: inline-block;
+			margin-bottom: 20px;
+			float: left;
+			background-color: #222222;
+		}
+
+		.space{
+			margin-right: 20px;
+		}
+
+		.spacetop{
+			margin-top: 40px;
+		}
+
+		.spacetopv{
+			margin-top: 25px;
+		}
+
+		.foot{
+			padding-bottom: 80px;
+		}
+
+		.foot-text{
+			line-height: 20px;
+			color: #464646;
+			font-size: 14px;
+		}
+
+		.space-2{
+			margin-right: 5px;
+		}
+
+		.spacetop-2{
+			padding-top: 15px;
+		}
+
+		.spacebottom{
+			margin-bottom: 20px;
+		}
+
+
+		/* New Release Banner */
+
+		.fresh{
+			padding-bottom: 25px;
+			width: 100%;
+		}
+
+		.fresh-content{
+			content: "";
+  			display: table;
+  			clear: both;
+  			width: 100%;
+		}
+
+		.fresh-cover{
+			width: 250px;
+			height: 250px;
+			border: 1px solid #464646;
+			border-radius: 5px;
+			float: left;
+  			width: 250px;
+		}
+
+		.fresh-title{
+			margin-left: 30px;
+			float: left;
+  			width: 65%;
+		}
+
+		.fresh-name{
+			font-size: 20pt;
+		}
+
+		.fresh-desc{
+			margin-top: 7px;
+			font-size: 12pt;
+		}
+
+		a.frsa, a.frsf{
+			color: #FFFFFF;
+		}
+
+		.fresh-buts{
+			margin-top: 10px;
+		}
+
+		/* Music Services Buttons */
+
+		.button{
+        	background-color: #000000;
+        	color: white;
+        	border: 1px solid #464646;
+        	height: 41px;
+        	border-radius: 10px;
+        	text-align: center;
+        	vertical-align: middle;
+        	line-height: 41px;
+        	position: relative;
+        	float: left;
+        	width: 150px;
+        	font-size: 14px;
+        	margin-top: 15px;
+        	margin-right: 15px;
+        }
+
+        .button:hover{
+        	color: black;
+        	background-color: #e7e6ed;
+        	height: 41px;
+        	border-radius: 10px;
+        	text-align: center;
+        	vertical-align: middle;
+        	line-height: 41px;
+        	position: relative;
+        	opacity: 1;
+            transition: 0.3s;
+            cursor: pointer;
+            float: left;
+        	width: 150px;
+        	font-size: 14px;
+        }
+
+        .icon-1 {
+        	background-image: url("images/graphics/applemusic.svg");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 16px;
+        	height: 16px;
+        	position: absolute;
+        	top: 12px;
+        	left: 12px;
+        }
+
+        .icon-2 {
+        	background-image: url("images/graphics/spotify.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 16px;
+        	height: 16px;
+        	position: absolute;
+        	top: 12px;
+        	left: 12px;
+        }
+
+        .icon-3 {
+        	background-image: url("images/graphics/vk.svg");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 16px;
+        	height: 16px;
+        	position: absolute;
+        	top: 12px;
+        	left: 12px;
+        }
+
+        .icon-4 {
+        	background-image: url("images/graphics/boom.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 16px;
+        	height: 16px;
+        	position: absolute;
+        	top: 12px;
+        	left: 12px;
+        }
+
+        .icon-5 {
+        	background-image: url("images/graphics/youtube.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 16px;
+        	height: 16px;
+        	position: absolute;
+        	top: 12px;
+        	left: 12px;
+        }
+
+        .icon-6 {
+        	background-image: url("images/graphics/telegraph-icon.png");
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	background-position: center;
+        	width: 16px;
+        	height: 16px;
+        	position: absolute;
+        	top: 12px;
+        	left: 12px;
+        }
+
+
+        /*Mobile Site*/
+
+        img.mmcover{
+        	border: 1px solid #464646;
+			border-radius: 5px;
+			height: 180px;
+			width: 180px;
+			transition: transform 1s;
+        }
+
+  img.mmcover:hover{
+  	cursor: pointer;
+  	transform:scale(0.97,0.97);
+  }
+
+
+        img.vmcover{
+        	border: 1px solid #464646;
+			border-radius: 5px;
+			height: auto;
+			width: 250px;
+			transition: transform 1s;
+        }
+
+          img.vmcover:hover{
+  	cursor: pointer;
+  	transform:scale(0.97,0.97);
+  }
+
+        .pagem{
+        	margin: 0 auto;
+        	display: none;
+        }
+
+		.headm{
+        	padding-top: 50px;
+			padding-bottom: 50px;
+        }
+
+		.t{ padding-left: 20px; font-size: 25pt;}
+		.nr{}
+
+		.nrimg{text-align: center;}
+		.nrt{text-align: center;}
+		.nrd{text-align: center;}
+		.nrb{text-align: center;}
+
+		.mtab{}
+		.mt{padding-bottom: 20px; padding-left: 20px;}
+		.mtabt{
+			width: 100%;
+			overflow-x: scroll;
+  			overflow-y: hidden;
+  			white-space: nowrap;
+  			-ms-overflow-style: none;  /* IE and Edge */
+  			scrollbar-width: none;
+		}
+		.mtabt::-webkit-scrollbar {
+ 			 display: none;
+		}
+
+		.mmce{
+			display: inline-block;
+			width: 17px;
+		}
+
+		.mmc{display: inline-block; margin-right: 20px;}
+
+		.mmtt{
+			margin-top: 8px;
+			font-size: 11pt;
+			overflow: hidden;
+			width: 180px;
+			text-overflow: ellipsis;
+			color: #464646;
+		}
+		.vtab{
+		}
+		.vt{padding-top: 50px;
+			padding-bottom: 20px; padding-left: 20px;}
+		.vtabt{		
+			width: 100%;
+			overflow-x: scroll;
+  			overflow-y: hidden;
+  			white-space: nowrap;
+  			-ms-overflow-style: none;  /* IE and Edge */
+  			scrollbar-width: none;
+  		}
+  		.vtabt::-webkit-scrollbar {
+ 			 display: none;
+		}
+		.mvvt{
+			margin-top: 8px;
+			font-size: 11pt;
+			overflow: hidden;
+			width: 250px;
+			text-overflow: ellipsis;
+			color: #464646;
+		}
+
+		.mvce{
+			display: inline-block;
+			width: 17px;
+		}
+
+		.vvc{
+			display: inline-block; 
+			margin-right: 20px;}
+		.footm{
+			color: #464646;
+			font-size: 14px;
+		}
+		.ft{padding-top: 50px;
+			padding-bottom: 20px;
+		padding-left: 20px}
+		.fs{padding-left: 20px;
+		padding-right: 20px; 
+			padding-bottom: 80px; line-height: 20px;}
+
+
+.adbanner{
+width: 804px; 
+height: 250px;
+ border-radius: 5px;
+  background-color:#222222;
+   margin-bottom: 45px;
+    background-image: url('images/pagebackground/ad-cover.png');
+     border: 1px solid #464646;
+      background-size: cover;
+       background-position: center;
+}
+
+        /*Media*/
+
+ @media only screen and (max-width: 768px) {
+   .pagem{
+    display: initial;
+
+  }
+
+  .page{
+  	display: none;
+  }
+}
