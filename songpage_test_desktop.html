@@ -1135,7 +1135,7 @@ Praise the Lord, а не попса
 	}
 
 	.mobile_content{
-		margin-top: 35px;
+		margin-top: 50px;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -1236,6 +1236,116 @@ Praise the Lord, а не попса
 		display: table-cell;
 		/*border: 1px solid red;*/
 	}
+
+	.m_listen_service_block{
+		text-align: center;
+	}
+
+	.m_listen_table{
+		width: 100%;
+		display: table;
+  	border-collapse: separate;
+    border-spacing: 0px;
+    border: 1px solid red;
+	}
+
+	.m_listen_table_col{
+    width: 100%;
+		border: 1px solid yellow;
+		padding: 10px;
+	}
+
+	.m_listen_service{
+		width: 60px;
+		height: 100px;
+		margin-bottom: 20px;
+		display: inline-block;
+	}
+
+	.m_lis_ser_name{
+		text-align: center;
+		font-size: 14px;
+		color: #464646;
+		margin-top: 5px;
+		white-space: pre-wrap;
+	}
+
+	.m_lis_ser_applemusic{
+		background-image: url('images/graphics/applemusic.svg');
+		width: 60px;
+		height: 60px;
+		background-size: cover;
+		border-radius: 14px;
+		background-repeat: no-repeat;
+	}
+
+	.m_lis_ser_spotify{
+		background-image: url('images/graphics/spotifym.jpeg');
+		width: 60px;
+		height: 60px;
+		border-radius: 10px;
+		border-radius: 14px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.m_lis_ser_vkmusic{
+		background-image: url('images/graphics/vk.svg');
+		width: 60px;
+		height: 60px;
+		border-radius: 14px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+		.m_lis_ser_boom{
+		background-image: url('images/graphics/boom.png');
+		width: 60px;
+		height: 60px;
+		border-radius: 14px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+		.m_lis_ser_youtube{
+		background-image: url('images/graphics/youtube.png');
+		width: 60px;
+		height: 60px;
+		border-radius: 14px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+		.m_lis_ser_itunes{
+		background-image: url('images/graphics/itunes.png');
+		width: 60px;
+		height: 60px;
+		border-radius: 14px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+		.m_lis_ser_download{
+		background-image: url('images/graphics/download.png');
+		width: 60px;
+		height: 60px;
+		border-radius: 14px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.column {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 
 @media only screen and (max-width: 414px) {
@@ -1385,16 +1495,69 @@ Praise the Lord, а не попса
 <div class="mobile_content">
 	<div id="mobile_SongPage" class="mobile_tabcontent">
 
-		
-		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; border: 1px solid white; color: #FFF;">Download </div>
-		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; border: 1px solid white; color: #FFF;">Download </div>
-		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; border: 1px solid white; color: #FFF;">Download </div>
-		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; border: 1px solid white; color: #FFF;">Download </div>
-		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; border: 1px solid white; color: #FFF;">Download </div>
-		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; border: 1px solid white; color: #FFF;">Download </div>
-		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; border: 1px solid white; color: #FFF;">Download </div>
-		<div style="text-align: center; line-height: 50px; border-radius: 10px; margin-bottom: 20px; height: 50px; width: 100%; border: 1px solid white; color: #FFF;">Download </div>
-		
+		<div class="row">
+			<div class="column">
+				<a href="#">
+						<div class="m_listen_service">
+							<div class="m_lis_ser_applemusic"></div>
+							<div class="m_lis_ser_name">Apple Music</div>
+						</div>
+						</a>
+			</div>
+			<div class="column">
+				<a href="#">
+						<div class="m_listen_service">
+							<div class="m_lis_ser_spotify"></div>
+							<div class="m_lis_ser_name">Spotify</div>
+						</div>
+						</a>
+			</div>
+			<div class="column">
+				<a href="#">
+						<div class="m_listen_service">
+							<div class="m_lis_ser_vkmusic"></div>
+							<div class="m_lis_ser_name">VK Music</div>
+						</div>
+						</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column">
+				<a href="#">
+						<div class="m_listen_service">
+							<div class="m_lis_ser_boom"></div>
+							<div class="m_lis_ser_name">BOOM</div>
+						</div>
+						</a>
+					</div>
+					<div class="column">
+						<a href="#">
+						<div class="m_listen_service">
+							<div class="m_lis_ser_youtube"></div>
+							<div class="m_lis_ser_name">YouTube</div>
+						</div>
+						</a>
+					</div>
+					<div class="column">
+						<a href="#">
+						<div class="m_listen_service">
+							<div class="m_lis_ser_itunes"></div>
+							<div class="m_lis_ser_name">iTunes</div>
+						</div>
+						</a>
+					</div>
+				<div class="row">
+					<div class="column">
+						<a href="#">
+						<div class="m_listen_service">
+							<div class="m_lis_ser_download"></div>
+							<div class="m_lis_ser_name">Download</div>
+						</div>
+						</a>
+					</div>
+
+</div>
+</div>
 
 <!-- 	<table class="tracklist">
     				<tr>
