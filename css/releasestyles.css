@@ -238,7 +238,7 @@
 		/* top, transparent red, faked with gradient */ 
 		linear-gradient(121deg, rgba(0,0,0,1) 34%, rgba(0,0,0,0) 100%),
 		/* bottom, image */
-		url('/images/pagebackground/ytmp-pool.jpg');
+		url('../images/pagebackground/ytmp-pool.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -317,7 +317,7 @@
 	}
 
 	.icon-1 {
-		background-image: url("images/graphics/apple-music-icon.png");
+		background-image: url("../images/graphics/apple-music-icon.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -328,7 +328,7 @@
 	}
 
 	.icon-2 {
-		background-image: url("images/graphics/spotify-icon.png");
+		background-image: url("../images/graphics/spotify-icon.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -340,7 +340,7 @@
 	}
 
 	.icon-3 {
-		background-image: url("images/graphics/vk-icon.png");
+		background-image: url("../images/graphics/vk-icon.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -352,7 +352,7 @@
 	}
 
 	.icon-4 {
-		background-image: url("images/graphics/boom-icon.png");
+		background-image: url("../images/graphics/boom-icon.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -364,7 +364,7 @@
 	}
 
 	.icon-5 {
-		background-image: url("images/graphics/youtube-icon.png");
+		background-image: url("../images/graphics/youtube-icon.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -376,7 +376,7 @@
 	}
 
 	.icon-6 {
-		background-image: url("images/graphics/telegraph-icon.png");
+		background-image: url("../images/graphics/telegraph-icon.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -982,7 +982,7 @@
 	}
 
 	.m_lis_ser_applemusic{
-		background-image: url('images/graphics/applemusic.svg');
+		background-image: url('../images/graphics/applemusic.svg');
 		width: 60px;
 		height: 60px;
 		background-size: cover;
@@ -991,7 +991,7 @@
 	}
 
 	.m_lis_ser_spotify{
-		background-image: url('images/graphics/spotifym.jpeg');
+		background-image: url('../images/graphics/spotifym.jpeg');
 		width: 60px;
 		height: 60px;
 		border-radius: 10px;
@@ -1001,7 +1001,7 @@
 	}
 
 	.m_lis_ser_vkmusic{
-		background-image: url('images/graphics/vk.svg');
+		background-image: url('../images/graphics/vk.svg');
 		width: 60px;
 		height: 60px;
 		border-radius: 14px;
@@ -1010,7 +1010,7 @@
 	}
 
 		.m_lis_ser_boom{
-		background-image: url('images/graphics/boom.png');
+		background-image: url('../images/graphics/boom.png');
 		width: 60px;
 		height: 60px;
 		border-radius: 14px;
@@ -1019,7 +1019,7 @@
 	}
 
 		.m_lis_ser_youtube{
-		background-image: url('images/graphics/youtube.png');
+		background-image: url('../images/graphics/youtube.png');
 		width: 60px;
 		height: 60px;
 		border-radius: 14px;
@@ -1028,7 +1028,7 @@
 	}
 
 		.m_lis_ser_itunes{
-		background-image: url('images/graphics/itunes.png');
+		background-image: url('../images/graphics/itunes.png');
 		width: 60px;
 		height: 60px;
 		border-radius: 14px;
@@ -1037,7 +1037,7 @@
 	}
 
 		.m_lis_ser_download{
-		background-image: url('images/graphics/download.png');
+		background-image: url('../images/graphics/download.png');
 		width: 60px;
 		height: 60px;
 		border-radius: 14px;
