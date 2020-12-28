@@ -400,8 +400,7 @@
         }
 
 		.headm{
-			padding-top: 100px; /*use when top release banner active*/
-        	/*padding-top: 50px;*/
+        	padding-top: 50px;
 			padding-bottom: 50px;
         }
 
@@ -486,12 +485,12 @@
 			padding-bottom: 80px; line-height: 20px;}
 
 			.m_playlist{
+				border-radius: 5px;
+				margin-left: 20px;
 				padding: 5px;
 				background-color: #f9c42d;
 				display: inline-block;
-				position: fixed;
-				width: 100%;
-				z-index: 1;
+				margin-bottom: 50px;
 			}
 
 			.m-playlist-cover{
