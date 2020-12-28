@@ -400,7 +400,8 @@
         }
 
 		.headm{
-        	padding-top: 50px;
+			padding-top: 100px; /*use when top release banner active*/
+        	/*padding-top: 50px;*/
 			padding-bottom: 50px;
         }
 
@@ -485,23 +486,23 @@
 			padding-bottom: 80px; line-height: 20px;}
 
 			.m_playlist{
-				border-radius: 5px;
-				margin-left: 20px;
 				padding: 5px;
 				background-color: #f9c42d;
 				display: inline-block;
-				margin-bottom: 50px;
+				position: fixed;
+				width: 100%;
+				z-index: 1;
 			}
 
 			.m-playlist-cover{
-				width: 52px;
-				height: 52px;
+				width: 53px;
+				height: 53px;
 				float: left;
 			}
 
 			.m-playlist-cover-img{
-				width: 52px;
-				height: 52px;
+				width: 53px;
+				height: 53px;
 				border-radius: 2px;
 				float: left;
 			}
