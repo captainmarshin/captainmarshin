@@ -484,6 +484,36 @@
 		padding-right: 20px; 
 			padding-bottom: 80px; line-height: 20px;}
 
+			.m_playlist{
+				border-radius: 5px;
+				margin-left: 20px;
+				padding: 5px;
+				background-color: #fcd734;
+				display: inline-block;
+				margin-bottom: 50px;
+			}
+
+			.m-playlist-cover{
+				width: 52px;
+				height: 52px;
+				float: left;
+			}
+
+			.m-playlist-cover-img{
+				width: 52px;
+				height: 52px;
+				border-radius: 2px;
+				float: left;
+			}
+
+			.m-playlist-name{
+				margin-left: 59px;
+				padding-right: 5px;
+				color: black;
+				font-size: 11pt;
+
+			}
+
 
         /*Media*/
 
