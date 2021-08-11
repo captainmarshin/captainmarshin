@@ -1,0 +1,208 @@
+/*
+
+Captain Marshin Website.
+captainmarshin.com
+Desinged by Маршин Entertainment.
+Copyright. All rights reserved.
+2021
+
+*/
+
+	body{
+		margin: 0;
+		padding: 0;
+		background-color: #000;
+		color: #fff;
+		font-family: Helvetica;
+	}
+
+	.title{
+		box-sizing: border-box;
+		padding-top: 20px;
+		padding-left: 20px;
+		padding-bottom: 40px;
+		font-size: 25pt;
+	}
+
+	a.title{
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.albums, .singles, .eps, .listen, .playnow, .altversions, .from, .events, .featuring{
+		box-sizing: border-box;
+	}
+
+		.cat_title{
+			font-weight: bold;
+			margin-left: 20px;
+			margin-top: 15px;
+			margin-bottom: 20px;
+			font-size: 18px;
+		}
+
+		.cat_content{
+			width: 100%;
+			overflow-x: scroll;
+				overflow-y: hidden;
+				white-space: nowrap;
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+				/*margin-bottom: 50px;*/
+		}
+
+		.cat_content::-webkit-scrollbar {
+				 display: none;
+
+		}
+
+		.cat_content_player{
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+
+		.cat_item{
+			display: inline-block;
+			margin-right: 20px;
+		}
+
+		.cat_item_fix{
+			display: inline-block;
+			margin-right: 16px;
+		}
+
+		img.item_cover{
+			border: 1px solid #1c1c1c;
+			border-radius: 2px;
+			height: 180px;
+			width: 180px;
+			background-color: #1c1c1c;
+		}
+
+
+		.item_name{
+			margin-top: 8px;
+			font-size: 11pt;
+			overflow: hidden;
+			width: 180px;
+			text-overflow: ellipsis;
+			color: #fff;
+		}
+
+		.item_year{
+			margin-top: 5px;
+			font-size: 11pt;
+			overflow: hidden;
+			width: 180px;
+			text-overflow: ellipsis;
+			color: #7B7B7B;
+		}
+
+		.item_label{
+			color: red;
+			padding-right: 5px;
+		}
+
+		.cat_line{
+			height: 1px;
+			margin-top: 20px;
+			margin-left: 20px;
+			background-color: #191919;
+		}
+
+		iframe{
+			border-radius: 3px; 
+			border: 1px solid #1c1c1c;
+		}
+
+	.videos{
+		box-sizing: border-box;
+	}
+
+		img.video_item_cover{
+			border: 1px solid #1c1c1c;
+			border-radius: 3px;
+			height: 180px;
+			width: 360px;
+			/*transition: transform 1s;*/
+			background-color: #1c1c1c;
+		}
+
+
+		.video_item_name{
+			margin-top: 8px;
+			font-size: 11pt;
+			overflow: hidden;
+			width: 360px;
+			text-overflow: ellipsis;
+			color: #fff;
+		}
+
+	.lyrics{
+		box-sizing: border-box;
+	}
+
+		img.lyrics_item_cover{
+			border: 1px solid #1c1c1c;
+			border-radius: 2px;
+			height: 80px;
+			width: 180px;
+			background-color: #1c1c1c;
+		}
+
+		.lyrics_item_symbol{
+			background-color: red;
+			height: 80px;
+			width: 180px;
+		}
+
+
+		.lyrics_show_btn{
+			color: orange;
+			cursor: pointer;
+			margin-top: 15px;
+		}
+
+		.lyrics_full{
+			display: none;
+			white-space: pre-line;
+			line-height: 23px;
+		}
+
+		.lyrcis_short{
+			white-space: pre-line;
+			line-height: 23px;
+		}
+
+	.projects{
+		box-sizing: border-box;
+	}
+
+		img.more_item_cover{
+			border: 1px solid #1c1c1c;
+			border-radius: 50%;
+			height: 60px;
+			width: 60px;
+			background-color: #1c1c1c;
+		}
+
+	.footer{
+		box-sizing: border-box;
+		color: #464646;
+		font-size: 14px;
+		padding-top: 50px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 100px;
+		line-height: 20px;
+	}
+
+		.links{
+			margin-top: 20px;
+		}
+
+		a.space-2{
+			margin-right: 5px;
+			color: #464646;
+		}
+
