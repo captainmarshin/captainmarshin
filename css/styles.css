@@ -14,6 +14,15 @@ Copyright. All rights reserved.
 		background-color: #000;
 		color: #fff;
 		font-family: Helvetica;
+		image-rendering: -webkit-optimize-contrast;
+	}
+
+	img{
+		image-rendering: -moz-crisp-edges;
+    	image-rendering: -o-crisp-edges;
+    	image-rendering: -webkit-optimize-contrast;
+    	image-rendering: crisp-edges;
+    	-ms-interpolation-mode: nearest-neighbor;
 	}
 
 	.title{
@@ -77,6 +86,7 @@ Copyright. All rights reserved.
 			height: 180px;
 			width: 180px;
 			background-color: #1c1c1c;
+			image-rendering: -webkit-optimize-contrast;
 		}
 
 
@@ -124,7 +134,7 @@ Copyright. All rights reserved.
 			border-radius: 3px;
 			height: 180px;
 			width: 360px;
-			/*transition: transform 1s;*/
+			image-rendering: -webkit-optimize-contrast;
 			background-color: #1c1c1c;
 		}
 
@@ -148,6 +158,7 @@ Copyright. All rights reserved.
 			height: 80px;
 			width: 180px;
 			background-color: #1c1c1c;
+			image-rendering: -webkit-optimize-contrast;
 		}
 
 		.lyrics_item_symbol{
@@ -184,6 +195,7 @@ Copyright. All rights reserved.
 			height: 60px;
 			width: 60px;
 			background-color: #1c1c1c;
+			image-rendering: -webkit-optimize-contrast;
 		}
 
 	.footer{
