@@ -41,6 +41,22 @@ Copyright. All rights reserved.
 			font-size: 18px;
 		}
 
+		.cat_event_title{
+			font-weight: bold;
+			margin-left: 20px;
+			margin-top: 15px;
+			font-size: 18px;
+		}
+
+
+		.cat_event_date{
+			font-weight: bold;
+			margin-left: 20px;
+			margin-top: 5px;
+			margin-bottom: 20px;
+			font-size: 18px;
+		}
+
 		.cat_content{
 			width: 100%;
 			overflow-x: scroll;
@@ -125,6 +141,15 @@ Copyright. All rights reserved.
 			height: 180px;
 			width: 360px;
 			background-color: #1c1c1c;
+		}
+
+		.video_item_cover{
+			border: 1px solid #1c1c1c;
+			border-radius: 3px;
+			height: 180px;
+			width: 360px;
+			background-color: #1c1c1c;
+			background-position: center; background-size: cover;
 		}
 
 
