@@ -30,7 +30,7 @@ Copyright. All rights reserved.
 		text-decoration: none;
 	}
 
-	.albums, .singles, .eps, .listen, .playnow, .altversions, .from, .events, .featuring, .marshinshop{
+	.albums, .singles, .eps, .listen, .playnow, .altversions, .from, .events, .featuring, .marshinshop, .soundtracks{
 		box-sizing: border-box;
 	}
 
@@ -199,6 +199,34 @@ Copyright. All rights reserved.
 			line-height: 23px;
 		}
 
+		.lyrics_slider{
+				margin-left: 20px;
+			}
+
+			.lyrics_page{
+				display: inline-block;
+				margin-right: 10px;
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+
+			.lyrics_page:hover{
+				cursor: pointer;
+				border-bottom: 3px solid orange;
+			}
+
+			.lpactive{
+				border-bottom: 3px solid orange;
+			}
+
+			[id^='lyricsc-'] {
+				display: none;
+			}
+
+			#lyricsc-1{
+				display: block;
+			}
+
 	.projects{
 		box-sizing: border-box;
 	}
@@ -209,6 +237,10 @@ Copyright. All rights reserved.
 			height: 60px;
 			width: 60px;
 			background-color: #1c1c1c;
+		}
+
+		.unavailable {
+			filter: brightness(30%);
 		}
 
 	.footer{
@@ -231,3 +263,11 @@ Copyright. All rights reserved.
 			color: #464646;
 		}
 
+
+.player_cover{
+	width: 200px;
+	height: 200px;
+	border: 1px solid #1c1c1c;
+	border-radius: 2px;
+	background-color: #1c1c1c;
+}
