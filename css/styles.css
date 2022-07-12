@@ -12,7 +12,7 @@ Copyright. All rights reserved.
 		margin: 0;
 		padding: 0;
 		background-color: #000;
-		color: #fff;
+		color: #f2f2f2;
 		font-family: Helvetica;
                 image-rendering: -webkit-optimize-contrast;
 	}
@@ -30,9 +30,80 @@ Copyright. All rights reserved.
 		text-decoration: none;
 	}
 
+	.title_link{
+		float: right; 
+		margin-right: 20px;
+		font-size: 14px;
+		color: #ff6600;
+		font-weight: 300;
+/*		text-decoration: underline;*/
+	}
+
+	.title_link:hover{
+		cursor: pointer;
+	}
+
 	.albums, .singles, .eps, .listen, .playnow, .altversions, .from, .events, .featuring, .marshinshop, .soundtracks{
 		box-sizing: border-box;
 	}
+
+	.albums .cat_item{
+			display: inline-block;
+			margin-right: 10px;
+		}
+	.singles .cat_item{
+			display:inline-block;
+			margin-right: 10px;
+		}
+	.eps .cat_item{
+			display: inline-block;
+			margin-right: 10px;
+		}
+	.listen .cat_item{
+			display: inline-block;
+			margin-right: 10px;
+		}
+	.playnow .cat_item{
+			display: inline-block;
+			margin-right: 10px;
+		}
+	.altversions .cat_item{
+			display: inline-block;
+			margin-right: 10px;
+		}
+	.from .cat_item{
+			display: inline-block;
+			margin-right: 10px;
+		}
+	.events .cat_item{
+			display: inline-block;
+			margin-right: 10px;
+		}
+	.featuring .cat_item{
+			display: inline-block;
+			margin-right: 10px;
+		}
+	.marshinshop .cat_item{
+			display: inline-block;
+			margin-right: 10px;
+		}
+	.soundtracks .cat_item{
+			display: inline-block;
+			margin-right: 10px;
+		}
+
+	.videos .cat_item{
+			display: inline-block;
+			margin-right: 10px;
+		}
+	.lyrics .cat_item{
+			display: inline-block;
+			margin-right: 10px;
+		}
+	.event .cat_item{
+			display: inline-block;
+			margin-right: 10px;
+		}
 
 		.cat_title{
 			font-weight: bold;
@@ -68,6 +139,16 @@ Copyright. All rights reserved.
 				/*margin-bottom: 50px;*/
 		}
 
+		.cat_content_2{
+			display:block;
+			width: 100%;
+			/*overflow-x: hidden;
+				overflow-y: scroll;
+				white-space: nowrap;
+				-ms-overflow-style: none;
+				scrollbar-width: none;*/
+		}
+
 		.cat_content::-webkit-scrollbar {
 				 display: none;
 
@@ -80,6 +161,10 @@ Copyright. All rights reserved.
 
 		.cat_item{
 			display: inline-block;
+			margin-right: 20px;
+		}
+
+		.cat_item:last-child{
 			margin-right: 20px;
 		}
 
