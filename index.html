@@ -820,26 +820,21 @@ Copyright. All rights reserved.
 
 
 	<script type="text/javascript">
-		
-		// .mini-player-play-btn // player play button
-		// .mini-player-pause-btn // player pause button
-
-		// .mini-player-new-release // audio file
 
 		function playerfileloaded() {
 			console.log("Player file loaded!")
+			document.getElementById("mini-player-loading").style.display = "none";
+			document.getElementById("mini-player-play-btn").style.display = "block";
 		}
 
 		function playerfilecanplay() {
 			console.log("Player file can play!")
-			document.getElementById("mini-player-loading").style.display = "none";
-			document.getElementById("mini-player-play-btn").style.display = "block";
 		}
 
 		function playerfileready() {
 			console.log("Player loaded file and ready to play!")
-			document.getElementById("mini-player-loading").style.display = "none";
-			document.getElementById("mini-player-play-btn").style.display = "block";
+			// document.getElementById("mini-player-loading").style.display = "none";
+			// document.getElementById("mini-player-play-btn").style.display = "block";
 		}
 
 		$(document).ready(function() {
