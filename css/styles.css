@@ -40,7 +40,7 @@ Copyright. All rights reserved.
 		width: 100%;
 		position: fixed;
 		top: 0;
-		background: rgba(0, 0, 0, 0.6);
+		background: rgba(0, 0, 0, 0.8);
 		backdrop-filter: blur(30px);
 		-webkit-backdrop-filter: blur(30px);
 	}
@@ -103,7 +103,7 @@ Copyright. All rights reserved.
 		display: flex;
 		align-items: center;
     	justify-content: center;
-		background: rgba(0, 0, 0, 0.6);
+		background: rgba(0, 0, 0, 0.8);
 		backdrop-filter: blur(30px);
 		-webkit-backdrop-filter: blur(30px);
 		box-sizing: border-box;
@@ -196,7 +196,7 @@ Copyright. All rights reserved.
     	box-sizing: border-box;
     	padding-top: 10px;
 /*		background: rgba(28, 28, 30, 0.6);*/
-		background: rgba(0, 0, 0, 0.6);
+		background: rgba(0, 0, 0, 0.8);
 		backdrop-filter: blur(30px);
 		-webkit-backdrop-filter: blur(30px);
 	}
