@@ -187,12 +187,16 @@ Copyright. All rights reserved.
 /*		display: none;*/
 	}
 
+	.mini-player-loading{
+		display: block;
+	}
+
 	#mini-player-pause-btn{
 		display: none;
 	}
 
 	#mini-player-play-btn{
-
+		display: none;
 	}
 
 

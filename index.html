@@ -792,8 +792,8 @@ Copyright. All rights reserved.
 	<div class="mini-player">
 
 
-		<audio id="mini-player-new-release">
-    		<source src="https://docs.google.com/uc?export=download&id=1nxpiNBRa3A-BGeyS-I7eS4jlL-gnxhrE">
+		<audio oncanplaythrough="playerfileready()" id="mini-player-new-release">
+    		<source src="https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a">
 		</audio>
 
 
@@ -809,7 +809,11 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 		<div class="mini-player-2">
-			<div class="mini-player-play"><span id="mini-player-play-btn" class="material-icons">play_arrow</span><span id="mini-player-pause-btn" class="material-icons">pause</span></div>
+			<div class="mini-player-play">
+				<span id="mini-player-loading" class="material-icons">sync</span>
+				<span id="mini-player-play-btn" class="material-icons">play_arrow</span>
+				<span id="mini-player-pause-btn" class="material-icons">pause</span>
+			</div>
 			<div class="mini-player-share"><span class="material-icons">ios_share</span></div>
 		</div>
 	</div>
@@ -822,13 +826,19 @@ Copyright. All rights reserved.
 
 		// .mini-player-new-release // audio file
 
+		function playerfileready() {
+			console.log("Player loaded file and ready to play!")
+			document.getElementById("mini-player-loading").style.display = "none";
+			document.getElementById("mini-player-play-btn").style.display = "block";
+		}
+
 		$(document).ready(function() {
 		  var music = document.getElementById("mini-player-new-release");
 		  var play_music_button = document.getElementById("mini-player-play-btn");
 		  var pause_music_button = document.getElementById("mini-player-pause-btn");
 
 		  function playAudio() {
-		    if (music.paused) {
+		    if(music.paused) {
 		      music.play();
 		      play_music_button.style.display = 'none';
 		      pause_music_button.style.display = 'block';
