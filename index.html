@@ -14,7 +14,8 @@ Copyright. All rights reserved.
 	<meta charset="utf-8">
 	<title>Капитан Маршин / Captain Marshin</title>
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="title" content="Капитан Маршин / Captain Marshin">
 	<meta name="description" content="Listen Капитан Маршин on Apple Music, Spotify, VK, BOOM. Watch on YouTube. Read Song Lyrics. Follow Instagram, Twitter, Telegram, VK">
 
@@ -70,11 +71,11 @@ Copyright. All rights reserved.
 			$(document).scroll(function () {
 			    var scrollTop = $(window).scrollTop();
 			    if (scrollTop > 5) {
-			        $('.header').stop().animate({height: "50px"}, 100);
-			        $('.logo img').stop().animate({width: "100px"}, 100);
+			        $('.header').height(40);
+			        $('.logo img').width(100)
 			    } else {
-			         $('.header').stop().animate({height: "100px"}, 100);
-			         $('.logo img').stop().animate({width: "150px"}, 100);   
+			        $('.header').height(80);
+			        $('.logo img').width(150) 
 			    }
 			});
 		});
