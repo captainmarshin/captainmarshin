@@ -11,10 +11,10 @@ Copyright. All rights reserved.
 	body{
 		margin: 0;
 		padding: 0;
-		background-color: #000;
+		background-color: black;
 		color: #f2f2f2;
-		font-family: Helvetica;
-        image-rendering: -webkit-optimize-contrast;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+/*        image-rendering: -webkit-optimize-contrast;*/
 
         -moz-osx-font-smoothing: grayscale;
     	-webkit-font-smoothing: antialiased;
@@ -29,7 +29,7 @@ Copyright. All rights reserved.
 	.header{
 		height: 100px;
 		box-sizing: border-box;
-		border-bottom: 1px solid #222;
+		border-bottom: 1px solid #111;
 		display: flex;
 		padding-top: 10px;
 		padding-right: 15px;
@@ -97,7 +97,7 @@ Copyright. All rights reserved.
 	.mini-player{
 		height: 65px;
 		width: 100%;
-		border-top: 1px solid #222;
+		border-top: 1px solid #111;
 		position: fixed;
 		bottom: 90px;
 		display: flex;
@@ -187,7 +187,7 @@ Copyright. All rights reserved.
 	.menu{
 		height: 90px;
 		width: 100%;
-		border-top: 1px solid #222;
+		border-top: 1px solid #111;
 		position: fixed;
 		bottom: 0;
 		display: flex;
