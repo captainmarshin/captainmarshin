@@ -792,7 +792,7 @@ Copyright. All rights reserved.
 	<div class="mini-player">
 
 
-		<audio oncanplaythrough="playerfileready()" id="mini-player-new-release">
+		<audio oncanplaythrough="playerfileready()" oncanplay="playerfilecanplay()" onloadeddata="playerfileloaded()" id="mini-player-new-release">
     		<source src="https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a">
 		</audio>
 
@@ -825,6 +825,16 @@ Copyright. All rights reserved.
 		// .mini-player-pause-btn // player pause button
 
 		// .mini-player-new-release // audio file
+
+		function playerfileloaded() {
+			console.log("Player file loaded!")
+		}
+
+		function playerfilecanplay() {
+			console.log("Player file can play!")
+			document.getElementById("mini-player-loading").style.display = "none";
+			document.getElementById("mini-player-play-btn").style.display = "block";
+		}
 
 		function playerfileready() {
 			console.log("Player loaded file and ready to play!")
