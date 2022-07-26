@@ -790,6 +790,13 @@ Copyright. All rights reserved.
 
 
 	<div class="mini-player">
+
+
+		<audio id="mini-player-new-release">
+    		<source src="https://docs.google.com/uc?export=download&id=1nxpiNBRa3A-BGeyS-I7eS4jlL-gnxhrE">
+		</audio>
+
+
 		<div class="mini-player-1">
 			<div class="mini-player-cover">
 				<a href="https://captainmarshin.com/indica">
@@ -802,10 +809,44 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 		<div class="mini-player-2">
-			<div class="mini-player-play"><span class="material-icons">play_arrow</span></div>
+			<div class="mini-player-play"><span id="mini-player-play-btn" class="material-icons">play_arrow</span><span id="mini-player-pause-btn" class="material-icons">pause</span></div>
 			<div class="mini-player-share"><span class="material-icons">ios_share</span></div>
 		</div>
 	</div>
+
+
+	<script type="text/javascript">
+		
+		// .mini-player-play-btn // player play button
+		// .mini-player-pause-btn // player pause button
+
+		// .mini-player-new-release // audio file
+
+		$(document).ready(function() {
+		  var music = document.getElementById("mini-player-new-release");
+		  var play_music_button = document.getElementById("mini-player-play-btn");
+		  var pause_music_button = document.getElementById("mini-player-pause-btn");
+
+		  function playAudio() {
+		    if (music.paused) {
+		      music.play();
+		      play_music_button.style.display = 'none';
+		      pause_music_button.style.display = 'block';
+		      console.log("Music start playing!");
+		    } else {
+		      music.pause();
+		      play_music_button.style.display = 'block';
+		      pause_music_button.style.display = 'none';
+		    }
+		    music.addEventListener('ended',function() {
+		      play_music_button.style.display = 'block';
+		      pause_music_button.style.display = 'none';
+		    });
+		  }
+		  play_music_button.addEventListener("click", playAudio);
+		});
+
+	</script>
 
 
 	<div class="menu">
