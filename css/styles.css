@@ -187,8 +187,8 @@ Copyright. All rights reserved.
 /*		display: none;*/
 	}
 
-	.mini-player-loading{
-		display: block;
+	#mini-player-loading{
+		display: none;
 	}
 
 	#mini-player-pause-btn{
@@ -197,6 +197,10 @@ Copyright. All rights reserved.
 
 	#mini-player-play-btn{
 		display: none;
+	}
+
+	#mini-player-start-btn{
+		display: block;
 	}
 
 

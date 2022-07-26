@@ -792,8 +792,9 @@ Copyright. All rights reserved.
 	<div class="mini-player">
 
 
-		<audio oncanplaythrough="playerfileready()" oncanplay="playerfilecanplay()" onloadeddata="playerfileloaded()" id="mini-player-new-release">
-    		<source src="https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a">
+		<audio id="mini-player-new-release">
+			<!-- oncanplaythrough="playerfileready()" oncanplay="playerfilecanplay()" onloadeddata="playerfileloaded()" -->
+    		<source src="">
 		</audio>
 
 
@@ -810,6 +811,7 @@ Copyright. All rights reserved.
 		</div>
 		<div class="mini-player-2">
 			<div class="mini-player-play">
+				<span id="mini-player-start-btn" class="material-icons">play_arrow</span>
 				<span id="mini-player-loading" class="material-icons">sync</span>
 				<span id="mini-player-play-btn" class="material-icons">play_arrow</span>
 				<span id="mini-player-pause-btn" class="material-icons">pause</span>
@@ -821,45 +823,99 @@ Copyright. All rights reserved.
 
 	<script type="text/javascript">
 
-		function playerfileloaded() {
-			console.log("Player file loaded!")
-			document.getElementById("mini-player-loading").style.display = "none";
-			document.getElementById("mini-player-play-btn").style.display = "block";
-		}
 
-		function playerfilecanplay() {
-			console.log("Player file can play!")
-		}
+		// function playerfileloaded() {
+		// 	console.log("Player file loaded!")
+		// 	document.getElementById("mini-player-loading").style.display = "none";
+		// 	document.getElementById("mini-player-play-btn").style.display = "block";
+		// }
 
-		function playerfileready() {
-			console.log("Player loaded file and ready to play!")
-			// document.getElementById("mini-player-loading").style.display = "none";
-			// document.getElementById("mini-player-play-btn").style.display = "block";
-		}
+		// function playerfilecanplay() {
+		// 	console.log("Player file can play!")
+		// }
 
-		$(document).ready(function() {
-		  var music = document.getElementById("mini-player-new-release");
-		  var play_music_button = document.getElementById("mini-player-play-btn");
-		  var pause_music_button = document.getElementById("mini-player-pause-btn");
+		// function playerfileready() {
+		// 	console.log("Player loaded file and ready to play!")
+		// 	// document.getElementById("mini-player-loading").style.display = "none";
+		// 	// document.getElementById("mini-player-play-btn").style.display = "block";
+		// }
 
-		  function playAudio() {
-		    if(music.paused) {
-		      music.play();
-		      play_music_button.style.display = 'none';
-		      pause_music_button.style.display = 'block';
-		      console.log("Music start playing!");
-		    } else {
-		      music.pause();
+		$(document).ready(function () {
+			var music = document.getElementById("mini-player-new-release");
+		  	var start_music_button = document.getElementById("mini-player-start-btn");
+		  	var play_music_button = document.getElementById("mini-player-play-btn");
+		  	var pause_music_button = document.getElementById("mini-player-pause-btn");
+		  	var loading_icon = document.getElementById("mini-player-loading");
+
+			start_music_button.addEventListener("click", loadingAudio);
+
+			function loadingAudio() {
+				var audio_url = "https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a";
+
+				start_music_button.style.display = 'none';
+				loading_icon.style.display = "block";
+
+				music.setAttribute("src", audio_url);
+ 				music.load();
+
+ 				music.addEventListener('canplaythrough', (event) => {
+ 					console.log('I think I can play through the entire ' +
+      				'video without ever having to stop to buffer.');
+      				start_music_button.style.display = 'none';
+					loading_icon.style.display = "none";
+					play_music_button.style.display = "block"
+ 				});
+			}
+
+			play_music_button.addEventListener("click", playAudio);
+
+			pause_music_button.addEventListener("click", pauseAudio);
+
+			function playAudio(){
+				music.play()
+				play_music_button.style.display = 'none';
+		      	pause_music_button.style.display = 'block';
+		      	console.log("Music start playing!");
+			}
+
+			function pauseAudio() {
+				music.pause();
+		      	play_music_button.style.display = 'block';
+		      	pause_music_button.style.display = 'none';
+		      	console.log("Music stop playing!");
+			}
+
+			music.addEventListener('ended',function() {
 		      play_music_button.style.display = 'block';
 		      pause_music_button.style.display = 'none';
-		    }
-		    music.addEventListener('ended',function() {
-		      play_music_button.style.display = 'block';
-		      pause_music_button.style.display = 'none';
+		      console.log("Music ended!");
 		    });
-		  }
-		  play_music_button.addEventListener("click", playAudio);
-		});
+
+		})
+
+		// $(document).ready(function() {
+		//   var music = document.getElementById("mini-player-new-release");
+		//   var play_music_button = document.getElementById("mini-player-play-btn");
+		//   var pause_music_button = document.getElementById("mini-player-pause-btn");
+
+		//   function playAudio() {
+		//     if(music.paused) {
+		//       music.play();
+		//       play_music_button.style.display = 'none';
+		//       pause_music_button.style.display = 'block';
+		//       console.log("Music start playing!");
+		//     } else {
+		//       music.pause();
+		//       play_music_button.style.display = 'block';
+		//       pause_music_button.style.display = 'none';
+		//     }
+		//     music.addEventListener('ended',function() {
+		//       play_music_button.style.display = 'block';
+		//       pause_music_button.style.display = 'none';
+		//     });
+		//   }
+		//   play_music_button.addEventListener("click", loadingAudio);
+		// });
 
 	</script>
 
