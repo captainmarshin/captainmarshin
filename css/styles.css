@@ -14,16 +14,94 @@ Copyright. All rights reserved.
 		background-color: #000;
 		color: #f2f2f2;
 		font-family: Helvetica;
-                image-rendering: -webkit-optimize-contrast;
+        image-rendering: -webkit-optimize-contrast;
 	}
 
-	.title{
-		box-sizing: border-box;
-		padding-top: 20px;
+
+	.header{
+		border-bottom: 1px solid #222;
+		display: flex;
+		padding-top: 40px;
+		padding-right: 20px;
 		padding-left: 20px;
 		padding-bottom: 40px;
-		font-size: 25pt;
+		align-items: center;
+    	justify-content: center;
 	}
+
+	.logo{
+		width: 50%;
+	}
+
+	.logo img{
+		width: 160px;
+		height: auto;
+		border: 0;
+	}
+
+	.button{
+		width: 50%;
+		text-align: right;
+	}
+
+	.donate-button{
+		width: 35px;
+		height: 35px;
+		font-weight: bold;
+		font-size: 16px;
+		background-color: orange;
+		border-radius: 50%;
+		border: 0;
+	}
+
+
+
+	.menu{
+		height: 80px;
+		width: 100%;
+		border-top: 1px solid #222;
+		position: fixed;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+    	justify-content: center;
+		background: rgba(0,0,0,0.8);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+	}
+
+	.player{
+		height: 50px;
+		width: 100%;
+		border-top: 1px solid #222;
+		position: fixed;
+		bottom: 80px;
+		display: flex;
+		align-items: center;
+    	justify-content: center;
+		background: rgba(0,0,0,0.8);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+	}
+
+	.active-music{
+		color: orange;
+	}
+
+	.active-shop{
+		color: lightblue;
+	}
+
+	.menu-item-1, .menu-item-2{
+		width: 50%;
+		box-sizing: border-box;
+/*		padding: 10px;*/
+		text-align: center;
+	}
+
+
+
+
 
 	a.title{
 		color: #fff;
@@ -47,17 +125,29 @@ Copyright. All rights reserved.
 		box-sizing: border-box;
 	}
 
+
+	.albums,
+	.singles,
+	.eps,
+	.soundtracks,
+	.videos,
+	.lyrics,
+	.event,
+	.projects {
+		margin-top: 30px;
+	}
+
 	.albums .cat_item{
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 5px;
 		}
 	.singles .cat_item{
 			display:inline-block;
-			margin-right: 10px;
+			margin-right: 5px;
 		}
 	.eps .cat_item{
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 5px;
 		}
 	.listen .cat_item{
 			display: inline-block;
@@ -94,15 +184,15 @@ Copyright. All rights reserved.
 
 	.videos .cat_item{
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 5px;
 		}
 	.lyrics .cat_item{
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 5px;
 		}
 	.event .cat_item{
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 5px;
 		}
 
 		.cat_title{
@@ -174,8 +264,8 @@ Copyright. All rights reserved.
 		}
 
 		img.item_cover{
-			border: 1px solid #1c1c1c;
-			border-radius: 2px;
+			border: 1px solid #222;
+			border-radius: 15px;
 			height: 180px;
 			width: 180px;
 			background-color: #1c1c1c;
@@ -206,10 +296,10 @@ Copyright. All rights reserved.
 		}
 
 		.cat_line{
-			height: 1px;
-			margin-top: 20px;
-			margin-left: 20px;
-			background-color: #191919;
+/*			height: 1px;*/
+			margin-top: 40px;
+			/*margin-left: 20px;
+			background-color: #191919;*/
 		}
 
 		iframe{
@@ -222,8 +312,8 @@ Copyright. All rights reserved.
 	}
 
 		img.video_item_cover{
-			border: 1px solid #1c1c1c;
-			border-radius: 3px;
+			border: 1px solid #222;
+			border-radius: 15px;
 			height: 180px;
 			width: 360px;
 			background-color: #1c1c1c;
@@ -253,8 +343,8 @@ Copyright. All rights reserved.
 	}
 
 		img.lyrics_item_cover{
-			border: 1px solid #1c1c1c;
-			border-radius: 2px;
+			border: 1px solid #222;
+			border-radius: 15px;
 			height: 80px;
 			width: 180px;
 			background-color: #1c1c1c;
