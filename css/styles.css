@@ -27,7 +27,7 @@ Copyright. All rights reserved.
 
 
 	.header{
-		height: 100px;
+		height: 50px;
 		box-sizing: border-box;
 		border-bottom: 1px solid #111;
 		display: flex;
@@ -46,7 +46,7 @@ Copyright. All rights reserved.
 	}
 
 	.header-fix{
-		height: 110px;
+		height: 60px;
 	}
 
 	.logo{
@@ -54,7 +54,7 @@ Copyright. All rights reserved.
 	}
 
 	.logo img{
-		width: 150px;
+		width: 100px;
   		height: auto;
 		border: 0;
 	}
@@ -70,7 +70,7 @@ Copyright. All rights reserved.
 		background-color: transparent;
 		border-radius: 50%;
 		padding: 0;
-		color: #F1882E;;
+		color: #F1882E;
 	}
 
 	.donate{
@@ -150,7 +150,7 @@ Copyright. All rights reserved.
 	.mini-player-note{
 		margin-top: 2px;
 		font-size: 11px;
-		color: #BB0000;
+		color: #F1882E;
 	}
 
 	.mini-player-play{
