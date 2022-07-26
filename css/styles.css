@@ -15,18 +15,37 @@ Copyright. All rights reserved.
 		color: #f2f2f2;
 		font-family: Helvetica;
         image-rendering: -webkit-optimize-contrast;
+
+        -moz-osx-font-smoothing: grayscale;
+    	-webkit-font-smoothing: antialiased;
+    	-webkit-text-size-adjust: 100%;
+		letter-spacing:.30px;
 	}
 
 
+/* WEBSITE HEADER */
+
+
 	.header{
-		border-bottom: 1px solid #222;
+		box-sizing: border-box;
+		border-bottom: 1px solid #333;
 		display: flex;
-		padding-top: 40px;
-		padding-right: 20px;
-		padding-left: 20px;
-		padding-bottom: 40px;
+		padding-top: 20px;
+		padding-right: 15px;
+		padding-left: 15px;
+		padding-bottom: 20px;
 		align-items: center;
     	justify-content: center;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		background: rgba(28, 28, 30, 0.6);
+		backdrop-filter: blur(30px);
+		-webkit-backdrop-filter: blur(30px);
+	}
+
+	.header-fix{
+		height: 120px;
 	}
 
 	.logo{
@@ -45,58 +64,151 @@ Copyright. All rights reserved.
 	}
 
 	.donate-button{
-		width: 35px;
-		height: 35px;
 		font-weight: bold;
 		font-size: 16px;
-		background-color: orange;
+		background-color: transparent;
 		border-radius: 50%;
-		border: 0;
+		padding: 0;
+		color: #F1882E;;
 	}
 
+	.donate-button .material-icons{
+		vertical-align: -5px;
+		font-size: 30px;
+	}
+
+
+
+/* WEBSITE MUSIC PLAYER */
+
+
+	.mini-player{
+		height: 65px;
+		width: 100%;
+		border-top: 1px solid #333;
+		position: fixed;
+		bottom: 90px;
+		display: flex;
+		align-items: center;
+    	justify-content: center;
+		background: rgba(28, 28, 30, 0.6);
+		backdrop-filter: blur(30px);
+		-webkit-backdrop-filter: blur(30px);
+		box-sizing: border-box;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+
+	.mini-player-1, .mini-player-2{
+		width: 50%;
+	}
+
+	.mini-player-2{
+		text-align: right;
+	}
+
+
+	.mini-player-cover{
+		width: 55px;
+		display: inline-block;
+	}
+
+	.mini-player-cover img{
+		width: 50px;
+		height: 50px;
+		border: 1px solid #333;
+		border-radius: 8px;
+		background-color: #1c1c1c;
+		vertical-align: bottom;
+	}
+
+	.mini-player-name{
+		box-sizing: border-box;
+		padding-left: 10px;
+		width: 150px;
+		font-size: 17px;
+		letter-spacing: .40px;
+		display: inline-block;
+		vertical-align: 15px;
+	}
+
+	.mini-player-play{
+		width: 80px;
+		text-align: center;
+		display: inline-block;
+	}
+
+	.mini-player-play span{
+		font-size: 40px;
+		vertical-align: bottom;
+	}
+
+	.mini-player-share{
+		width: 30px;		
+		text-align: right;
+		display: inline-block;
+	}
+
+	.mini-player-share span{
+		padding: 0;
+		font-size: 28px;
+		vertical-align: 4px;
+	}
+
+
+
+
+/* WEBSITE MENU */
 
 
 	.menu{
-		height: 80px;
+		height: 90px;
 		width: 100%;
-		border-top: 1px solid #222;
+		border-top: 1px solid #333;
 		position: fixed;
 		bottom: 0;
 		display: flex;
-		align-items: center;
-    	justify-content: center;
-		background: rgba(0,0,0,0.8);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
+		align-items: top;
+    	justify-content: top;
+    	box-sizing: border-box;
+    	padding-top: 10px;
+		background: rgba(28, 28, 30, 0.6);
+		backdrop-filter: blur(30px);
+		-webkit-backdrop-filter: blur(30px);
 	}
 
-	.player{
-		height: 50px;
-		width: 100%;
-		border-top: 1px solid #222;
-		position: fixed;
-		bottom: 80px;
-		display: flex;
-		align-items: center;
-    	justify-content: center;
-		background: rgba(0,0,0,0.8);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
+
+	.menu-item-name{
+		font-size: 13px;
 	}
 
 	.active-music{
-		color: orange;
+		color: #F1882E;
 	}
 
 	.active-shop{
-		color: lightblue;
+		color: #1492F8;
 	}
 
 	.menu-item-1, .menu-item-2{
 		width: 50%;
 		box-sizing: border-box;
-/*		padding: 10px;*/
+		color: gray;
 		text-align: center;
+	}
+
+	.shop-btn:hover{
+		color: #1492F8;
+		cursor: pointer;
+	}
+
+
+	.music-btn:hover{
+		color: #F1882E;
+		cursor: pointer;
 	}
 
 
@@ -110,7 +222,7 @@ Copyright. All rights reserved.
 
 	.title_link{
 		float: right; 
-		margin-right: 20px;
+		margin-right: 15px;
 		font-size: 14px;
 		color: #ff6600;
 		font-weight: 300;
@@ -139,73 +251,80 @@ Copyright. All rights reserved.
 
 	.albums .cat_item{
 			display: inline-block;
-			margin-right: 5px;
+			margin-right: 8px;
 		}
 	.singles .cat_item{
 			display:inline-block;
-			margin-right: 5px;
+			margin-right: 8px;
 		}
 	.eps .cat_item{
 			display: inline-block;
-			margin-right: 5px;
+			margin-right: 8px;
 		}
 	.listen .cat_item{
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 8px;
 		}
 	.playnow .cat_item{
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 8px;
 		}
 	.altversions .cat_item{
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 8px;
 		}
 	.from .cat_item{
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 8px;
 		}
 	.events .cat_item{
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 8px;
 		}
 	.featuring .cat_item{
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 8px;
 		}
 	.marshinshop .cat_item{
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 8px;
 		}
 	.soundtracks .cat_item{
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 8px;
 		}
 
 	.videos .cat_item{
 			display: inline-block;
-			margin-right: 5px;
+			margin-right: 8px;
 		}
 	.lyrics .cat_item{
 			display: inline-block;
-			margin-right: 5px;
+			margin-right: 8px;
 		}
 	.event .cat_item{
 			display: inline-block;
-			margin-right: 5px;
+			margin-right: 8px;
 		}
 
 		.cat_title{
 			font-weight: bold;
-			margin-left: 20px;
+			margin-left: 15px;
 			margin-top: 15px;
-			margin-bottom: 20px;
-			font-size: 18px;
+			margin-bottom: 15px;
+			font-size: 20px;
+		}
+
+		.cat_title .material-icons{
+			font-size: 30px;
+			margin-left: -7px;
+			vertical-align: -8px;
+			color: #999;
 		}
 
 		.cat_event_title{
 			font-weight: bold;
-			margin-left: 20px;
+			margin-left: 15px;
 			margin-top: 15px;
 			font-size: 18px;
 		}
@@ -213,7 +332,7 @@ Copyright. All rights reserved.
 
 		.cat_event_date{
 			font-weight: bold;
-			margin-left: 20px;
+			margin-left: 15px;
 			margin-top: 5px;
 			margin-bottom: 20px;
 			font-size: 18px;
@@ -245,27 +364,27 @@ Copyright. All rights reserved.
 		}
 
 		.cat_content_player{
-			margin-right: 20px;
-			margin-left: 20px;
+			margin-right: 15px;
+			margin-left: 15px;
 		}
 
 		.cat_item{
 			display: inline-block;
-			margin-right: 20px;
+			margin-right: 15px;
 		}
 
 		.cat_item:last-child{
-			margin-right: 20px;
+			margin-right: 15px;
 		}
 
 		.cat_item_fix{
 			display: inline-block;
-			margin-right: 16px;
+			margin-right: 12px;
 		}
 
 		img.item_cover{
 			border: 1px solid #222;
-			border-radius: 15px;
+			border-radius: 8px;
 			height: 180px;
 			width: 180px;
 			background-color: #1c1c1c;
@@ -273,7 +392,7 @@ Copyright. All rights reserved.
 
 
 		.item_name{
-			margin-top: 8px;
+			margin-top: 3px;
 			font-size: 11pt;
 			overflow: hidden;
 			width: 180px;
@@ -281,8 +400,14 @@ Copyright. All rights reserved.
 			color: #fff;
 		}
 
+		.item_name .material-icons{
+			font-size: 16px;
+			vertical-align: bottom;
+			color: #999;
+		}
+
 		.item_year{
-			margin-top: 5px;
+			margin-top: 3px;
 			font-size: 11pt;
 			overflow: hidden;
 			width: 180px;
@@ -298,7 +423,7 @@ Copyright. All rights reserved.
 		.cat_line{
 /*			height: 1px;*/
 			margin-top: 40px;
-			/*margin-left: 20px;
+			/*margin-left: 15px;
 			background-color: #191919;*/
 		}
 
@@ -313,14 +438,14 @@ Copyright. All rights reserved.
 
 		img.video_item_cover{
 			border: 1px solid #222;
-			border-radius: 15px;
+			border-radius: 8px;
 			height: 180px;
 			width: 360px;
 			background-color: #1c1c1c;
 		}
 
 		.video_item_cover{
-			border: 1px solid #1c1c1c;
+			border: 1px solid #222;
 			border-radius: 3px;
 			height: 180px;
 			width: 360px;
@@ -338,13 +463,19 @@ Copyright. All rights reserved.
 			color: #fff;
 		}
 
+		.video_item_name .material-icons{
+			font-size: 16px;
+			vertical-align: bottom;
+			color: #999;
+		}
+
 	.lyrics{
 		box-sizing: border-box;
 	}
 
 		img.lyrics_item_cover{
 			border: 1px solid #222;
-			border-radius: 15px;
+			border-radius: 8px;
 			height: 80px;
 			width: 180px;
 			background-color: #1c1c1c;
@@ -375,7 +506,7 @@ Copyright. All rights reserved.
 		}
 
 		.lyrics_slider{
-				margin-left: 20px;
+				margin-left: 15px;
 			}
 
 			.lyrics_page{
@@ -407,7 +538,7 @@ Copyright. All rights reserved.
 	}
 
 		img.more_item_cover{
-			border: 1px solid #1c1c1c;
+			border: 1px solid #222;
 			border-radius: 50%;
 			height: 60px;
 			width: 60px;
@@ -422,10 +553,10 @@ Copyright. All rights reserved.
 		box-sizing: border-box;
 		color: #464646;
 		font-size: 14px;
-		padding-top: 50px;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-bottom: 100px;
+		padding-top: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 200px;
 		line-height: 20px;
 	}
 
