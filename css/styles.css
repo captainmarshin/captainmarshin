@@ -27,6 +27,7 @@ Copyright. All rights reserved.
 
 
 	.header{
+		height: 100px;
 		box-sizing: border-box;
 		border-bottom: 1px solid #222;
 		display: flex;
@@ -45,7 +46,7 @@ Copyright. All rights reserved.
 	}
 
 	.header-fix{
-		height: 70px;
+		height: 110px;
 	}
 
 	.logo{
@@ -53,8 +54,8 @@ Copyright. All rights reserved.
 	}
 
 	.logo img{
-		width: 100px;
-		height: auto;
+		width: 150px;
+  		height: auto;
 		border: 0;
 	}
 
@@ -70,6 +71,17 @@ Copyright. All rights reserved.
 		border-radius: 50%;
 		padding: 0;
 		color: #F1882E;;
+	}
+
+	.donate{
+		font-weight: bold;
+		font-size: 12px;
+		padding: 5px 12px;
+		box-sizing: border-box;
+		background-color: #F1882E;
+		border-radius: 55px;
+		border: 0;
+		color: #111;
 	}
 
 	.donate-button .material-icons{
@@ -138,7 +150,7 @@ Copyright. All rights reserved.
 	.mini-player-note{
 		margin-top: 2px;
 		font-size: 11px;
-		color: red;
+		color: #BB0000;
 	}
 
 	.mini-player-play{

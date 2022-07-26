@@ -44,20 +44,43 @@ Copyright. All rights reserved.
 	<!-- Google Icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 <body>
 
-	<div class="header">
+	<div class="header" id="header">
 
 		<div class="logo">
 			<a href="http://captainmarshin.com"><img src="images/captain_logo.png"></a>
 		</div>
 
 		<div class="button">
-			<div class="donate-button"><span class="material-icons">monetization_on</span></div>
+			<!-- <div class="donate-button"><span class="material-icons">monetization_on</span></div> -->
+			<button class="donate">Donate</button>
 		</div>
 
 	</div>
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(document).scroll(function () {
+			    var scrollTop = $(window).scrollTop();
+			    if (scrollTop > 5) {
+			        $('.header').stop().animate({height: "50px"}, 100);
+			        $('.logo img').stop().animate({width: "100px"}, 100);
+			    } else {
+			         $('.header').stop().animate({height: "100px"}, 100);
+			         $('.logo img').stop().animate({width: "150px"}, 100);   
+			    }
+			});
+		});
+	</script>
+
+
 
 	<div class="header-fix"></div>
 	
