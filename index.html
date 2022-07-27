@@ -854,7 +854,20 @@ Copyright. All rights reserved.
 				var audio_url = "https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a";
 
 				start_music_button.style.display = 'none';
-				loading_icon.style.display = "block";
+				loading_icon.style.display = "inline-block";
+
+				var $loading_icon_anim = $(loading_icon), degree = 0, timer;
+			    
+			    rotate();
+
+			    function rotate() {
+			        
+			        $loading_icon_anim.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});  
+			        $loading_icon_anim.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});                      
+			        timer = setTimeout(function() {
+			            --degree; rotate();
+			        },5);
+			    }
 
 				music.setAttribute("src", audio_url);
  				music.load();
@@ -876,7 +889,9 @@ Copyright. All rights reserved.
  					start_music_button.style.display = 'none';
 					loading_icon.style.display = "none";
 					play_music_button.style.display = "block";
-					
+
+					clearTimeout(timer);
+
  					playAudio();
  				});
 
