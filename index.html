@@ -791,9 +791,9 @@ Copyright. All rights reserved.
 
 	<div id="mini-player" class="mini-player">
 
-		<audio id="mini-player-new-release">
+		<audio id="mini-player-new-release" type="audio/mp4">
 			<!-- oncanplaythrough="playerfileready()" oncanplay="playerfilecanplay()" onloadeddata="playerfileloaded()" -->
-    		<source id="mini-player-source" src="" type="audio/x-m4a">
+    		<source id="mini-player-source" src="" type="audio/mp4">
 		</audio>
 
 		<div id="mini-player-open" class="mini-player-1">
@@ -966,11 +966,11 @@ Copyright. All rights reserved.
 				.then(response => response.blob())
 				.then(blob => {
 
-					blob = blob.slice(0, blob.size, "audio/x-m4a")
+					blob = blob.slice(0, blob.size, "audio/mp4")
 
 					console.log(blob)
 
-					var link = webkitURL.createObjectURL(blob);
+					var link = URL.createObjectURL(blob);
 
 					document.getElementById('mini-player-source').setAttribute("src", link);
 
