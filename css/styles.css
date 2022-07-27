@@ -149,6 +149,7 @@ Copyright. All rights reserved.
 		letter-spacing: .40px;
 		display: inline-block;
 		vertical-align: 7px;
+		text-overflow: ellipsis;
 	}
 
 	.mini-player-note{
@@ -216,6 +217,9 @@ Copyright. All rights reserved.
 	}
 
 
+/* MINI PLAYER EXPAND (TRACKS LIST)	*/
+
+
 	.mini-player-expand{
 		width: 100%;
 		border-top: 1px solid #111;
@@ -234,8 +238,93 @@ Copyright. All rights reserved.
 		padding-top: 5px;
 		padding-bottom: 5px;
 		display: none;
+		overflow-y:scroll;
+    	overflow-x:hidden;
 	}
 
+
+	.mini-player-expand-row{
+		height: 60px;
+		width: 100%;
+		box-sizing: border-box;
+		display: flex;
+		border-bottom: 1px solid #222;
+		margin-bottom: 10px;
+	}
+
+
+	.mini-player-expand-cover{
+		width: 55px;
+		display: inline-block;
+	}
+
+	.mini-player-expand-cover img{
+		width: 50px;
+		height: 50px;
+		border: 1px solid #222;
+		border-radius: 5px;
+		background-color: #1c1c1c;
+		vertical-align: bottom;
+	}
+
+	.mini-player-expand-meta{
+		box-sizing: border-box;
+		padding-left: 17px;
+		padding-right: 10px;
+		width: 100%;
+		display: inline-block;
+		padding-top: 8px;
+		max-width: calc(100%);
+    	white-space: nowrap;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+	}
+
+	.mini-player-expand-name {
+		font-size: 17px;
+		letter-spacing: .40px;
+	}
+
+	.mini-player-expand-name span {
+		font-size: 14px;
+		vertical-align: -2px;
+		color: #999;
+	}
+
+	.mini-player-expand-artist {
+		margin-top: 2px;
+		font-size: 11px;
+		text-overflow: ellipsis;
+	}
+
+
+	.mini-player-expand-controls{
+		width: 30%;
+		text-align: right;
+		display: inline-block;
+	}
+
+	.mini-player-expand-play, .mini-player-expand-download, .mini-player-expand-share{
+		vertical-align: -32px;
+		display: inline-block;
+	}
+
+
+	.mini-player-expand-play span{
+		font-size: 32px;
+		color: #ddd;
+	}
+
+	.mini-player-expand-download span{
+		font-size: 29px;
+		color: #ddd;
+	}
+
+	.mini-player-expand-share span{
+		padding: 0;
+		vertical-align: 4.5px;
+		color: #ddd;
+	}
 
 
 
