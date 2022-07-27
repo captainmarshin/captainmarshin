@@ -81,7 +81,7 @@ Copyright. All rights reserved.
 		background-color: #F1882E;
 		border-radius: 55px;
 		border: 0;
-		color: #111;
+		color: #000;
 	}
 
 	.donate-button .material-icons{
@@ -122,6 +122,10 @@ Copyright. All rights reserved.
 		text-align: right;
 	}
 
+	.mini-player-1:hover{
+		cursor: pointer;
+	}
+
 
 	.mini-player-cover{
 		width: 55px;
@@ -132,7 +136,7 @@ Copyright. All rights reserved.
 		width: 50px;
 		height: 50px;
 		border: 1px solid #333;
-		border-radius: 8px;
+		border-radius: 5px;
 		background-color: #1c1c1c;
 		vertical-align: bottom;
 	}
@@ -160,8 +164,7 @@ Copyright. All rights reserved.
 	}
 
 	.mini-player-play span{
-		font-size: 40px;
-		vertical-align: bottom;
+		font-size: 32px;
 		color: #ddd;
 	}
 
@@ -177,8 +180,7 @@ Copyright. All rights reserved.
 
 	.mini-player-share span{
 		padding: 0;
-		font-size: 28px;
-		vertical-align: 4px;
+		vertical-align: 4.5px;
 		color: #ddd;
 	}
 
@@ -201,6 +203,37 @@ Copyright. All rights reserved.
 
 	#mini-player-start-btn{
 		display: block;
+	}
+
+	#mini-player-share-btn{
+		display: inline-block;
+	}
+
+
+
+	#mini-player-expand{
+
+	}
+
+
+	.mini-player-expand{
+		width: 100%;
+		border-top: 1px solid #111;
+		position: fixed;
+		top: 50px;
+		bottom: 155px;
+/*		display: flex;*/
+		align-items: center;
+    	justify-content: center;
+		background: rgba(0, 0, 0, 0.8);
+		backdrop-filter: blur(30px);
+		-webkit-backdrop-filter: blur(30px);
+		box-sizing: border-box;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		display: none;
 	}
 
 

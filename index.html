@@ -789,20 +789,18 @@ Copyright. All rights reserved.
 	</div>
 
 
-	<div class="mini-player">
-
+	<div id="mini-player" class="mini-player">
 
 		<audio id="mini-player-new-release">
 			<!-- oncanplaythrough="playerfileready()" oncanplay="playerfilecanplay()" onloadeddata="playerfileloaded()" -->
     		<source src="">
 		</audio>
 
-
-		<div class="mini-player-1">
+		<div id="mini-player-open" class="mini-player-1">
 			<div class="mini-player-cover">
-				<a href="https://captainmarshin.com/indica">
+				<!-- <a href="https://captainmarshin.com/indica"> -->
 					<img src="content/singles/226.jpg">
-				</a>
+				<!-- </a> -->
 			</div>
 			<div class="mini-player-name">
 				<div class="mini-player-songname">Indica</div>
@@ -816,7 +814,9 @@ Copyright. All rights reserved.
 				<span id="mini-player-play-btn" class="material-icons">play_arrow</span>
 				<span id="mini-player-pause-btn" class="material-icons">pause</span>
 			</div>
-			<div class="mini-player-share"><span class="material-icons">ios_share</span></div>
+			<div class="mini-player-share">
+				<span id="mini-player-share-btn" class="material-icons">ios_share</span>
+			</div>
 		</div>
 	</div>
 
@@ -863,7 +863,9 @@ Copyright. All rights reserved.
       				'video without ever having to stop to buffer.');
       				start_music_button.style.display = 'none';
 					loading_icon.style.display = "none";
-					play_music_button.style.display = "block"
+					play_music_button.style.display = "block";
+
+					playAudio();
  				});
 			}
 
@@ -891,6 +893,23 @@ Copyright. All rights reserved.
 		      console.log("Music ended!");
 		    });
 
+		});
+
+		$(document).ready(function() {
+			var musicplayeropen = document.getElementById("mini-player-open");
+			var miniplayer = document.getElementById("mini-player");
+			var miniplayerexpand = document.getElementById("mini-player-expand");
+
+			musicplayeropen.addEventListener("click", function() {
+
+				if (miniplayerexpand.style.display === "flex") {
+					miniplayerexpand.style.display = "none";
+				} 
+				else 
+				{
+					miniplayerexpand.style.display = "flex";
+			    }
+			})
 		})
 
 		// $(document).ready(function() {
@@ -918,6 +937,13 @@ Copyright. All rights reserved.
 		// });
 
 	</script>
+
+
+	<div class="mini-player-expand" id="mini-player-expand">
+
+		Player content not available now.
+
+	</div>
 
 
 	<div class="menu">
