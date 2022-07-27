@@ -972,7 +972,17 @@ Copyright. All rights reserved.
 				    // document.getElementById('mini-player-source').src = URL.createObjectURL(data);
 				    // document.getElementById('mini-player-source').type = 'audio/x-m4a';
 				    elProgress.innerHTML = 'Playing Now';
+
 				    music.load();
+				    
+				    start_music_button.style.display = 'none';
+					loading_icon.style.display = "none";
+					play_music_button.style.display = "block";
+
+      				clearTimeout(timer);
+
+ 					playAudio();
+
 				})
 				.catch(error => {
 				  console.error(error);
@@ -983,17 +993,17 @@ Copyright. All rights reserved.
 				};
 
 
-				music.addEventListener('canplay', (event) => {
- 					console.log('I think I can play through the entire ' +
-      				'audio without ever having to stop to buffer.');
-      				start_music_button.style.display = 'none';
-					loading_icon.style.display = "none";
-					play_music_button.style.display = "block";
+				// music.addEventListener('canplay', (event) => {
+ 				// 	console.log('I think I can play through the entire ' +
+      			// 	'audio without ever having to stop to buffer.');
+      			// 	start_music_button.style.display = 'none';
+				// 	loading_icon.style.display = "none";
+				// 	play_music_button.style.display = "block";
 
-      				clearTimeout(timer);
+      			// 	clearTimeout(timer);
 
- 					playAudio();
- 				});
+ 				// 	playAudio();
+ 				// });
 
 			}
 
