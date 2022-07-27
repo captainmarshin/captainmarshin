@@ -793,7 +793,7 @@ Copyright. All rights reserved.
 
 		<audio id="mini-player-new-release">
 			<!-- oncanplaythrough="playerfileready()" oncanplay="playerfilecanplay()" onloadeddata="playerfileloaded()" -->
-    		<source src="">
+    		<source src="" type="audio/mp4">
 		</audio>
 
 		<div id="mini-player-open" class="mini-player-1">
@@ -848,6 +848,7 @@ Copyright. All rights reserved.
 		  	var loading_icon = document.getElementById("mini-player-loading");
 
 			start_music_button.addEventListener("click", loadingAudio);
+			start_music_button.addEventListener("touchstart", loadingAudio);
 
 			function loadingAudio() {
 				var audio_url = "https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a";
@@ -858,15 +859,32 @@ Copyright. All rights reserved.
 				music.setAttribute("src", audio_url);
  				music.load();
 
- 				music.addEventListener('canplaythrough', (event) => {
- 					console.log('I think I can play through the entire ' +
-      				'video without ever having to stop to buffer.');
-      				start_music_button.style.display = 'none';
+ 				music.addEventListener('waiting', (event) => {
+ 					console.log('Loading...');
+ 				});
+
+ 				music.addEventListener('loadedmetadata', (event) => {
+ 					console.log('Meta loaded! >> Loading first frame...');
+ 				});
+
+ 				music.addEventListener('loadeddata', (event) => {
+ 					console.log('First frame loaded! >> Ready to play with loading...');
+ 				});
+
+ 				music.addEventListener('canplay', (event) => {
+ 					console.log('Can play with loading! >> Loading entire audio file...');
+ 					start_music_button.style.display = 'none';
 					loading_icon.style.display = "none";
 					play_music_button.style.display = "block";
-
-					playAudio();
+					
+ 					playAudio();
  				});
+
+ 				music.addEventListener('canplaythrough', (event) => {
+ 					console.log('I think I can play through the entire ' +
+      				'audio without ever having to stop to buffer.');
+ 				});
+
 			}
 
 			play_music_button.addEventListener("click", playAudio);
@@ -878,6 +896,10 @@ Copyright. All rights reserved.
 				play_music_button.style.display = 'none';
 		      	pause_music_button.style.display = 'block';
 		      	console.log("Music start playing!");
+
+		      	music.addEventListener('waiting', (event) => {
+ 					console.log('Something went wrong :/');
+ 				});
 			}
 
 			function pauseAudio() {
