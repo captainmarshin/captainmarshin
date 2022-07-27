@@ -793,7 +793,7 @@ Copyright. All rights reserved.
 
 		<audio id="mini-player-new-release">
 			<!-- oncanplaythrough="playerfileready()" oncanplay="playerfilecanplay()" onloadeddata="playerfileloaded()" -->
-    		<source id="mini-player-source" src="" type="audio/mp4">
+    		<source id="mini-player-source" src="" type="audio/x-m4a">
 		</audio>
 
 		<div id="mini-player-open" class="mini-player-1">
@@ -970,7 +970,7 @@ Copyright. All rights reserved.
 				.then(data => {
 					// music.setAttribute("src", URL.createObjectURL(data));
 				    document.getElementById('mini-player-source').src = URL.createObjectURL(data);
-				    document.getElementById('mini-player-source').type = 'audio/mp4';
+				    document.getElementById('mini-player-source').type = 'audio/x-m4a';
 					start_music_button.style.display = 'none';
 					loading_icon.style.display = "none";
 					play_music_button.style.display = "block";
@@ -1032,6 +1032,10 @@ Copyright. All rights reserved.
 			// 	play_music_button.style.display = "none";
 
 			// }
+
+			//  $("music").bind("stalled", function() { 
+		    //     music.load();
+		    // });
 
 			function playAudio(){
 				music.play()
