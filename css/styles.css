@@ -145,6 +145,7 @@ Copyright. All rights reserved.
 	.mini-player-name{
 		box-sizing: border-box;
 		padding-left: 10px;
+		padding-right: 10px;
 /*		width: 100px;*/
 		font-size: 17px;
 		letter-spacing: .40px;
@@ -300,7 +301,7 @@ Copyright. All rights reserved.
 
 
 	.mini-player-expand-controls{
-		width: 30%;
+		width: 40%;
 		text-align: right;
 		display: inline-block;
 	}

@@ -803,8 +803,8 @@ Copyright. All rights reserved.
 				<!-- </a> -->
 			</div>
 			<div class="mini-player-name">
-				<div class="mini-player-songname">Indica <span id="status"></span></div>
-				<div class="mini-player-note">NEW RELEASE <span id="progress"></span>%</div>
+				<div class="mini-player-songname">Indica</div>
+				<div class="mini-player-note"><span id="progress">NEW RELEASE</span></div>
 			</div>
 		</div>
 		<div class="mini-player-2">
@@ -841,6 +841,7 @@ Copyright. All rights reserved.
 		// }
 
 		$(document).ready(function () {
+
 			var music = document.getElementById("mini-player-new-release");
 		  	var start_music_button = document.getElementById("mini-player-start-btn");
 		  	var play_music_button = document.getElementById("mini-player-play-btn");
@@ -851,7 +852,7 @@ Copyright. All rights reserved.
 			start_music_button.addEventListener("touchstart", loadingAudio);
 
 			function loadingAudio() {
-				// var audio_url = "https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a";
+				var audio_url = "https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a";
 
 				start_music_button.style.display = 'none';
 				loading_icon.style.display = "inline-block";
@@ -867,10 +868,9 @@ Copyright. All rights reserved.
 			        timer = setTimeout(function() {
 			            ++degree; rotate();
 			        },5);
-			    }
+			    };
 
 				// music.setAttribute("src", audio_url);
- 				// music.load();
 
  				// music.addEventListener('waiting', (event) => {
  				// 	console.log('Loading...');
@@ -915,10 +915,7 @@ Copyright. All rights reserved.
 
 				//
 
-
-
-
-				const elProgress = document.getElementById('progress');
+ 				const elProgress = document.getElementById('progress');
 
 				fetch('https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a')
 				.then(response => {
@@ -967,26 +964,38 @@ Copyright. All rights reserved.
 				  );
 				})
 				.then(response => response.blob())
-				.then(data => {
-					// music.setAttribute("src", URL.createObjectURL(data));
-				    document.getElementById('mini-player-source').src = URL.createObjectURL(data);
-				    document.getElementById('mini-player-source').type = 'audio/x-m4a';
-					start_music_button.style.display = 'none';
+				.then(blob => {
+					blob = blob.slice(0, blob.size, "audio/x-m4a")
+					console.log(blob)
+					var link = URL.createObjectURL(blob);
+					document.getElementById('mini-player-source').setAttribute("src", link);
+				    // document.getElementById('mini-player-source').src = URL.createObjectURL(data);
+				    // document.getElementById('mini-player-source').type = 'audio/x-m4a';
+				    elProgress.innerHTML = 'Playing Now';
+				    music.load();
+				})
+				.catch(error => {
+				  console.error(error);
+				});
+
+				function progress({loaded, total}) {
+				  elProgress.innerHTML = 'Loading ' + Math.round(loaded/total*100)+'%';
+				};
+
+
+				music.addEventListener('loadeddata', (event) => {
+ 					console.log('I think I can play through the entire ' +
+      				'audio without ever having to stop to buffer.');
+      				start_music_button.style.display = 'none';
 					loading_icon.style.display = "none";
 					play_music_button.style.display = "block";
 
       				clearTimeout(timer);
 
  					playAudio();
-				  	
-				})
-				.catch(error => {
-				  console.error(error);
-				})
+ 				});
 
-				function progress({loaded, total}) {
-				  elProgress.innerHTML = Math.round(loaded/total*100)+'%';
-				}
+			}
 
 
 				// Progerss bar!
@@ -1002,20 +1011,6 @@ Copyright. All rights reserved.
 
 				//
 
-
- 				// music.addEventListener('loadeddata', (event) => {
- 				// 	console.log('I think I can play through the entire ' +
-      			// 	'audio without ever having to stop to buffer.');
-      			// 	start_music_button.style.display = 'none';
-				// 	loading_icon.style.display = "none";
-				// 	play_music_button.style.display = "block";
-
-      			// 	clearTimeout(timer);
-
- 				// 	playAudio();
- 				// });
-
-			}
 
 			// loading_icon.addEventListener("click", stopLoading);
 
@@ -1042,6 +1037,7 @@ Copyright. All rights reserved.
 				play_music_button.style.display = 'none';
 		      	pause_music_button.style.display = 'block';
 		      	console.log("Music start playing!");
+		      	document.getElementById('progress').innerHTML = 'Playing Now';
 			}
 
 			function pauseAudio() {
@@ -1049,12 +1045,14 @@ Copyright. All rights reserved.
 		      	play_music_button.style.display = 'block';
 		      	pause_music_button.style.display = 'none';
 		      	console.log("Music stop playing!");
+		      	document.getElementById('progress').innerHTML = 'Paused';
 			}
 
 			music.addEventListener('ended',function() {
 		      play_music_button.style.display = 'block';
 		      pause_music_button.style.display = 'none';
 		      console.log("Music ended!");
+		      document.getElementById('progress').innerHTML = 'Song ended';
 		    });
 
 		});
