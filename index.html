@@ -793,7 +793,7 @@ Copyright. All rights reserved.
 
 		<audio id="mini-player-new-release">
 			<!-- oncanplaythrough="playerfileready()" oncanplay="playerfilecanplay()" onloadeddata="playerfileloaded()" -->
-    		<source src="" type="audio/mp4">
+    		<source id="mini-player-source" src="" type="audio/mp4">
 		</audio>
 
 		<div id="mini-player-open" class="mini-player-1">
@@ -803,8 +803,8 @@ Copyright. All rights reserved.
 				<!-- </a> -->
 			</div>
 			<div class="mini-player-name">
-				<div class="mini-player-songname">Indica</div>
-				<div class="mini-player-note">NEW RELEASE <span id="aone1l"></span>%</div>
+				<div class="mini-player-songname">Indica <span id="status"></span></div>
+				<div class="mini-player-note">NEW RELEASE <span id="progress"></span>%</div>
 			</div>
 		</div>
 		<div class="mini-player-2">
@@ -851,7 +851,7 @@ Copyright. All rights reserved.
 			start_music_button.addEventListener("touchstart", loadingAudio);
 
 			function loadingAudio() {
-				var audio_url = "https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a";
+				// var audio_url = "https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a";
 
 				start_music_button.style.display = 'none';
 				loading_icon.style.display = "inline-block";
@@ -869,8 +869,8 @@ Copyright. All rights reserved.
 			        },5);
 			    }
 
-				music.setAttribute("src", audio_url);
- 				music.load();
+				// music.setAttribute("src", audio_url);
+ 				// music.load();
 
  				// music.addEventListener('waiting', (event) => {
  				// 	console.log('Loading...');
@@ -895,49 +895,142 @@ Copyright. All rights reserved.
  				// 	playAudio();
  				// });
 
- 				function loop() {
-				  var buffered = music.buffered;
-				  var loaded;
 
-				  if (buffered.length) {
-				    loaded = 100 * buffered.end(0) / music.duration;
-				    document.getElementById("aone1l").innerHTML = loaded.toFixed(2);
+
+ 				// % of buffering audio file
+
+ 				// function loop() {
+				//   var buffered = music.buffered;
+				//   var loaded;
+
+				//   if (buffered.length) {
+				//     loaded = 100 * buffered.end(0) / music.duration;
+				//     document.getElementById("aone1l").innerHTML = loaded.toFixed(2);
+				//   }
+
+				//   setTimeout(loop, 50);
+				// }
+
+				// loop();
+
+				//
+
+
+
+
+				const elProgress = document.getElementById('progress');
+
+				fetch('https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a')
+				.then(response => {
+				  if (!response.ok) {
+				    throw Error(response.status+' '+response.statusText)
 				  }
 
-				  setTimeout(loop, 50);
-				}
+				  if (!response.body) {
+				    throw Error('ReadableStream not yet supported in this browser.')
+				  }
 
-				loop();
+				  // to access headers, server must send CORS header "Access-Control-Expose-Headers: content-encoding, content-length x-file-size"
+				  // server must send custom x-file-size header if gzip or other content-encoding is used
+				  const contentEncoding = response.headers.get('content-encoding');
+				  const contentLength = response.headers.get(contentEncoding ? 'x-file-size' : 'content-length');
+				  if (contentLength === null) {
+				    throw Error('Response size header unavailable');
+				  }
 
- 				music.addEventListener('canplay', (event) => {
- 					console.log('I think I can play through the entire ' +
-      				'audio without ever having to stop to buffer.');
-      				start_music_button.style.display = 'none';
+				  const total = parseInt(contentLength, 10);
+				  let loaded = 0;
+
+				  return new Response(
+				    new ReadableStream({
+				      start(controller) {
+				        const reader = response.body.getReader();
+
+				        read();
+				        function read() {
+				          reader.read().then(({done, value}) => {
+				            if (done) {
+				              controller.close();
+				              return; 
+				            }
+				            loaded += value.byteLength;
+				            progress({loaded, total})
+				            controller.enqueue(value);
+				            read();
+				          }).catch(error => {
+				            console.error(error);
+				            controller.error(error)                  
+				          })
+				        }
+				      }
+				    })
+				  );
+				})
+				.then(response => response.blob())
+				.then(data => {
+					// music.setAttribute("src", URL.createObjectURL(data));
+				    document.getElementById('mini-player-source').src = URL.createObjectURL(data);
+					start_music_button.style.display = 'none';
 					loading_icon.style.display = "none";
 					play_music_button.style.display = "block";
 
       				clearTimeout(timer);
 
  					playAudio();
- 				});
+				  	
+				})
+				.catch(error => {
+				  console.error(error);
+				})
+
+				function progress({loaded, total}) {
+				  elProgress.innerHTML = Math.round(loaded/total*100)+'%';
+				}
+
+
+				// Progerss bar!
+
+				// var myProgressBar = document.getElementById('loadbar'); 
+
+				// music.addEventListener('timeupdate', onLoadProgress);
+
+				// function onLoadProgress () {
+				//     var progress = parseInt(((music.currentTime / music.duration) * 100), 10);
+				//     myProgressBar.value = progress; 
+				// }
+
+				//
+
+
+ 				// music.addEventListener('loadeddata', (event) => {
+ 				// 	console.log('I think I can play through the entire ' +
+      			// 	'audio without ever having to stop to buffer.');
+      			// 	start_music_button.style.display = 'none';
+				// 	loading_icon.style.display = "none";
+				// 	play_music_button.style.display = "block";
+
+      			// 	clearTimeout(timer);
+
+ 				// 	playAudio();
+ 				// });
 
 			}
 
-			loading_icon.addEventListener("click", stopLoading);
+			// loading_icon.addEventListener("click", stopLoading);
 
 			play_music_button.addEventListener("click", playAudio);
 
 			pause_music_button.addEventListener("click", pauseAudio);
 
-			function stopLoading() {
-				var stopsrc = "";
-				music.setAttribute("src", stopsrc);
-				console.log("Loading of track stopped.")
-				start_music_button.style.display = 'block';
-				loading_icon.style.display = "none";
-				play_music_button.style.display = "none";
+			// function stopLoading() {
+			// 	var stopsrc = "";
+			// 	music.setAttribute("src", stopsrc);
+			// 	console.log("Loading of track stopped.")
+			// 	start_music_button.style.display = 'block';
+			// 	loading_icon.style.display = "none";
+			// 	play_music_button.style.display = "none";
 
-			}
+			// }
 
 			function playAudio(){
 				music.play()
