@@ -965,16 +965,37 @@ Copyright. All rights reserved.
 				})
 				.then(response => response.blob())
 				.then(blob => {
+
 					blob = blob.slice(0, blob.size, "audio/x-m4a")
+
 					console.log(blob)
-					var link = URL.createObjectURL(blob);
+
+					var link = webkitURL.createObjectURL(blob);
+
 					document.getElementById('mini-player-source').setAttribute("src", link);
+
 				    // document.getElementById('mini-player-source').src = URL.createObjectURL(data);
 				    // document.getElementById('mini-player-source').type = 'audio/x-m4a';
+				    
 				    elProgress.innerHTML = 'Playing Now';
 
 				    music.load();
 				    console.log(music)
+
+				    // Does not work in Safari/mobile
+			        // var blob = new Blob([arrayBuffer]);
+			        // var url = URL.createObjectURL(blob);
+
+			        // Should work in Safari/on mobile
+			        // var blob = new Blob([arrayBuffer], {type: 'audio/mpeg'});
+			        // // All browsers, except Firefox
+			        // try {
+			        //     url = webkitURL.createObjectURL(blob);
+			        // }
+			        // // Firefox
+			        // catch(err) {
+			        //     url = URL.createObjectURL(blob);
+			        // }
 
 				})
 				.catch(error => {
