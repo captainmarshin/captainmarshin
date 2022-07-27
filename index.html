@@ -810,7 +810,7 @@ Copyright. All rights reserved.
 		<div class="mini-player-2">
 			<div class="mini-player-play">
 				<span id="mini-player-start-btn" class="material-icons">play_arrow</span>
-				<span id="mini-player-loading" class="material-icons">sync</span>
+				<span id="mini-player-loading" class="material-icons">autorenew</span>
 				<span id="mini-player-play-btn" class="material-icons">play_arrow</span>
 				<span id="mini-player-pause-btn" class="material-icons">pause</span>
 			</div>
@@ -865,7 +865,7 @@ Copyright. All rights reserved.
 			        $loading_icon_anim.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});  
 			        $loading_icon_anim.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});                      
 			        timer = setTimeout(function() {
-			            --degree; rotate();
+			            ++degree; rotate();
 			        },5);
 			    }
 
