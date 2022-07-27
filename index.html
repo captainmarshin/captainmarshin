@@ -804,7 +804,7 @@ Copyright. All rights reserved.
 			</div>
 			<div class="mini-player-name">
 				<div class="mini-player-songname">Indica</div>
-				<div class="mini-player-note">NEW RELEASE</div>
+				<div class="mini-player-note">NEW RELEASE <span id="aone1l"></span>%</div>
 			</div>
 		</div>
 		<div class="mini-player-2">
@@ -895,13 +895,27 @@ Copyright. All rights reserved.
  				// 	playAudio();
  				// });
 
+ 				function loop() {
+				  var buffered = music.buffered;
+				  var loaded;
+
+				  if (buffered.length) {
+				    loaded = 100 * buffered.end(0) / music.duration;
+				    document.getElementById("aone1l").innerHTML = loaded.toFixed(2);
+				  }
+
+				  setTimeout(loop, 50);
+				}
+
+				loop();
+
  				music.addEventListener('canplay', (event) => {
  					console.log('I think I can play through the entire ' +
       				'audio without ever having to stop to buffer.');
       				start_music_button.style.display = 'none';
 					loading_icon.style.display = "none";
 					play_music_button.style.display = "block";
-					
+
       				clearTimeout(timer);
 
  					playAudio();
@@ -909,9 +923,21 @@ Copyright. All rights reserved.
 
 			}
 
+			loading_icon.addEventListener("click", stopLoading);
+
 			play_music_button.addEventListener("click", playAudio);
 
 			pause_music_button.addEventListener("click", pauseAudio);
+
+			function stopLoading() {
+				var stopsrc = "";
+				music.setAttribute("src", stopsrc);
+				console.log("Loading of track stopped.")
+				start_music_button.style.display = 'block';
+				loading_icon.style.display = "none";
+				play_music_button.style.display = "none";
+
+			}
 
 			function playAudio(){
 				music.play()
