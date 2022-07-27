@@ -968,15 +968,23 @@ Copyright. All rights reserved.
 				})
 				.then(response => response.blob())
 				.then(data => {
+
+					var source = document.getElementById('mini-player-source');
 					// music.setAttribute("src", URL.createObjectURL(data));
-				    document.getElementById('mini-player-source').src = URL.createObjectURL(data);
+				    source.src = URL.createObjectURL(data);
 					start_music_button.style.display = 'none';
 					loading_icon.style.display = "none";
 					play_music_button.style.display = "block";
 
       				clearTimeout(timer);
 
- 					playAudio();
+      				music.appendChild(source);
+
+      				music.load()
+      				music.play()
+
+
+ 					// playAudio();
 				  	
 				})
 				.catch(error => {
