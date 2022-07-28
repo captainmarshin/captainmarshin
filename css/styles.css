@@ -172,6 +172,8 @@ Copyright. All rights reserved.
 	.mini-player-controls{
 		width: 100%;
 		text-align: right;
+		box-sizing: border-box;
+		padding-right: 13px;
 		display: inline-block;
 	}
 
