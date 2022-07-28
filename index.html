@@ -74,6 +74,7 @@ Copyright. All rights reserved.
 
 	<!-- Google Icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -84,7 +85,7 @@ Copyright. All rights reserved.
 	<div class="header" id="header">
 
 		<div class="logo">
-			<a href="http://captainmarshin.com"><img src="images/captain_logo.png"></a>
+			<a href="http://captainmarshin.com"><img src="images/captain_logo.svg"></a>
 		</div>
 
 		<div class="button">
@@ -807,6 +808,9 @@ Copyright. All rights reserved.
 				<div class="mini-player-note"><span id="progress">NEW RELEASE</span></div>
 			</div>
 			<div class="mini-player-controls">
+				<div class="mini-player-controls-ctrl">
+					<div id="mini-player-like-btn"><span class="material-symbols-outlined">favorite</span></div>
+				</div>
 				<div class="mini-player-controls-ctrl" id="mini-player-ctrl-btns">
 					<div id="mini-player-start-btn"><span class="material-icons">play_arrow</span></div>
 					<div id="mini-player-loading"><span class="material-icons">autorenew</span></div>
@@ -1118,10 +1122,14 @@ Copyright. All rights reserved.
 
 				if (miniplayerexpand.style.display === "block") {
 					miniplayerexpand.style.display = "none";
+					document.body.style.overflow = "scroll";
+					document.miniplayerexpand.style.overflow = "hidden";
 				} 
 				else 
 				{
 					miniplayerexpand.style.display = "block";
+					document.body.style.overflow = "hidden";
+					document.miniplayerexpand.style.overflow = "scroll";
 			    }
 			   }
 			})
