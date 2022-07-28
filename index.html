@@ -1012,7 +1012,7 @@ Copyright. All rights reserved.
 				};
 
 
-				music.addEventListener('canplay', (event) => {
+				music.addEventListener('loadeddata', (event) => {
  					console.log('I think I can play through the entire ' +
       				'audio without ever having to stop to buffer.');
       				start_music_button.style.display = 'none';
