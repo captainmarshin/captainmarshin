@@ -497,6 +497,62 @@ Copyright. All rights reserved.
 	}
 
 
+/* PAGES ALL SINGLES */
+
+	.all-singles{
+		width: 100%;
+/*		border-top: 1px solid #111;*/
+		position: fixed;
+		top: 50px;
+		bottom: 155px;
+/*		display: flex;*/
+		align-items: center;
+    	justify-content: center;
+		background: rgba(30, 30, 30, 0.6);
+		backdrop-filter: blur(30px);
+		-webkit-backdrop-filter: blur(30px);
+		box-sizing: border-box;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+/*		display: none;*/
+		overflow-y:scroll;
+    	overflow-x:hidden;
+	}
+
+
+	.all-singles-cards{
+		display: flex;
+		flex-wrap: wrap;
+/*		flex-flow: row wrap;*/
+	}
+
+
+	.all-singles-cards .cat_item{
+/*		border: 1px solid red;*/
+		box-sizing: border-box;
+		padding: 20px;
+		margin-right: 0px;
+		flex-grow: 1;
+	}
+
+	.all-singles-cards .cat_item img{
+/*		max-width: 210px;*/
+		width: 100%;
+		height: auto;
+	}
+
+	.all-singles-cards .cat_item:last-child{
+/*		border: 1px solid red;*/
+		box-sizing: border-box;
+		padding: 20px;
+		margin-right: 0px;
+	}
+
+
+
+
 
 
 
