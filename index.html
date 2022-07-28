@@ -791,9 +791,9 @@ Copyright. All rights reserved.
 
 	<div id="mini-player" class="mini-player">
 
-		<audio id="mini-player-new-release" type="audio/mp4">
+		<audio id="mini-player-new-release" type="audio/mp3">
 			<!-- oncanplaythrough="playerfileready()" oncanplay="playerfilecanplay()" onloadeddata="playerfileloaded()" -->
-    		<source id="mini-player-source" src="" type="audio/mp4">
+    		<source id="mini-player-source" src="" type="audio/mp3">
 		</audio>
 
 		<div id="mini-player-open" class="mini-player-1">
@@ -917,7 +917,7 @@ Copyright. All rights reserved.
 
  				const elProgress = document.getElementById('progress');
 
-				fetch('https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a')
+				fetch('https://dl.dropbox.com/s/ja4fj90sbnlp7yk/Indica.mp3')
 				.then(response => {
 				  if (!response.ok) {
 				    throw Error(response.status+' '+response.statusText)
@@ -966,7 +966,7 @@ Copyright. All rights reserved.
 				.then(response => response.blob())
 				.then(blob => {
 
-					blob = blob.slice(0, blob.size, "audio/mp4")
+					blob = blob.slice(0, blob.size, "audio/mp3")
 
 					console.log(blob)
 
@@ -981,6 +981,7 @@ Copyright. All rights reserved.
 				    start_music_button.style.display = 'none';
 					loading_icon.style.display = "none";
 					play_music_button.style.display = "block";
+
 
 				    console.log(music)
 
