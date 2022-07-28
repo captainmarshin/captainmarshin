@@ -30,6 +30,32 @@ Copyright. All rights reserved.
 	}
 
 
+/* Confetti when like // Delete/replace	*/
+
+
+	.canvas{
+		position: fixed;
+		bottom: 80px;
+		background: none;
+		pointer-events: none;
+		right: 15px;
+		width: 150px;
+		height: 150px;
+		z-index: 1;
+	}
+
+
+	canvas{
+		position:relative;
+		height: auto;
+		width: 150px;
+		top: 60px;
+		box-sizing: border-box;
+	}
+
+/* -----	*/
+
+
 /* WEBSITE HEADER */
 
 
@@ -499,7 +525,7 @@ Copyright. All rights reserved.
 
 /* PAGES ALL SINGLES */
 
-	.all-singles{
+	.all-singles, .all-videos, .all-lyrics{
 		width: 100%;
 /*		border-top: 1px solid #111;*/
 		position: fixed;
@@ -522,13 +548,13 @@ Copyright. All rights reserved.
 	}
 
 
-	.all-singles-cards{
+	.all-singles-cards, .all-videos-cards, .all-lyrics-cards{
 		/*display: flex;
 		flex-wrap: wrap;*/
 /*		flex-flow: row wrap;*/
-display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 20px;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		grid-gap: 20px;
 	}
 
 	.all-title{
@@ -565,11 +591,76 @@ display: grid;
 		height: auto;
 	}
 
+
+/* VIDEO PAGE */
+
+	.all-videos-cards .cat_item{
+/*		border: 1px solid red;*/
+		box-sizing: border-box;
+/*		padding: 5px;*/
+		margin-right: 0px;
+		flex-grow: 1;
+	}
+
+	.all-videos-cards .cat_item .video_item_name{
+		white-space: nowrap;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+/*    	max-width: 150px;*/
+		max-width: calc(100%);
+	}
+
+	.all-videos-cards .cat_item img{
+		width: 100%;
+		height: auto;
+	}
+
+	.all-videos-cards .cat_item:last-child{
+/*		border: 1px solid red;*/
+		box-sizing: border-box;
+		margin-right: 0px;
+	}
+
+
+/* LYRICS PAGE */
+
+	.all-lyrics-cards .cat_item{
+/*		border: 1px solid red;*/
+		box-sizing: border-box;
+/*		padding: 5px;*/
+		margin-right: 0px;
+		flex-grow: 1;
+	}
+
+	.all-lyrics-cards .cat_item .item_name{
+		white-space: nowrap;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+/*    	max-width: 150px;*/
+		max-width: calc(100%);
+	}
+
+	.all-lyrics-cards .cat_item img{
+		width: 100%;
+		height: auto;
+	}
+
+	.all-lyrics-cards .cat_item:last-child{
+/*		border: 1px solid red;*/
+		box-sizing: border-box;
+		margin-right: 0px;
+	}
+
 	.all-singles-cards .cat_item:last-child{
 /*		border: 1px solid red;*/
 		box-sizing: border-box;
 		margin-right: 0px;
 	}
+
+
+
+
+/* ALL MUSIC VIDEOS PAGE */
 
 
 
