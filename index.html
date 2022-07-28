@@ -1347,8 +1347,8 @@ Copyright. All rights reserved.
     		<source id="mini-player-source" src="" type="audio/mp3">
 		</audio>
 
-		<div class="mini-player-row">
-			<div id="mini-player-open" class="mini-player-cover">
+		<div class="mini-player-row" id="mini-player-open">
+			<div class="mini-player-cover">
 				<!-- <div id="mini-player-open"> -->
 				<img src="content/singles/226.jpg">
 				<!-- </div> -->
@@ -1358,7 +1358,6 @@ Copyright. All rights reserved.
 				<div class="mini-player-note"><span id="progress">NEW RELEASE</span></div>
 			</div>
 			<div class="mini-player-controls">
-				<div class="canvas"><canvas id="canvas"></canvas></div>
 				<div class="mini-player-controls-ctrl">
 					<div id="mini-player-like-btn"><span class="material-symbols-outlined">favorite</span></div>
 				</div>
@@ -1372,41 +1371,6 @@ Copyright. All rights reserved.
 		</div>
 
 	</div>
-
-
-	<script type="text/javascript">
-		
-		var myCanvas = document.getElementById('canvas');
-
-		document.getElementById('mini-player-like-btn').addEventListener('click', function(){
-
-			var myConfetti = confetti.create(myCanvas, {
-		});
-		myConfetti({
-		  particleCount: 50,
-		  		spread: 80,
-				origin: {
-				    x: 0.5,
-				    y: 1
-				  },
-				scalar: 1
-		});
-			// confetti({
-			// 	particleCount: 50,
-		  	// 	spread: 70,
-			// 	origin: {
-			// 	    x: 0.93,
-			// 	    y: 0.95
-			// 	  },
-			// 	scalar: 0.7
-			// });
-
-			setTimeout(() => {
-			  confetti.reset();
-			}, 3000);
-		})
-
-	</script>
 
 
 		<!-- <div id="mini-player-open">
@@ -1706,7 +1670,7 @@ Copyright. All rights reserved.
 
 			musicplayeropen.addEventListener("click", function() {
 
-			  if (!$(event.target).closest('#mini-player-ctrl-btns').length) {
+			  if ((!$(event.target).closest('#mini-player-ctrl-btns').length) && (!$(event.target).closest('#mini-player-like-btn').length)) {
 
 				if (miniplayerexpand.style.display === "block") {
 					miniplayerexpand.style.display = "none";

@@ -33,7 +33,7 @@ Copyright. All rights reserved.
 /* Confetti when like // Delete/replace	*/
 
 
-	.canvas{
+/*	.canvas{
 		position: fixed;
 		bottom: 80px;
 		background: none;
@@ -51,7 +51,7 @@ Copyright. All rights reserved.
 		width: 150px;
 		top: 60px;
 		box-sizing: border-box;
-	}
+	}*/
 
 /* -----	*/
 
@@ -545,6 +545,11 @@ Copyright. All rights reserved.
 		display: none;
 		overflow-y:scroll;
     	overflow-x:hidden;
+	}
+
+
+	#open-all-lyrics:hover, #open-all-singles:hover, #open-all-videos:hover{
+		cursor: pointer;
 	}
 
 
