@@ -796,18 +796,38 @@ Copyright. All rights reserved.
     		<source id="mini-player-source" src="" type="audio/mp3">
 		</audio>
 
-		<div id="mini-player-open" class="mini-player-1">
+		<div class="mini-player-row">
 			<div class="mini-player-cover">
-				<!-- <a href="https://captainmarshin.com/indica"> -->
+				<div id="mini-player-open">
+				<img src="content/singles/226.jpg">
+				</div>
+			</div>
+			<div class="mini-player-meta">
+				<div class="mini-player-name">Indica <span class="material-icons">explicit</span></div>
+				<div class="mini-player-note"><span id="progress">NEW RELEASE</span></div>
+			</div>
+			<div class="mini-player-controls">
+				<div class="mini-player-controls-ctrl">
+					<div id="mini-player-start-btn"><span class="material-icons">play_arrow</span></div>
+					<div id="mini-player-loading"><span class="material-icons">autorenew</span></div>
+					<div id="mini-player-play-btn"><span class="material-icons">play_arrow</span></div>
+					<div id="mini-player-pause-btn"><span class="material-icons">pause</span></div>
+				</div>
+				<div id="mini-player-share-btn"><span class="material-icons">ios_share</span></div>
+			</div>
+		</div>
+
+	</div>
+
+
+		<!-- <div id="mini-player-open">
+			<div class="mini-player-cover">
 					<img src="content/singles/226.jpg">
-				<!-- </a> -->
 			</div>
 			<div class="mini-player-name">
 				<div class="mini-player-songname">Indica</div>
 				<div class="mini-player-note"><span id="progress">NEW RELEASE</span></div>
 			</div>
-		</div>
-		<div class="mini-player-2">
 			<div class="mini-player-play">
 				<span id="mini-player-start-btn" class="material-icons">play_arrow</span>
 				<span id="mini-player-loading" class="material-icons">autorenew</span>
@@ -817,8 +837,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-share">
 				<span id="mini-player-share-btn" class="material-icons">ios_share</span>
 			</div>
-		</div>
-	</div>
+	</div> -->
 
 
 	<script type="text/javascript">
@@ -984,7 +1003,6 @@ Copyright. All rights reserved.
 
 					music.load()
 
-
 				    console.log(music)
 
 				    // Does not work in Safari/mobile
@@ -1017,13 +1035,15 @@ Copyright. All rights reserved.
       				'audio without ever having to stop to buffer.');
       				start_music_button.style.display = 'none';
 					loading_icon.style.display = "none";
-					play_music_button.style.display = "block";
+					play_music_button.style.display = "inline-block";
+
+					document.getElementById('mini-player-play-btn').click();
 
 					console.log(music)
 
       				clearTimeout(timer);
 
- 					playAudio();
+ 					// playAudio();
  				});
 
 			}
@@ -1066,21 +1086,21 @@ Copyright. All rights reserved.
 			function playAudio(){
 				music.play()
 				play_music_button.style.display = 'none';
-		      	pause_music_button.style.display = 'block';
+		      	pause_music_button.style.display = 'inline-block';
 		      	console.log("Music start playing!");
 		      	document.getElementById('progress').innerHTML = 'Playing Now';
 			}
 
 			function pauseAudio() {
 				music.pause();
-		      	play_music_button.style.display = 'block';
+		      	play_music_button.style.display = 'inline-block';
 		      	pause_music_button.style.display = 'none';
 		      	console.log("Music stop playing!");
 		      	document.getElementById('progress').innerHTML = 'Paused';
 			}
 
 			music.addEventListener('ended',function() {
-		      play_music_button.style.display = 'block';
+		      play_music_button.style.display = 'inline-block';
 		      pause_music_button.style.display = 'none';
 		      console.log("Music ended!");
 		      document.getElementById('progress').innerHTML = 'Song ended';

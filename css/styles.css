@@ -100,7 +100,7 @@ Copyright. All rights reserved.
 		border-top: 1px solid #111;
 		position: fixed;
 		bottom: 90px;
-		display: flex;
+/*		display: flex;*/
 		align-items: center;
     	justify-content: center;
 		background: rgba(0, 0, 0, 0.8);
@@ -114,16 +114,11 @@ Copyright. All rights reserved.
 	}
 
 
-	.mini-player-1, .mini-player-2{
-		width: 50%;
-	}
+	.mini-player-row{
+		width: 100%;
+		box-sizing: border-box;
+		display: flex;
 
-	.mini-player-2{
-		text-align: right;
-	}
-
-	.mini-player-1:hover{
-		cursor: pointer;
 	}
 
 
@@ -142,16 +137,23 @@ Copyright. All rights reserved.
 	}
 
 
-	.mini-player-name{
+	.mini-player-meta{
 		box-sizing: border-box;
-		padding-left: 10px;
-		padding-right: 10px;
-/*		width: 100px;*/
-		font-size: 17px;
-		letter-spacing: .40px;
+		padding-left: 17px;
+		padding-right: 20px;
+		width: 100%;
 		display: inline-block;
-		vertical-align: 7px;
-		text-overflow: ellipsis;
+		padding-top: 10px;
+		max-width: calc(100%);
+    	white-space: nowrap;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+	}
+
+	.mini-player-name span {
+		font-size: 14px;
+		vertical-align: -2px;
+		color: #999;
 	}
 
 	.mini-player-note{
@@ -160,31 +162,18 @@ Copyright. All rights reserved.
 		color: #F1882E;
 	}
 
-	.mini-player-play{
-		width: 80px;
-		text-align: center;
-		display: inline-block;
-	}
-
-	.mini-player-play span{
-		font-size: 32px;
-		color: #ddd;
-	}
-
-	.mini-player-play span:hover{
-		cursor: pointer;
-	}
-
-	.mini-player-share{
-		width: 30px;		
+	.mini-player-controls{
+		width: 100%;
 		text-align: right;
 		display: inline-block;
 	}
 
-	.mini-player-share span{
-		padding: 0;
-		vertical-align: 4.5px;
+	.mini-player-controls span{
 		color: #ddd;
+	}
+
+	.mini-player-controls span:hover{
+		cursor: pointer;
 	}
 
 
@@ -205,7 +194,7 @@ Copyright. All rights reserved.
 	}
 
 	#mini-player-start-btn{
-		display: block;
+		display: inline-block;
 	}
 
 	#mini-player-share-btn{
@@ -214,9 +203,16 @@ Copyright. All rights reserved.
 
 
 
-	#mini-player-expand{
-
+	.mini-player-controls-ctrl span{
+		font-size: 35px;
+		box-sizing: border-box;
+		padding-right: 40px;
 	}
+
+	#mini-player-share-btn span{
+		font-size: 24px;
+	}
+
 
 
 /* MINI PLAYER EXPAND (TRACKS LIST)	*/
@@ -272,7 +268,7 @@ Copyright. All rights reserved.
 	.mini-player-expand-meta{
 		box-sizing: border-box;
 		padding-left: 17px;
-		padding-right: 10px;
+		padding-right: 20px;
 		width: 100%;
 		display: inline-block;
 		padding-top: 8px;
@@ -301,7 +297,9 @@ Copyright. All rights reserved.
 
 
 	.mini-player-expand-controls{
-		width: 40%;
+		width: 100%;
+		/*white-space: nowrap;
+    	overflow: hidden;*/
 		text-align: right;
 		display: inline-block;
 	}
