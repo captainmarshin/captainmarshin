@@ -29,7 +29,7 @@ Copyright. All rights reserved.
 	.header{
 		height: 50px;
 		box-sizing: border-box;
-		border-bottom: 1px solid #111;
+		border-bottom: 1px solid #222;
 		display: flex;
 		padding-top: 10px;
 		padding-right: 15px;
@@ -118,7 +118,6 @@ Copyright. All rights reserved.
 		width: 100%;
 		box-sizing: border-box;
 		display: flex;
-
 	}
 
 
@@ -127,10 +126,14 @@ Copyright. All rights reserved.
 		display: inline-block;
 	}
 
+	.mini-player-cover:hover{
+		cursor: pointer;
+	}
+
 	.mini-player-cover img{
 		width: 50px;
 		height: 50px;
-		border: 1px solid #333;
+		border: 1px solid #222;
 		border-radius: 5px;
 		background-color: #1c1c1c;
 		vertical-align: bottom;
@@ -148,6 +151,10 @@ Copyright. All rights reserved.
     	white-space: nowrap;
     	overflow: hidden;
     	text-overflow: ellipsis;
+	}
+
+	.mini-player-meta:hover{
+		cursor: pointer;
 	}
 
 	.mini-player-name span {
@@ -203,15 +210,37 @@ Copyright. All rights reserved.
 
 
 
-	.mini-player-controls-ctrl span{
+	#mini-player-loading .material-icons{
+		line-height: 55px;
 		font-size: 35px;
-		box-sizing: border-box;
-		padding-right: 40px;
 	}
 
-	#mini-player-share-btn span{
-		font-size: 24px;
+	#mini-player-pause-btn .material-icons{
+		line-height: 55px;
+		font-size: 40px;
 	}
+
+	#mini-player-play-btn .material-icons{
+		line-height: 55px;
+		font-size: 40px;
+		color: #F1882E;
+	}
+
+	#mini-player-start-btn .material-icons{
+		line-height: 55px;
+		font-size: 40px;
+	}
+
+
+/*	.mini-player-controls-ctrl{
+		height: 55px;
+		box-sizing: border-box;
+		border: 1px solid red;
+	}*/
+
+/*	.mini-player-controls-ctrl div{
+		
+	}*/
 
 
 

@@ -796,24 +796,23 @@ Copyright. All rights reserved.
     		<source id="mini-player-source" src="" type="audio/mp3">
 		</audio>
 
-		<div class="mini-player-row">
+		<div class="mini-player-row" id="mini-player-open">
 			<div class="mini-player-cover">
-				<div id="mini-player-open">
+				<!-- <div id="mini-player-open"> -->
 				<img src="content/singles/226.jpg">
-				</div>
+				<!-- </div> -->
 			</div>
 			<div class="mini-player-meta">
 				<div class="mini-player-name">Indica <span class="material-icons">explicit</span></div>
 				<div class="mini-player-note"><span id="progress">NEW RELEASE</span></div>
 			</div>
 			<div class="mini-player-controls">
-				<div class="mini-player-controls-ctrl">
+				<div class="mini-player-controls-ctrl" id="mini-player-ctrl-btns">
 					<div id="mini-player-start-btn"><span class="material-icons">play_arrow</span></div>
 					<div id="mini-player-loading"><span class="material-icons">autorenew</span></div>
 					<div id="mini-player-play-btn"><span class="material-icons">play_arrow</span></div>
 					<div id="mini-player-pause-btn"><span class="material-icons">pause</span></div>
 				</div>
-				<div id="mini-player-share-btn"><span class="material-icons">ios_share</span></div>
 			</div>
 		</div>
 
@@ -1037,11 +1036,11 @@ Copyright. All rights reserved.
 					loading_icon.style.display = "none";
 					play_music_button.style.display = "inline-block";
 
-					document.getElementById('mini-player-play-btn').click();
-
 					console.log(music)
 
       				clearTimeout(timer);
+
+      				document.getElementById('progress').innerHTML = 'Ready to play';
 
  					// playAudio();
  				});
@@ -1115,6 +1114,8 @@ Copyright. All rights reserved.
 
 			musicplayeropen.addEventListener("click", function() {
 
+			  if (!$(event.target).closest('#mini-player-ctrl-btns').length) {
+
 				if (miniplayerexpand.style.display === "block") {
 					miniplayerexpand.style.display = "none";
 				} 
@@ -1122,6 +1123,7 @@ Copyright. All rights reserved.
 				{
 					miniplayerexpand.style.display = "block";
 			    }
+			   }
 			})
 		})
 
