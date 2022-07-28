@@ -523,9 +523,12 @@ Copyright. All rights reserved.
 
 
 	.all-singles-cards{
-		display: flex;
-		flex-wrap: wrap;
+		/*display: flex;
+		flex-wrap: wrap;*/
 /*		flex-flow: row wrap;*/
+display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 1rem;
 	}
 
 
