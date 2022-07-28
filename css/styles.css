@@ -97,7 +97,7 @@ Copyright. All rights reserved.
 	.mini-player{
 		height: 65px;
 		width: 100%;
-		border-top: 1px solid #222;
+/*		border-top: 1px solid #222;*/
 		position: fixed;
 		bottom: 90px;
 /*		display: flex;*/
@@ -109,7 +109,7 @@ Copyright. All rights reserved.
 		box-sizing: border-box;
 		padding-left: 20px;
 		padding-right: 20px;
-		padding-top: 5px;
+		padding-top: 6px;
 		padding-bottom: 5px;
 	}
 
@@ -266,6 +266,49 @@ Copyright. All rights reserved.
 	  	'opsz' 48
 	}
 
+
+	.mini-player-timeline{
+		width: 100%;
+		height: 30px;
+		position: fixed;
+		bottom: 143px;
+		padding: 0;
+		margin: 0;
+		z-index: 1;
+		display: none;
+/*		border: 1px solid red;*/
+	}
+
+	.mini-player-timeline progress{
+		width: 100%;
+		box-sizing: border-box;
+		vertical-align: bottom;
+	}
+
+	.mini-player-timeline:hover > progress{
+		height: 10px;
+		cursor: pointer;
+	}
+
+	progress {
+	  	border-radius: 7px;
+	  	padding: 0;
+		margin: 0;
+	  	height: 1px;
+	}
+
+	progress::-webkit-progress-bar {
+	  	background-color: #222;
+	}
+
+	progress::-webkit-progress-value {
+	  	background-color: #F1882E;
+	}
+
+	progress::-moz-progress-bar {
+	  	background-color: #222;
+	}
+
 /*	.mini-player-controls-ctrl div{
 		
 	}*/
@@ -280,7 +323,7 @@ Copyright. All rights reserved.
 		border-top: 1px solid #111;
 		position: fixed;
 		top: 50px;
-		bottom: 155px;
+		bottom: 156px;
 /*		display: flex;*/
 		align-items: center;
     	justify-content: center;

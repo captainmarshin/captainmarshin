@@ -476,6 +476,20 @@ Copyright. All rights reserved.
 		<div class="cat_content">
 			
 			<div class="cat_item_fix"></div>
+
+			<div class="cat_item">
+				<a href="http://captainmarshin.com/indica#lyrics">
+					<img class="lyrics_item_cover" src="content/lyrics/531.jpg">
+				</a>
+				<div class="item_name">Indica</div>
+			</div>
+
+			<div class="cat_item">
+				<a href="http://captainmarshin.com/wtcmebc#lyrics">
+					<img class="lyrics_item_cover" src="content/lyrics/530.jpg">
+				</a>
+				<div class="item_name">WTCMEBC</div>
+			</div>
 			
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/cmat4#lyrics">
@@ -712,7 +726,7 @@ Copyright. All rights reserved.
 
 			<div class="cat_item">
 				<a href="https://music.apple.com/artist/captain-marshin/1486687033" target="_blank" title="Apple Music">
-						<img class="more_item_cover" src="images/applemusic.jpg">
+					<img class="more_item_cover" src="images/applemusic.jpg">
 				</a>
 			</div>
 
@@ -789,6 +803,11 @@ Copyright. All rights reserved.
 		<a class="urlhelp" href="https://war.ukraine.ua/" target="_blank">🇺🇦❤️</a>
 	</div>
 
+
+	<div id="mini-player-timeline" class="mini-player-timeline">
+		<progress id="mini-player-timeline-bar" value="0" max="100">
+		</progress>
+	</div>
 
 	<div id="mini-player" class="mini-player">
 
@@ -1029,7 +1048,7 @@ Copyright. All rights reserved.
 				});
 
 				function progress({loaded, total}) {
-				  elProgress.innerHTML = 'Loading ' + Math.round(loaded/total*100)+'%';
+				  elProgress.innerHTML = 'LOADING ' + Math.round(loaded/total*100)+'%';
 				};
 
 
@@ -1044,7 +1063,7 @@ Copyright. All rights reserved.
 
       				clearTimeout(timer);
 
-      				document.getElementById('progress').innerHTML = 'Ready to play';
+      				document.getElementById('progress').innerHTML = 'READY TO PLAY';
 
  					// playAudio();
  				});
@@ -1054,16 +1073,16 @@ Copyright. All rights reserved.
 
 				// Progerss bar!
 
-				// var myProgressBar = document.getElementById('loadbar'); 
+				var myProgressBar = document.getElementById('mini-player-timeline-bar'); 
 
-				// music.addEventListener('timeupdate', onLoadProgress);
+				music.addEventListener('timeupdate', onLoadProgress);
 
-				// function onLoadProgress () {
-				//     var progress = parseInt(((music.currentTime / music.duration) * 100), 10);
-				//     myProgressBar.value = progress; 
-				// }
+				function onLoadProgress () {
+				    var progress = parseInt(((music.currentTime / music.duration) * 100), 10);
+				    myProgressBar.value = progress; 
+				}
 
-				//
+				
 
 
 			// loading_icon.addEventListener("click", stopLoading);
@@ -1087,11 +1106,13 @@ Copyright. All rights reserved.
 		    // });
 
 			function playAudio(){
+				document.getElementById('mini-player-timeline').style.display = "block";
+				
 				music.play()
 				play_music_button.style.display = 'none';
 		      	pause_music_button.style.display = 'inline-block';
 		      	console.log("Music start playing!");
-		      	document.getElementById('progress').innerHTML = 'Playing Now';
+		      	document.getElementById('progress').innerHTML = 'PLAYING NOW';
 			}
 
 			function pauseAudio() {
@@ -1099,14 +1120,14 @@ Copyright. All rights reserved.
 		      	play_music_button.style.display = 'inline-block';
 		      	pause_music_button.style.display = 'none';
 		      	console.log("Music stop playing!");
-		      	document.getElementById('progress').innerHTML = 'Paused';
+		      	document.getElementById('progress').innerHTML = 'PAUSED';
 			}
 
 			music.addEventListener('ended',function() {
 		      play_music_button.style.display = 'inline-block';
 		      pause_music_button.style.display = 'none';
 		      console.log("Music ended!");
-		      document.getElementById('progress').innerHTML = 'Song ended';
+		      document.getElementById('progress').innerHTML = 'SONG ENDED';
 		    });
 
 		});
