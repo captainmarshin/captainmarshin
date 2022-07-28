@@ -27,7 +27,7 @@ Copyright. All rights reserved.
 
 
 	.header{
-		height: 50px;
+		height: 70px;
 		box-sizing: border-box;
 		border-bottom: 1px solid #222;
 		display: flex;
@@ -109,7 +109,7 @@ Copyright. All rights reserved.
 		box-sizing: border-box;
 		padding-left: 20px;
 		padding-right: 20px;
-		padding-top: 6px;
+		padding-top: 5px;
 		padding-bottom: 5px;
 	}
 
@@ -137,6 +137,8 @@ Copyright. All rights reserved.
 		border-radius: 5px;
 		background-color: #1c1c1c;
 		vertical-align: bottom;
+		box-sizing: border-box;
+		margin-top: 3px;
 	}
 
 
@@ -323,7 +325,7 @@ Copyright. All rights reserved.
 		border-top: 1px solid #111;
 		position: fixed;
 		top: 50px;
-		bottom: 156px;
+		bottom: 155px;
 /*		display: flex;*/
 		align-items: center;
     	justify-content: center;
@@ -348,6 +350,10 @@ Copyright. All rights reserved.
 		display: flex;
 		border-bottom: 1px solid #222;
 		margin-bottom: 10px;
+	}
+
+	.mini-player-expand-row:first-child{
+		margin-top: 15px;
 	}
 
 	.mini-player-expand-row:last-child{
