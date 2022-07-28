@@ -236,6 +236,7 @@ Copyright. All rights reserved.
 	.mini-player-controls-ctrl{
 		box-sizing: border-box;
 		display: inline-block;
+		width: 40px;
 	}
 
 	#mini-player-like-btn .material-symbols-outlined{
@@ -244,6 +245,8 @@ Copyright. All rights reserved.
 		vertical-align: 6px;
 		box-sizing: border-box;
 		padding-right: 10px;
+		width: 40px;
+		text-align: center;
 	}
 
 	#mini-player-like-btn .material-symbols-outlined:hover{
