@@ -86,8 +86,8 @@ Copyright. All rights reserved.
 
 	<div class="header" id="header">
 
-		<div class="logo">
-			<a href="http://captainmarshin.com"><img src="images/captain_logo.svg"></a>
+		<div class="logo" id="close-all-windows">
+			<img src="images/captain_logo.svg">
 		</div>
 
 		<div class="button">
@@ -354,6 +354,9 @@ Copyright. All rights reserved.
 	</div>
 
 	<div id="window-all-singles" class="all-singles">
+
+		<div class="all-title">All Singles</div>
+
 		<div class="all-singles-cards">
 			
 
@@ -1384,6 +1387,45 @@ Copyright. All rights reserved.
 			})
 		})
 
+
+		$(document).ready(function() {
+			var allsinglesopen = document.getElementById("open-all-singles");
+			var windowallsingles = document.getElementById("window-all-singles");
+
+			allsinglesopen.addEventListener("click", function() {
+
+				if (windowallsingles.style.display === "block") {
+					windowallsingles.style.display = "none";
+					document.body.style.overflow = "scroll";
+					windowallsingles.style.overflow = "hidden";
+				} 
+				else 
+				{
+					windowallsingles.style.display = "block";
+					document.body.style.overflow = "hidden";
+					windowallsingles.style.overflow = "scroll";
+			    }
+			   
+			})
+		})
+
+
+		$(document).ready(function() {
+			var closeallwindows = document.getElementById('close-all-windows');
+
+			var allsingleswindow = document.getElementById('window-all-singles');
+
+			var miniplayerexpand = document.getElementById("mini-player-expand");
+
+			closeallwindows.addEventListener('click', function() {
+
+				allsingleswindow.style.display = "none";
+				miniplayerexpand.style.display = "none";
+				document.body.style.overflow = "scroll";
+				miniplayerexpand.style.overflow = "hidden";
+			})
+		})
+
 		// $(document).ready(function() {
 		//   var music = document.getElementById("mini-player-new-release");
 		//   var play_music_button = document.getElementById("mini-player-play-btn");
@@ -1412,6 +1454,8 @@ Copyright. All rights reserved.
 
 
 	<div class="mini-player-expand" id="mini-player-expand">
+
+		<div class="all-title">Tracklist</div>
 
 		<div class="mini-player-expand-row">
 			<div class="mini-player-expand-cover">

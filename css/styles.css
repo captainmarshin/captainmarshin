@@ -358,10 +358,10 @@ Copyright. All rights reserved.
 		border-bottom: 1px solid #222;
 		margin-bottom: 10px;
 	}
-
+/*
 	.mini-player-expand-row:first-child{
 		margin-top: 15px;
-	}
+	}*/
 
 	.mini-player-expand-row:last-child{
 		border-bottom: 0;
@@ -516,7 +516,7 @@ Copyright. All rights reserved.
 		padding-right: 20px;
 		padding-top: 5px;
 		padding-bottom: 5px;
-/*		display: none;*/
+		display: none;
 		overflow-y:scroll;
     	overflow-x:hidden;
 	}
@@ -527,17 +527,36 @@ Copyright. All rights reserved.
 		flex-wrap: wrap;*/
 /*		flex-flow: row wrap;*/
 display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 20px;
+	}
+
+	.all-title{
+		display: block;
+		width: 100%;
+		height: 50px;
+		color: #fff;
+		font-size: 25px;
+		font-weight: bold;
+		margin-top: 14px;
+		box-sizing: border-box;
 	}
 
 
 	.all-singles-cards .cat_item{
 /*		border: 1px solid red;*/
 		box-sizing: border-box;
-		padding: 20px;
+/*		padding: 5px;*/
 		margin-right: 0px;
 		flex-grow: 1;
+	}
+
+	.all-singles-cards .cat_item .item_name{
+		white-space: nowrap;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+/*    	max-width: 150px;*/
+		max-width: calc(100%);
 	}
 
 	.all-singles-cards .cat_item img{
@@ -549,7 +568,6 @@ display: grid;
 	.all-singles-cards .cat_item:last-child{
 /*		border: 1px solid red;*/
 		box-sizing: border-box;
-		padding: 20px;
 		margin-right: 0px;
 	}
 
