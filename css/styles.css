@@ -20,6 +20,13 @@ Copyright. All rights reserved.
     	-webkit-font-smoothing: antialiased;
     	-webkit-text-size-adjust: 100%;
 		letter-spacing:.30px;
+
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
 	}
 
 
@@ -322,7 +329,7 @@ Copyright. All rights reserved.
 
 	.mini-player-expand{
 		width: 100%;
-		border-top: 1px solid #111;
+/*		border-top: 1px solid #111;*/
 		position: fixed;
 		top: 50px;
 		bottom: 155px;
