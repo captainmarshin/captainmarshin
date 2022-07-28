@@ -32,8 +32,8 @@ Copyright. All rights reserved.
 		border-bottom: 1px solid #222;
 		display: flex;
 		padding-top: 10px;
-		padding-right: 15px;
-		padding-left: 15px;
+		padding-right: 20px;
+		padding-left: 20px;
 		padding-bottom: 10px;
 		align-items: center;
     	justify-content: center;
@@ -46,7 +46,7 @@ Copyright. All rights reserved.
 	}
 
 	.header-fix{
-		height: 60px;
+		height: 40px;
 	}
 
 	.logo{
@@ -107,8 +107,8 @@ Copyright. All rights reserved.
 		backdrop-filter: blur(30px);
 		-webkit-backdrop-filter: blur(30px);
 		box-sizing: border-box;
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 20px;
+		padding-right: 20px;
 		padding-top: 5px;
 		padding-bottom: 5px;
 	}
@@ -172,8 +172,6 @@ Copyright. All rights reserved.
 	.mini-player-controls{
 		width: 100%;
 		text-align: right;
-		box-sizing: border-box;
-		padding-right: 13px;
 		display: inline-block;
 	}
 
@@ -262,8 +260,8 @@ Copyright. All rights reserved.
 		backdrop-filter: blur(30px);
 		-webkit-backdrop-filter: blur(30px);
 		box-sizing: border-box;
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 20px;
+		padding-right: 20px;
 		padding-top: 5px;
 		padding-bottom: 5px;
 		display: none;
@@ -302,7 +300,7 @@ Copyright. All rights reserved.
 		padding-right: 20px;
 		width: 100%;
 		display: inline-block;
-		padding-top: 8px;
+		padding-top: 7px;
 		max-width: calc(100%);
     	white-space: nowrap;
     	overflow: hidden;
@@ -336,7 +334,7 @@ Copyright. All rights reserved.
 	}
 
 	.mini-player-expand-play, .mini-player-expand-download, .mini-player-expand-share{
-		vertical-align: -32px;
+		vertical-align: -25px;
 		display: inline-block;
 	}
 
@@ -508,7 +506,7 @@ Copyright. All rights reserved.
 
 		.cat_title{
 			font-weight: bold;
-			margin-left: 15px;
+			margin-left: 20px;
 			margin-top: 15px;
 			margin-bottom: 15px;
 			font-size: 20px;
@@ -573,12 +571,12 @@ Copyright. All rights reserved.
 		}
 
 		.cat_item:last-child{
-			margin-right: 15px;
+			margin-right: 20px;
 		}
 
 		.cat_item_fix{
 			display: inline-block;
-			margin-right: 12px;
+			margin-right: 15px;
 		}
 
 		img.item_cover{
@@ -753,8 +751,8 @@ Copyright. All rights reserved.
 		color: #464646;
 		font-size: 14px;
 		padding-top: 10px;
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 20px;
+		padding-right: 20px;
 		padding-bottom: 200px;
 		line-height: 20px;
 	}
