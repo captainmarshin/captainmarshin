@@ -94,9 +94,27 @@ Copyright. All rights reserved.
 		</div>
 
 		<div class="button">
-			<button class="donate">Donate</button>
+			<button id="open-donate-window" class="donate">Donate</button>
 		</div>
 
+	</div>
+
+
+	<div id="donate" class="window">
+
+		<div class="window-title">Donate</div>
+
+		<div class="donate-block"></div>
+
+		<div class="donate-block"></div>
+
+		<div class="donate-block"></div>
+
+		<div class="donate-block"></div>
+
+		<div class="donate-block"></div>
+
+		
 	</div>
 
 
@@ -1712,6 +1730,28 @@ Copyright. All rights reserved.
 
 
 		$(document).ready(function() {
+			var opendonatewindow = document.getElementById("open-donate-window");
+			var windowdonate = document.getElementById("donate");
+
+			opendonatewindow.addEventListener("click", function() {
+
+				if (windowdonate.style.display === "block") {
+					windowdonate.style.display = "none";
+					document.body.style.overflow = "scroll";
+					windowdonate.style.overflow = "hidden";
+				} 
+				else 
+				{
+					windowdonate.style.display = "block";
+					document.body.style.overflow = "hidden";
+					windowdonate.style.overflow = "scroll";
+			    }
+			   
+			})
+		})
+
+
+		$(document).ready(function() {
 			var allvideosopen = document.getElementById("open-all-videos");
 			var windowallvideos = document.getElementById("window-all-videos");
 
@@ -1762,6 +1802,7 @@ Copyright. All rights reserved.
 			var allsingleswindow = document.getElementById('window-all-singles');
 			var windowallvideos = document.getElementById("window-all-videos");
 			var windowalllyrics = document.getElementById("window-all-lyrics");
+			var windowdonate = document.getElementById("donate");
 
 			var miniplayerexpand = document.getElementById("mini-player-expand");
 
@@ -1770,6 +1811,7 @@ Copyright. All rights reserved.
 				allsingleswindow.style.display = "none";
 				windowallvideos.style.display = "none";
 				windowalllyrics.style.display = "none";
+				windowdonate.style.display = "none";
 				miniplayerexpand.style.display = "none";
 				document.body.style.overflow = "scroll";
 				miniplayerexpand.style.overflow = "hidden";
