@@ -1,0 +1,518 @@
+<!-- 
+
+Marshin Shop Website.
+marshin.shop
+Desinged by Маршин Entertainment.
+Copyright. All rights reserved.
+2021
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Маршин Shop / Marshin Shop</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="title" content="Маршин Shop">
+	<meta name="description" content="Get unique items from Marshin Shop.">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://marshin.shop">
+	<meta property="og:title" content="Маршин Shop">
+	<meta property="og:description" content="Get unique items from Marshin Shop.">
+	<meta property="og:image" content="favicon/preview012.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="http://marshin.shop">
+	<meta property="twitter:title" content="Маршин Shop">
+	<meta property="twitter:description" content="Get unique items from Marshin Shop.">
+	<meta property="twitter:image" content="https://marshin.shop/favicon/preview012.jpg">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/shopstyles.css">
+
+	<!-- Google Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+<!-- 	<div class="header">
+		<a href="http://marshin.shop">
+			<div class="title"><img src="images/logo.png"></div>
+		</a>
+	</div>
+ -->
+	<div class="header" id="header">
+
+		<div class="logo" id="close-all-windows">
+			<img src="images/shop_logo.png">
+		</div>
+
+		<div class="button">
+			<button id="open-cart-window" class="cart"><span class="material-icons">shopping_cart</span> Cart</button>
+			<button id="close-window" class="close-btn-shop"><span class="material-icons">cancel</span> Close</button>
+		</div>
+
+	</div>
+
+
+	<div class="header-fix"></div>
+
+
+	<div class="category">
+		<div class="cat_title">Маршин 2022 Collection</div>
+		<div class="cat_content">
+
+			<div class="cat_item_fix"></div>
+
+			<div class="cat_item">
+				<a href="shop_web/collection/marshin2022/hoodie">
+					<img class="item_cover" src="shop_web/content/clothes/marshin2022/hoodie_01_s.jpg">
+				</a>
+				<div class="item_name">Black Hoodie</div>
+				<div class="item_year">Out of stock</div>
+			</div>
+
+			<div class="cat_item">
+				<a href="shop_web/collection/marshin2022/tshirt">
+					<img class="item_cover" src="shop_web/content/clothes/marshin2022/tshirt_01_s.jpg">
+				</a>
+				<div class="item_name">Black T-Shirt</div>
+				<div class="item_year">Out of stock</div>
+			</div>
+
+			<div class="cat_item">
+				<a href="shop_web/collection/marshin2022/cap">
+					<img class="item_cover" src="shop_web/content/clothes/marshin2022/cap_01_s.jpg">
+				</a>
+				<div class="item_name">Black Cap</div>
+				<div class="item_year">Out of stock</div>
+			</div>
+
+			<div class="cat_item">
+				<a href="shop_web/collection/marshin2022/facemask">
+					<img class="item_cover" src="shop_web/content/clothes/marshin2022/facemask_01_s.jpg">
+				</a>
+				<div class="item_name">Black Face Mask</div>
+				<div class="item_year">Out of stock</div>
+			</div>
+
+		</div>
+		<div class="cat_line"></div>
+	</div>
+
+	<div class="category">
+		<div class="cat_title">Music</div>
+		<div class="cat_content">
+
+			<div class="cat_item_fix"></div>
+
+			<div class="cat_item">
+				<a href="#">
+					<img class="item_cover" src="shop_web/content/music/yearone/item_01_s.jpg">
+				</a>
+				<div class="item_name">Год первый</div>
+				<div class="item_year">Out of stock</div>
+			</div>
+
+			<div class="cat_item">
+				<a href="#">
+					<img class="item_cover" src="shop_web/content/music/gornoe/item_01_s.jpg">
+				</a>
+				<div class="item_name">Я ещё вернусь</div>
+				<div class="item_year">Out of stock</div>
+			</div>
+
+		</div>
+		<div class="cat_line"></div>
+	</div>
+
+
+	<div class="projects">
+		<div class="cat_title">More</div>
+		<div class="cat_content">
+
+			<div class="cat_item_fix"></div>
+
+			<div id="open-window-delivery" class="cat_item">
+					<img class="more_item_cover" src="images/delivery.jpg">
+			</div>
+
+			<div id="open-window-faq" class="cat_item">
+					<img class="more_item_cover" src="images/faq.jpg">
+			</div>
+
+			<div id="open-window-support" class="cat_item">
+					<img class="more_item_cover" src="images/support.jpg">
+			</div>
+
+			<div class="cat_item">
+				<a href="https://music.apple.com/ru/artist/captain-marshin/1486687033" target="_blank" title="iTunes Store">
+					<img class="more_item_cover" src="images/itunes.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="https://www.amazon.com/s?k=Капитан+Маршин&rh=n%3A163856011&dc&ds=v1%3ArPQogTNQIvs9kRPQuqGRMbtUoSSOM%2FgHIz%2BvkEh%2B0EI&crid=1CAF10XRUYT08&qid=1659110426&rnid=2941120011&sprefix=капитан+маршин%2Caps%2C197&ref=sr_nr_n_7" target="_blank" title="Amazon">
+					<img class="more_item_cover" src="images/amazon.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="https://t.me/marshinshop" target="_blank" title="Telegram">
+					<img class="more_item_cover" src="images/telegram.jpg">
+				</a>
+			</div>
+
+		</div>
+		<div class="cat_line"></div>
+	</div>
+
+
+
+	<div id="support" class="window-shop">
+
+		<div class="window-title">Support</div>
+
+		
+	</div>
+
+
+
+	<div id="faq" class="window-shop">
+
+		<div class="window-title">FAQ</div>
+
+		<div class="text">
+		<span class="text_blocks">
+			<b>Q:</b> Как приобрести товар?<br>
+			<b>A:</b> Для покупки товара необходимо перейти в карточку товара и нажать на белую кнопку с указанием цены (или на синию кнопку для оплаты через криптовалюты). После этого вы будете переправлены на форму оформления заказа, где можете указать адрес доставки и контактную информацию, а так же выбрать удобный способ оплаты.
+		</span>
+		<!-- <span class="text_blocks">
+			<b>Q:</b> Что такое Лицензионный ключ?<br>
+			<b>A:</b> Лицензионный ключ - это серийный номер товара. Каждый товар, представленный в магазине уникальный и продается ограниченным тиражом. Лицензионный ключ будет отправлен вам по email после покупке товара. В данный момент лицензионный ключ предоставляется только при покупке
+		</span> -->
+
+		<a name="howtobuy"></a>
+		<span class="text_blocks">
+			<b>Q:</b> Оплата товара - RUB<br>
+			<b>A:</b> 1. При выборе оплаты в RUB вы попадаете на страницу оформления заказа. Вам нужно указать Имя, Адрес доставки и Номер телефона (обязательные поля), по желанию - указать Telegram. На Номер телефона (если указан Telegram, то в личные сообщения Telegram) будет направлен номер заказа, сроки доставки и трек-номер. После заполнения формы нажмите кнопку Перейти к оплате.<br>
+			2. Вас переместит на страницу платежной системы QIWI, где вы можете оплатить заказ банковской картой (Visa, Mastercard, etc.) или переводом через кошелёк Qiwi. Справа от метода оплаты указана сумма к оплате (при оплате банковской картой будет расчитана коммиссия по условиям Qiwi), а так же ваша контактная информация.
+			ВАЖНО! Если вы заметили ошибку в ваших данных, то просто закройте форму и оформите заказ снова. Активный заказ будет аннулирован через 5 минут в случае неоплаты. Проверяйте внимательно контактный номер телефона (или Telegram), так как это единственный способ получить номер заказа.<br>
+			3. После оплаты заказа можете закрыть форму QIWI. В течении 5 минут вы получите SMS на номер телефона (если указан Telegram, то + сообщение в Telegram) с номером заказа и сроком доставки. Иногда SMS может приходить с опозданием, что связано с загрузкой провайдера SMS рассылки.<br>
+			4. При возникновении вопросов напишите, пожалуйста, на email: <a class="faq_url" href="mailto:help@marshin.shop?subject=Маршин Shop: Обращение пользователя">help@marshin.shop</a> или в Telegram: <a class="faq_url" href="https://t.me/contactmarshin">@contactmarshin</a>
+		</span>
+
+		<a name="cryptobot"></a>
+		<span class="text_blocks">
+			<b>Q:</b> Оплата товара - TON, USDC, USDT<br>
+			<b>A:</b> 0. ВАЖНО! ПРИ ОПЛАТЕ ТОВАРА ДАННЫМ СПОСОБОМ У ВАС ДОЛЖЕН БЫТЬ TELEGRAM АККАУНТ.<br><br>
+			0. Оплата с помощью Toncoin (TON), USDC (USD Coin - BEP20), USDT (Tether, BEP20) производится с помощью @CryptoBot.<br>
+			0. Для оплаты через @CryptoBot вам необходимо перевести нужную вам криптовалюту на адрес вашего кошелька в боте, после чего вы сможете оплатить товар.<br><br>
+			1. Нажмите на синюю кнопку Pay with TON на странице заказа.<br>
+			2. Вы перейдете на страницу бота @CryptoBot. Нажмите на кнопку Открыть в Telegram, после чего нажмите кнопку НАЧАТЬ (START)<br>
+			3. В боте: выберите валюту для оплаты (TON, USDC или USDT)<br>
+			4. Нажмите кнопку Use Min с суммой к оплате<br>
+			5. Нажмите кнопку Add Comment (Добавить комментарий) и укажите Адрес доставки и Номер телефона для связи.<br>
+			ВАЖНО! ПРИ ОПЛАТЕ ТОВАРА ЧЕРЕЗ @CryptoBot ОБЯЗАТЕЛЬНО УКАЗЫВАЙТЕ КОНТАКТНУЮ ИНФОРМАЦИЮ (АДРЕС ДОСТАВКИ, НОМЕР ТЕЛЕФОНА) В КОММЕНТАРИИ К ПЛАТЕЖУ. ЗАКАЗЫ БЕЗ КОММЕНТАРИЯ К ПЛАТЕЖУ НЕ ОБРАБАТЫВАЮТСЯ, ДЕНЬГИ НЕ ВОЗВРАЩАЮТСЯ!<br>
+			6. После добавления комментария нажмите Pay Now (Оплатить)<br>
+			7. После оплаты заказа вы автоматически вернетесь в меню бота. В течении 5 минут вы получите SMS на номер телефона (если указан Telegram, то сообщение в Telegram) с номером заказа и сроком доставки. Иногда SMS может приходить с опозданием, что связано с загрузкой провайдера SMS рассылки.<br>
+			8. При возникновении вопросов напишите, пожалуйста, на email: <a class="faq_url" href="mailto:help@marshin.shop?subject=Маршин Shop: Обращение пользователя">help@marshin.shop</a> или в Telegram: <a class="faq_url" href="https://t.me/contactmarshin">@contactmarshin</a>
+		</span>
+
+		<span class="text_blocks">
+			<b>Q:</b> Вопросы по доставке<br>
+			<b>A:</b> Всю информации о доставке вы можете найти в разделе <a class="faq_url" href="delivery.html">Delivery</a>
+		</span>
+		<span class="text_blocks">
+			<b>Q:</b> Бракованный товар или товар ненадлежащего качества<br>
+			<b>A:</b> Если вам пришел бракованный товар или товар не соответсвует заказу - напишите пожалуйста на <a class="faq_url" href="mailto:help@marshin.shop?subject=Маршин Shop: Обращение пользователя">help@marshin.shop</a> с указанием номера заказа.
+		</span>
+		<span class="text_blocks">
+			<b>Q:</b> Где найти номер заказа?<br>
+			<b>A:</b> Номер заказа будет указан в сообщении после оплаты заказа.
+		</span>
+		<span class="text_blocks">
+			<b>Q:</b> Что такое трек-номер и где его взять?<br>
+			<b>A:</b> Трек номер позволяет определить, на каком этапе доставки находится ваш товар. После того, как мы передадим ваш заказ в курьерскую службу, мы направим трек-номер на указанный вами номер телефона или telegram. Чтобы отследить заказ, можно воспользоваться сервисом <a class="faq_url" href="https://pochta.ru/tracking" target="_blank">pochta.ru/tracking</a>
+		</span>
+		<span class="text_blocks">
+			<b>Q:</b> Как вернуть товар?<br>
+			<b>A:</b> Для того, чтобы вернуть товар свяжитесь пожалуйста по указанному email - <a class="faq_url" href="mailto:help@marshin.shop?subject=Маршин Shop: Обращение пользователя">help@marshin.shop</a>
+		</span>
+	</div>
+		
+	</div>
+
+
+
+	<div id="delivery" class="window-shop">
+
+		<div class="window-title">Delivery</div>
+
+		<div class="text">
+		<span class="text_blocks">
+			Доставка товара оформляется на странице оплаты товара. Важно указать действующий мобильный телефон, а так же адрес доставки. После оплаты заказа и отправки товара, мы отправляем трек-номер на ваш номер мобильного телефона или в указанный вами Telegram.
+		</span>
+		<span class="text_blocks">
+			ВАЖНО! ПРИ ОПЛАТЕ ТОВАРА ЧЕРЕЗ @CryptoBot ОБЯЗАТЕЛЬНО УКАЗЫВАЙТЕ КОНТАКТНУЮ ИНФОРМАЦИЮ (АДРЕС ДОСТАВКИ, НОМЕР ТЕЛЕФОНА) В КОММЕНТАРИИ К ПЛАТЕЖУ. ЗАКАЗЫ БЕЗ КОММЕНТАРИЯ К ПЛАТЕЖУ НЕ ОБРАБАТЫВАЮТСЯ, ДЕНЬГИ НЕ ВОЗВРАЩАЮТСЯ! 
+		</span>
+		<span class="text_blocks">
+			Стоимость доставки включена в стоимость товара.
+		</span>
+		<span class="text_blocks">
+			Упаковка и отправка товара занимает от 2х до 5ти дней в зависимости от загруженности магазина. Мы работаем над сокращением данного времени. Сроки доставки товара варьируются и зависят от адреса доставки. Обращаем ваше внимание, что доставку возможно осуществить только в передлах РФ. Сроки доставки устанавливаются курьерской службой, о них мы сообщаем после оформления заказа. 
+		</span>
+		<span class="text_blocks">
+			После оплаты заказа на ваш номер телефона (или Telegram) придет сообщение с номером заказа, а так же сроком доставки. После отправки заказа на ваш адрес мы пришлем дополнительное сообщение с трек-номером заказа.
+		</span>
+		<span class="text_blocks">
+			Если курьерская служба не сможет доставить товар в указанную точку - мы свяжемся с вами для оформления возврата. 
+		</span>
+		<span class="text_blocks">
+			Если у вас возникли дополнительный вопросы по поводу доставки - вы можете связаться с нами по указанному email: <a class="faq_url" href="mailto:help@marshin.shop?subject=Маршин Shop: Вопрос по доставке">help@marshin.shop</a> или Telegram: <a class="faq_url" href="https://t.me/contactmarshin">@contactmarshin</a>
+		</span>
+	</div>
+		
+	</div>
+
+
+
+
+	<script type="text/javascript">
+
+		var open_window_support = document.getElementById("open-window-support");
+		var window_support = document.getElementById("support");
+
+		var open_window_delivery = document.getElementById("open-window-delivery");
+		var window_delivery = document.getElementById("delivery");
+
+		var open_window_faq = document.getElementById("open-window-faq");
+		var window_faq = document.getElementById("faq");
+
+		var cart_button = document.getElementById("open-cart-window");
+		var close_button = document.getElementById("close-window");
+
+		$(document).ready(function() {
+
+			close_button.addEventListener("click", function() {
+
+				window_faq.style.display = "none";
+				window_faq.style.overflow = "hidden";
+
+				window_delivery.style.display = "none";;
+				window_delivery.style.overflow = "hidden";
+				
+				window_support.style.display = "none";
+				window_support.style.overflow = "hidden";
+
+				document.body.style.overflow = "scroll";
+
+				cart_button.style.display = "block";
+				close_button.style.display = "none";
+			   
+			})
+		});
+		
+		$(document).ready(function() {
+
+			open_window_support.addEventListener("click", function() {
+
+				if (window_support.style.display === "block") {
+					window_support.style.display = "none";
+					document.body.style.overflow = "scroll";
+					window_support.style.overflow = "hidden";
+					cart_button.style.display = "block";
+					close_button.style.display = "none";
+				} 
+				else 
+				{
+					window_support.style.display = "block";
+					document.body.style.overflow = "hidden";
+					window_support.style.overflow = "scroll";
+					cart_button.style.display = "none";
+					close_button.style.display = "block";
+			    }
+			   
+			})
+		});
+
+
+		$(document).ready(function() {
+
+			open_window_delivery.addEventListener("click", function() {
+
+				if (window_delivery.style.display === "block") {
+					window_delivery.style.display = "none";
+					document.body.style.overflow = "scroll";
+					window_delivery.style.overflow = "hidden";
+					cart_button.style.display = "block";
+					close_button.style.display = "none";
+				} 
+				else 
+				{
+					window_delivery.style.display = "block";
+					document.body.style.overflow = "hidden";
+					window_delivery.style.overflow = "scroll";
+					cart_button.style.display = "none";
+					close_button.style.display = "block";
+			    }
+			   
+			})
+		});
+
+
+		$(document).ready(function() {
+
+			open_window_faq.addEventListener("click", function() {
+
+				if (window_faq.style.display === "block") {
+					window_faq.style.display = "none";
+					document.body.style.overflow = "scroll";
+					window_faq.style.overflow = "hidden";
+					cart_button.style.display = "block";
+					close_button.style.display = "none";
+				} 
+				else 
+				{
+					window_faq.style.display = "block";
+					document.body.style.overflow = "hidden";
+					window_faq.style.overflow = "scroll";
+					cart_button.style.display = "none";
+					close_button.style.display = "block";
+			    }
+			   
+			})
+		});
+
+
+
+		$(document).ready(function() {
+			var closeallwindows = document.getElementById('close-all-windows');
+
+			closeallwindows.addEventListener('click', function() {
+
+				window_faq.style.display = "none";
+				window_faq.style.overflow = "hidden";
+
+				window_delivery.style.display = "none";;
+				window_delivery.style.overflow = "hidden";
+				
+				window_support.style.display = "none";
+				window_support.style.overflow = "hidden";
+
+				document.body.style.overflow = "scroll";
+				cart_button.style.display = "block";
+				close_button.style.display = "none";
+				
+			})
+		});
+
+
+	</script>
+
+
+
+
+	<div class="footer">
+		Маршин Entertainment<br>
+		2014-2022 Copyright. All rights reserved.
+
+		<div class="links"> <!-- Social Links -->
+			<a class="space-2" href="#delivery">Delivery</a>
+			<a class="space-2" href="#faq">FAQ</a>
+			<a class="space-2" href="#support">Support</a>
+			<a class="space-2" href="https://music.apple.com/artist/captain-marshin/1486687033">Apple Music</a>
+			<a class="space-2" href="https://open.spotify.com/artist/7jeV7Ofu7JdWCPqEohb8Uo">Spotify</a>
+			<a class="space-2" href="https://www.youtube.com/channel/UCKSLYkGgjVIrLP-sPSSnygQ/featured">YouTube</a>
+			<a class="space-2" href="https://t.me/captainmarshin">Telegram</a>
+			<a class="space-2" href="https://www.instagram.com/captainmarshin/">Instagram</a>
+			<a class="space-2" href="https://twitter.com/captainmarshin">Twitter</a>
+		</div>
+		
+		<br>
+		<style>
+		 .urlhelp { text-decoration: none; }
+		</style>
+		<a class="urlhelp" href="https://war.ukraine.ua/" target="_blank">🇺🇦❤️</a>
+	</div>
+
+
+
+	<script type="text/javascript">
+		
+		$('a[href="#delivery"]').click(function() {
+			window_delivery.style.display = "block";
+			document.body.style.overflow = "hidden";
+			window_delivery.style.overflow = "scroll";
+		    return false;
+		});
+
+
+		$('a[href="#faq"]').click(function() {
+			window_faq.style.display = "block";
+			document.body.style.overflow = "hidden";
+			window_faq.style.overflow = "scroll";
+		    return false;
+		});
+
+
+		$('a[href="#support"]').click(function() {
+			window_support.style.display = "block";
+			document.body.style.overflow = "hidden";
+			window_support.style.overflow = "scroll";
+		    return false;
+		});
+
+
+	</script>
+
+
+
+
+
+	<!-- MENU -->
+
+	<div class="menu">
+		<div class="menu-item-1">
+			<div class="music-btn" id="open-music-tab">
+				<div class="menu-item-icon"><span class="material-icons">album</span></div>
+				<div class="menu-item-name">Music</div>
+			</div>
+		</div>
+		<div class="menu-item-2">
+			<div class="shop-btn active-shop" id="open-shop-tab">
+				<div class="menu-item-icon"><span class="material-icons">local_mall</span></div>
+				<div class="menu-item-name">Shop</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		var musicbutton = document.getElementById('open-music-tab');
+
+		musicbutton.addEventListener('click', function() {
+			window.location.href = "index.html";
+		})
+	</script>
+
+</body>
+</html>

@@ -81,20 +81,18 @@ Copyright. All rights reserved.
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-	<!-- Confetti Effect -->
-	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-
 </head>
 <body>
 
 	<div class="header" id="header">
 
 		<div class="logo" id="close-all-windows">
-			<img src="images/captain_logo.svg">
+			<img src="images/cap_logo.png">
 		</div>
 
 		<div class="button">
-			<button id="open-donate-window" class="donate">Donate</button>
+			<button id="open-donate-window" class="donate"><span class="material-icons">monetization_on</span> Donate</button>
+			<button id="close-window" class="close-btn"><span class="material-icons">cancel</span> Close</button>
 		</div>
 
 	</div>
@@ -104,15 +102,127 @@ Copyright. All rights reserved.
 
 		<div class="window-title">Donate</div>
 
-		<div class="donate-block"></div>
+		<div class="all-services">
 
-		<div class="donate-block"></div>
+		<div class="donate-block">
+			<div class="donate-service-logo ton-logo-fix">
+				<img src="images/ton.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">2 TON/month</div>
+				<div class="donate-service-pay-options-info">Subscribtion</div>
+			</div>
+			<div class="donate-service-text">
+				Donate in Toncoin
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+					    <path d="M16 13L0 7L16 1L32 7L16 13Z" fill="#45AEF5"/>
+					    <path opacity="0.6" d="M16 13L32 7L16 31V13Z" fill="#45AEF5"/>
+					    <path opacity="0.8" d="M16 13L0 7L16 31V13Z" fill="#45AEF5"/>
+					</svg>
+ 					Pay with Tonkeeper</div>
+			</div>
+		</div>
 
-		<div class="donate-block"></div>
+		<div class="donate-block">
+			<div class="donate-service-logo">
+				<img src="images/boosty.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">50₽/month</div>
+				<div class="donate-service-pay-options-info">Subscribtion</div>
+			</div>
+			<div class="donate-service-text">
+				Donate and subscribe on boosty.to
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-service-url">
+					boosty.to/captainmarshin
+				</div>
+			</div>
+		</div>
 
-		<div class="donate-block"></div>
+		<div class="donate-block">
+			<div class="donate-service-logo">
+				<img src="images/qiwi.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">Pay what you want</div>
+			</div>
+			<div class="donate-service-text">
+				1
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-service-url">
+					qiwi.com/n/CAPTAINMARSHIN
+				</div>
+			</div>
+		</div>
 
-		<div class="donate-block"></div>
+		<div class="donate-block">
+			<div class="donate-service-logo">
+				<img src="images/buymeacoffee.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">Pay what you want</div>
+			</div>
+			<div class="donate-service-text">
+				Buy me a coffee 
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-service-url">
+					buymeacoffee.com/captainmarshin
+				</div>
+			</div>
+		</div>
+
+		<div class="donate-block">
+			<!-- https://app.binance.com/qr/dplk5cb1330e11ec4288bd68297401d17fb5 -->
+			<div class="donate-service-logo">
+				<img src="images/binance.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">Any amount</div>
+				<div class="donate-service-pay-options-info">1</div>
+			</div>
+			<div class="donate-service-text">
+				Donate in different crypto.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<img src="images/binance.ico">
+ 					Pay with Binance</div>
+			</div>
+		</div>
+
+		<div class="donate-block">
+			<div class="donate-service-logo ton-logo-fix">
+				<img src="images/ton.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">2 TON/month</div>
+				<div class="donate-service-pay-options-info">Subscribtion</div>
+			</div>
+			<div class="donate-service-text">
+				Donate in Toncoin
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+					    <path d="M16 13L0 7L16 1L32 7L16 13Z" fill="#45AEF5"/>
+					    <path opacity="0.6" d="M16 13L32 7L16 31V13Z" fill="#45AEF5"/>
+					    <path opacity="0.8" d="M16 13L0 7L16 31V13Z" fill="#45AEF5"/>
+					</svg>
+ 					Pay with CryptoBot</div>
+			</div>
+		</div>
+
+
+
+
+		</div>
 
 		
 	</div>
@@ -817,203 +927,203 @@ Copyright. All rights reserved.
 				<a href="http://captainmarshin.com/indica#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/531.jpg">
 				</a>
-				<div class="item_name">Indica</div>
+				<div class="item_name">Indica <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/wtcmebc#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/530.jpg">
 				</a>
-				<div class="item_name">WTCMEBC</div>
+				<div class="item_name">WTCMEBC <span class="material-icons">explicit</span></div>
 			</div>
 			
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/cmat4#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/529.jpg">
 				</a>
-				<div class="item_name">New Day</div>
+				<div class="item_name">New Day <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/wtlschopped#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/528.jpg">
 				</a>
-				<div class="item_name">Welcome to LS [Chopped & Screwed]</div>
+				<div class="item_name">Welcome to LS [Chopped & Screwed] <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/wtls#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/527.jpg">
 				</a>
-				<div class="item_name">Welcome to LS</div>
+				<div class="item_name">Welcome to LS <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/thegamealbumprelude#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/524.jpg">
 				</a>
-				<div class="item_name">The Game Album Prelude</div>
+				<div class="item_name">The Game Album Prelude <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/phoenix#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/523.jpg">
 				</a>
-				<div class="item_name">Феникс</div>
+				<div class="item_name">Феникс <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/jordan2#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/522.jpg">
 				</a>
-				<div class="item_name">Jordan II</div>
+				<div class="item_name">Jordan II <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/southghetto#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/521.jpg">
 				</a>
-				<div class="item_name">Южное гетто</div>
+				<div class="item_name">Южное гетто <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/blonde#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/520.jpg">
 				</a>
-				<div class="item_name">Блондинка (другая версия)</div>
+				<div class="item_name">Блондинка (другая версия) <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/jm#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/519.jpg">
 				</a>
-				<div class="item_name">Совместный движ</div>
+				<div class="item_name">Совместный движ <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/pass#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/518.jpg">
 				</a>
-				<div class="item_name">Perfect Ass</div>
+				<div class="item_name">Perfect Ass <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/df#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/517.jpg">
 				</a>
-				<div class="item_name">Dynamite Freestyle</div>
+				<div class="item_name">Dynamite Freestyle <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/lera#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/516.jpg">
 				</a>
-				<div class="item_name">Деовчка с падика</div>
+				<div class="item_name">Деовчка с падика <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/cantlove#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/515.jpg">
 				</a>
-				<div class="item_name">Не могу полюбить</div>
+				<div class="item_name">Не могу полюбить <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/mr3m#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/514.jpg">
 				</a>
-				<div class="item_name">Мистер 3 мульта</div>
+				<div class="item_name">Мистер 3 мульта <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/tacm#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/513.jpg">
 				</a>
-				<div class="item_name">Удивительный Капитан Маршин</div>
+				<div class="item_name">Удивительный Капитан Маршин <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/rocket#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/512.jpg">
 				</a>
-				<div class="item_name">Рокет</div>
+				<div class="item_name">Рокет <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/pool#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/511.jpg">
 				</a>
-				<div class="item_name">Part of our life</div>
+				<div class="item_name">Part of our life <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/lvstories#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/510.jpg">
 				</a>
-				<div class="item_name">Love Stories</div>
+				<div class="item_name">Love Stories <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/meetdawn#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/509.jpg">
 				</a>
-				<div class="item_name">Встречаю рассвет</div>
+				<div class="item_name">Встречаю рассвет <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/lifeway#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/508.jpg">
 				</a>
-				<div class="item_name">Lifeway</div>
+				<div class="item_name">Lifeway <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/jrr#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/507.jpg">
 				</a>
-				<div class="item_name">Просто почитаем рэп</div>
+				<div class="item_name">Просто почитаем рэп <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/mftmp#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/506.jpg">
 				</a>
-				<div class="item_name">Спортболид</div>
+				<div class="item_name">Спортболид <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/rise#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/505.jpg">
 				</a>
-				<div class="item_name">Rise</div>
+				<div class="item_name">Rise <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/jordan#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/504.jpg">
 				</a>
-				<div class="item_name">Jordan</div>
+				<div class="item_name">Jordan <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/claudebonnie#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/503.jpg">
 				</a>
-				<div class="item_name">Клайд и Бонни</div>
+				<div class="item_name">Клайд и Бонни <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/gmfire#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/502.jpg">
 				</a>
-				<div class="item_name">Дай малышка мне огня</div>
+				<div class="item_name">Дай малышка мне огня <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/gornoe#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/501.jpg">
 				</a>
-				<div class="item_name">Я ещё вернусь</div>
+				<div class="item_name">Я ещё вернусь <span class="material-icons">explicit</span></div>
 			</div>
 
 		</div>
@@ -1035,203 +1145,203 @@ Copyright. All rights reserved.
 				<a href="http://captainmarshin.com/indica#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/531.jpg">
 				</a>
-				<div class="item_name">Indica</div>
+				<div class="item_name">Indica <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/wtcmebc#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/530.jpg">
 				</a>
-				<div class="item_name">WTCMEBC</div>
+				<div class="item_name">WTCMEBC <span class="material-icons">explicit</span></div>
 			</div>
 			
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/cmat4#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/529.jpg">
 				</a>
-				<div class="item_name">New Day</div>
+				<div class="item_name">New Day <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/wtlschopped#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/528.jpg">
 				</a>
-				<div class="item_name">Welcome to LS [Chopped & Screwed]</div>
+				<div class="item_name">Welcome to LS [Chopped & Screwed] <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/wtls#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/527.jpg">
 				</a>
-				<div class="item_name">Welcome to LS</div>
+				<div class="item_name">Welcome to LS <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/thegamealbumprelude#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/524.jpg">
 				</a>
-				<div class="item_name">The Game Album Prelude</div>
+				<div class="item_name">The Game Album Prelude <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/phoenix#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/523.jpg">
 				</a>
-				<div class="item_name">Феникс</div>
+				<div class="item_name">Феникс <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/jordan2#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/522.jpg">
 				</a>
-				<div class="item_name">Jordan II</div>
+				<div class="item_name">Jordan II <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/southghetto#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/521.jpg">
 				</a>
-				<div class="item_name">Южное гетто</div>
+				<div class="item_name">Южное гетто <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/blonde#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/520.jpg">
 				</a>
-				<div class="item_name">Блондинка (другая версия)</div>
+				<div class="item_name">Блондинка (другая версия) <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/jm#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/519.jpg">
 				</a>
-				<div class="item_name">Совместный движ</div>
+				<div class="item_name">Совместный движ <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/pass#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/518.jpg">
 				</a>
-				<div class="item_name">Perfect Ass</div>
+				<div class="item_name">Perfect Ass <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/df#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/517.jpg">
 				</a>
-				<div class="item_name">Dynamite Freestyle</div>
+				<div class="item_name">Dynamite Freestyle <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/lera#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/516.jpg">
 				</a>
-				<div class="item_name">Деовчка с падика</div>
+				<div class="item_name">Деовчка с падика <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/cantlove#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/515.jpg">
 				</a>
-				<div class="item_name">Не могу полюбить</div>
+				<div class="item_name">Не могу полюбить <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/mr3m#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/514.jpg">
 				</a>
-				<div class="item_name">Мистер 3 мульта</div>
+				<div class="item_name">Мистер 3 мульта <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/tacm#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/513.jpg">
 				</a>
-				<div class="item_name">Удивительный Капитан Маршин</div>
+				<div class="item_name">Удивительный Капитан Маршин <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/rocket#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/512.jpg">
 				</a>
-				<div class="item_name">Рокет</div>
+				<div class="item_name">Рокет <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/pool#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/511.jpg">
 				</a>
-				<div class="item_name">Part of our life</div>
+				<div class="item_name">Part of our life <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/lvstories#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/510.jpg">
 				</a>
-				<div class="item_name">Love Stories</div>
+				<div class="item_name">Love Stories <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/meetdawn#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/509.jpg">
 				</a>
-				<div class="item_name">Встречаю рассвет</div>
+				<div class="item_name">Встречаю рассвет <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/lifeway#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/508.jpg">
 				</a>
-				<div class="item_name">Lifeway</div>
+				<div class="item_name">Lifeway <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/jrr#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/507.jpg">
 				</a>
-				<div class="item_name">Просто почитаем рэп</div>
+				<div class="item_name">Просто почитаем рэп <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/mftmp#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/506.jpg">
 				</a>
-				<div class="item_name">Спортболид</div>
+				<div class="item_name">Спортболид <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/rise#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/505.jpg">
 				</a>
-				<div class="item_name">Rise</div>
+				<div class="item_name">Rise <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/jordan#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/504.jpg">
 				</a>
-				<div class="item_name">Jordan</div>
+				<div class="item_name">Jordan <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/claudebonnie#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/503.jpg">
 				</a>
-				<div class="item_name">Клайд и Бонни</div>
+				<div class="item_name">Клайд и Бонни <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/gmfire#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/502.jpg">
 				</a>
-				<div class="item_name">Дай малышка мне огня</div>
+				<div class="item_name">Дай малышка мне огня <span class="material-icons">explicit</span></div>
 			</div>
 
 			<div class="cat_item">
 				<a href="http://captainmarshin.com/gornoe#lyrics">
 					<img class="lyrics_item_cover" src="content/lyrics/501.jpg">
 				</a>
-				<div class="item_name">Я ещё вернусь</div>
+				<div class="item_name">Я ещё вернусь <span class="material-icons">explicit</span></div>
 			</div>
 
 
@@ -1336,14 +1446,21 @@ Copyright. All rights reserved.
 		<a class="space-2" href="https://t.me/captainmarshin">Telegram</a>
 		<a class="space-2" href="https://www.instagram.com/captainmarshin/">Instagram</a>
 		<a class="space-2" href="https://twitter.com/captainmarshin">Twitter</a>
-		<a class="space-2" href="https://marshin.shop">Shop</a>
 		</div>
+
+		<!-- <div class="badges">
+			<a href="https://music.apple.com/us/artist/captain-marshin/1486687033?itsct=music_box_badge&amp;itscg=30200&amp;app=music&amp;ls=1"><img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-music/badge/en-us?size=250x83&h=cdbcefe9e23b0310ab61b31e72e2dcdb" alt="Listen on Apple Music" style=" width: 120px;"></a>
+
+			<a href="#"><img src="images/addtoapplewallet.png" alt="Add to Apple Wallet" style="width: 120px; height: auto;"></a>
+
+			<a href="#"><img src="images/paec.png" alt="Add to Apple Wallet" style="width: 55px; height: auto;"></a>
+		</div> -->
 		
 		<br>
 		<style>
-		 .urlhelp { text-decoration: none; }
+		 .helpukraine { text-decoration: none; }
 		</style>
-		<a class="urlhelp" href="https://war.ukraine.ua/" target="_blank">🇺🇦❤️</a>
+		<a class="helpukraine" href="https://war.ukraine.ua/" target="_blank">🇺🇦❤️</a>
 	</div>
 
 
@@ -1403,6 +1520,26 @@ Copyright. All rights reserved.
 				<span id="mini-player-share-btn" class="material-icons">ios_share</span>
 			</div>
 	</div> -->
+
+
+	<script type="text/javascript">
+
+		const title = document.title;
+		// const url = document.querySelector('link[rel=canonical]') ? document.querySelector('link[rel=canonical]').href : document.location.href;
+		const shareButton = document.getElementById('mini-player-like-btn');
+
+		shareButton.addEventListener('click', event => {
+		  if (navigator.share) { 
+		  	navigator.share({
+		  		url: 'https://captainmarshin.com',
+		    })
+		    .catch(console.error);
+		    } else {
+		        console.log("Device don't support Share Menu")
+		        // Need to make dialog for unsupported devices
+		    }
+		});
+	</script>
 
 
 	<script type="text/javascript">
@@ -1675,142 +1812,6 @@ Copyright. All rights reserved.
 
 		});
 
-		$(document).ready(function() {
-			var musicplayeropen = document.getElementById("mini-player-open");
-			var miniplayer = document.getElementById("mini-player");
-			var miniplayerexpand = document.getElementById("mini-player-expand");
-
-			musicplayeropen.addEventListener("click", function() {
-
-			  if ((!$(event.target).closest('#mini-player-ctrl-btns').length) && (!$(event.target).closest('#mini-player-like-btn').length)) {
-
-				if (miniplayerexpand.style.display === "block") {
-					miniplayerexpand.style.display = "none";
-					document.body.style.overflow = "scroll";
-					miniplayerexpand.style.overflow = "hidden";
-				} 
-				else 
-				{
-					miniplayerexpand.style.display = "block";
-					document.body.style.overflow = "hidden";
-					miniplayerexpand.style.overflow = "scroll";
-			    }
-			   }
-			})
-		})
-
-
-
-		$(document).ready(function() {
-			var allsinglesopen = document.getElementById("open-all-singles");
-			var windowallsingles = document.getElementById("window-all-singles");
-
-			allsinglesopen.addEventListener("click", function() {
-
-				if (windowallsingles.style.display === "block") {
-					windowallsingles.style.display = "none";
-					document.body.style.overflow = "scroll";
-					windowallsingles.style.overflow = "hidden";
-				} 
-				else 
-				{
-					windowallsingles.style.display = "block";
-					document.body.style.overflow = "hidden";
-					windowallsingles.style.overflow = "scroll";
-			    }
-			   
-			})
-		})
-
-
-		$(document).ready(function() {
-			var opendonatewindow = document.getElementById("open-donate-window");
-			var windowdonate = document.getElementById("donate");
-
-			opendonatewindow.addEventListener("click", function() {
-
-				if (windowdonate.style.display === "block") {
-					windowdonate.style.display = "none";
-					document.body.style.overflow = "scroll";
-					windowdonate.style.overflow = "hidden";
-				} 
-				else 
-				{
-					windowdonate.style.display = "block";
-					document.body.style.overflow = "hidden";
-					windowdonate.style.overflow = "scroll";
-			    }
-			   
-			})
-		})
-
-
-		$(document).ready(function() {
-			var allvideosopen = document.getElementById("open-all-videos");
-			var windowallvideos = document.getElementById("window-all-videos");
-
-			allvideosopen.addEventListener("click", function() {
-
-				if (windowallvideos.style.display === "block") {
-					windowallvideos.style.display = "none";
-					document.body.style.overflow = "scroll";
-					windowallvideos.style.overflow = "hidden";
-				} 
-				else 
-				{
-					windowallvideos.style.display = "block";
-					document.body.style.overflow = "hidden";
-					windowallvideos.style.overflow = "scroll";
-			    }
-			   
-			})
-		})
-
-
-		$(document).ready(function() {
-			var alllyricsopen = document.getElementById("open-all-lyrics");
-			var windowalllyrics = document.getElementById("window-all-lyrics");
-
-			alllyricsopen.addEventListener("click", function() {
-
-				if (windowalllyrics.style.display === "block") {
-					windowalllyrics.style.display = "none";
-					document.body.style.overflow = "scroll";
-					windowalllyrics.style.overflow = "hidden";
-				} 
-				else 
-				{
-					windowalllyrics.style.display = "block";
-					document.body.style.overflow = "hidden";
-					windowalllyrics.style.overflow = "scroll";
-			    }
-			   
-			})
-		})
-
-
-
-		$(document).ready(function() {
-			var closeallwindows = document.getElementById('close-all-windows');
-
-			var allsingleswindow = document.getElementById('window-all-singles');
-			var windowallvideos = document.getElementById("window-all-videos");
-			var windowalllyrics = document.getElementById("window-all-lyrics");
-			var windowdonate = document.getElementById("donate");
-
-			var miniplayerexpand = document.getElementById("mini-player-expand");
-
-			closeallwindows.addEventListener('click', function() {
-
-				allsingleswindow.style.display = "none";
-				windowallvideos.style.display = "none";
-				windowalllyrics.style.display = "none";
-				windowdonate.style.display = "none";
-				miniplayerexpand.style.display = "none";
-				document.body.style.overflow = "scroll";
-				miniplayerexpand.style.overflow = "hidden";
-			})
-		})
 
 		// $(document).ready(function() {
 		//   var music = document.getElementById("mini-player-new-release");
@@ -1835,6 +1836,167 @@ Copyright. All rights reserved.
 		//   }
 		//   play_music_button.addEventListener("click", loadingAudio);
 		// });
+
+	</script>
+
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+		
+		var close_button = document.getElementById("close-window");
+
+		var musicplayeropen = document.getElementById("mini-player-open");
+		var miniplayer = document.getElementById("mini-player");
+		
+		var miniplayerexpand = document.getElementById("mini-player-expand");
+
+		var allsinglesopen = document.getElementById("open-all-singles");
+		var windowallsingles = document.getElementById("window-all-singles");
+
+		var opendonatewindow = document.getElementById("open-donate-window");
+		var windowdonate = document.getElementById("donate");
+
+		var allvideosopen = document.getElementById("open-all-videos");
+		var windowallvideos = document.getElementById("window-all-videos");
+
+		var alllyricsopen = document.getElementById("open-all-lyrics");
+		var windowalllyrics = document.getElementById("window-all-lyrics");
+
+		var closeallwindows = document.getElementById('close-all-windows');
+
+
+			close_button.addEventListener("click", function() {
+
+				windowallsingles.style.display = "none";
+				windowallvideos.style.display = "none";
+				windowalllyrics.style.display = "none";
+				windowdonate.style.display = "none";
+				document.body.style.overflow = "scroll";
+				
+				opendonatewindow.style.display = "block";
+				close_button.style.display = "none";
+			   
+			})
+
+
+			musicplayeropen.addEventListener("click", function() {
+
+			  if ((!$(event.target).closest('#mini-player-ctrl-btns').length) && (!$(event.target).closest('#mini-player-like-btn').length)) {
+
+				if (miniplayerexpand.style.display === "block") {
+					miniplayerexpand.style.display = "none";
+					document.body.style.overflow = "scroll";
+					miniplayerexpand.style.overflow = "hidden";
+				} 
+				else 
+				{
+					miniplayerexpand.style.display = "block";
+					document.body.style.overflow = "hidden";
+					miniplayerexpand.style.overflow = "scroll";
+			    }
+			   }
+			})
+
+
+			allsinglesopen.addEventListener("click", function() {
+
+				if (windowallsingles.style.display === "block") {
+					windowallsingles.style.display = "none";
+					document.body.style.overflow = "scroll";
+					windowallsingles.style.overflow = "hidden";
+					opendonatewindow.style.display = "block";
+					close_button.style.display = "none";
+				} 
+				else 
+				{
+					windowallsingles.style.display = "block";
+					document.body.style.overflow = "hidden";
+					windowallsingles.style.overflow = "scroll";
+					opendonatewindow.style.display = "none";
+					close_button.style.display = "block";
+			    }
+			   
+			})
+
+
+			opendonatewindow.addEventListener("click", function() {
+
+				if (windowdonate.style.display === "block") {
+					windowdonate.style.display = "none";
+					document.body.style.overflow = "scroll";
+					windowdonate.style.overflow = "hidden";
+					opendonatewindow.style.display = "block";
+					close_button.style.display = "none";
+				} 
+				else 
+				{
+					windowdonate.style.display = "block";
+					document.body.style.overflow = "hidden";
+					windowdonate.style.overflow = "scroll";
+					opendonatewindow.style.display = "none";
+					close_button.style.display = "block";
+			    }
+			   
+			})
+
+
+			allvideosopen.addEventListener("click", function() {
+
+				if (windowallvideos.style.display === "block") {
+					windowallvideos.style.display = "none";
+					document.body.style.overflow = "scroll";
+					windowallvideos.style.overflow = "hidden";
+					opendonatewindow.style.display = "block";
+					close_button.style.display = "none";
+				} 
+				else 
+				{
+					windowallvideos.style.display = "block";
+					document.body.style.overflow = "hidden";
+					windowallvideos.style.overflow = "scroll";
+					opendonatewindow.style.display = "none";
+					close_button.style.display = "block";
+			    }
+			   
+			})
+
+
+			alllyricsopen.addEventListener("click", function() {
+
+				if (windowalllyrics.style.display === "block") {
+					windowalllyrics.style.display = "none";
+					document.body.style.overflow = "scroll";
+					windowalllyrics.style.overflow = "hidden";
+					opendonatewindow.style.display = "block";
+					close_button.style.display = "none";
+				} 
+				else 
+				{
+					windowalllyrics.style.display = "block";
+					document.body.style.overflow = "hidden";
+					windowalllyrics.style.overflow = "scroll";
+					opendonatewindow.style.display = "none";
+					close_button.style.display = "block";
+			    }
+			   
+			})
+
+
+			closeallwindows.addEventListener('click', function() {
+
+				windowallsingles.style.display = "none";
+				windowallvideos.style.display = "none";
+				windowalllyrics.style.display = "none";
+				windowdonate.style.display = "none";
+				miniplayerexpand.style.display = "none";
+				document.body.style.overflow = "scroll";
+				miniplayerexpand.style.overflow = "hidden";
+				
+				opendonatewindow.style.display = "block";
+				close_button.style.display = "none";
+			})
+		})
 
 	</script>
 
@@ -2440,12 +2602,22 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 		<div class="menu-item-2">
-			<div class="shop-btn">
+			<div class="shop-btn" id="open-shop-tab">
 				<div class="menu-item-icon"><span class="material-icons">local_mall</span></div>
 				<div class="menu-item-name">Shop</div>
 			</div>
 		</div>
 	</div>
+
+
+	<script type="text/javascript">
+		var shopbutton = document.getElementById('open-shop-tab');
+
+		shopbutton.addEventListener('click', function() {
+			window.location.href = "shop.html";
+		})
+	</script>
+
 
 </body>
 </html>
