@@ -92,6 +92,10 @@ Copyright. All rights reserved.
 		float: right;
 	}
 
+	.donate:hover{
+		cursor: pointer;
+	}
+
 	.donate-button .material-icons{
 		vertical-align: -5px;
 		font-size: 30px;
@@ -124,7 +128,7 @@ Copyright. All rights reserved.
 
 
 	.donate-service-logo{
-		background-color: #fefefe;
+		background-color: #f5f5f7;
 		border-radius: 15px;
 		box-sizing: border-box;
 		padding: 20px;
@@ -172,6 +176,17 @@ Copyright. All rights reserved.
 		margin-right: 5px;
 		height: auto;
 		vertical-align: -3px;
+	}
+
+	.donate-button .material-icons{
+		font-size: 17px;
+		margin-right: 5px;
+		height: auto;
+		vertical-align: -3px;
+	}
+
+	.color-orange{
+		color: #F1882E;
 	}
 
 	.donate-button-qr{
@@ -300,10 +315,6 @@ Copyright. All rights reserved.
 		z-index: 1;
 	}
 
-	.donate:hover{
-		cursor: pointer;
-	}
-
 	.cart:hover{
 		cursor: pointer;	
 	}
@@ -393,6 +404,7 @@ Copyright. All rights reserved.
 
 	.donate-block{
 		margin-bottom: 20px;
+		height: 277px;
 		width: 100%;
 		box-sizing: border-box;
 		background-color: #1e1e1e;
@@ -400,8 +412,15 @@ Copyright. All rights reserved.
 		border-radius: 15px;
 		color: #f5f5f7;
 		padding: 20px;
-
 	}
+
+	.donate-block a{
+		text-decoration: none;
+		border: 0;
+		color: #f5f5f7;
+	}
+
+
 
 /*	.window-text{
 		display: block;

@@ -81,6 +81,9 @@ Copyright. All rights reserved.
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+	<!-- Flip plugin for donation cards -->
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
 </head>
 <body>
 
@@ -104,29 +107,69 @@ Copyright. All rights reserved.
 
 		<div class="all-services">
 
-		<div class="donate-block">
-			<div class="donate-service-logo ton-logo-fix">
-				<img src="images/ton.png">
+		<div class="donate-block-1" id="donate-1">
+		<div class="front">
+			<div class="donate-block">
+				<div class="donate-service-logo ton-logo-fix">
+					<img src="images/ton.png">
+				</div>
+				<div class="donate-service-pay-options">
+					<div class="donate-service-pay-options-info">TON</div>
+					<div class="donate-service-pay-options-info">Payment</div>
+				</div>
+				<div class="donate-service-text">
+					Donate in Toncoin crypto.
+				</div>
+				<div class="donate-service-buttons">
+					<a href="ton://transfer/EQAgebhhR0er85-vn1S2sAMcNqYiFfZfV6uyMs7EeBkeAGV1" target="_blank">
+					<div class="donate-button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						    <path d="M16 13L0 7L16 1L32 7L16 13Z" fill="#45AEF5"/>
+						    <path opacity="0.6" d="M16 13L32 7L16 31V13Z" fill="#45AEF5"/>
+						    <path opacity="0.8" d="M16 13L0 7L16 31V13Z" fill="#45AEF5"/>
+						</svg>
+	 					Pay with Tonkeeper</div>
+	 				</a>
+				</div>
 			</div>
-			<div class="donate-service-pay-options">
-				<div class="donate-service-pay-options-info">2 TON/month</div>
-				<div class="donate-service-pay-options-info">Subscribtion</div>
+		</div>
+		<div class="back">
+			<div class="donate-block">
+				Scan QR with your wallet
+
+				OR
+
+				Open direct wallet link
+
+				You need to install wallet what support ton:// link
+				Get wallet on ton.apps
 			</div>
-			<div class="donate-service-text">
-				Donate in Toncoin
-			</div>
-			<div class="donate-service-buttons">
-				<div class="donate-button">
-					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-					    <path d="M16 13L0 7L16 1L32 7L16 13Z" fill="#45AEF5"/>
-					    <path opacity="0.6" d="M16 13L32 7L16 31V13Z" fill="#45AEF5"/>
-					    <path opacity="0.8" d="M16 13L0 7L16 31V13Z" fill="#45AEF5"/>
-					</svg>
- 					Pay with Tonkeeper</div>
-			</div>
+		</div>
 		</div>
 
 		<div class="donate-block">
+			<a href="https://t.me/CryptoBot?start=IVRqAb00BDL6" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/cryptobot.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">Crypto</div>
+				<div class="donate-service-pay-options-info">Payment</div>
+			</div>
+			<div class="donate-service-text">
+				Donate any amount and get special gift.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<img src="images/cryptobot_icn.png">
+ 					Pay with CryptoBot
+ 				</div>
+			</div>
+			</a>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://boosty.to/captainmarshin" target="_blank">
 			<div class="donate-service-logo">
 				<img src="images/boosty.png">
 			</div>
@@ -135,47 +178,34 @@ Copyright. All rights reserved.
 				<div class="donate-service-pay-options-info">Subscribtion</div>
 			</div>
 			<div class="donate-service-text">
-				Donate and subscribe on boosty.to
+				Subscribtion on boosty.to to support.
 			</div>
 			<div class="donate-service-buttons">
-				<div class="donate-service-url">
-					boosty.to/captainmarshin
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to boosty.to
 				</div>
 			</div>
+			</a>
 		</div>
 
 		<div class="donate-block">
+			<a href="https://qiwi.com/n/CAPTAINMARSHIN" target="_blank">
 			<div class="donate-service-logo">
 				<img src="images/qiwi.png">
 			</div>
 			<div class="donate-service-pay-options">
-				<div class="donate-service-pay-options-info">Pay what you want</div>
+				<div class="donate-service-pay-options-info">RUB</div>
+				<div class="donate-service-pay-options-info">Payment</div>
 			</div>
 			<div class="donate-service-text">
-				1
+				One-time any amount payment via qiwi.com
 			</div>
 			<div class="donate-service-buttons">
-				<div class="donate-service-url">
-					qiwi.com/n/CAPTAINMARSHIN
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to qiwi.com
 				</div>
 			</div>
-		</div>
-
-		<div class="donate-block">
-			<div class="donate-service-logo">
-				<img src="images/buymeacoffee.png">
-			</div>
-			<div class="donate-service-pay-options">
-				<div class="donate-service-pay-options-info">Pay what you want</div>
-			</div>
-			<div class="donate-service-text">
-				Buy me a coffee 
-			</div>
-			<div class="donate-service-buttons">
-				<div class="donate-service-url">
-					buymeacoffee.com/captainmarshin
-				</div>
-			</div>
+			</a>
 		</div>
 
 		<div class="donate-block">
@@ -184,11 +214,11 @@ Copyright. All rights reserved.
 				<img src="images/binance.png">
 			</div>
 			<div class="donate-service-pay-options">
-				<div class="donate-service-pay-options-info">Any amount</div>
-				<div class="donate-service-pay-options-info">1</div>
+				<div class="donate-service-pay-options-info">Crypto</div>
+				<div class="donate-service-pay-options-info">Payment</div>
 			</div>
 			<div class="donate-service-text">
-				Donate in different crypto.
+				Donate any amount in any cryptocurencie.
 			</div>
 			<div class="donate-service-buttons">
 				<div class="donate-button">
@@ -198,27 +228,24 @@ Copyright. All rights reserved.
 		</div>
 
 		<div class="donate-block">
-			<div class="donate-service-logo ton-logo-fix">
-				<img src="images/ton.png">
+			<a href="https://buymeacoffee.com/captainmarshin" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/buymeacoffee.png">
 			</div>
 			<div class="donate-service-pay-options">
-				<div class="donate-service-pay-options-info">2 TON/month</div>
-				<div class="donate-service-pay-options-info">Subscribtion</div>
+				<div class="donate-service-pay-options-info">USD</div>
+				<div class="donate-service-pay-options-info">Payment</div>
 			</div>
 			<div class="donate-service-text">
-				Donate in Toncoin
+				One-time different amount payment.
 			</div>
 			<div class="donate-service-buttons">
 				<div class="donate-button">
-					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-					    <path d="M16 13L0 7L16 1L32 7L16 13Z" fill="#45AEF5"/>
-					    <path opacity="0.6" d="M16 13L32 7L16 31V13Z" fill="#45AEF5"/>
-					    <path opacity="0.8" d="M16 13L0 7L16 31V13Z" fill="#45AEF5"/>
-					</svg>
- 					Pay with CryptoBot</div>
+					<span class="material-icons color-orange">north_east</span>Go to buymecoffee.com
+				</div>
 			</div>
+			</a>
 		</div>
-
 
 
 
@@ -226,6 +253,11 @@ Copyright. All rights reserved.
 
 		
 	</div>
+
+
+	<script type="text/javascript">
+		$("#donate-1").flip();
+	</script>
 
 
 
