@@ -14,7 +14,10 @@ Copyright. All rights reserved.
 	<meta charset="utf-8">
 	<title>Маршин Shop / Marshin Shop</title>
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  	<meta name="theme-color" content="#111111">
+  	<!-- <meta name="theme-color" content="#F1882E"> -->
+	<meta name="viewport" content="viewport-fit=cover width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="title" content="Маршин Shop">
 	<meta name="description" content="Get unique items from Marshin Shop.">
 
@@ -77,7 +80,7 @@ Copyright. All rights reserved.
 
 
 	<div class="category">
-		<div class="cat_title">Маршин 2022 Collection</div>
+		<div id="open-all-collection-2022" class="cat_title">Маршин 2022 Collection  <span class="material-icons">chevron_right</span></div>
 		<div class="cat_content">
 
 			<div class="cat_item_fix"></div>
@@ -117,6 +120,54 @@ Copyright. All rights reserved.
 		</div>
 		<div class="cat_line"></div>
 	</div>
+
+
+	<!-- WINDOW ALL COLLECTION 2022 -->
+
+	<div id="window-all-collection-2022" class="all-collection">
+
+		<div class="all-title">Маршин 2022 Collection</div>
+
+		<div class="all-videos-cards">
+			
+
+			<div class="cat_item">
+				<a href="shop_web/collection/marshin2022/hoodie">
+					<img class="item_cover" src="shop_web/content/clothes/marshin2022/hoodie_01_s.jpg">
+				</a>
+				<div class="item_name">Black Hoodie</div>
+				<div class="item_year">Out of stock</div>
+			</div>
+
+			<div class="cat_item">
+				<a href="shop_web/collection/marshin2022/tshirt">
+					<img class="item_cover" src="shop_web/content/clothes/marshin2022/tshirt_01_s.jpg">
+				</a>
+				<div class="item_name">Black T-Shirt</div>
+				<div class="item_year">Out of stock</div>
+			</div>
+
+			<div class="cat_item">
+				<a href="shop_web/collection/marshin2022/cap">
+					<img class="item_cover" src="shop_web/content/clothes/marshin2022/cap_01_s.jpg">
+				</a>
+				<div class="item_name">Black Cap</div>
+				<div class="item_year">Out of stock</div>
+			</div>
+
+			<div class="cat_item">
+				<a href="shop_web/collection/marshin2022/facemask">
+					<img class="item_cover" src="shop_web/content/clothes/marshin2022/facemask_01_s.jpg">
+				</a>
+				<div class="item_name">Black Face Mask</div>
+				<div class="item_year">Out of stock</div>
+			</div>
+
+
+		</div>
+	</div>
+
+
 
 	<div class="category">
 		<div class="cat_title">Music</div>
@@ -304,6 +355,9 @@ Copyright. All rights reserved.
 		var open_window_delivery = document.getElementById("open-window-delivery");
 		var window_delivery = document.getElementById("delivery");
 
+		var allcolection2022 = document.getElementById("open-all-collection-2022");
+		var windowallcollection2022 = document.getElementById("window-all-collection-2022");
+
 		var open_window_faq = document.getElementById("open-window-faq");
 		var window_faq = document.getElementById("faq");
 
@@ -312,10 +366,36 @@ Copyright. All rights reserved.
 
 		$(document).ready(function() {
 
+			allcolection2022.addEventListener("click", function() {
+
+				if (windowallcollection2022.style.display === "block") {
+					windowallcollection2022.style.display = "none";
+					document.body.style.overflow = "scroll";
+					windowallcollection2022.style.overflow = "hidden";
+					cart_button.style.display = "block";
+					close_button.style.display = "none";
+				} 
+				else 
+				{
+					windowallcollection2022.style.display = "block";
+					document.body.style.overflow = "hidden";
+					windowallcollection2022.style.overflow = "scroll";
+					cart_button.style.display = "none";
+					close_button.style.display = "block";
+			    }
+			   
+			})
+		});
+
+		$(document).ready(function() {
+
 			close_button.addEventListener("click", function() {
 
 				window_faq.style.display = "none";
 				window_faq.style.overflow = "hidden";
+
+				windowallcollection2022.style.display = "none";
+				windowallcollection2022.style.overflow = "hidden";
 
 				window_delivery.style.display = "none";;
 				window_delivery.style.overflow = "hidden";
@@ -411,6 +491,9 @@ Copyright. All rights reserved.
 
 				window_faq.style.display = "none";
 				window_faq.style.overflow = "hidden";
+
+				windowallcollection2022.style.display = "none";
+				windowallcollection2022.style.overflow = "hidden";
 
 				window_delivery.style.display = "none";;
 				window_delivery.style.overflow = "hidden";

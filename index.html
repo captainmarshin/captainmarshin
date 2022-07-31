@@ -84,6 +84,9 @@ Copyright. All rights reserved.
 	<!-- Flip plugin for donation cards -->
 	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
+	<!-- QR Code generator plugin -->
+	<script src="js/qrcode.min.js"></script>
+
 </head>
 <body>
 
@@ -100,6 +103,9 @@ Copyright. All rights reserved.
 
 	</div>
 
+	<div class="notification">
+		Copied!
+	</div>
 
 	<div id="donate" class="window">
 
@@ -115,13 +121,13 @@ Copyright. All rights reserved.
 				</div>
 				<div class="donate-service-pay-options">
 					<div class="donate-service-pay-options-info">TON</div>
-					<div class="donate-service-pay-options-info">Payment</div>
+					<div class="donate-service-pay-options-info">One-time</div>
+					<div class="donate-service-pay-options-info">Any amount</div>
 				</div>
 				<div class="donate-service-text">
 					Donate in Toncoin crypto.
 				</div>
 				<div class="donate-service-buttons">
-					<a href="ton://transfer/EQAgebhhR0er85-vn1S2sAMcNqYiFfZfV6uyMs7EeBkeAGV1" target="_blank">
 					<div class="donate-button">
 						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
 						    <path d="M16 13L0 7L16 1L32 7L16 13Z" fill="#45AEF5"/>
@@ -129,20 +135,34 @@ Copyright. All rights reserved.
 						    <path opacity="0.8" d="M16 13L0 7L16 31V13Z" fill="#45AEF5"/>
 						</svg>
 	 					Pay with Tonkeeper</div>
-	 				</a>
+				</div>
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Toncoin wallet
 				</div>
 			</div>
 		</div>
 		<div class="back">
 			<div class="donate-block">
-				Scan QR with your wallet
+				<div class="qrcode" id="qrcode-ton"></div>
+				<div style="font-size: 11px; text-align: center; margin-top: 5px; color: lightgrey;">Scan QR with TON wallet</div>
 
-				OR
+				<script type="text/javascript">
+					new QRCode("qrcode-ton", { text: "EQAgebhhR0er85-vn1S2sAMcNqYiFfZfV6uyMs7EeBkeAGV1", width: 100, height: 100 });
+				</script>
 
-				Open direct wallet link
+				<div style="font-weight: bold; margin-top: 8px; text-align: center">OR</div>
 
-				You need to install wallet what support ton:// link
-				Get wallet on ton.apps
+				<div class="donate-service-buttons">
+				<a href="ton://transfer/EQAgebhhR0er85-vn1S2sAMcNqYiFfZfV6uyMs7EeBkeAGV1" target="_blank">
+					<div class="donate-button">
+	 					<span class="material-icons">north_east</span> Open direct wallet link
+	 				</div>
+	 				</a>
+	 			</div>
+
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+					You need to install wallet what support ton:// link
+				</div>
 			</div>
 		</div>
 		</div>
@@ -154,17 +174,21 @@ Copyright. All rights reserved.
 			</div>
 			<div class="donate-service-pay-options">
 				<div class="donate-service-pay-options-info">Crypto</div>
-				<div class="donate-service-pay-options-info">Payment</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Any amount</div>
 			</div>
 			<div class="donate-service-text">
-				Donate any amount and get special gift.
+				Donate in crypto and get special gift.
 			</div>
 			<div class="donate-service-buttons">
 				<div class="donate-button">
 					<img src="images/cryptobot_icn.png">
- 					Pay with CryptoBot
+ 					Open CryptoBot
  				</div>
 			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Telegram app
+				</div>
 			</a>
 		</div>
 
@@ -178,13 +202,16 @@ Copyright. All rights reserved.
 				<div class="donate-service-pay-options-info">Subscribtion</div>
 			</div>
 			<div class="donate-service-text">
-				Subscribtion on boosty.to to support.
+				Exclusive content and working process.
 			</div>
 			<div class="donate-service-buttons">
 				<div class="donate-button">
 					<span class="material-icons color-orange">north_east</span>Go to boosty.to
 				</div>
 			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card
+				</div>
 			</a>
 		</div>
 
@@ -195,36 +222,71 @@ Copyright. All rights reserved.
 			</div>
 			<div class="donate-service-pay-options">
 				<div class="donate-service-pay-options-info">RUB</div>
-				<div class="donate-service-pay-options-info">Payment</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Any amount</div>
 			</div>
 			<div class="donate-service-text">
-				One-time any amount payment via qiwi.com
+				Support in RUB currency.
 			</div>
 			<div class="donate-service-buttons">
 				<div class="donate-button">
 					<span class="material-icons color-orange">north_east</span>Go to qiwi.com
 				</div>
 			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card or Qiwi wallet
+				</div>
 			</a>
 		</div>
 
-		<div class="donate-block">
-			<!-- https://app.binance.com/qr/dplk5cb1330e11ec4288bd68297401d17fb5 -->
-			<div class="donate-service-logo">
-				<img src="images/binance.png">
+
+		<div class="donate-block-1" id="donate-2">
+		<div class="front">
+			<div class="donate-block">
+				<!-- https://app.binance.com/qr/dplk5cb1330e11ec4288bd68297401d17fb5 -->
+				<div class="donate-service-logo">
+					<img src="images/binance.png">
+				</div>
+				<div class="donate-service-pay-options">
+					<div class="donate-service-pay-options-info">Crypto</div>
+					<div class="donate-service-pay-options-info">One-time</div>
+					<div class="donate-service-pay-options-info">Any amount</div>
+				</div>
+				<div class="donate-service-text">
+					Support in any crypto you want.
+				</div>
+				<div class="donate-service-buttons">
+					<div class="donate-button">
+						<img src="images/binance.ico">
+	 					Pay with Binance Pay</div>
+				</div>
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Binance account
+				</div>
 			</div>
-			<div class="donate-service-pay-options">
-				<div class="donate-service-pay-options-info">Crypto</div>
-				<div class="donate-service-pay-options-info">Payment</div>
+		</div>
+		<div class="back">
+			<div class="donate-block">
+				<div class="qrcode" id="qrcode-binance"></div>
+				<div style="font-size: 11px; text-align: center; margin-top: 5px; color: lightgrey;">Scan QR in Binance app.</div>
+
+				<script type="text/javascript">
+					new QRCode("qrcode-binance", { text: "https://app.binance.com/qr/dplk5cb1330e11ec4288bd68297401d17fb5", width: 100, height: 100 });
+				</script>
+
+				<div style="font-weight: bold; margin-top: 8px; text-align: center">OR</div>
+
+				<div class="donate-service-buttons">
+					<div id="copy-payid" class="donate-button">
+	 					<span class="material-icons">content_copy</span> 205710163
+	 				</div>
+	 			</div>
+
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+					Input this Pay ID in Binance app.
+				</div>
 			</div>
-			<div class="donate-service-text">
-				Donate any amount in any cryptocurencie.
-			</div>
-			<div class="donate-service-buttons">
-				<div class="donate-button">
-					<img src="images/binance.ico">
- 					Pay with Binance</div>
-			</div>
+		</div>
 		</div>
 
 		<div class="donate-block">
@@ -234,16 +296,20 @@ Copyright. All rights reserved.
 			</div>
 			<div class="donate-service-pay-options">
 				<div class="donate-service-pay-options-info">USD</div>
-				<div class="donate-service-pay-options-info">Payment</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Fixed amount</div>
 			</div>
 			<div class="donate-service-text">
-				One-time different amount payment.
+				Support in cups of coffee.
 			</div>
 			<div class="donate-service-buttons">
 				<div class="donate-button">
 					<span class="material-icons color-orange">north_east</span>Go to buymecoffee.com
 				</div>
 			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card
+				</div>
 			</a>
 		</div>
 
@@ -257,6 +323,16 @@ Copyright. All rights reserved.
 
 	<script type="text/javascript">
 		$("#donate-1").flip();
+		$("#donate-2").flip();
+
+		$("#copy-payid").click( event => {
+			navigator.clipboard.writeText("205710163");
+			$(".notification").show("slideUp", function() {
+				setTimeout(function(){
+					$(".notification").hide("slideDown")
+				}, 3000);
+			});
+		})
 	</script>
 
 
@@ -1905,6 +1981,7 @@ Copyright. All rights reserved.
 				windowalllyrics.style.display = "none";
 				windowdonate.style.display = "none";
 				document.body.style.overflow = "scroll";
+				miniplayerexpand.style.display = "none";
 				
 				opendonatewindow.style.display = "block";
 				close_button.style.display = "none";
@@ -1920,12 +1997,16 @@ Copyright. All rights reserved.
 					miniplayerexpand.style.display = "none";
 					document.body.style.overflow = "scroll";
 					miniplayerexpand.style.overflow = "hidden";
+					opendonatewindow.style.display = "block";
+					close_button.style.display = "none";
 				} 
 				else 
 				{
 					miniplayerexpand.style.display = "block";
 					document.body.style.overflow = "hidden";
 					miniplayerexpand.style.overflow = "scroll";
+					opendonatewindow.style.display = "none";
+					close_button.style.display = "block";
 			    }
 			   }
 			})
