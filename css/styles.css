@@ -8,6 +8,20 @@ Copyright. All rights reserved.
 
 */
 
+
+
+/* COLORS PALLETE
+
+	Music Tab
+	Main color: #F1882E (orange)
+
+	Shop Tab:
+	Main color:
+
+ */
+
+
+
 	body{
 		margin: 0;
 		padding: 0;
@@ -39,7 +53,7 @@ Copyright. All rights reserved.
 		border-bottom: 1px solid #222;
 		display: flex;
 		padding-top: 10px;
-		padding-right: 20px;
+		padding-right: 15px;
 		padding-left: 20px;
 		padding-bottom: 10px;
 		align-items: center;
@@ -278,8 +292,9 @@ Copyright. All rights reserved.
 		margin: 5px;
 		display: inline-block;
 		padding: 3px 12px;
-		border: 1px solid #f5f5f7;
+		border: 1px solid #aaa;
 		border-radius: 50px;
+		color: #aaa;
 	}
 
 	.close-btn-shop{
@@ -528,7 +543,7 @@ Copyright. All rights reserved.
 		cursor: pointer;
 	}
 
-	.mini-player-name span {
+	.mini-player-name span.material-icons {
 		font-size: 14px;
 		vertical-align: -2px;
 		color: #999;
@@ -610,6 +625,20 @@ Copyright. All rights reserved.
 		width: 40px;
 	}
 
+	#mini-player-rewind-btn .material-symbols-outlined{
+		line-height: 55px;
+		font-size: 28px;
+		vertical-align: 6px;
+		box-sizing: border-box;
+		padding-right: 10px;
+		width: 40px;
+		text-align: center;
+	}
+
+	#mini-player-rewind-btn{
+		display: none;
+	}
+
 	#mini-player-like-btn .material-symbols-outlined{
 		line-height: 55px;
 		font-size: 28px;
@@ -621,6 +650,23 @@ Copyright. All rights reserved.
 	}
 
 	#mini-player-like-btn .material-symbols-outlined:hover{
+		font-variation-settings:
+	  	'FILL' 1,
+	  	'wght' 400,
+	  	'GRAD' 0,
+	  	'opsz' 48;
+	  	color: #F1882E;
+	}
+
+	#mini-player-rewind-btn .material-symbols-outlined{
+		font-variation-settings:
+	  	'FILL' 1,
+	  	'wght' 400,
+	  	'GRAD' 0,
+	  	'opsz' 48;
+	}
+
+	#mini-player-rewind-btn .material-symbols-outlined:hover{
 		font-variation-settings:
 	  	'FILL' 1,
 	  	'wght' 400,
@@ -657,8 +703,8 @@ Copyright. All rights reserved.
 	}
 
 	.mini-player-timeline:hover > progress{
-		height: 10px;
-		cursor: pointer;
+		height: 15px !important;
+		cursor: pointer !important;
 	}
 
 	progress {
@@ -674,6 +720,7 @@ Copyright. All rights reserved.
 
 	progress::-webkit-progress-value {
 	  	background-color: #F1882E;
+	  	transition: width 2s;
 	}
 
 	progress::-moz-progress-bar {
@@ -712,6 +759,38 @@ Copyright. All rights reserved.
 	}
 
 
+	.mini-player-control{
+		width: 100%;
+/*		border-top: 1px solid #111;*/
+		position: sticky;
+		bottom: 0;
+		height: 80px;
+/*		display: flex;*/
+		align-items: center;
+    	justify-content: center;
+		background: rgba(30, 30, 30, 0.2);
+		backdrop-filter: blur(30px);
+		-webkit-backdrop-filter: blur(30px);
+		box-sizing: border-box;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		display: block;
+	}
+
+	.mini-player-control div {
+		display: inline-block;
+	}
+
+	.mini-player-ctrls{
+		width: 100%;
+		text-align: center;
+	}
+
+	.mini-player-ctrls .material-icons{
+		font-size: 50px;
+	}
+
+
 	.mini-player-expand-row{
 		height: 60px;
 		width: 100%;
@@ -719,6 +798,10 @@ Copyright. All rights reserved.
 		display: flex;
 		border-bottom: 1px solid #222;
 		margin-bottom: 10px;
+	}
+
+	.mini-player-expand-row:hover{
+		cursor: pointer;
 	}
 /*
 	.mini-player-expand-row:first-child{
@@ -787,6 +870,15 @@ Copyright. All rights reserved.
 		vertical-align: -25px;
 		display: inline-block;
 	}
+
+	.mini-player-expand-play span.material-icons:hover, .mini-player-expand-download span.material-icons:hover, .mini-player-expand-share span.material-icons:hover{
+		cursor: pointer;
+		color: #F1882E;
+	}
+
+	/*.mini-player-expand-play{
+		margin-right: 10px;
+	}*/
 
 
 	.mini-player-expand-play span{

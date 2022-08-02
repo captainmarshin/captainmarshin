@@ -87,6 +87,22 @@ Copyright. All rights reserved.
 	<!-- QR Code generator plugin -->
 	<script src="js/qrcode.min.js"></script>
 
+
+	<!-- Captain Marshin Player -->
+	<script src="js/player.js"></script>
+
+	<!-- Like share menu -->
+	<script src="js/share.js"></script>
+
+	<!-- Pages -->
+	<script src="js/pages.js"></script>
+
+	<!-- Tabs -->
+	<script src="js/tabs.js"></script>
+
+	<!-- Tracklist JSON Urls -->
+	<script type="text/javascript" src="js/player/tracklist.json"></script>
+
 </head>
 <body>
 
@@ -1587,22 +1603,23 @@ Copyright. All rights reserved.
 		<div class="mini-player-row" id="mini-player-open">
 			<div class="mini-player-cover">
 				<!-- <div id="mini-player-open"> -->
-				<img src="content/singles/226.jpg">
+				<img id="mini-player-cover" src="content/singles/226.jpg">
 				<!-- </div> -->
 			</div>
 			<div class="mini-player-meta">
-				<div class="mini-player-name">Indica <span class="material-icons">explicit</span></div>
+				<div class="mini-player-name"><span id="mini-player-trackname">Indica</span> <span class="material-icons">explicit</span></div>
 				<div class="mini-player-note"><span id="progress">NEW RELEASE</span></div>
 			</div>
 			<div class="mini-player-controls">
 				<div class="mini-player-controls-ctrl">
-					<div id="mini-player-like-btn"><span class="material-symbols-outlined">favorite</span></div>
+					<div id="mini-player-like-btn"><span title="Share with friends" class="material-symbols-outlined">favorite</span></div>
+					<div id="mini-player-rewind-btn"><span title="Play song" class="material-symbols-outlined">fast_rewind</span></div>
 				</div>
 				<div class="mini-player-controls-ctrl" id="mini-player-ctrl-btns">
-					<div id="mini-player-start-btn"><span class="material-icons">play_arrow</span></div>
-					<div id="mini-player-loading"><span class="material-icons">autorenew</span></div>
-					<div id="mini-player-play-btn"><span class="material-icons">play_arrow</span></div>
-					<div id="mini-player-pause-btn"><span class="material-icons">pause</span></div>
+					<div id="mini-player-start-btn"><span title="Play song" class="material-icons">play_arrow</span></div>
+					<div id="mini-player-loading"><span title="Song is loading" class="material-icons">autorenew</span></div>
+					<div id="mini-player-play-btn"><span title="Resume playing" class="material-icons">play_arrow</span></div>
+					<div id="mini-player-pause-btn"><span title="Stop playing" class="material-icons">pause</span></div>
 				</div>
 			</div>
 		</div>
@@ -1628,324 +1645,6 @@ Copyright. All rights reserved.
 				<span id="mini-player-share-btn" class="material-icons">ios_share</span>
 			</div>
 	</div> -->
-
-
-	<script type="text/javascript">
-
-		const title = document.title;
-		// const url = document.querySelector('link[rel=canonical]') ? document.querySelector('link[rel=canonical]').href : document.location.href;
-		const shareButton = document.getElementById('mini-player-like-btn');
-
-		shareButton.addEventListener('click', event => {
-		  if (navigator.share) { 
-		  	navigator.share({
-		  		url: 'https://captainmarshin.com',
-		    })
-		    .catch(console.error);
-		    } else {
-		        console.log("Device don't support Share Menu")
-		        // Need to make dialog for unsupported devices
-		    }
-		});
-	</script>
-
-
-	<script type="text/javascript">
-
-
-		// function playerfileloaded() {
-		// 	console.log("Player file loaded!")
-		// 	document.getElementById("mini-player-loading").style.display = "none";
-		// 	document.getElementById("mini-player-play-btn").style.display = "block";
-		// }
-
-		// function playerfilecanplay() {
-		// 	console.log("Player file can play!")
-		// }
-
-		// function playerfileready() {
-		// 	console.log("Player loaded file and ready to play!")
-		// 	// document.getElementById("mini-player-loading").style.display = "none";
-		// 	// document.getElementById("mini-player-play-btn").style.display = "block";
-		// }
-
-		$(document).ready(function () {
-
-			var music = document.getElementById("mini-player-new-release");
-		  	var start_music_button = document.getElementById("mini-player-start-btn");
-		  	var play_music_button = document.getElementById("mini-player-play-btn");
-		  	var pause_music_button = document.getElementById("mini-player-pause-btn");
-		  	var loading_icon = document.getElementById("mini-player-loading");
-
-			start_music_button.addEventListener("click", loadingAudio);
-			start_music_button.addEventListener("touchstart", loadingAudio);
-
-			function loadingAudio() {
-				var audio_url = "https://dl.dropbox.com/s/3lebhozbyrg3axk/Indica.m4a";
-
-				start_music_button.style.display = 'none';
-				loading_icon.style.display = "inline-block";
-
-				var $loading_icon_anim = $(loading_icon), degree = 0, timer;
-			    
-			    rotate();
-
-			    function rotate() {
-			        
-			        $loading_icon_anim.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});  
-			        $loading_icon_anim.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});                      
-			        timer = setTimeout(function() {
-			            ++degree; rotate();
-			        },5);
-			    };
-
-				// music.setAttribute("src", audio_url);
-
- 				// music.addEventListener('waiting', (event) => {
- 				// 	console.log('Loading...');
- 				// });
-
- 				// music.addEventListener('loadedmetadata', (event) => {
- 				// 	console.log('Meta loaded! >> Loading first frame...');
- 				// });
-
- 				// music.addEventListener('loadeddata', (event) => {
- 				// 	console.log('First frame loaded! >> Ready to play with loading...');
- 				// });
-
- 				// music.addEventListener('canplay', (event) => {
- 				// 	console.log('Can play with loading! >> Loading entire audio file...');
- 				// 	start_music_button.style.display = 'none';
-				// 	loading_icon.style.display = "none";
-				// 	play_music_button.style.display = "block";
-
-				// 	clearTimeout(timer);
-
- 				// 	playAudio();
- 				// });
-
-
-
- 				// % of buffering audio file
-
- 				// function loop() {
-				//   var buffered = music.buffered;
-				//   var loaded;
-
-				//   if (buffered.length) {
-				//     loaded = 100 * buffered.end(0) / music.duration;
-				//     document.getElementById("aone1l").innerHTML = loaded.toFixed(2);
-				//   }
-
-				//   setTimeout(loop, 50);
-				// }
-
-				// loop();
-
-				//
-
- 				const elProgress = document.getElementById('progress');
-
-				fetch('https://dl.dropbox.com/s/ja4fj90sbnlp7yk/Indica.mp3')
-				.then(response => {
-				  if (!response.ok) {
-				    throw Error(response.status+' '+response.statusText)
-				  }
-
-				  if (!response.body) {
-				    throw Error('ReadableStream not yet supported in this browser.')
-				  }
-
-				  // to access headers, server must send CORS header "Access-Control-Expose-Headers: content-encoding, content-length x-file-size"
-				  // server must send custom x-file-size header if gzip or other content-encoding is used
-				  const contentEncoding = response.headers.get('content-encoding');
-				  const contentLength = response.headers.get(contentEncoding ? 'x-file-size' : 'content-length');
-				  if (contentLength === null) {
-				    throw Error('Response size header unavailable');
-				  }
-
-				  const total = parseInt(contentLength, 10);
-				  let loaded = 0;
-
-				  return new Response(
-				    new ReadableStream({
-				      start(controller) {
-				        const reader = response.body.getReader();
-
-				        read();
-				        function read() {
-				          reader.read().then(({done, value}) => {
-				            if (done) {
-				              controller.close();
-				              return; 
-				            }
-				            loaded += value.byteLength;
-				            progress({loaded, total})
-				            controller.enqueue(value);
-				            read();
-				          }).catch(error => {
-				            console.error(error);
-				            controller.error(error)                  
-				          })
-				        }
-				      }
-				    })
-				  );
-				})
-				.then(response => response.blob())
-				.then(blob => {
-
-					blob = blob.slice(0, blob.size, "audio/mp3")
-
-					console.log(blob)
-
-					var link = URL.createObjectURL(blob);
-
-					document.getElementById('mini-player-source').setAttribute("src", link);
-
-				    // document.getElementById('mini-player-source').src = URL.createObjectURL(data);
-				    // document.getElementById('mini-player-source').type = 'audio/x-m4a';
-				    
-				    // elProgress.innerHTML = 'Ready';
-				    // start_music_button.style.display = 'none';
-					// loading_icon.style.display = "none";
-					// play_music_button.style.display = "block";
-
-					music.load()
-
-				    console.log(music)
-
-				    // Does not work in Safari/mobile
-			        // var blob = new Blob([arrayBuffer]);
-			        // var url = URL.createObjectURL(blob);
-
-			        // Should work in Safari/on mobile
-			        // var blob = new Blob([arrayBuffer], {type: 'audio/mpeg'});
-			        // // All browsers, except Firefox
-			        // try {
-			        //     url = webkitURL.createObjectURL(blob);
-			        // }
-			        // // Firefox
-			        // catch(err) {
-			        //     url = URL.createObjectURL(blob);
-			        // }
-
-				})
-				.catch(error => {
-				  console.error(error);
-				});
-
-				function progress({loaded, total}) {
-				  elProgress.innerHTML = 'LOADING ' + Math.round(loaded/total*100)+'%';
-				};
-
-
-				music.addEventListener('loadeddata', (event) => {
- 					console.log('I think I can play through the entire ' +
-      				'audio without ever having to stop to buffer.');
-      				start_music_button.style.display = 'none';
-					loading_icon.style.display = "none";
-					play_music_button.style.display = "inline-block";
-
-					console.log(music)
-
-      				clearTimeout(timer);
-
-      				document.getElementById('progress').innerHTML = 'READY TO PLAY';
-
- 					// playAudio();
- 				});
-
-			}
-
-
-				// Progerss bar!
-
-				var myProgressBar = document.getElementById('mini-player-timeline-bar'); 
-
-				music.addEventListener('timeupdate', onLoadProgress);
-
-				function onLoadProgress () {
-				    var progress = parseInt(((music.currentTime / music.duration) * 100), 10);
-				    myProgressBar.value = progress; 
-				}
-
-				
-
-
-			// loading_icon.addEventListener("click", stopLoading);
-
-			play_music_button.addEventListener("click", playAudio);
-
-			pause_music_button.addEventListener("click", pauseAudio);
-
-			// function stopLoading() {
-			// 	var stopsrc = "";
-			// 	music.setAttribute("src", stopsrc);
-			// 	console.log("Loading of track stopped.")
-			// 	start_music_button.style.display = 'block';
-			// 	loading_icon.style.display = "none";
-			// 	play_music_button.style.display = "none";
-
-			// }
-
-			//  $("music").bind("stalled", function() { 
-		    //     music.load();
-		    // });
-
-			function playAudio(){
-				document.getElementById('mini-player-timeline').style.display = "block";
-
-				music.play()
-				play_music_button.style.display = 'none';
-		      	pause_music_button.style.display = 'inline-block';
-		      	console.log("Music start playing!");
-		      	document.getElementById('progress').innerHTML = 'PLAYING NOW';
-			}
-
-			function pauseAudio() {
-				music.pause();
-		      	play_music_button.style.display = 'inline-block';
-		      	pause_music_button.style.display = 'none';
-		      	console.log("Music stop playing!");
-		      	document.getElementById('progress').innerHTML = 'PAUSED';
-			}
-
-			music.addEventListener('ended',function() {
-		      play_music_button.style.display = 'inline-block';
-		      pause_music_button.style.display = 'none';
-		      console.log("Music ended!");
-		      document.getElementById('progress').innerHTML = 'SONG ENDED';
-		    });
-
-		});
-
-
-		// $(document).ready(function() {
-		//   var music = document.getElementById("mini-player-new-release");
-		//   var play_music_button = document.getElementById("mini-player-play-btn");
-		//   var pause_music_button = document.getElementById("mini-player-pause-btn");
-
-		//   function playAudio() {
-		//     if(music.paused) {
-		//       music.play();
-		//       play_music_button.style.display = 'none';
-		//       pause_music_button.style.display = 'block';
-		//       console.log("Music start playing!");
-		//     } else {
-		//       music.pause();
-		//       play_music_button.style.display = 'block';
-		//       pause_music_button.style.display = 'none';
-		//     }
-		//     music.addEventListener('ended',function() {
-		//       play_music_button.style.display = 'block';
-		//       pause_music_button.style.display = 'none';
-		//     });
-		//   }
-		//   play_music_button.addEventListener("click", loadingAudio);
-		// });
-
-	</script>
 
 
 	<script type="text/javascript">
@@ -1991,7 +1690,7 @@ Copyright. All rights reserved.
 
 			musicplayeropen.addEventListener("click", function() {
 
-			  if ((!$(event.target).closest('#mini-player-ctrl-btns').length) && (!$(event.target).closest('#mini-player-like-btn').length)) {
+			  if ((!$(event.target).closest('#mini-player-ctrl-btns').length) && (!$(event.target).closest('#mini-player-like-btn').length) && (!$(event.target).closest('#mini-player-rewind-btn').length)) {
 
 				if (miniplayerexpand.style.display === "block") {
 					miniplayerexpand.style.display = "none";
@@ -1999,6 +1698,7 @@ Copyright. All rights reserved.
 					miniplayerexpand.style.overflow = "hidden";
 					opendonatewindow.style.display = "block";
 					close_button.style.display = "none";
+					document.getElementById("mini-player-timeline-bar").style = "height: 1px;"
 				} 
 				else 
 				{
@@ -2007,6 +1707,7 @@ Copyright. All rights reserved.
 					miniplayerexpand.style.overflow = "scroll";
 					opendonatewindow.style.display = "none";
 					close_button.style.display = "block";
+					document.getElementById("mini-player-timeline-bar").style = "height: 15px;"
 			    }
 			   }
 			})
@@ -2118,7 +1819,7 @@ Copyright. All rights reserved.
 
 		<div class="all-title">Tracklist</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_039">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/226.jpg">
 			</div>
@@ -2127,13 +1828,13 @@ Copyright. All rights reserved.
 				<div class="mini-player-expand-artist">Капитан Маршин</div>
 			</div>
 			<div class="mini-player-expand-controls">
-				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
-				<div class="mini-player-expand-download"><span class="material-icons">download</span></div>
+				<div class="mini-player-expand-play"><span title="Play song" class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span title="Download song" class="material-icons">download</span></div>
 				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_038">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/225.jpg">
 			</div>
@@ -2148,7 +1849,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_037">
 			<div class="mini-player-expand-cover">
 				<img src="content/eps/302.jpg">
 			</div>
@@ -2163,7 +1864,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_036">
 			<div class="mini-player-expand-cover">
 				<img src="content/eps/302.jpg">
 			</div>
@@ -2178,7 +1879,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_035">
 			<div class="mini-player-expand-cover">
 				<img src="content/eps/302.jpg">
 			</div>
@@ -2193,7 +1894,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_034">
 			<div class="mini-player-expand-cover">
 				<img src="content/eps/302.jpg">
 			</div>
@@ -2208,7 +1909,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_033">
 			<div class="mini-player-expand-cover">
 				<img src="content/eps/302.jpg">
 			</div>
@@ -2223,7 +1924,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_032">
 			<div class="mini-player-expand-cover">
 				<img src="content/eps/302.jpg">
 			</div>
@@ -2238,7 +1939,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_031">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/224.jpg">
 			</div>
@@ -2253,7 +1954,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_030">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/223.jpg">
 			</div>
@@ -2268,7 +1969,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_029">
 			<div class="mini-player-expand-cover">
 				<img src="content/albums/101.jpg">
 			</div>
@@ -2283,7 +1984,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_028">
 			<div class="mini-player-expand-cover">
 				<img src="content/albums/101.jpg">
 			</div>
@@ -2298,7 +1999,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_027">
 			<div class="mini-player-expand-cover">
 				<img src="content/albums/101.jpg">
 			</div>
@@ -2313,7 +2014,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_026">
 			<div class="mini-player-expand-cover">
 				<img src="content/albums/101.jpg">
 			</div>
@@ -2328,7 +2029,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_025">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/222.jpg">
 			</div>
@@ -2343,7 +2044,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_024">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/221.jpg">
 			</div>
@@ -2358,7 +2059,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_023">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/220.jpg">
 			</div>
@@ -2373,7 +2074,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_022">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/219.jpg">
 			</div>
@@ -2388,7 +2089,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_021">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/218.jpg">
 			</div>
@@ -2403,7 +2104,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_020">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/217.jpg">
 			</div>
@@ -2418,7 +2119,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_019">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/216.jpg">
 			</div>
@@ -2433,7 +2134,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_018">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/215.jpg">
 			</div>
@@ -2449,7 +2150,7 @@ Copyright. All rights reserved.
 		</div>
 
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_017">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/214.jpg">
 			</div>
@@ -2464,7 +2165,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_016">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/213.jpg">
 			</div>
@@ -2479,7 +2180,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_015">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/212.jpg">
 			</div>
@@ -2494,7 +2195,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_014">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/211.jpg">
 			</div>
@@ -2509,7 +2210,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_013">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/210.jpg">
 			</div>
@@ -2524,7 +2225,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_012">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/209.jpg">
 			</div>
@@ -2539,7 +2240,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_011">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/208.jpg">
 			</div>
@@ -2554,7 +2255,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_010">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/207.jpg">
 			</div>
@@ -2569,7 +2270,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_009">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/206.jpg">
 			</div>
@@ -2584,7 +2285,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_008">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/205.jpg">
 			</div>
@@ -2599,7 +2300,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_007">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/204.jpg">
 			</div>
@@ -2614,7 +2315,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_006">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/203.jpg">
 			</div>
@@ -2629,7 +2330,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_005">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/202.jpg">
 			</div>
@@ -2644,7 +2345,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_004">
 			<div class="mini-player-expand-cover">
 				<img src="content/singles/201.jpg">
 			</div>
@@ -2659,7 +2360,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_003">
 			<div class="mini-player-expand-cover">
 				<img src="content/eps/301.jpg">
 			</div>
@@ -2674,7 +2375,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_002">
 			<div class="mini-player-expand-cover">
 				<img src="content/eps/301.jpg">
 			</div>
@@ -2689,7 +2390,7 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
-		<div class="mini-player-expand-row">
+		<div class="mini-player-expand-row" id="release_id_001">
 			<div class="mini-player-expand-cover">
 				<img src="content/eps/301.jpg">
 			</div>
@@ -2704,11 +2405,19 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 
+		<!-- <div class="mini-player-control">
+			<div class="mini-player-ctrls">
+			<div class="mini-player-control-back"><span class="material-icons">fast_rewind</span></div>
+			<div class="mini-player-control-play"><span class="material-icons">play_arrow</span></div>
+			<div class="mini-player-control-next"><span class="material-icons">fast_forward</span></div>
+			</div>
+		</div> -->
+
 	</div>
 
 
 	<div class="menu">
-		<div class="menu-item-1">
+		<div class="menu-item-1" id="open-music-tab">
 			<div class="music-btn active-music">
 				<div class="menu-item-icon"><span class="material-icons">album</span></div>
 				<div class="menu-item-name">Music</div>
@@ -2721,15 +2430,6 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 	</div>
-
-
-	<script type="text/javascript">
-		var shopbutton = document.getElementById('open-shop-tab');
-
-		shopbutton.addEventListener('click', function() {
-			window.location.href = "shop.html";
-		})
-	</script>
 
 
 </body>
