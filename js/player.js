@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+			// When document is ready - loading tracklist.json
+			// This file contains all releases with id, cover, cloud link
+
+			var data = JSON.parse($.getJSON({'url': "https://captainmarshin.com/js/player/tracklist.json", 'async': false}).responseText);
+
+			// Set vars for buttons and interface elements
+
 			var music = document.getElementById("mini-player-new-release");
 		  	var start_music_button = document.getElementById("mini-player-start-btn");
 		  	var play_music_button = document.getElementById("mini-player-play-btn");
@@ -10,15 +17,17 @@ $(document).ready(function () {
 
 		  	var like_btn = document.getElementById("mini-player-like-btn");
 
+		  	// Listen press on Start button and launch audio file fetch.
+		  	// "touchstart" uses for mobile devices ("click" works on mobile too, but in one moment "click" stop working :/ )
+
 			start_music_button.addEventListener("click", loadingAudio);
 			start_music_button.addEventListener("touchstart", loadingAudio);
 
 
-			// This is a main variable for audio url. 
-			// When user select track in Tracklist or on Release page - this varaible get need
-			// url from json file.
-			var audio_url = "https://dl.dropbox.com/s/ja4fj90sbnlp7yk/Indica.mp3";
+			// Set vars for track data
+			// This var updates from JSON when user select track in Tracklist (mini-player-expand)
 
+			var audio_url = "https://dl.dropbox.com/s/ja4fj90sbnlp7yk/Indica.mp3";
 			var release_name = "";
 			var release_cover = "";
 
@@ -31,16 +40,23 @@ $(document).ready(function () {
 			};
 
 			function InsertTrack(){
-			var pressed = this.id;
+			music.pause();
+			var selectedtrack = this.id;
+			var selectedid = selectedtrack.substring(11);
+			// console.log(pagenum)
 
-			console.log(pressed)
+			var trackid = "track_id_" + selectedid;
 
-			var json = JSON.parse($.getJSON({'url': "https://dl.dropbox.com/s/xijlpa1jdswupyv/tracklist.json", 'async': false}).responseText);
-			console.log(json)
+			var trackname = data[trackid].release_name;
+			var trackcover = data[trackid].release_cover;
+			var trackurl = data[trackid].release_audio_url;
 
-			      audio_url = data[0].release_audio_url
-			      release_name = data[0].release_name
-			      release_cover = data[0].release_cover
+			// console.log(data[te].release_name)
+
+
+			      audio_url = trackurl;
+			      release_name = trackname;
+			      release_cover = trackcover;
 
 			      document.getElementById("mini-player-cover").src = release_cover
 			      document.getElementById("mini-player-trackname").innerHTML = release_name
@@ -48,7 +64,7 @@ $(document).ready(function () {
 
 			      console.log("after this need to start loading audio function");
 
-			      // loadingAudio();
+			      loadingAudio();
 
 			      console.log(audio_url);
 			      console.log(release_name);
