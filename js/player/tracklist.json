@@ -1,16 +1,22 @@
 {
 	"track_id": {
-		"039" : {
+
+		"039" : [
+			{
 				"release_name": "Indica",
 				"release_cover": "content/singles/226.jpg",
 				"release_audio_url": "https://dl.dropbox.com/s/ja4fj90sbnlp7yk/Indica.mp3"
-				},
-		"038" : {
+			}
+		],
+
+		"038": [
+			{
 				"release_name": "WTCMEBC",
 				"release_cover": "content/singles/225.jpg",
 				"release_audio_url": "https://dl.dropbox.com/s/i38ummf00875drb/WTCMEBC.mp3"
-				},
-		}
+			}
+		]
+	}
 	
 }
 
