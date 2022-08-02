@@ -1,22 +1,237 @@
 {
-	"track_id": {
-
-		"039" : [
-			{
-				"release_name": "Indica",
-				"release_cover": "content/singles/226.jpg",
-				"release_audio_url": "https://dl.dropbox.com/s/ja4fj90sbnlp7yk/Indica.mp3"
-			}
-		],
-
-		"038": [
-			{
-				"release_name": "WTCMEBC",
-				"release_cover": "content/singles/225.jpg",
-				"release_audio_url": "https://dl.dropbox.com/s/i38ummf00875drb/WTCMEBC.mp3"
-			}
-		]
-	}
-	
+	"track_id_039":
+		{
+			"release_name": "Indica",
+			"release_cover": "content/singles/226.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/ja4fj90sbnlp7yk/Indica.mp3"
+		},
+	"track_id_038":
+		{
+			"release_name": "WTCMEBC",
+			"release_cover": "content/singles/225.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/i38ummf00875drb/WTCMEBC.mp3"
+		},
+	"track_id_037":
+		{
+			"release_name": "New Day",
+			"release_cover": "content/eps/302.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/r1qhsyay1gdl9e8/New%20Day.mp3"
+		},
+	"track_id_036":
+		{
+			"release_name": "Знаки",
+			"release_cover": "content/eps/302.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/7jl2bkagruavh5r/%D0%97%D0%BD%D0%B0%D0%BA%D0%B8.mp3"
+		},
+	"track_id_035":
+		{
+			"release_name": "City-17",
+			"release_cover": "content/eps/302.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/0l9ks26zg4tcfbv/City17.mp3"
+		},
+	"track_id_034":
+		{
+			"release_name": "Набирай",
+			"release_cover": "content/eps/302.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/t4n694ssmnmpefq/%D0%9D%D0%B0%D0%B1%D0%B8%D1%80%D0%B0%D0%B9.mp3"
+		},
+	"track_id_033":
+		{
+			"release_name": "Lifelight",
+			"release_cover": "content/eps/302.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/6o65nbre8n011dd/Lifelight.mp3"
+		},
+	"track_id_032":
+		{
+			"release_name": "Возраст",
+			"release_cover": "content/eps/302.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/i7wswaitmhr11cb/%D0%92%D0%BE%D0%B7%D1%80%D0%B0%D1%81%D1%82.mp3"
+		},
+	"track_id_031":
+		{
+			"release_name": "Welcome to LS (Chopped & Screwed)",
+			"release_cover": "content/singles/224.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/05c8vlr79dlhonc/Welcome%20to%20LS%20%28Chopped%20and%20Screwed%29.mp3"
+		},
+	"track_id_030":
+		{
+			"release_name": "Welcome to LS",
+			"release_cover": "content/singles/223.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/8p2934ufcnywtir/Welcome%20to%20LS.mp3"
+		},
+	"track_id_029":
+		{
+			"release_name": "The Game Album Prelude",
+			"release_cover": "content/albums/101.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/zha5l6ap517amgo/The%20Game%20Album%20Prelude.mp3"
+		},
+	"track_id_028":
+		{
+			"release_name": "Феникс (другая версия)",
+			"release_cover": "content/albums/101.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/tlyvbrdo8q84bed/%D0%A4%D0%B5%D0%BD%D0%B8%D0%BA%D1%81%20%28%D0%94%D1%80%D1%83%D0%B3%D0%B0%D1%8F%20%D0%92%D0%B5%D1%80%D1%81%D0%B8%D1%8F%29.mp3"
+		},
+	"track_id_027":
+		{
+			"release_name": "Южное гетто (Remastered)",
+			"release_cover": "content/albums/101.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/vtq3koxgtgfs798/%D0%AE%D0%B6%D0%BD%D0%BE%D0%B5%20%D0%93%D0%B5%D1%82%D1%82%D0%BE%20%28feat.%20Fizerwa%29%20%5B%D0%94%D1%80%D1%83%D0%B3%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%5D.mp3"
+		},
+	"track_id_026":
+		{
+			"release_name": "Не могу полюбить (Remastered)",
+			"release_cover": "content/albums/101.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/i38ummf00875drb/WTCMEBC.mp3"
+		},
+	"track_id_025":
+		{
+			"release_name": "Феникс",
+			"release_cover": "content/singles/222.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/x80zyuxj0b9ycu4/%D0%A4%D0%B5%D0%BD%D0%B8%D0%BA%D1%81.mp3"
+		},
+	"track_id_024":
+		{
+			"release_name": "Jordan II",
+			"release_cover": "content/singles/221.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/s4hssu760fokwf8/Jordan%20II.mp3"
+		},
+	"track_id_023":
+		{
+			"release_name": "Южное гетто",
+			"release_cover": "content/singles/220.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/6ek4rb2rsyjb1g2/%D0%AE%D0%B6%D0%BD%D0%BE%D0%B5%20%D0%93%D0%B5%D1%82%D1%82%D0%BE%20%28feat.%20Fizerwa%29.mp3"
+		},
+	"track_id_022":
+		{
+			"release_name": "Блондинка (другая версия)",
+			"release_cover": "content/singles/219.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/638opqsgbr6x1wd/%D0%91%D0%BB%D0%BE%D0%BD%D0%B4%D0%B8%D0%BD%D0%BA%D0%B0%20%28%D0%94%D1%80%D1%83%D0%B3%D0%B0%D1%8F%20%D0%92%D0%B5%D1%80%D1%81%D0%B8%D1%8F%29.mp3"
+		},
+	"track_id_021":
+		{
+			"release_name": "Совместный движ",
+			"release_cover": "content/singles/218.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/oshb38btexk73dp/%D0%A1%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B9%20%D0%94%D0%B2%D0%B8%D0%B6.mp3"
+		},
+	"track_id_020":
+		{
+			"release_name": "Perfect Ass",
+			"release_cover": "content/singles/217.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/h8wj3ue3sxe0r75/Perfect%20Ass.mp3"
+		},
+	"track_id_019":
+		{
+			"release_name": "Dynamite Freestyle",
+			"release_cover": "content/singles/216.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/5nkep98acf4y80d/Dynamite%20Freestyle.mp3"
+		},
+	"track_id_018":
+		{
+			"release_name": "Девочка с падика",
+			"release_cover": "content/singles/215.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/anmygen6kgq0bzv/%D0%94%D0%B5%D0%B2%D0%BE%D1%87%D0%BA%D0%B0%20%D1%81%20%D0%BF%D0%B0%D0%B4%D0%B8%D0%BA%D0%B0.mp3"
+		},
+	"track_id_017":
+		{
+			"release_name": "Не могу полюбить",
+			"release_cover": "content/singles/214.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/22fmw73gveopsfg/%D0%9D%D0%B5%20%D0%9C%D0%BE%D0%B3%D1%83%20%D0%9F%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D1%8C%20%28feat.%20Twenty-4%29.mp3"
+		},
+	"track_id_016":
+		{
+			"release_name": "Мистер 3 мульта",
+			"release_cover": "content/singles/213.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/jza1f4cxkf7qoz6/%D0%9C%D0%B8%D1%81%D1%82%D0%B5%D1%80%203%20%D0%9C%D1%83%D0%BB%D1%8C%D1%82%D0%B0.mp3"
+		},
+	"track_id_015":
+		{
+			"release_name": "Удивительный Капитан Маршин",
+			"release_cover": "content/singles/212.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/hl6sva27096wsvf/%D0%A3%D0%B4%D0%B8%D0%B2%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%9A%D0%B0%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%20%D0%9C%D0%B0%D1%80%D1%88%D0%B8%D0%BD.mp3"
+		},
+	"track_id_014":
+		{
+			"release_name": "Рокет",
+			"release_cover": "content/singles/211.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/7izqghlwpe36s0s/%D0%A0%D0%BE%D0%BA%D0%B5%D1%82.mp3"
+		},
+	"track_id_013":
+		{
+			"release_name": "Part of our life",
+			"release_cover": "content/singles/210.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/k27xyjh281qfnp2/Part%20of%20Our%20Life.mp3"
+		},
+	"track_id_012":
+		{
+			"release_name": "Love Stories",
+			"release_cover": "content/singles/209.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/ms24qplrpb5ruxl/Love%20Stories.mp3"
+		},
+	"track_id_011":
+		{
+			"release_name": "Встречаю рассвет",
+			"release_cover": "content/singles/208.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/2qw8y5q42wpyci2/%D0%92%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B0%D1%8E%20%D1%80%D0%B0%D1%81%D1%81%D0%B2%D0%B5%D1%82.mp3"
+		},
+	"track_id_010":
+		{
+			"release_name": "Lifeway",
+			"release_cover": "content/singles/207.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/3lu8orzys0kjpgw/Lifeway.mp3"
+		},
+	"track_id_009":
+		{
+			"release_name": "Просто почитаем рэп",
+			"release_cover": "content/singles/206.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/usupcplk5nego4b/%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%BE%20%D0%BF%D0%BE%D1%87%D0%B8%D1%82%D0%B0%D0%B5%D0%BC%20%D1%80%D1%8D%D0%BF.mp3"
+		},
+	"track_id_008":
+		{
+			"release_name": "Спортболид",
+			"release_cover": "content/singles/205.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/gyxr3ty2tdmk2of/%D0%A1%D0%BF%D0%BE%D1%80%D1%82%D0%B1%D0%BE%D0%BB%D0%B8%D0%B4.mp3"
+		},
+	"track_id_007":
+		{
+			"release_name": "Rise",
+			"release_cover": "content/singles/204.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/pyol2sfdpz4r8o7/Rise.mp3"
+		},
+	"track_id_006":
+		{
+			"release_name": "Jordan",
+			"release_cover": "content/singles/203.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/mkf4yvzcthfbshj/Jordan.mp3"
+		},
+	"track_id_005":
+		{
+			"release_name": "Клайд и Бонни",
+			"release_cover": "content/singles/202.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/70165rvu9lt4e6o/%D0%9A%D0%BB%D0%B0%D0%B9%D0%B4%20%D0%B8%20%D0%91%D0%BE%D0%BD%D0%BD%D0%B8.mp3"
+		},
+	"track_id_004":
+		{
+			"release_name": "Дай малышка мне огня",
+			"release_cover": "content/singles/201.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/ieiodh9xzwxdzg9/%D0%94%D0%B0%D0%B9%20%D0%BC%D0%B0%D0%BB%D1%8B%D1%88%D0%BA%D0%B0%20%D0%BC%D0%BD%D0%B5%20%D0%BE%D0%B3%D0%BD%D1%8F.mp3"
+		},
+	"track_id_003":
+		{
+			"release_name": "Я ещё вернусь",
+			"release_cover": "content/eps/301.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/wivph4ces3c6gjw/%D0%AF%20%D0%B5%D1%89%D1%91%20%D0%B2%D0%B5%D1%80%D0%BD%D1%83%D1%81%D1%8C.mp3"
+		},
+	"track_id_002":
+		{
+			"release_name": "Я ещё вернусь (часть 1)",
+			"release_cover": "content/eps/301.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/45iiqk3sv8w905g/%D0%AF%20%D0%B5%D1%89%D1%91%20%D0%B2%D0%B5%D1%80%D0%BD%D1%83%D1%81%D1%8C%20%28%D1%87%D0%B0%D1%81%D1%82%D1%8C%201%29.mp3"
+		},
+	"track_id_001":
+		{
+			"release_name": "Я ещё вернусь (часть 2)",
+			"release_cover": "content/eps/301.jpg",
+			"release_audio_url": "https://dl.dropbox.com/s/3jl9px5uvtowfuj/%D0%AF%20%D0%B5%D1%89%D1%91%20%D0%B2%D0%B5%D1%80%D0%BD%D1%83%D1%81%D1%8C%20%28%D1%87%D0%B0%D1%81%D1%82%D1%8C%202%29.mp3"
+		}
 }
 
