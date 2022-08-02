@@ -720,7 +720,7 @@ Copyright. All rights reserved.
 
 	progress::-webkit-progress-value {
 	  	background-color: #F1882E;
-	  	transition: width 2s;
+/*	  	transition: width 2s;*/
 	}
 
 	progress::-moz-progress-bar {

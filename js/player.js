@@ -1,3 +1,15 @@
+// player.js
+// Delevoper: Маршин Entertainment
+// Used to play music in mini-player and tracks from Release pages.
+
+// tracklist.json
+// This file contains all releases with uniq ID. 
+// Don't forget to put new releases in it and set ID in index.html/release page
+
+// Some function is not uniq, i get it from stackoverflow.
+// 2022
+
+
 $(document).ready(function () {
 
 			// When document is ready - loading tracklist.json
@@ -17,6 +29,8 @@ $(document).ready(function () {
 
 		  	var like_btn = document.getElementById("mini-player-like-btn");
 
+		  	var myProgressBar = document.getElementById('mini-player-timeline-bar'); 
+
 		  	// Listen press on Start button and launch audio file fetch.
 		  	// "touchstart" uses for mobile devices ("click" works on mobile too, but in one moment "click" stop working :/ )
 
@@ -32,6 +46,20 @@ $(document).ready(function () {
 			var release_cover = "";
 
 
+
+			// DOWNLOAD TRACK FUNCTION
+			// This function fire when user click on download icon in tracklist or release page
+
+
+			// var tracks = document.querySelectorAll('[id^="release_id_"]');
+			// for (var i=0; i < tracks.length; i += 1){
+			// 	  tracks[i].addEventListener("click", InsertTrack);
+			// };
+
+
+
+
+
 			// This is test function to get url from file when click on btn.
 
 			var tracks = document.querySelectorAll('[id^="release_id_"]');
@@ -39,58 +67,37 @@ $(document).ready(function () {
 				  tracks[i].addEventListener("click", InsertTrack);
 			};
 
+			function SwitchTrack() {
+				music.pause();
+				music.currentTime = 0;
+				myProgressBar.val = 0;
+				pause_music_button.style.display = "none"
+
+			}
+
 			function InsertTrack(){
-			music.pause();
-			var selectedtrack = this.id;
-			var selectedid = selectedtrack.substring(11);
-			// console.log(pagenum)
+			
+				SwitchTrack();
 
-			var trackid = "track_id_" + selectedid;
+				var selectedtrack = this.id;
+				var selectedid = selectedtrack.substring(11);
 
-			var trackname = data[trackid].release_name;
-			var trackcover = data[trackid].release_cover;
-			var trackurl = data[trackid].release_audio_url;
+				var trackid = "track_id_" + selectedid;
 
-			// console.log(data[te].release_name)
+				var trackname = data[trackid].release_name;
+				var trackcover = data[trackid].release_cover;
+				var trackurl = data[trackid].release_audio_url;
 
+		      	audio_url = trackurl;
+		      	release_name = trackname;
+		      	release_cover = trackcover;
 
-			      audio_url = trackurl;
-			      release_name = trackname;
-			      release_cover = trackcover;
+		      	document.getElementById("mini-player-cover").src = release_cover
+		      	document.getElementById("mini-player-trackname").innerHTML = release_name
+		      	document.getElementById('progress').innerHTML = "INSERTING CASSETTE"
 
-			      document.getElementById("mini-player-cover").src = release_cover
-			      document.getElementById("mini-player-trackname").innerHTML = release_name
-			      document.getElementById('progress').innerHTML = "INSERTING CASSETTE"
-
-			      console.log("after this need to start loading audio function");
-
-			      loadingAudio();
-
-			      console.log(audio_url);
-			      console.log(release_name);
-			      console.log(release_cover);
+		      	loadingAudio();
 			};
-
-			  // $("#release_id_037").click(function() {
-			  //     var data = JSON.parse(release_id_037);
-
-			  //     audio_url = data[0].release_audio_url
-			  //     release_name = data[0].release_name
-			  //     release_cover = data[0].release_cover
-
-			  //     document.getElementById("mini-player-cover").src = release_cover
-			  //     document.getElementById("mini-player-trackname").innerHTML = release_name
-			  //     document.getElementById('progress').innerHTML = "INSERTING CASSETTE"
-
-			  //     console.log("after this need to start loading audio function");
-
-			  //     loadingAudio();
-
-			  //     console.log(audio_url);
-			  //     console.log(release_name);
-			  //     console.log(release_cover);
-			  //   });
-			// }
 
 
 			// This function used to show user loading process when he click play first time
@@ -115,58 +122,12 @@ $(document).ready(function () {
 			        },5);
 			    };
 
-				// music.setAttribute("src", audio_url);
-
- 				// music.addEventListener('waiting', (event) => {
- 				// 	console.log('Loading...');
- 				// });
-
- 				// music.addEventListener('loadedmetadata', (event) => {
- 				// 	console.log('Meta loaded! >> Loading first frame...');
- 				// });
-
- 				// music.addEventListener('loadeddata', (event) => {
- 				// 	console.log('First frame loaded! >> Ready to play with loading...');
- 				// });
-
- 				// music.addEventListener('canplay', (event) => {
- 				// 	console.log('Can play with loading! >> Loading entire audio file...');
- 				// 	start_music_button.style.display = 'none';
-				// 	loading_icon.style.display = "none";
-				// 	play_music_button.style.display = "block";
-
-				// 	clearTimeout(timer);
-
- 				// 	playAudio();
- 				// });
-
-
-
- 				// % of buffering audio file
-
- 				// function loop() {
-				//   var buffered = music.buffered;
-				//   var loaded;
-
-				//   if (buffered.length) {
-				//     loaded = 100 * buffered.end(0) / music.duration;
-				//     document.getElementById("aone1l").innerHTML = loaded.toFixed(2);
-				//   }
-
-				//   setTimeout(loop, 50);
-				// }
-
-				// loop();
-
-				//
-
 			    // This function is combine of loading music file.
 			    // First, fetch audio url and show procentege of Loading file to user
 			    // Procentege is auto update, so user see, how much file is loading
  				const elProgress = document.getElementById('progress');
 
 				fetch(audio_url)
-				// fetch('https://dl.dropbox.com/s/ja4fj90sbnlp7yk/Indica.mp3')
 				.then(response => {
 				  if (!response.ok) {
 				    throw Error(response.status+' '+response.statusText)
@@ -178,6 +139,7 @@ $(document).ready(function () {
 
 				  // to access headers, server must send CORS header "Access-Control-Expose-Headers: content-encoding, content-length x-file-size"
 				  // server must send custom x-file-size header if gzip or other content-encoding is used
+
 				  const contentEncoding = response.headers.get('content-encoding');
 				  const contentLength = response.headers.get(contentEncoding ? 'x-file-size' : 'content-length');
 				  if (contentLength === null) {
@@ -228,31 +190,9 @@ $(document).ready(function () {
 
 				    // document.getElementById('mini-player-source').src = URL.createObjectURL(data);
 				    // document.getElementById('mini-player-source').type = 'audio/x-m4a';
-				    
-				    // elProgress.innerHTML = 'Ready';
-				    // start_music_button.style.display = 'none';
-					// loading_icon.style.display = "none";
-					// play_music_button.style.display = "block";
 
 					// Load current file for ready to play.
 					music.load()
-
-				    console.log(music)
-
-				    // Does not work in Safari/mobile
-			        // var blob = new Blob([arrayBuffer]);
-			        // var url = URL.createObjectURL(blob);
-
-			        // Should work in Safari/on mobile
-			        // var blob = new Blob([arrayBuffer], {type: 'audio/mpeg'});
-			        // // All browsers, except Firefox
-			        // try {
-			        //     url = webkitURL.createObjectURL(blob);
-			        // }
-			        // // Firefox
-			        // catch(err) {
-			        //     url = URL.createObjectURL(blob);
-			        // }
 
 				})
 				.catch(error => {
@@ -291,8 +231,6 @@ $(document).ready(function () {
 				// This is a track progress bar. It's shows how long track playing.
 				// User can press in any place of progress bar to rewind track to selected position.
 
-				var myProgressBar = document.getElementById('mini-player-timeline-bar'); 
-
 				music.addEventListener('timeupdate', onLoadProgress);
 
 				// Calculate and update progress bar position.
@@ -306,13 +244,14 @@ $(document).ready(function () {
 
 				// $('#mini-player-timeline-bar').bind('click', function (ev) {
 
-				    var player = document.querySelector("video"); // Delete this shi it's dont need i think
+				    // var player = document.querySelector("video"); // Delete this shi it's dont need i think
 					var progressBar = document.querySelector("progress");
 					progressBar.addEventListener("click", seek);
 
 					// Rewind function.
 					// Here we get position of user click and math this to progress bar 
 					// After all we set progress var value.
+
 					function seek(e) {
 					    var percent = e.offsetX / this.offsetWidth;
 					    music.currentTime = percent * music.duration;
@@ -345,9 +284,6 @@ $(document).ready(function () {
 
 			// }
 
-			//  $("music").bind("stalled", function() { 
-		    //     music.load();
-		    // });
 
 		    // Function for playing audio
 		    // All is simple. 
@@ -392,6 +328,11 @@ $(document).ready(function () {
 		      pause_music_button.style.display = 'none';
 		      console.log("Music ended!");
 		      document.getElementById('progress').innerHTML = 'SONG ENDED';
+
+		      // [ Future ]
+		      // When track end - start playing next track from tracklist in order from top to bottom (Autoplay)
+		      // It can be difficult to make work on mobile :(
+
 		    });
 
 			// Listen Rewind button
@@ -409,26 +350,6 @@ $(document).ready(function () {
 
 		});
 
-		// $(document).ready(function() {
-		//   var music = document.getElementById("mini-player-new-release");
-		//   var play_music_button = document.getElementById("mini-player-play-btn");
-		//   var pause_music_button = document.getElementById("mini-player-pause-btn");
+// Ape :()
 
-		//   function playAudio() {
-		//     if(music.paused) {
-		//       music.play();
-		//       play_music_button.style.display = 'none';
-		//       pause_music_button.style.display = 'block';
-		//       console.log("Music start playing!");
-		//     } else {
-		//       music.pause();
-		//       play_music_button.style.display = 'block';
-		//       pause_music_button.style.display = 'none';
-		//     }
-		//     music.addEventListener('ended',function() {
-		//       play_music_button.style.display = 'block';
-		//       pause_music_button.style.display = 'none';
-		//     });
-		//   }
-		//   play_music_button.addEventListener("click", loadingAudio);
-		// });
+		
