@@ -10,6 +10,9 @@
 // 2022
 
 
+// [!] Delete comments with code
+
+
 $(document).ready(function () {
 
 			var loadingaudio = false;
@@ -86,17 +89,41 @@ $(document).ready(function () {
 			};
 
 
-			function DownloadTrack() {
-				// if ((!$(event.target).closest('.mini-player-expand-controls').length)) {
-					var selectedtrack = this.id;
-					var selectedid = selectedtrack.substring(12);
 
-					var trackid = "track_id_" + selectedid;
 
-					var trackurl = data[trackid].release_audio_url;
-					console.log(trackurl)
-				// }
-			}
+
+			var openpage = document.querySelectorAll('[id^="open_page_"]');
+				for (var i=0; i < openpage.length; i += 1) {
+					
+					openpage[i].addEventListener("click", function() {
+							var selectedtrack = this.id;
+							var selectedid = selectedtrack.substring(10);
+
+							var trackid = "track_id_" + selectedid;
+
+							var trackurl = data[trackid].release_page_url;
+
+							window.location.href = trackurl;
+							
+						});
+			};
+
+
+
+
+
+
+			// function DownloadTrack() {
+			// 	// if ((!$(event.target).closest('.mini-player-expand-controls').length)) {
+			// 		var selectedtrack = this.id;
+			// 		var selectedid = selectedtrack.substring(12);
+
+			// 		var trackid = "track_id_" + selectedid;
+
+			// 		var trackurl = data[trackid].release_audio_url;
+			// 		console.log(trackurl)
+			// 	// }
+			// }
 
 
 
@@ -136,6 +163,10 @@ $(document).ready(function () {
 
 					});
 			};
+
+
+
+
 
 			function SwitchTrack() {
 				music.pause();

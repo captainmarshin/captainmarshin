@@ -78,6 +78,8 @@ Copyright. All rights reserved.
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+	<!-- Plugins: -->
+
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -87,11 +89,10 @@ Copyright. All rights reserved.
 	<!-- QR Code generator plugin -->
 	<script src="js/qrcode.min.js"></script>
 
-
-	<!-- Captain Marshin Player -->
+	<!-- MusicPlayer -->
 	<script src="js/player.js"></script>
 
-	<!-- Like share menu -->
+	<!-- Like/share menu -->
 	<script src="js/share.js"></script>
 
 	<!-- Pages -->
@@ -100,9 +101,19 @@ Copyright. All rights reserved.
 	<!-- Tabs -->
 	<script src="js/tabs.js"></script>
 
-
 </head>
 <body>
+
+	<div id="loader" class="loading">
+		<object type="image/svg+xml" data="images/cassette.svg"></object>
+		<div class="loading-text">Loading</div>
+	</div>
+
+	<!-- 
+	//
+	// Header
+	//
+	-->
 
 	<div class="header" id="header">
 
@@ -117,9 +128,24 @@ Copyright. All rights reserved.
 
 	</div>
 
+	<!-- 
+	//
+	// UI: Notification
+	// Now used only for donate page, but can be used somewhere else in future
+	//
+	 -->
+
 	<div class="notification">
 		Copied!
 	</div>
+
+
+	<!-- 
+	//
+	// Page: Donate
+	// All methods how people can donate.
+	//
+	 -->
 
 	<div id="donate" class="window">
 
@@ -257,7 +283,6 @@ Copyright. All rights reserved.
 		<div class="donate-block-1" id="donate-2">
 		<div class="front">
 			<div class="donate-block">
-				<!-- https://app.binance.com/qr/dplk5cb1330e11ec4288bd68297401d17fb5 -->
 				<div class="donate-service-logo">
 					<img src="images/binance.png">
 				</div>
@@ -334,6 +359,12 @@ Copyright. All rights reserved.
 		
 	</div>
 
+	<!-- 
+	//
+	// Function for rotate cards on donate page
+	// [!] On Android very strange animation :/ Need to check it.
+	//
+	 -->
 
 	<script type="text/javascript">
 		$("#donate-1").flip();
@@ -349,27 +380,22 @@ Copyright. All rights reserved.
 		})
 	</script>
 
-
-
-<!-- 	<script type="text/javascript">
-		$(document).ready(function() {
-			$(document).scroll(function () {
-			    var scrollTop = $(window).scrollTop();
-			    if (scrollTop > 5) {
-			        $('.header').height(40);
-			        $('.logo img').width(100)
-			    } else {
-			        $('.header').height(80);
-			        $('.logo img').width(150) 
-			    }
-			});
-		});
-	</script> -->
-
-
+	<!-- 
+	//
+	// Fix header fixed position
+	//
+	 -->
 
 	<div class="header-fix"></div>
+
+
+	<!-- 
+	//
+	// Category: Albums & Mixtapes
+	//
+	 -->
 	
+
 	<div class="albums">
 		<div class="cat_title">Albums & Mixtapes</div>
 		<div class="cat_content">
@@ -387,6 +413,16 @@ Copyright. All rights reserved.
 		</div>
 		<div class="cat_line"></div>
 	</div>
+
+
+
+	<!-- 
+	//
+	// Category: Singles
+	//
+	 -->
+
+
 
 	<div class="singles">
 		<div id="open-all-singles" class="cat_title">Singles <span class="material-icons">chevron_right</span></div>
@@ -607,7 +643,12 @@ Copyright. All rights reserved.
 	</div>
 
 
-	<!-- WINDOW ALL SINGLES -->
+	<!-- 
+	//
+	// Page: All Singles
+	// Don't forget update this page (just copy from category)
+	//
+	 -->
 
 
 	<div id="window-all-singles" class="all-singles">
@@ -830,14 +871,11 @@ Copyright. All rights reserved.
 	</div>
 
 
-
-
-
-
-
-
-
-
+	<!-- 
+	//
+	// Category: EPs
+	//
+	 -->
 
 
 	<div class="eps">
@@ -866,6 +904,13 @@ Copyright. All rights reserved.
 		<div class="cat_line"></div>
 	</div>
 
+	<!-- 
+	//
+	// Category: Soudtracks
+	// ( Hidden :P )
+	//
+	 -->
+
 	<!-- <div class="soundtracks">
 		<div class="cat_title">Soundtracks</div>
 		<div class="cat_content">
@@ -883,6 +928,13 @@ Copyright. All rights reserved.
 		</div>
 		<div class="cat_line"></div>
 	</div> -->
+
+	<!-- 
+	//
+	// Category: Music Videos
+	// Don't forget update this category
+	//
+	 -->
 
 	<div class="videos">
 		<div id="open-all-videos" class="cat_title">Music Videos <span class="material-icons">chevron_right</span></div>
@@ -959,7 +1011,12 @@ Copyright. All rights reserved.
 	</div>
 
 
-	<!-- WINDOW ALL MUSIC VIDEOS -->
+	<!-- 
+	//
+	// Page: All Music Videos
+	// Don't forget update this page (just copy from category)
+	//
+	 -->
 
 	<div id="window-all-videos" class="all-videos">
 
@@ -1037,6 +1094,12 @@ Copyright. All rights reserved.
 	</div>
 
 
+	<!-- 
+	//
+	// Category: Lyrics
+	// Don't forget update this category when new track available
+	//
+	 -->
 
 
 	<div class="lyrics">
@@ -1254,7 +1317,14 @@ Copyright. All rights reserved.
 
 
 
-	<!-- WINDOW ALL LYRICS -->
+	<!-- 
+	//
+	// Page: All Lyrics
+	// Don't forget update this page when adds new track (just copy from Category)
+	//
+	 -->
+
+
 
 	<div id="window-all-lyrics" class="all-lyrics">
 
@@ -1471,6 +1541,11 @@ Copyright. All rights reserved.
 	</div>
 
 
+	<!-- 
+	//
+	// Category: Events
+	//
+	 -->
 
 
 	<div class="event">
@@ -1491,6 +1566,13 @@ Copyright. All rights reserved.
 		</div>
 		<div class="cat_line"></div>
 	</div>
+
+
+	<!-- 
+	//
+	// Category: More (Links)
+	//
+	 -->
 
 
 	<div class="projects">
@@ -1557,6 +1639,12 @@ Copyright. All rights reserved.
 		<div class="cat_line"></div>
 	</div>
 
+	<!-- 
+	//
+	// Footer
+	//
+	 -->
+
 	<div class="footer">
 		Маршин Entertainment<br>
 		2014-2022 Copyright. All rights reserved.
@@ -1570,6 +1658,12 @@ Copyright. All rights reserved.
 		<a class="space-2" href="https://twitter.com/captainmarshin">Twitter</a>
 		</div>
 
+		<!-- 
+		//
+		// Badges (hidden)
+		//
+		 -->
+
 		<!-- <div class="badges">
 			<a href="https://music.apple.com/us/artist/captain-marshin/1486687033?itsct=music_box_badge&amp;itscg=30200&amp;app=music&amp;ls=1"><img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-music/badge/en-us?size=250x83&h=cdbcefe9e23b0310ab61b31e72e2dcdb" alt="Listen on Apple Music" style=" width: 120px;"></a>
 
@@ -1577,6 +1671,12 @@ Copyright. All rights reserved.
 
 			<a href="#"><img src="images/paec.png" alt="Add to Apple Wallet" style="width: 55px; height: auto;"></a>
 		</div> -->
+
+		<!-- 
+		//
+		// Help Ukraine badge
+		//
+		 -->
 		
 		<br>
 		<style>
@@ -1584,6 +1684,14 @@ Copyright. All rights reserved.
 		</style>
 		<a class="helpukraine" href="https://war.ukraine.ua/" target="_blank">🇺🇦❤️</a>
 	</div>
+
+
+	<!-- 
+	//
+	// Mini-player
+	// Don't forget to add new release here
+	//
+	 -->
 
 
 	<div id="mini-player-timeline" class="mini-player-timeline">
@@ -1594,15 +1702,12 @@ Copyright. All rights reserved.
 	<div id="mini-player" class="mini-player">
 
 		<audio id="mini-player-new-release" type="audio/mp3">
-			<!-- oncanplaythrough="playerfileready()" oncanplay="playerfilecanplay()" onloadeddata="playerfileloaded()" -->
     		<source id="mini-player-source" src="" type="audio/mp3">
 		</audio>
 
 		<div class="mini-player-row" id="mini-player-open">
 			<div class="mini-player-cover">
-				<!-- <div id="mini-player-open"> -->
 				<img id="mini-player-cover" src="content/singles/226.jpg">
-				<!-- </div> -->
 			</div>
 			<div class="mini-player-meta">
 				<div class="mini-player-name"><span id="mini-player-trackname">Indica</span> <span class="material-icons">explicit</span></div>
@@ -1625,197 +1730,32 @@ Copyright. All rights reserved.
 	</div>
 
 
-		<!-- <div id="mini-player-open">
-			<div class="mini-player-cover">
-					<img src="content/singles/226.jpg">
-			</div>
-			<div class="mini-player-name">
-				<div class="mini-player-songname">Indica</div>
-				<div class="mini-player-note"><span id="progress">NEW RELEASE</span></div>
-			</div>
-			<div class="mini-player-play">
-				<span id="mini-player-start-btn" class="material-icons">play_arrow</span>
-				<span id="mini-player-loading" class="material-icons">autorenew</span>
-				<span id="mini-player-play-btn" class="material-icons">play_arrow</span>
-				<span id="mini-player-pause-btn" class="material-icons">pause</span>
-			</div>
-			<div class="mini-player-share">
-				<span id="mini-player-share-btn" class="material-icons">ios_share</span>
-			</div>
-	</div> -->
-
-
-	<script type="text/javascript">
-
-		$(document).ready(function() {
-		
-		var close_button = document.getElementById("close-window");
-
-		var musicplayeropen = document.getElementById("mini-player-open");
-		var miniplayer = document.getElementById("mini-player");
-		
-		var miniplayerexpand = document.getElementById("mini-player-expand");
-
-		var allsinglesopen = document.getElementById("open-all-singles");
-		var windowallsingles = document.getElementById("window-all-singles");
-
-		var opendonatewindow = document.getElementById("open-donate-window");
-		var windowdonate = document.getElementById("donate");
-
-		var allvideosopen = document.getElementById("open-all-videos");
-		var windowallvideos = document.getElementById("window-all-videos");
-
-		var alllyricsopen = document.getElementById("open-all-lyrics");
-		var windowalllyrics = document.getElementById("window-all-lyrics");
-
-		var closeallwindows = document.getElementById('close-all-windows');
-
-
-			close_button.addEventListener("click", function() {
-
-				windowallsingles.style.display = "none";
-				windowallvideos.style.display = "none";
-				windowalllyrics.style.display = "none";
-				windowdonate.style.display = "none";
-				document.body.style.overflow = "scroll";
-				miniplayerexpand.style.display = "none";
-				
-				opendonatewindow.style.display = "block";
-				close_button.style.display = "none";
-			   
-			})
-
-
-			musicplayeropen.addEventListener("click", function() {
-
-			  if ((!$(event.target).closest('#mini-player-ctrl-btns').length) && (!$(event.target).closest('#mini-player-like-btn').length) && (!$(event.target).closest('#mini-player-rewind-btn').length)) {
-
-				if (miniplayerexpand.style.display === "block") {
-					miniplayerexpand.style.display = "none";
-					document.body.style.overflow = "scroll";
-					miniplayerexpand.style.overflow = "hidden";
-					opendonatewindow.style.display = "block";
-					close_button.style.display = "none";
-					document.getElementById("mini-player-timeline-bar").style = "height: 1px;"
-				} 
-				else 
-				{
-					miniplayerexpand.style.display = "block";
-					document.body.style.overflow = "hidden";
-					miniplayerexpand.style.overflow = "scroll";
-					opendonatewindow.style.display = "none";
-					close_button.style.display = "block";
-					document.getElementById("mini-player-timeline-bar").style = "height: 15px;"
-			    }
-			   }
-			})
-
-
-			allsinglesopen.addEventListener("click", function() {
-
-				if (windowallsingles.style.display === "block") {
-					windowallsingles.style.display = "none";
-					document.body.style.overflow = "scroll";
-					windowallsingles.style.overflow = "hidden";
-					opendonatewindow.style.display = "block";
-					close_button.style.display = "none";
-				} 
-				else 
-				{
-					windowallsingles.style.display = "block";
-					document.body.style.overflow = "hidden";
-					windowallsingles.style.overflow = "scroll";
-					opendonatewindow.style.display = "none";
-					close_button.style.display = "block";
-			    }
-			   
-			})
-
-
-			opendonatewindow.addEventListener("click", function() {
-
-				if (windowdonate.style.display === "block") {
-					windowdonate.style.display = "none";
-					document.body.style.overflow = "scroll";
-					windowdonate.style.overflow = "hidden";
-					opendonatewindow.style.display = "block";
-					close_button.style.display = "none";
-				} 
-				else 
-				{
-					windowdonate.style.display = "block";
-					document.body.style.overflow = "hidden";
-					windowdonate.style.overflow = "scroll";
-					opendonatewindow.style.display = "none";
-					close_button.style.display = "block";
-			    }
-			   
-			})
-
-
-			allvideosopen.addEventListener("click", function() {
-
-				if (windowallvideos.style.display === "block") {
-					windowallvideos.style.display = "none";
-					document.body.style.overflow = "scroll";
-					windowallvideos.style.overflow = "hidden";
-					opendonatewindow.style.display = "block";
-					close_button.style.display = "none";
-				} 
-				else 
-				{
-					windowallvideos.style.display = "block";
-					document.body.style.overflow = "hidden";
-					windowallvideos.style.overflow = "scroll";
-					opendonatewindow.style.display = "none";
-					close_button.style.display = "block";
-			    }
-			   
-			})
-
-
-			alllyricsopen.addEventListener("click", function() {
-
-				if (windowalllyrics.style.display === "block") {
-					windowalllyrics.style.display = "none";
-					document.body.style.overflow = "scroll";
-					windowalllyrics.style.overflow = "hidden";
-					opendonatewindow.style.display = "block";
-					close_button.style.display = "none";
-				} 
-				else 
-				{
-					windowalllyrics.style.display = "block";
-					document.body.style.overflow = "hidden";
-					windowalllyrics.style.overflow = "scroll";
-					opendonatewindow.style.display = "none";
-					close_button.style.display = "block";
-			    }
-			   
-			})
-
-
-			closeallwindows.addEventListener('click', function() {
-
-				windowallsingles.style.display = "none";
-				windowallvideos.style.display = "none";
-				windowalllyrics.style.display = "none";
-				windowdonate.style.display = "none";
-				miniplayerexpand.style.display = "none";
-				document.body.style.overflow = "scroll";
-				miniplayerexpand.style.overflow = "hidden";
-				
-				opendonatewindow.style.display = "block";
-				close_button.style.display = "none";
-			})
-		})
-
-	</script>
+	<!-- 
+	//
+	// Mini-player expand (tracklist)
+	// Don't forget to add new tracks in this list at the top of div
+	//
+	 -->
 
 
 	<div class="mini-player-expand" id="mini-player-expand">
 
 		<div class="all-title">Tracklist</div>
+
+		<!-- <div class="mini-player-expand-row" id="release_id_  $NUMBER$  ">
+			<div class="mini-player-expand-cover">
+				<img src="	$RELEASE_COVER$	">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">$RELEASE_NAME$ <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span title="Play song" class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_  $NUMBER$  " title="Download song" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_  $NUMBER$  " title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div> -->
 
 		<div class="mini-player-expand-row" id="release_id_039">
 			<div class="mini-player-expand-cover">
@@ -1828,7 +1768,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span title="Play song" class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_039" title="Download song" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_039" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -1843,7 +1783,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_038" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_038" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -1858,7 +1798,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_037" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_037" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -1873,7 +1813,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_036" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_036" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -1888,7 +1828,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_035" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_035" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -1903,7 +1843,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_034" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_034" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -1918,7 +1858,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_033" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_033" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -1933,7 +1873,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_032" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_032" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -1948,7 +1888,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_031" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_031" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -1963,7 +1903,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_030" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_030" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -1978,7 +1918,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_029" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_029" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -1993,7 +1933,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_028" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_028" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2008,7 +1948,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_027" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_027" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2023,7 +1963,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_026" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_026" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2038,7 +1978,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_025" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_025" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2053,7 +1993,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_024" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_024" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2068,7 +2008,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_023" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_023" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2083,7 +2023,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_022" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_022" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2098,7 +2038,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_021" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_021" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2113,7 +2053,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_020" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_020" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2128,7 +2068,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_019" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_019" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2143,7 +2083,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_018" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_018" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2159,7 +2099,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_017" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_017" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2174,7 +2114,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_016" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_016" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2189,7 +2129,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_015" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_015" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2204,7 +2144,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_014" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_014" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2219,7 +2159,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_013" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_013" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2234,7 +2174,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_012" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_012" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2249,7 +2189,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_011" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_011" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2264,7 +2204,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_010" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_010" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2279,7 +2219,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_009" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_009" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2294,7 +2234,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_008" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_008" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2309,7 +2249,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_007" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_007" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2324,7 +2264,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_006" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_006" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2339,7 +2279,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_005" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_005" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2354,7 +2294,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_004" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_004" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2369,7 +2309,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_003" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_003" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2384,7 +2324,7 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_002" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_002" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
@@ -2399,19 +2339,18 @@ Copyright. All rights reserved.
 			<div class="mini-player-expand-controls">
 				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
 				<div class="mini-player-expand-download"><span id="download_id_001" class="material-icons">download</span></div>
-				<div class="mini-player-expand-share"><span class="material-icons">ios_share</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_001" title="Open release page" class="material-icons">open_in_new</span></div>
 			</div>
 		</div>
 
-		<!-- <div class="mini-player-control">
-			<div class="mini-player-ctrls">
-			<div class="mini-player-control-back"><span class="material-icons">fast_rewind</span></div>
-			<div class="mini-player-control-play"><span class="material-icons">play_arrow</span></div>
-			<div class="mini-player-control-next"><span class="material-icons">fast_forward</span></div>
-			</div>
-		</div> -->
-
 	</div>
+
+
+	<!-- 
+	//
+	// Tabs menu
+	//
+	 -->
 
 
 	<div class="menu">
@@ -2430,7 +2369,19 @@ Copyright. All rights reserved.
 	</div>
 
 
-	<iframe id="invisible" style="display:none;"></iframe>
+
+	<script type="text/javascript">
+		document.body.onload = function(){
+		  setTimeout(function() {
+		    var preloader = document.getElementById('loader');
+		    if( !preloader.classList.contains('done') )
+		    {
+		      preloader.classList.add('done');
+		    }
+		  }, 1000)
+		}
+	</script>
+
 
 
 </body>

@@ -1,3 +1,8 @@
+// share.js
+// Delevoper: Маршин Entertainment
+
+// 2022
+
 // This is Tabs menu in bottom of all sites.
 // Active class sets on main page of opened tab.
 

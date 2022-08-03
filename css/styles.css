@@ -44,6 +44,55 @@ Copyright. All rights reserved.
 	}
 
 
+	.loading{
+		position: fixed;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		top: 50%;
+  		left: 50%;
+  		background-color: rgba(0, 0, 0, 0.5);
+  		-ms-transform: translateX(-50%) translateY(-50%);
+  		-webkit-transform: translate(-50%,-50%);
+  		transform: translate(-50%,-50%);
+  		visibility: visible;
+  		transition: 0.5s all;
+	}
+
+	.loading object {
+		z-index: 1;
+		width: 120px;
+		height: 120px;
+		top: 45%;
+  		left: 50%;
+  		position: absolute;
+  		-ms-transform: translateX(-50%) translateY(-45%);
+  		-webkit-transform: translate(-50%,-45%);
+  		transform: translate(-50%,-45%);
+	}
+
+	.loading-text{
+		z-index: 1;
+		width: 120px;
+		height: 120px;
+		margin-top: 30px;
+		top: 60%;
+  		left: 50%;
+  		text-align: center;
+  		position: absolute;
+  		-ms-transform: translateX(-50%) translateY(-60%);
+  		-webkit-transform: translate(-50%,-60%);
+  		transform: translate(-50%,-60%);
+  		color: #F1882E;
+  		font-size: 12px;
+  		font-weight: bold;
+	}
+
+	.loading.done {
+		visibility: hidden;
+		opacity: 0;
+	}
+
 /* WEBSITE HEADER */
 
 
@@ -757,6 +806,11 @@ Copyright. All rights reserved.
 		overflow-y:scroll;
     	overflow-x:hidden;
 	}
+
+
+	/*[id^='current_play_'] .material-icons{
+		color: #F1882E;
+	}*/
 
 
 	.mini-player-control{

@@ -1,4 +1,13 @@
-		$(document).ready(function () {
+// share.js
+// Delevoper: Маршин Entertainment
+// Simple share menu
+
+// 2022
+
+// [!] Delete comments with code
+
+
+	$(document).ready(function () {
 
 		var title = document.title;
 		// const url = document.querySelector('link[rel=canonical]') ? document.querySelector('link[rel=canonical]').href : document.location.href;
