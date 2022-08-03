@@ -12,6 +12,8 @@
 
 $(document).ready(function () {
 
+			var loadingaudio = false;
+
 			// When document is ready - loading tracklist.json
 			// This file contains all releases with id, cover, cloud link
 
@@ -51,12 +53,50 @@ $(document).ready(function () {
 			// This function fire when user click on download icon in tracklist or release page
 
 
-			// var tracks = document.querySelectorAll('[id^="release_id_"]');
-			// for (var i=0; i < tracks.length; i += 1){
-			// 	  tracks[i].addEventListener("click", InsertTrack);
+			var downloadids = document.querySelectorAll('[id^="download_id_"]');
+
+			// downloadids.addEventListener('click', e => { // can also onclick
+			//   // filter only elements you care about
+			//   if (!e.target.matches('flash-card-check-mark')) return;  
+			//   var elem = e.target;
+			//   var elemContent = e.querySelector('p'); // query selector nests
+
+
+			//   if (elem.getAttribute("checked") === null) {
+			//     elemContent.style.border = "1px solid #0000";
+			//   } else {
+			//     elemContent.style.border = "1px solid magenta";
+			//   }
+
 			// };
+				for (var i=0; i < downloadids.length; i += 1) {
+					
+					downloadids[i].addEventListener("click", function() {
+							var selectedtrack = this.id;
+							var selectedid = selectedtrack.substring(12);
+
+							var trackid = "track_id_" + selectedid;
+
+							var trackurl = data[trackid].release_audio_url;
+
+							var downloadlink = trackurl + "?dl=1"
+							window.open(downloadlink, "_self");
+							
+						});
+			};
 
 
+			function DownloadTrack() {
+				// if ((!$(event.target).closest('.mini-player-expand-controls').length)) {
+					var selectedtrack = this.id;
+					var selectedid = selectedtrack.substring(12);
+
+					var trackid = "track_id_" + selectedid;
+
+					var trackurl = data[trackid].release_audio_url;
+					console.log(trackurl)
+				// }
+			}
 
 
 
@@ -64,44 +104,76 @@ $(document).ready(function () {
 
 			var tracks = document.querySelectorAll('[id^="release_id_"]');
 			for (var i=0; i < tracks.length; i += 1){
-				  tracks[i].addEventListener("click", InsertTrack);
+					tracks[i].addEventListener("click", function() {
+
+						if(loadingaudio === true){
+							return console.log("Sorry, track already loading :(")
+						}
+
+						if ((!$(event.target).closest('.mini-player-expand-download').length) && (!$(event.target).closest('.mini-player-expand-share').length)) {
+
+							SwitchTrack();
+
+							var selectedtrack = this.id;
+							var selectedid = selectedtrack.substring(11);
+
+							var trackid = "track_id_" + selectedid;
+
+							var trackname = data[trackid].release_name;
+							var trackcover = data[trackid].release_cover;
+							var trackurl = data[trackid].release_audio_url;
+
+					      	audio_url = trackurl;
+					      	release_name = trackname;
+					      	release_cover = trackcover;
+
+					      	document.getElementById("mini-player-cover").src = release_cover
+					      	document.getElementById("mini-player-trackname").innerHTML = release_name
+					      	document.getElementById('progress').innerHTML = "INSERTING CASSETTE"
+
+					      	loadingAudio();
+						}
+
+					});
 			};
 
 			function SwitchTrack() {
 				music.pause();
 				music.currentTime = 0;
 				myProgressBar.val = 0;
-				pause_music_button.style.display = "none"
+				pause_music_button.style.display = "none";
 
 			}
 
-			function InsertTrack(){
+			// function InsertTrack(){
 			
-				SwitchTrack();
+			// 	SwitchTrack();
 
-				var selectedtrack = this.id;
-				var selectedid = selectedtrack.substring(11);
+			// 	var selectedtrack = this.id;
+			// 	var selectedid = selectedtrack.substring(11);
 
-				var trackid = "track_id_" + selectedid;
+			// 	var trackid = "track_id_" + selectedid;
 
-				var trackname = data[trackid].release_name;
-				var trackcover = data[trackid].release_cover;
-				var trackurl = data[trackid].release_audio_url;
+			// 	var trackname = data[trackid].release_name;
+			// 	var trackcover = data[trackid].release_cover;
+			// 	var trackurl = data[trackid].release_audio_url;
 
-		      	audio_url = trackurl;
-		      	release_name = trackname;
-		      	release_cover = trackcover;
+		    //   	audio_url = trackurl;
+		    //   	release_name = trackname;
+		    //   	release_cover = trackcover;
 
-		      	document.getElementById("mini-player-cover").src = release_cover
-		      	document.getElementById("mini-player-trackname").innerHTML = release_name
-		      	document.getElementById('progress').innerHTML = "INSERTING CASSETTE"
+		    //   	document.getElementById("mini-player-cover").src = release_cover
+		    //   	document.getElementById("mini-player-trackname").innerHTML = release_name
+		    //   	document.getElementById('progress').innerHTML = "INSERTING CASSETTE"
 
-		      	loadingAudio();
-			};
+		    //   	loadingAudio();
+			// };
 
 
 			// This function used to show user loading process when he click play first time
 			function loadingAudio() {
+
+				loadingaudio = true;
 
 				// Hide Start (Play) icon.
 				start_music_button.style.display = 'none';
@@ -193,6 +265,7 @@ $(document).ready(function () {
 
 					// Load current file for ready to play.
 					music.load()
+					loadingaudio = false;
 
 				})
 				.catch(error => {
