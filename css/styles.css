@@ -1339,8 +1339,8 @@ Copyright. All rights reserved.
 		}
 
 		.cat_content_player{
-			margin-right: 15px;
-			margin-left: 15px;
+			margin-right: 20px;
+			margin-left: 20px;
 		}
 
 		.cat_item{
@@ -1603,6 +1603,17 @@ Copyright. All rights reserved.
 		max-width: calc(100%);
 	}
 
+	.player-release-primary{
+		margin-top: 6px;
+		color: #F1882E;
+	}
+
+	.player-release-feat{
+		color: #555;
+		font-size: 14px;
+		margin-top: 6px;
+	}
+
 	.player-release-type{
 		color: #555;
 		font-size: 14px;
@@ -1694,6 +1705,26 @@ Copyright. All rights reserved.
 		position: relative;
 		vertical-align: top;
 		z-index: -1;
+	}
+
+	.lyrics-card-expanded{
+		width: 90%;
+		height: auto;
+	}
+
+	.lyrics-card-expanded-text{
+		white-space: pre-line;
+		line-height: 23px;
+	}
+
+	.lyrics-card-close-exp{
+		margin-top: 20px;
+		font-weight: bold;
+		color: #F1882E;
+	}
+
+	.lyrics-card:last-child{
+		margin-right: 18px;
 	}
 
 	.lyrics-card-name{
