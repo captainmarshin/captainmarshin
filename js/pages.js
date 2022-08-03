@@ -37,9 +37,9 @@ $(document).ready(function() {
 
 			close_button.addEventListener("click", function() {
 
-				windowallsingles.style.display = "none";
-				windowallvideos.style.display = "none";
-				windowalllyrics.style.display = "none";
+				// windowallsingles.style.display = "none";
+				// windowallvideos.style.display = "none";
+				// windowalllyrics.style.display = "none";
 				windowdonate.style.display = "none";
 				document.body.style.overflow = "scroll";
 				miniplayerexpand.style.display = "none";
@@ -73,29 +73,29 @@ $(document).ready(function() {
 					document.getElementById("mini-player-timeline-bar").style = "height: 15px;"
 			    }
 			   }
-			})
+			});
 
 			// Open All singles page
 
-			allsinglesopen.addEventListener("click", function() {
+			// allsinglesopen.addEventListener("click", function() {
 
-				if (windowallsingles.style.display === "block") {
-					windowallsingles.style.display = "none";
-					document.body.style.overflow = "scroll";
-					windowallsingles.style.overflow = "hidden";
-					opendonatewindow.style.display = "block";
-					close_button.style.display = "none";
-				} 
-				else 
-				{
-					windowallsingles.style.display = "block";
-					document.body.style.overflow = "hidden";
-					windowallsingles.style.overflow = "scroll";
-					opendonatewindow.style.display = "none";
-					close_button.style.display = "block";
-			    }
+			// 	if (windowallsingles.style.display === "block") {
+			// 		windowallsingles.style.display = "none";
+			// 		document.body.style.overflow = "scroll";
+			// 		windowallsingles.style.overflow = "hidden";
+			// 		opendonatewindow.style.display = "block";
+			// 		close_button.style.display = "none";
+			// 	} 
+			// 	else 
+			// 	{
+			// 		windowallsingles.style.display = "block";
+			// 		document.body.style.overflow = "hidden";
+			// 		windowallsingles.style.overflow = "scroll";
+			// 		opendonatewindow.style.display = "none";
+			// 		close_button.style.display = "block";
+			//     }
 			   
-			})
+			// });
 
 			// Open Donate page
 
@@ -119,51 +119,51 @@ $(document).ready(function() {
 			   
 			})
 
-			// Open All Music Videos page
+			// // Open All Music Videos page
 
-			allvideosopen.addEventListener("click", function() {
+			// allvideosopen.addEventListener("click", function() {
 
-				if (windowallvideos.style.display === "block") {
-					windowallvideos.style.display = "none";
-					document.body.style.overflow = "scroll";
-					windowallvideos.style.overflow = "hidden";
-					opendonatewindow.style.display = "block";
-					close_button.style.display = "none";
-				} 
-				else 
-				{
-					windowallvideos.style.display = "block";
-					document.body.style.overflow = "hidden";
-					windowallvideos.style.overflow = "scroll";
-					opendonatewindow.style.display = "none";
-					close_button.style.display = "block";
-			    }
+			// 	if (windowallvideos.style.display === "block") {
+			// 		windowallvideos.style.display = "none";
+			// 		document.body.style.overflow = "scroll";
+			// 		windowallvideos.style.overflow = "hidden";
+			// 		opendonatewindow.style.display = "block";
+			// 		close_button.style.display = "none";
+			// 	} 
+			// 	else 
+			// 	{
+			// 		windowallvideos.style.display = "block";
+			// 		document.body.style.overflow = "hidden";
+			// 		windowallvideos.style.overflow = "scroll";
+			// 		opendonatewindow.style.display = "none";
+			// 		close_button.style.display = "block";
+			//     }
 			   
-			})
+			// })
 
 
 			// Open all lyrics page
 
 
-			alllyricsopen.addEventListener("click", function() {
+			// alllyricsopen.addEventListener("click", function() {
 
-				if (windowalllyrics.style.display === "block") {
-					windowalllyrics.style.display = "none";
-					document.body.style.overflow = "scroll";
-					windowalllyrics.style.overflow = "hidden";
-					opendonatewindow.style.display = "block";
-					close_button.style.display = "none";
-				} 
-				else 
-				{
-					windowalllyrics.style.display = "block";
-					document.body.style.overflow = "hidden";
-					windowalllyrics.style.overflow = "scroll";
-					opendonatewindow.style.display = "none";
-					close_button.style.display = "block";
-			    }
+			// 	if (windowalllyrics.style.display === "block") {
+			// 		windowalllyrics.style.display = "none";
+			// 		document.body.style.overflow = "scroll";
+			// 		windowalllyrics.style.overflow = "hidden";
+			// 		opendonatewindow.style.display = "block";
+			// 		close_button.style.display = "none";
+			// 	} 
+			// 	else 
+			// 	{
+			// 		windowalllyrics.style.display = "block";
+			// 		document.body.style.overflow = "hidden";
+			// 		windowalllyrics.style.overflow = "scroll";
+			// 		opendonatewindow.style.display = "none";
+			// 		close_button.style.display = "block";
+			//     }
 			   
-			})
+			// })
 
 			// This works when user click on Logo.
 			// Need to remove this, Close button shows every time when open page or expand player
