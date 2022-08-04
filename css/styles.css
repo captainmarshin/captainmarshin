@@ -113,6 +113,7 @@ Copyright. All rights reserved.
 		background: rgba(30, 30, 30, 0.6);
 		backdrop-filter: blur(30px);
 		-webkit-backdrop-filter: blur(30px);
+		z-index: 1;
 	}
 
 	.notification{
@@ -1677,6 +1678,19 @@ Copyright. All rights reserved.
 		text-align: center;
 	}
 
+	.player-track-download-btn{
+		width: 30px;
+		padding-right: 6px;
+		line-height: 60px;
+		display: inline-block;
+		text-align: center;
+	}
+
+	.player-track-download-btn span.material-icons{
+		font-size: 30px;
+		vertical-align: -9px;
+	}
+
 	.player-track-play-btn span.material-icons{
 		font-size: 35px;
 		vertical-align: -11px;
@@ -1686,6 +1700,15 @@ Copyright. All rights reserved.
 		font-size: 14px;
 		margin-top: 15px;
 		color: #555;
+	}
+
+	.player-release-download-full{
+		float: right;
+	}
+
+	.player-release-download-full .material-icons{
+		font-size: 18px;
+		vertical-align: -5px;
 	}
 
 
@@ -1704,7 +1727,7 @@ Copyright. All rights reserved.
 		margin-right: 8px;
 		position: relative;
 		vertical-align: top;
-		z-index: -1;
+/*		z-index: -1;*/
 	}
 
 	.lyrics-card-expanded{
@@ -1718,9 +1741,24 @@ Copyright. All rights reserved.
 	}
 
 	.lyrics-card-close-exp{
-		margin-top: 20px;
+		margin-top: 30px;
 		font-weight: bold;
 		color: #F1882E;
+	}
+
+	.lyrics-card-close-exp a{
+		text-decoration: none;
+		font-weight: bold;
+		color: #F1882E;
+	}
+
+	[id^='lyrics-card-expand']{
+		display: none;
+	}
+
+	.lyrics-card-expand-written-by{
+		font-size: 14px;
+		margin-top: 20px;
 	}
 
 	.lyrics-card:last-child{
@@ -1744,11 +1782,19 @@ Copyright. All rights reserved.
   		-webkit-text-fill-color: transparent;
 	}
 
+	.lyrics-card-text:hover{
+		cursor: pointer;
+	}
+
 	.lyrics-card-expand{
 		bottom: 20px;
 		position: absolute;
 		font-weight: bold;
 		color: #F1882E;
+	}
+
+	.lyrics-card-expand:hover{
+		cursor: pointer;
 	}
 
 
