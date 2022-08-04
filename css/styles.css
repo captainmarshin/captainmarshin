@@ -414,9 +414,9 @@ Copyright. All rights reserved.
 
 
 
-/* DONATE WINDOW	*/
+/* PAGES STYLES (DONATE, SHOP INFO, ALL CATEGORIES)	*/
 
-	.window{
+	.pages{
 		width: 100%;
 /*		border-top: 1px solid #111;*/
 		position: fixed;
@@ -1008,28 +1008,6 @@ Copyright. All rights reserved.
 
 /* PAGES ALL SINGLES */
 
-	.all-singles, .all-videos, .all-lyrics{
-		width: 100%;
-/*		border-top: 1px solid #111;*/
-		position: fixed;
-		top: 50px;
-		bottom: 155px;
-/*		display: flex;*/
-		align-items: center;
-    	justify-content: center;
-		background: rgba(30, 30, 30, 0.6);
-		backdrop-filter: blur(30px);
-		-webkit-backdrop-filter: blur(30px);
-		box-sizing: border-box;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-top: 5px;
-		padding-bottom: 30px;
-		display: none;
-		overflow-y:scroll;
-    	overflow-x:hidden;
-	}
-
 
 	.all-collection{
 		width: 100%;
@@ -1065,18 +1043,25 @@ Copyright. All rights reserved.
 	}
 
 
-	#open-all-lyrics:hover, #open-all-singles:hover, #open-all-videos:hover{
+	[id^='open-page-']:hover{
 		cursor: pointer;
 	}
 
 
-	.all-singles-cards, .all-videos-cards, .all-lyrics-cards{
+	.all-singles-cards, .all-videos-cards{
 		/*display: flex;
 		flex-wrap: wrap;*/
 /*		flex-flow: row wrap;*/
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 		grid-gap: 20px;
+	}
+
+	.all-lyrics-cards{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-gap: 20px;
+		margin-bottom: 20px;
 	}
 
 	.all-title{
@@ -1088,6 +1073,23 @@ Copyright. All rights reserved.
 		font-weight: bold;
 		margin-top: 14px;
 		box-sizing: border-box;
+	}
+
+
+	.all-lyrics-cards .lyrics-card{
+		box-sizing: border-box;
+/*		padding: 5px;*/
+		width: auto;
+		margin-right: 0px;
+		flex-grow: 1;
+	}
+
+	.all-lyrics-cards .lyrics-card:last-child{
+		box-sizing: border-box;
+/*		padding: 5px;*/
+		width: auto;
+		margin-right: 0px;
+		flex-grow: 1;
 	}
 
 
@@ -1772,6 +1774,12 @@ Copyright. All rights reserved.
     	white-space: nowrap;
     	overflow: hidden;
     	text-overflow: ellipsis;
+	}
+
+	.lyrics-card-name .material-icons{
+		font-size: 16px;
+		vertical-align: -2px;
+		color: #999;
 	}
 
 	.lyrics-card-text{

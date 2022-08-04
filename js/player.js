@@ -52,6 +52,55 @@ $(document).ready(function () {
 
 
 
+
+			// CLOSE PLAYER FUNCTION
+
+			var close_button = document.getElementById("close-page");
+			var opendonatewindow = document.getElementById("open-page-001");
+
+			var musicplayeropen = document.getElementById("mini-player-open");
+			var miniplayer = document.getElementById("mini-player");
+		
+			var miniplayerexpand = document.getElementById("mini-player-expand");
+
+			close_button.addEventListener("click", function() {
+				document.body.style.overflow = "scroll";
+				miniplayerexpand.style.display = "none";
+
+				opendonatewindow.style.display = "block";
+				close_button.style.display = "none";
+			   
+			});
+
+
+			// This listener expand music player.
+
+			musicplayeropen.addEventListener("click", function() {
+
+			  if ((!$(event.target).closest('#mini-player-ctrl-btns').length) && (!$(event.target).closest('#mini-player-like-btn').length) && (!$(event.target).closest('#mini-player-rewind-btn').length)) {
+
+				if (miniplayerexpand.style.display === "block") {
+					miniplayerexpand.style.display = "none";
+					document.body.style.overflow = "scroll";
+					miniplayerexpand.style.overflow = "hidden";
+					opendonatewindow.style.display = "block";
+					close_button.style.display = "none";
+					document.getElementById("mini-player-timeline-bar").style = "height: 1px;"
+				} 
+				else 
+				{
+					miniplayerexpand.style.display = "block";
+					document.body.style.overflow = "hidden";
+					miniplayerexpand.style.overflow = "scroll";
+					opendonatewindow.style.display = "none";
+					close_button.style.display = "block";
+					document.getElementById("mini-player-timeline-bar").style = "height: 15px;"
+			    }
+			   }
+			});
+
+
+
 			// DOWNLOAD TRACK FUNCTION
 			// This function fire when user click on download icon in tracklist or release page
 

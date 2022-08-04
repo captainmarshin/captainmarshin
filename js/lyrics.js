@@ -7,8 +7,6 @@
 
 $(document).ready(function() {
 
-	console.log("lyrics.js ready")
-
 	//Vars for buttons and divs
 
 	//Lyrics card ID
