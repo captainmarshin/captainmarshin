@@ -1647,6 +1647,11 @@ Copyright. All rights reserved.
 		border-bottom: 1px solid #222;
 	}
 
+	.player-track:hover{
+		cursor: pointer;
+		color: #F1882E;
+	}
+
 	.player-track-number{
 		width: 30px;
 		line-height: 60px;
