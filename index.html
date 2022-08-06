@@ -106,18 +106,6 @@ Copyright. All rights reserved.
 
 	<!-- 
 	//
-	// Preload function
-	// Need to replace cassette.svg, its big and not so cool ://
-	//
-	-->
-
-	<div id="loader" class="loading">
-		<object type="image/svg+xml" data="images/cassette.svg"></object>
-		<div class="loading-text">Loading</div>
-	</div>
-
-	<!-- 
-	//
 	// Header
 	//
 	-->
@@ -2644,27 +2632,6 @@ Copyright. All rights reserved.
 			</div>
 		</div>
 	</div>
-
-
-	<!-- 
-	//
-	// Preload function
-	//
-	 -->
-
-
-	<script type="text/javascript">
-		document.body.onload = function(){
-		  setTimeout(function() {
-		    var preloader = document.getElementById('loader');
-		    if( !preloader.classList.contains('done') )
-		    {
-		      preloader.classList.add('done');
-		    }
-		  }, 1000)
-		}
-	</script>
-
 
 
 </body>

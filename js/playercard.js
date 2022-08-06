@@ -12,7 +12,7 @@
 
 $(document).ready(function () {
 
-			var playerlink = document.getElementById("mini-player-source").src
+			var playerlink = document.getElementById("tracklink").getAttribute("href")
 
 			var loadingaudio = false;
 
@@ -81,23 +81,7 @@ $(document).ready(function () {
 
 			  if ((!$(event.target).closest('.player-track-download-btn').length) && (!$(event.target).closest('#mini-player-like-btn').length) && (!$(event.target).closest('#mini-player-rewind-btn').length)) {
 
-				if (miniplayerexpand.style.display === "block") {
-					miniplayerexpand.style.display = "none";
-					document.body.style.overflow = "scroll";
-					miniplayerexpand.style.overflow = "hidden";
-					opendonatewindow.style.display = "block";
-					close_button.style.display = "none";
-					document.getElementById("mini-player-timeline-bar").style = "height: 1px;"
-				} 
-				else 
-				{
-					miniplayerexpand.style.display = "block";
-					document.body.style.overflow = "hidden";
-					miniplayerexpand.style.overflow = "scroll";
-					opendonatewindow.style.display = "none";
-					close_button.style.display = "block";
-					document.getElementById("mini-player-timeline-bar").style = "height: 15px;"
-			    }
+			  	$(".header-fix").get(0).scrollIntoView();
 			   }
 			});
 
@@ -225,6 +209,8 @@ $(document).ready(function () {
 				myProgressBar.val = 0;
 				pause_music_button.style.display = "none";
 				like_btn.style.display = "inline-block";
+				play_music_button.style.display = 'inline-block';
+		      	rewind_btn.style.display = "none";
 
 			}
 
@@ -263,8 +249,6 @@ $(document).ready(function () {
 				// Show Loading icon
 				loading_icon.style.display = "inline-block";
 
-				//show like btn
-				like_btn.style.display = "inline-block";
 
 				// Start animation for Loading icon
 				var $loading_icon_anim = $(loading_icon), degree = 0, timer;			    

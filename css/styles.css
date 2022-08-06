@@ -436,6 +436,7 @@ Copyright. All rights reserved.
 		display: none;
 		overflow-y:scroll;
     	overflow-x:hidden;
+    	z-index: 2;
 	}
 
 
@@ -1586,6 +1587,11 @@ Copyright. All rights reserved.
 	.player-cover {
 		box-sizing: border-box;
 		display: inline-block;
+		max-width: 158px;
+	}
+
+	.player-cover img {
+		box-sizing: border-box;
 		max-width: calc(100%);
 	}
 
@@ -1811,6 +1817,10 @@ Copyright. All rights reserved.
 	}
 
 
+
+	.helpukraine { 
+		text-decoration: none; 
+	}
 
 
 

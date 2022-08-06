@@ -77,17 +77,6 @@ Copyright. All rights reserved.
 </head>
 <body>
 
-	<!-- 
-	//
-	// Preload function
-	// Need to replace cassette.svg, its big and not so cool ://
-	//
-	-->
-
-	<div id="loader" class="loading">
-		<object type="image/svg+xml" data="images/cassette.svg"></object>
-		<div class="loading-text">Loading</div>
-	</div>
 
 	<!-- 
 	//
@@ -2663,7 +2652,6 @@ Copyright. All rights reserved.
 	//
 	 -->
 
-
 	<div id="mini-player-timeline" class="mini-player-timeline">
 		<progress id="mini-player-timeline-bar" value="0" max="100">
 		</progress>
@@ -2671,8 +2659,13 @@ Copyright. All rights reserved.
 
 	<div id="mini-player" class="mini-player">
 
+		<!-- 
+		// This need to fast load page and fetch right first track on release page
+		 -->
+		<a style="display: none;" id="tracklink" href="https://dl.dropbox.com/s/wivph4ces3c6gjw/%D0%AF%20%D0%B5%D1%89%D1%91%20%D0%B2%D0%B5%D1%80%D0%BD%D1%83%D1%81%D1%8C.mp3"></a>
+
 		<audio id="mini-player-new-release" type="audio/mp3">
-    		<source id="mini-player-source" src="https://dl.dropbox.com/s/wivph4ces3c6gjw/%D0%AF%20%D0%B5%D1%89%D1%91%20%D0%B2%D0%B5%D1%80%D0%BD%D1%83%D1%81%D1%8C.mp3" type="audio/mp3">
+    		<source id="mini-player-source" src="" type="audio/mp3">
 		</audio>
 
 		<div class="mini-player-row" id="mini-player-open">
@@ -2722,25 +2715,6 @@ Copyright. All rights reserved.
 		</div>
 	</div>
 
-
-	<!-- 
-	//
-	// Preload function
-	//
-	 -->
-
-
-	<script type="text/javascript">
-		document.body.onload = function(){
-		  setTimeout(function() {
-		    var preloader = document.getElementById('loader');
-		    if( !preloader.classList.contains('done') )
-		    {
-		      preloader.classList.add('done');
-		    }
-		  }, 1000)
-		}
-	</script>
 
 </body>
 </html>
