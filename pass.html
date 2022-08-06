@@ -40,18 +40,352 @@ Copyright. All rights reserved.
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<!-- Google Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<!-- Plugins: -->
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<!-- Flip plugin for donation cards -->
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+	<!-- QR Code generator plugin -->
+	<script src="js/qrcode.min.js"></script>
+
+	<!-- Playercard -->
+	<script src="js/playercard.js"></script>
+
+	<!-- Like/share menu -->
+	<script src="js/share.js"></script>
+
+	<!-- Pages -->
+	<script src="js/pages.js"></script>
+
+	<!-- Tabs -->
+	<script src="js/tabs.js"></script>
+
+	<!-- Lyrics -->
+	<script src="js/lyrics.js"></script>
+
 </head>
 <body>
 
-	<a href="http://captainmarshin.com" class="title">
-		<div class="title">Капитан Маршин &nbsp;/&nbsp; Captain Marshin</div>
-	</a>
+	<!-- 
+	//
+	// Header
+	//
+	-->
+
+	<div class="header" id="header">
+
+		<div class="logo" id="close-all-windows">
+			<img src="images/cap_logo.png">
+		</div>
+
+		<div class="button">
+			<button id="open-page-001" class="donate"><span class="material-icons">monetization_on</span> Donate</button>
+			<button id="close-page" class="close-btn"><span class="material-icons">cancel</span> Close</button>
+		</div>
+
+	</div>
+
+	<!-- 
+	//
+	// UI: Notification
+	// Now used only for donate page, but can be used somewhere else in future
+	//
+	 -->
+
+	<div class="notification">
+		Copied!
+	</div>
+
+
+	<!-- 
+	//
+	// Page: Donate
+	// All methods how people can donate.
+	//
+	 -->
+
+	<div id="page-001" class="pages">
+
+		<div class="window-title">Donate</div>
+
+		<div class="all-services">
+
+		<div class="donate-block-1" id="donate-1">
+		<div class="front">
+			<div class="donate-block">
+				<div class="donate-service-logo ton-logo-fix">
+					<img src="images/ton.png">
+				</div>
+				<div class="donate-service-pay-options">
+					<div class="donate-service-pay-options-info">TON</div>
+					<div class="donate-service-pay-options-info">One-time</div>
+					<div class="donate-service-pay-options-info">Any amount</div>
+				</div>
+				<div class="donate-service-text">
+					Donate in Toncoin crypto.
+				</div>
+				<div class="donate-service-buttons">
+					<div class="donate-button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						    <path d="M16 13L0 7L16 1L32 7L16 13Z" fill="#45AEF5"/>
+						    <path opacity="0.6" d="M16 13L32 7L16 31V13Z" fill="#45AEF5"/>
+						    <path opacity="0.8" d="M16 13L0 7L16 31V13Z" fill="#45AEF5"/>
+						</svg>
+	 					Pay with Tonkeeper</div>
+				</div>
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Toncoin wallet
+				</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="donate-block">
+				<div class="qrcode" id="qrcode-ton"></div>
+				<div style="font-size: 11px; text-align: center; margin-top: 5px; color: lightgrey;">Scan QR with TON wallet</div>
+
+				<script type="text/javascript">
+					new QRCode("qrcode-ton", { text: "EQAgebhhR0er85-vn1S2sAMcNqYiFfZfV6uyMs7EeBkeAGV1", width: 100, height: 100 });
+				</script>
+
+				<div style="font-weight: bold; margin-top: 8px; text-align: center">OR</div>
+
+				<div class="donate-service-buttons">
+				<a href="ton://transfer/EQAgebhhR0er85-vn1S2sAMcNqYiFfZfV6uyMs7EeBkeAGV1" target="_blank">
+					<div class="donate-button">
+	 					<span class="material-icons">north_east</span> Open direct wallet link
+	 				</div>
+	 				</a>
+	 			</div>
+
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+					You need to install wallet what support ton:// link
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://t.me/CryptoBot?start=IVRqAb00BDL6" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/cryptobot.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">Crypto</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Any amount</div>
+			</div>
+			<div class="donate-service-text">
+				Donate in crypto and get special gift.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<img src="images/cryptobot_icn.png">
+ 					Open CryptoBot
+ 				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Telegram app
+				</div>
+			</a>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://boosty.to/captainmarshin" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/boosty.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">50₽/month</div>
+				<div class="donate-service-pay-options-info">Subscribtion</div>
+			</div>
+			<div class="donate-service-text">
+				Exclusive content and working process.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to boosty.to
+				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card
+				</div>
+			</a>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://qiwi.com/n/CAPTAINMARSHIN" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/qiwi.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">RUB</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Any amount</div>
+			</div>
+			<div class="donate-service-text">
+				Support in RUB currency.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to qiwi.com
+				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card or Qiwi wallet
+				</div>
+			</a>
+		</div>
+
+
+		<div class="donate-block-1" id="donate-2">
+		<div class="front">
+			<div class="donate-block">
+				<div class="donate-service-logo">
+					<img src="images/binance.png">
+				</div>
+				<div class="donate-service-pay-options">
+					<div class="donate-service-pay-options-info">Crypto</div>
+					<div class="donate-service-pay-options-info">One-time</div>
+					<div class="donate-service-pay-options-info">Any amount</div>
+				</div>
+				<div class="donate-service-text">
+					Support in any crypto you want.
+				</div>
+				<div class="donate-service-buttons">
+					<div class="donate-button">
+						<img src="images/binance.ico">
+	 					Pay with Binance Pay</div>
+				</div>
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Binance account
+				</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="donate-block">
+				<div class="qrcode" id="qrcode-binance"></div>
+				<div style="font-size: 11px; text-align: center; margin-top: 5px; color: lightgrey;">Scan QR in Binance app.</div>
+
+				<script type="text/javascript">
+					new QRCode("qrcode-binance", { text: "https://app.binance.com/qr/dplk5cb1330e11ec4288bd68297401d17fb5", width: 100, height: 100 });
+				</script>
+
+				<div style="font-weight: bold; margin-top: 8px; text-align: center">OR</div>
+
+				<div class="donate-service-buttons">
+					<div id="copy-payid" class="donate-button">
+	 					<span class="material-icons">content_copy</span> 205710163
+	 				</div>
+	 			</div>
+
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+					Input this Pay ID in Binance app.
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://buymeacoffee.com/captainmarshin" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/buymeacoffee.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">USD</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Fixed amount</div>
+			</div>
+			<div class="donate-service-text">
+				Support in cups of coffee.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to buymecoffee.com
+				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card
+				</div>
+			</a>
+		</div>
+
+
+
+		</div>
+
+		
+	</div>
+
+	<!-- 
+	//
+	// Function for rotate cards on donate page
+	// [!] On Android very strange animation :/ Need to check it.
+	//
+	 -->
+
+	<script type="text/javascript">
+		$("#donate-1").flip();
+		$("#donate-2").flip();
+
+		$("#copy-payid").click( event => {
+			navigator.clipboard.writeText("205710163");
+			$(".notification").show("slideUp", function() {
+				setTimeout(function(){
+					$(".notification").hide("slideDown")
+				}, 3000);
+			});
+		})
+	</script>
+
+	<!-- 
+	//
+	// Fix header fixed position
+	//
+	 -->
+
+	<div class="header-fix"></div>
+
 
 	<div class="playnow">
-		<div class="cat_title">Perfect Ass</div>
+		<div class="cat_title">Tracklist</div>
 		<div class="cat_content_player">
 
-			<iframe src="https://open.spotify.com/embed/album/02ufx7EAWGmSsQ0DaWl2EE" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+			<div class="player">
+
+				<div class="player-info">
+					<div class="player-cover">
+						<img src="content/singles/217.jpg">
+					</div>
+					<div class="player-release-info">
+						<div class="player-release-name">Perfect Ass</div>
+						<div class="player-release-primary">Капитан Маршин</div>
+						<!-- <div class="player-release-feat"></div> -->
+						<div class="player-release-type">SINGLE ∙ RAP</div>
+					</div>
+				</div>
+
+				<div class="player-tracklist">
+
+					<div class="player-track" id="release_id_020">
+						<div class="player-track-number">1</div>
+						<div class="player-track-name">Perfect Ass <span class="material-icons">explicit</span></div>
+						<div class="player-track-download-btn"><span id="download_id_020" class="material-icons">download</span></div>
+						<div class="player-track-play-btn"><span class="material-icons">play_arrow</span></div>
+					</div>
+				
+				</div>
+
+				<div class="player-release-year">2021 ℗ Капитан Маршин </div>
+
+			</div>
 			
 		</div>
 		<div class="cat_line"></div>
@@ -84,6 +418,18 @@ Copyright. All rights reserved.
 			<div class="cat_item_fix"></div>
 
 			<div class="cat_item">
+				<a href="https://dl.dropbox.com/s/h8wj3ue3sxe0r75/Perfect%20Ass.mp3" download title="Download">
+					<img class="more_item_cover" src="images/download.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="#" target="_blank" title="Telegram">
+					<img class="more_item_cover" src="images/telegram.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
 				<a href="https://music.apple.com/ru/album/perfect-ass-single/1543027319" target="_blank" title="Apple Music">
 					<img class="more_item_cover" src="images/applemusic.jpg">
 				</a>
@@ -96,26 +442,8 @@ Copyright. All rights reserved.
 			</div>
 
 			<div class="cat_item">
-				<a href="https://vk.com/music/album/-2000645553_9645553_5c323447007bad4734" target="_blank" title="VK Music">
-					<img class="more_item_cover" src="images/vkmusic.jpg">
-				</a>
-			</div>
-
-			<div class="cat_item">
-				<a href="https://vk.cc/bVpmAz" target="_blank" title="BOOM">
-					<img class="more_item_cover" src="images/boom.jpg">
-				</a>
-			</div>
-
-			<div class="cat_item">
 				<a href="https://youtu.be/qmssIz0I-0k" target="_blank" title="YouTube">
 					<img class="more_item_cover" src="images/youtube.jpg">
-				</a>
-			</div>
-
-			<div class="cat_item">
-				<a href="https://music.yandex.ru/album/15624249/track/74391486" target="_blank" title="Yandex Music">
-					<img class="more_item_cover" src="images/yandexmusic.jpg">
 				</a>
 			</div>
 
@@ -134,103 +462,70 @@ Copyright. All rights reserved.
 	<div class="lyrics">
 		<div class="cat_title">Lyrics</div>
 		<div class="cat_content_player">
-			<span class="lyrcis_short">Shake
-			Shake, shake, shake
-			Shake, shake, shake
-			Shake, shake, shake
-			</span>
-			<div class="lyrics_show_btn" id="lyrics_show_btn" onclick="ShowLyrics();">Read more....</div>
-			<span class="lyrics_full" id="lyrics_full">
-			Куда бегут года 
-			Shake, shake
-			Вокруг, то тут, то там
-			Shake, shake
-			Вокруг, то тут, то там
-			Shake, shake
-			Вокруг, то тут, то там
-			Shake, shake
+			
+			<div class="lyrics-card" id="lyrcis-card-020">
+				<div class="lyrics-card-name">Perfect Ass</div>
+				<div id="lyrics-card-short-020" class="lyrics-card-text">
+					Среди кварталов и районов этих серых, бейба
+					Среди машин и тех девчонок что с улыбкой, бейба
+				</div>
+				<div id="lyrics-card-opene-020" class="lyrics-card-expand">Show more...</div>
+				<div id="lyrics-card-expand-020">
+				<div class="lyrics-card-expanded-text">
+					(Shake, shake, shake)
+					(Куда бегут года)
+					(Вокруг, то тут, то там)
 
-			Среди кварталов и районов этих серых, бейба
-			Среди машин и тех девчонок что с улыбкой, бейба
-			Среди дыма с заводов и с наших балконов, бейба
-			Я пролетел столько событий ради жопы этой
+					Среди кварталов и районов этих серых, бейба
+					Среди машин и тех девчонок что с улыбкой, бейба
+					Среди дыма с заводов и с наших балконов, бейба
+					Я пролетел столько событий ради жопы этой
 
-			Мой премиум S класс плывет по нашим спальным блокам
-			Мой хоуми весь на чёрном в чёрной кепке со мной сбоку
-			Я захвачу своих братков и понесусь без стопа
-			Мы на угаре смотрим в окна в поисках пиздатой жопы
+					Мой премиум S класс плывет по нашим спальным блокам
+					Мой хоуми весь на чёрном в чёрной кепке со мной сбоку
+					Я захвачу своих братков и понесусь без стопа
+					Мы на угаре смотрим в окна в поисках пиздатой жопы
 
-			Вокруг злые люди, копы, будни, сучки (эй)
-			Вокруг грусти столько сколько кэша в моей сумке (Cash)
-			Я прошёл столько дворов и побывал на каждой тусе
-			Но все закончилось на той чья жопа в моем вкусе
+					Вокруг злые люди, копы, будни, сучки (эй)
+					Вокруг грусти столько сколько кэша в моей сумке (Cash)
+					Я прошёл столько дворов и побывал на каждой тусе
+					Но все закончилось на той чья жопа в моем вкусе
 
-			Жопа охуенная
-			Жопа охуенная
-			Жопа охуенная твоя
-			(Shake that ass, girl!)
+					Жопа охуенная
+					Жопа охуенная
+					Жопа охуенная твоя
+					(Shake that ass, girl!)
 
-			Жопа охуенная
-			Жопа охуенная
-			Жопа охуенная твоя
-			(Shake that ass, girl!)
+					Маршин 
 
-			Жопа охуенная
-			Жопа охуенная
-			Жопа охуенная твоя
-			(Shake that ass, girl!)
-			Жопа охуенная твоя
+					Помню встреча, утро, тот июль
+					По-моему был накурен
+					Ты что то говорила про любовь, но я не слушал
+					Твой зад верх-вниз, твой зад - звезда всей тусы, зад пиздец упругий
+					Помню только как твой зад сжимали мои руки
+					И все пиздец как просто
+					Столько задниц было в доме
+					Столько сучек вновь в игноре
+					Столько сук хотят повтора
+					Столько сук мимо меня, но манит лишь всегда одна
+					Где бы ни был я - всегда она - охуенная
+					Нас несут эти замуты 
+					Дня вновь мало - мы на сутки
+					В сутках есть не только суки
+					Я забыл тот дом уютный 
+					Я забыл давно тебя и я забыл кто новая 
+					Но выбор пал тут не спроста
+					Ведь жопа охуенная
 
-			Жопа охуенная
-			Жопа охуенная
-			Жопа охуенная твоя
-			(Shake that ass, girl!)
-
-			Маршин 
-
-			Помню встреча, утро, тот июль
-			По-моему был накурен
-			Ты что то говорила про любовь, но я не слушал
-			Твой зад верх-вниз, твой зад - звезда всей тусы, зад пиздец упругий
-			Помню только как твой зад сжимали мои руки
-
-			И все пиздец как просто
-			Столько задниц было в доме
-			Столько сучек вновь в игноре
-			Столько сук хотят повтора
-
-			Столько сук мимо меня, но манит лишь всегда одна
-			Где бы ни был я - всегда она
-			Охуенная
-
-			Нас несут эти замуты 
-			Дня вновь мало - мы на сутки
-			В сутках есть не только суки
-			Я забыл тот дом уютный 
-
-			Я забыл давно тебя и я забыл кто новая 
-			Но выбрал пал тут не спроста
-			Ведь жопа охуенная
-
-			Куда бегут года 
-			Shake, shake
-			Вокруг, то тут, то там
-			Shake, shake
-			Вокруг, то тут, то там
-			Shake, shake
-			Вокруг, то тут, то там
-			Куда бегут года
-			Жопа охуенная
-			Жопа охуенная
-			Жопа охуенная
-			</span>
-
-			<script type="text/javascript">
-				function ShowLyrics() {
-					document.getElementById('lyrics_show_btn').style.display = "none";
-					document.getElementById('lyrics_full').style.display = "block";
-				}
-			</script>
+					(Куда бегут года)
+					(Shake, shake)
+					(Вокруг, то тут, то там)
+					(Жопа охуенная)
+				</div>
+				<div class="lyrics-card-expand-written-by"><b>Written by:</b> Капитан Маршин</div>
+				<div id="lyrics-card-close-020" class="lyrics-card-close-exp"><a href="#lyrics">Close lyrics</a></div>
+				</div>
+			</div>
 
 		</div>
 		<div class="cat_line"></div>
@@ -256,21 +551,118 @@ Copyright. All rights reserved.
 	</div>
 
 
+	<!-- 
+	//
+	// Footer
+	//
+	 -->
+
 	<div class="footer">
 		Маршин Entertainment<br>
-		2014-2021 Copyright. All rights reserved.
+		2014-2022 Copyright. All rights reserved.
 
-		<div class="links"> <!-- Social Links -->
-			<a class="space-2" href="https://music.apple.com/artist/captain-marshin/1486687033">Apple Music</a>
-			<a class="space-2" href="https://open.spotify.com/artist/7jeV7Ofu7JdWCPqEohb8Uo">Spotify</a>
-			<a class="space-2" href="https://vk.com/artist/kapitanmarshin">VK Music</a>
-			<a class="space-2" href="https://vk.cc/avPZHv">BOOM</a>
-			<a class="space-2" href="https://music.yandex.ru/artist/9716771">Yandex.Music</a>
-			<a class="space-2" href="https://www.youtube.com/channel/UCKSLYkGgjVIrLP-sPSSnygQ/featured">YouTube</a>
-			<a class="space-2" href="https://t.me/captainmarshin">Telegram</a>
-			<a class="space-2" href="https://www.instagram.com/captainmarshin/">Instagram</a>
-			<a class="space-2" href="https://vk.com/captainmarshin">VK</a>
-			<a class="space-2" href="https://twitter.com/captainmarshin">Twitter</a>
+		<div class="links">
+		<a class="space-2" href="https://music.apple.com/artist/captain-marshin/1486687033">Apple Music</a>
+		<a class="space-2" href="https://open.spotify.com/artist/7jeV7Ofu7JdWCPqEohb8Uo">Spotify</a>
+		<a class="space-2" href="https://www.youtube.com/channel/UCKSLYkGgjVIrLP-sPSSnygQ/featured">YouTube</a>
+		<a class="space-2" href="https://t.me/captainmarshin">Telegram</a>
+		<a class="space-2" href="https://www.instagram.com/captainmarshin/">Instagram</a>
+		<a class="space-2" href="https://twitter.com/captainmarshin">Twitter</a>
+		</div>
+
+		<!-- 
+		//
+		// Badges (hidden)
+		//
+		 -->
+
+		<!-- <div class="badges">
+			<a href="https://music.apple.com/us/artist/captain-marshin/1486687033?itsct=music_box_badge&amp;itscg=30200&amp;app=music&amp;ls=1"><img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-music/badge/en-us?size=250x83&h=cdbcefe9e23b0310ab61b31e72e2dcdb" alt="Listen on Apple Music" style=" width: 120px;"></a>
+
+			<a href="#"><img src="images/addtoapplewallet.png" alt="Add to Apple Wallet" style="width: 120px; height: auto;"></a>
+
+			<a href="#"><img src="images/paec.png" alt="Add to Apple Wallet" style="width: 55px; height: auto;"></a>
+		</div> -->
+
+		<!-- 
+		//
+		// Help Ukraine badge
+		//
+		 -->
+		
+		<br>
+		<a class="helpukraine" href="https://war.ukraine.ua/" target="_blank">🇺🇦❤️</a>
+	</div>
+
+
+	<!-- 
+	//
+	// Mini-player
+	// Don't forget to add new release here
+	//
+	 -->
+
+
+	<div id="mini-player-timeline" class="mini-player-timeline">
+		<progress id="mini-player-timeline-bar" value="0" max="100">
+		</progress>
+	</div>
+
+	<div id="mini-player" class="mini-player">
+
+		<!-- 
+		// This need to fast load page and fetch right first track on release page
+		 -->
+		<a style="display: none;" id="tracklink" href="https://dl.dropbox.com/s/h8wj3ue3sxe0r75/Perfect%20Ass.mp3"></a>
+
+		<audio id="mini-player-new-release" type="audio/mp3">
+    		<source id="mini-player-source" src="" type="audio/mp3">
+		</audio>
+
+		<div class="mini-player-row" id="mini-player-open">
+			<div class="mini-player-cover">
+				<img id="mini-player-cover" src="content/singles/217.jpg">
+			</div>
+			<div class="mini-player-meta">
+				<div class="mini-player-name"><span id="mini-player-trackname">Perfect Ass</span> <span class="material-icons">explicit</span></div>
+				<div class="mini-player-note"><span id="progress">SINGLE</span></div>
+			</div>
+			<div class="mini-player-controls">
+				<div class="mini-player-controls-ctrl">
+					<div id="mini-player-like-btn"><span title="Share with friends" class="material-symbols-outlined">favorite</span></div>
+					<div id="mini-player-rewind-btn"><span title="Play song" class="material-symbols-outlined">fast_rewind</span></div>
+				</div>
+				<div class="mini-player-controls-ctrl" id="mini-player-ctrl-btns">
+					<div id="mini-player-start-btn"><span title="Play song" class="material-icons">play_arrow</span></div>
+					<div id="mini-player-loading"><span title="Song is loading" class="material-icons">autorenew</span></div>
+					<div id="mini-player-play-btn"><span title="Play song" class="material-icons">play_arrow</span></div>
+					<div id="mini-player-pause-btn"><span title="Stop playing" class="material-icons">pause</span></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- 
+	//
+	// Tabs menu
+	//
+	 -->
+
+
+	<div class="menu">
+		<div class="menu-item-1" id="open-music-tab">
+			<div class="music-btn active-music">
+				<div class="menu-item-icon"><span class="material-icons">album</span></div>
+				<div class="menu-item-name">Music</div>
+			</div>
+		</div>
+		<div class="menu-item-2">
+			<div class="shop-btn" id="open-shop-tab">
+				<div class="menu-item-icon"><span class="material-icons">local_mall</span></div>
+				<div class="menu-item-name">Shop</div>
+			</div>
 		</div>
 	</div>
 

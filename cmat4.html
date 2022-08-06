@@ -38,18 +38,387 @@ Copyright. All rights reserved.
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<!-- Google Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<!-- Plugins: -->
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<!-- Flip plugin for donation cards -->
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+	<!-- QR Code generator plugin -->
+	<script src="js/qrcode.min.js"></script>
+
+	<!-- Playercard -->
+	<script src="js/playercard.js"></script>
+
+	<!-- Like/share menu -->
+	<script src="js/share.js"></script>
+
+	<!-- Pages -->
+	<script src="js/pages.js"></script>
+
+	<!-- Tabs -->
+	<script src="js/tabs.js"></script>
+
+	<!-- Lyrics -->
+	<script src="js/lyrics.js"></script>
+
 </head>
 <body>
 
-	<a href="http://captainmarshin.com" class="title">
-		<div class="title">Капитан Маршин &nbsp;/&nbsp; Captain Marshin</div>
-	</a>
+	<!-- 
+	//
+	// Header
+	//
+	-->
+
+	<div class="header" id="header">
+
+		<div class="logo" id="close-all-windows">
+			<img src="images/cap_logo.png">
+		</div>
+
+		<div class="button">
+			<button id="open-page-001" class="donate"><span class="material-icons">monetization_on</span> Donate</button>
+			<button id="close-page" class="close-btn"><span class="material-icons">cancel</span> Close</button>
+		</div>
+
+	</div>
+
+	<!-- 
+	//
+	// UI: Notification
+	// Now used only for donate page, but can be used somewhere else in future
+	//
+	 -->
+
+	<div class="notification">
+		Copied!
+	</div>
+
+
+	<!-- 
+	//
+	// Page: Donate
+	// All methods how people can donate.
+	//
+	 -->
+
+	<div id="page-001" class="pages">
+
+		<div class="window-title">Donate</div>
+
+		<div class="all-services">
+
+		<div class="donate-block-1" id="donate-1">
+		<div class="front">
+			<div class="donate-block">
+				<div class="donate-service-logo ton-logo-fix">
+					<img src="images/ton.png">
+				</div>
+				<div class="donate-service-pay-options">
+					<div class="donate-service-pay-options-info">TON</div>
+					<div class="donate-service-pay-options-info">One-time</div>
+					<div class="donate-service-pay-options-info">Any amount</div>
+				</div>
+				<div class="donate-service-text">
+					Donate in Toncoin crypto.
+				</div>
+				<div class="donate-service-buttons">
+					<div class="donate-button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						    <path d="M16 13L0 7L16 1L32 7L16 13Z" fill="#45AEF5"/>
+						    <path opacity="0.6" d="M16 13L32 7L16 31V13Z" fill="#45AEF5"/>
+						    <path opacity="0.8" d="M16 13L0 7L16 31V13Z" fill="#45AEF5"/>
+						</svg>
+	 					Pay with Tonkeeper</div>
+				</div>
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Toncoin wallet
+				</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="donate-block">
+				<div class="qrcode" id="qrcode-ton"></div>
+				<div style="font-size: 11px; text-align: center; margin-top: 5px; color: lightgrey;">Scan QR with TON wallet</div>
+
+				<script type="text/javascript">
+					new QRCode("qrcode-ton", { text: "EQAgebhhR0er85-vn1S2sAMcNqYiFfZfV6uyMs7EeBkeAGV1", width: 100, height: 100 });
+				</script>
+
+				<div style="font-weight: bold; margin-top: 8px; text-align: center">OR</div>
+
+				<div class="donate-service-buttons">
+				<a href="ton://transfer/EQAgebhhR0er85-vn1S2sAMcNqYiFfZfV6uyMs7EeBkeAGV1" target="_blank">
+					<div class="donate-button">
+	 					<span class="material-icons">north_east</span> Open direct wallet link
+	 				</div>
+	 				</a>
+	 			</div>
+
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+					You need to install wallet what support ton:// link
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://t.me/CryptoBot?start=IVRqAb00BDL6" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/cryptobot.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">Crypto</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Any amount</div>
+			</div>
+			<div class="donate-service-text">
+				Donate in crypto and get special gift.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<img src="images/cryptobot_icn.png">
+ 					Open CryptoBot
+ 				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Telegram app
+				</div>
+			</a>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://boosty.to/captainmarshin" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/boosty.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">50₽/month</div>
+				<div class="donate-service-pay-options-info">Subscribtion</div>
+			</div>
+			<div class="donate-service-text">
+				Exclusive content and working process.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to boosty.to
+				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card
+				</div>
+			</a>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://qiwi.com/n/CAPTAINMARSHIN" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/qiwi.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">RUB</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Any amount</div>
+			</div>
+			<div class="donate-service-text">
+				Support in RUB currency.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to qiwi.com
+				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card or Qiwi wallet
+				</div>
+			</a>
+		</div>
+
+
+		<div class="donate-block-1" id="donate-2">
+		<div class="front">
+			<div class="donate-block">
+				<div class="donate-service-logo">
+					<img src="images/binance.png">
+				</div>
+				<div class="donate-service-pay-options">
+					<div class="donate-service-pay-options-info">Crypto</div>
+					<div class="donate-service-pay-options-info">One-time</div>
+					<div class="donate-service-pay-options-info">Any amount</div>
+				</div>
+				<div class="donate-service-text">
+					Support in any crypto you want.
+				</div>
+				<div class="donate-service-buttons">
+					<div class="donate-button">
+						<img src="images/binance.ico">
+	 					Pay with Binance Pay</div>
+				</div>
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Binance account
+				</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="donate-block">
+				<div class="qrcode" id="qrcode-binance"></div>
+				<div style="font-size: 11px; text-align: center; margin-top: 5px; color: lightgrey;">Scan QR in Binance app.</div>
+
+				<script type="text/javascript">
+					new QRCode("qrcode-binance", { text: "https://app.binance.com/qr/dplk5cb1330e11ec4288bd68297401d17fb5", width: 100, height: 100 });
+				</script>
+
+				<div style="font-weight: bold; margin-top: 8px; text-align: center">OR</div>
+
+				<div class="donate-service-buttons">
+					<div id="copy-payid" class="donate-button">
+	 					<span class="material-icons">content_copy</span> 205710163
+	 				</div>
+	 			</div>
+
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+					Input this Pay ID in Binance app.
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://buymeacoffee.com/captainmarshin" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/buymeacoffee.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">USD</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Fixed amount</div>
+			</div>
+			<div class="donate-service-text">
+				Support in cups of coffee.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to buymecoffee.com
+				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card
+				</div>
+			</a>
+		</div>
+
+
+
+		</div>
+
+		
+	</div>
+
+	<!-- 
+	//
+	// Function for rotate cards on donate page
+	// [!] On Android very strange animation :/ Need to check it.
+	//
+	 -->
+
+	<script type="text/javascript">
+		$("#donate-1").flip();
+		$("#donate-2").flip();
+
+		$("#copy-payid").click( event => {
+			navigator.clipboard.writeText("205710163");
+			$(".notification").show("slideUp", function() {
+				setTimeout(function(){
+					$(".notification").hide("slideDown")
+				}, 3000);
+			});
+		})
+	</script>
+
+	<!-- 
+	//
+	// Fix header fixed position
+	//
+	 -->
+
+	<div class="header-fix"></div>
+
 
 	<div class="playnow">
-		<div class="cat_title">Captain Marshin and Twenty-4</div>
+		<div class="cat_title">Tracklist</div>
 		<div class="cat_content_player">
 
-			<iframe src="https://open.spotify.com/embed/album/2NR75XygSgDVINhBBaMZBB?theme=0" width="100%" height="280" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+			<div class="player">
+
+				<div class="player-info">
+					<div class="player-cover">
+						<img src="content/eps/302.jpg">
+					</div>
+					<div class="player-release-info">
+						<div class="player-release-name">Captain Marshin and Twenty-4</div>
+						<div class="player-release-primary">Капитан Маршин, Twenty-4</div>
+						<!-- <div class="player-release-feat"></div> -->
+						<div class="player-release-type">EP ∙ RAP</div>
+					</div>
+				</div>
+
+				<div class="player-tracklist">
+
+					<div class="player-track" id="release_id_037">
+						<div class="player-track-number">1</div>
+						<div class="player-track-name">New Day <span class="material-icons">explicit</span></div>
+						<div class="player-track-download-btn"><span id="download_id_037" class="material-icons" title="Download song">download</span></div>
+						<div class="player-track-play-btn"><span class="material-icons" title="Play song">play_arrow</span></div>
+					</div>
+
+					<div class="player-track" id="release_id_036">
+						<div class="player-track-number">2</div>
+						<div class="player-track-name">Знаки <span class="material-icons">explicit</span></div>
+						<div class="player-track-download-btn"><span id="download_id_036" class="material-icons" title="Download song">download</span></div>
+						<div class="player-track-play-btn"><span class="material-icons" title="Play song">play_arrow</span></div>
+					</div>
+
+					<div class="player-track" id="release_id_035">
+						<div class="player-track-number">3</div>
+						<div class="player-track-name">City-17 <span class="material-icons">explicit</span></div>
+						<div class="player-track-download-btn"><span id="download_id_035" class="material-icons" title="Download song">download</span></div>
+						<div class="player-track-play-btn"><span class="material-icons" title="Play song">play_arrow</span></div>
+					</div>
+
+					<div class="player-track" id="release_id_034">
+						<div class="player-track-number">4</div>
+						<div class="player-track-name">Набирай <span class="material-icons">explicit</span></div>
+						<div class="player-track-download-btn"><span id="download_id_034" class="material-icons" title="Download song">download</span></div>
+						<div class="player-track-play-btn"><span class="material-icons" title="Play song">play_arrow</span></div>
+					</div>
+
+					<div class="player-track" id="release_id_033">
+						<div class="player-track-number">5</div>
+						<div class="player-track-name">Lifelight <span class="material-icons">explicit</span></div>
+						<div class="player-track-download-btn"><span id="download_id_033" class="material-icons" title="Download song">download</span></div>
+						<div class="player-track-play-btn"><span class="material-icons" title="Play song">play_arrow</span></div>
+					</div>
+
+					<div class="player-track" id="release_id_032">
+						<div class="player-track-number">6</div>
+						<div class="player-track-name">Возраст <span class="material-icons">explicit</span></div>
+						<div class="player-track-download-btn"><span id="download_id_032" class="material-icons" title="Download song">download</span></div>
+						<div class="player-track-play-btn"><span class="material-icons" title="Play song">play_arrow</span></div>
+					</div>
+				
+				</div>
+
+				<div class="player-release-year">2022 ℗ Капитан Маршин </div>
+
+			</div>
 			
 		</div>
 		<div class="cat_line"></div>
@@ -90,6 +459,18 @@ Copyright. All rights reserved.
 			<div class="cat_item_fix"></div>
 
 			<div class="cat_item">
+				<a href="https://dl.dropbox.com/s/503e7efsvvop94e/Captain%20Marshin%20and%20Twenty-4.zip" download title="Download">
+					<img class="more_item_cover" src="images/download.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="https://t.me/captainmarshin/373" target="_blank" title="Telegram">
+					<img class="more_item_cover" src="images/telegram.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
 				<a href="https://music.apple.com/ru/album/captain-marshin-and-twenty-4-ep/1611529199?l=en" target="_blank" title="Apple Music">
 					<img class="more_item_cover" src="images/applemusic.jpg">
 				</a>
@@ -98,12 +479,6 @@ Copyright. All rights reserved.
 			<div class="cat_item">
 				<a href="https://open.spotify.com/album/2NR75XygSgDVINhBBaMZBB?si=E0DlqjfFQ1Kl337NNnyeJA" target="_blank" title="Spotify">
 					<img class="more_item_cover" src="images/spotify.jpg">
-				</a>
-			</div>
-
-			<div class="cat_item">
-				<a href="https://vk.com/music?z=audio_playlist-2000869426_14869426/f85fc3ffe7466467ef" target="_blank" title="VK Music">
-					<img class="more_item_cover" src="images/vkmusic.jpg">
 				</a>
 			</div>
 
@@ -118,28 +493,17 @@ Copyright. All rights reserved.
 					<img class="more_item_cover" src="images/soundcloud.jpg">
 				</a>
 			</div>
-			
-			<div class="cat_item">
-				<a href="https://t.me/captainmarshin/373" target="_blank" title="Telegram">
-					<img class="more_item_cover" src="images/telegram.jpg">
-				</a>
-			</div>
+
 
 			<div class="cat_item">
-				<a href="https://music.yandex.ru/album/21592818" target="_blank" title="Yandex Music">
-					<img class="more_item_cover" src="images/yandexmusic.jpg">
+				<a href="https://music.apple.com/ru/album/captain-marshin-and-twenty-4-ep/1611529199?l=en" target="_blank" title="iTunes Store">
+					<img class="more_item_cover" src="images/itunes.jpg">
 				</a>
 			</div>
 
 			<div class="cat_item">
 				<a href="https://music.amazon.com/albums/B09T9HWL83?ref=dm_sh_am4a_CIuXFHunOjUSZlyhwk5zLY3Ml" target="_blank" title="Amazon Music">
 					<img class="more_item_cover" src="images/amazonmusic.jpg">
-				</a>
-			</div>
-
-			<div class="cat_item">
-				<a href="https://music.apple.com/ru/album/captain-marshin-and-twenty-4-ep/1611529199?l=en" target="_blank" title="iTunes Store">
-					<img class="more_item_cover" src="images/itunes.jpg">
 				</a>
 			</div>
 
@@ -157,175 +521,145 @@ Copyright. All rights reserved.
 	<a name="lyrics"></a>
 	<div class="lyrics">
 		<div class="cat_title">Lyrics</div>
+		<div class="cat_content">
 
-		<style type="text/css">
-			.lyrics_slider{
-				margin-left: 20px;
-			}
-
-			.lyrics_page{
-				display: inline-block;
-				margin-right: 10px;
-				margin-top: 5px;
-				margin-bottom: 5px;
-			}
-
-			.lyrics_page:hover{
-				cursor: pointer;
-				border-bottom: 3px solid orange;
-			}
-
-			.lpactive{
-				border-bottom: 3px solid orange;
-			}
-
-			[id^='lyricsc-'] {
-				display: none;
-			}
-
-			#lyricsc-1{
-				display: block;
-			}
-		</style>
-
-		<div class="lyrics_slider">
-			<div class="lyrics_page lpactive" id="lyrics-1">New Day</div>
-			<div class="lyrics_page" id="lyrics-2">Знаки</div>
-			<div class="lyrics_page" id="lyrics-3">City-17</div>
-			<div class="lyrics_page" id="lyrics-4">Набирай</div>
-			<div class="lyrics_page" id="lyrics-5">Lifelight</div>
-			<div class="lyrics_page" id="lyrics-6">Возраст</div>
-		</div>
-		<div id="lyricsc-1">
-			<div class="cat_content_player">
-				<span class="lyrcis_short">
+			<div class="cat_item_fix"></div>
+			
+			<div class="lyrics-card" id="lyrcis-card-037">
+				<div class="lyrics-card-name">New Day</div>
+				<div id="lyrics-card-short-037" class="lyrics-card-text">
+					Разбудил утром всех - я папа
+					Привёл в дом девочку - пиздато
+				</div>
+				<div id="lyrics-card-opene-037" class="lyrics-card-expand">Show more...</div>
+				<div id="lyrics-card-expand-037">
+				<div class="lyrics-card-expanded-text">
 					Разбудил утром всех - я папа
 					Привёл в дом девочку - пиздато
 					Важное дело отложим на потом
 					Деньги работают кровью и потом
-				</span>
-				<div class="lyrics_show_btn" id="lyrics_show_btn_1">Read more....</div>
-				<span class="lyrics_full" id="lyrics_full_1">
-				Выхожу будто бы с офиса НАТО
-				Никому не нужен ты без доната
-				Всё что имеешь, бургер из Мака
-				Не можешь в меня поверить не надо
-									
-				Разбудил утром всех - я папа
-				Привёл в дом девочку - пиздато
-				Важное дело отложим на потом
-				Деньги работают кровью и потом
 
-				Выхожу будто бы с офиса НАТО
-				Никому не нужен ты без доната
-				Всё что имеешь, бургер из Мака
-				Не можешь в меня поверить не надо
+					Выхожу будто бы с офиса НАТО
+					Никому не нужен ты без доната
+					Всё что имеешь, бургер из Мака
+					Не можешь в меня поверить не надо
+										
+					Разбудил утром всех - я папа
+					Привёл в дом девочку - пиздато
+					Важное дело отложим на потом
+					Деньги работают кровью и потом
 
-				New day, mane, same drip
-				(Elise cook this shit)
-				Маршин on beat
-				Brother на кухне
-				Triple A chief
-				Твоим долбоебам до нас лишь расти
-				Я выбежал с леса
-				Я, бля, сумасшедший
-				В микро Workplace’а
-				Голоса бесов
-				Бейба твоя на коленях - раздета
-				Твой homie балбес - потерялся на местности
-				Хочешь панчлайнов?
-				Закройте ебало
-				Мой новый день начался с жесткого плана
-				Их пацы не могут даже ровно базарить
-				Я видел все ваши трущебы, кварталы
-				Я слышал все ваши пустые базары
-				Всех сук, бля, волнует размеры зарплаты
-				Я строю себя из крепчайших металлов
-				Мы чё-то не взяли? - нам это не надо
+					Выхожу будто бы с офиса НАТО
+					Никому не нужен ты без доната
+					Всё что имеешь, бургер из Мака
+					Не можешь в меня поверить не надо
 
-				Нахуй бывших, крыс, змей, сук
-				Нахуй идут, who leads own игру
-				Маршин big папа, ты понял кто true
-				Не читаю под бит, я его выношу
-				Пацы подкинули тему, ебу
-				Я лишь крепчаю, Twenty-4 too
-				Эти текста не топы iTunes
-				Но в них больше truth чем во всё твоём crew
-				Маршин
+					New day, mane, same drip
+					(Elise cook this shit)
+					Маршин on beat
+					Brother на кухне
+					Triple A chief
+					Твоим долбоебам до нас лишь расти
+					Я выбежал с леса
+					Я, бля, сумасшедший
+					В микро Workplace’а
+					Голоса бесов
+					Бейба твоя на коленях - раздета
+					Твой homie балбес - потерялся на местности
+					Хочешь панчлайнов?
+					Закройте ебало
+					Мой новый день начался с жесткого плана
+					Их пацы не могут даже ровно базарить
+					Я видел все ваши трущебы, кварталы
+					Я слышал все ваши пустые базары
+					Всех сук, бля, волнует размеры зарплаты
+					Я строю себя из крепчайших металлов
+					Мы чё-то не взяли? - нам это не надо
 
-				Курение вместо воды
-				Тебе биток не поможет прожить
-				FLочка вместо еды
-				Хотя мне биточки помогут прожить (е)
-				В ЧС закинул, попал, пропал
-				Данк закинул - пропал - попал
-				Деньги забрал, пропал пропал
-				Дурочки в ахуе как пропал
-				Поработил на работу ваших долбаебов - они обороты
-				Взял на понт работой бля с пол оборота
-				Не знаю завода, мне дорога нота
-				Я как Eddie Brock сую твоей малыхе прям в рот (е-e)
-				Не пройдя порог, проверю блокнот, она была уже (е-е)
-				Новый день, новый план
-				Коробка вещает - ты уебан
-				Снова лень, для тебя тлен
-				Для меня работа лишь only fun
+					Нахуй бывших, крыс, змей, сук
+					Нахуй идут, who leads own игру
+					Маршин big папа, ты понял кто true
+					Не читаю под бит, я его выношу
+					Пацы подкинули тему, ебу
+					Я лишь крепчаю, Twenty-4 too
+					Эти текста не топы iTunes
+					Но в них больше truth чем во всё твоём crew
+					Маршин
 
-				Разбудил утром всех - я папа
-				Привёл в дом девочку - пиздато
-				Важное дело отложим на потом
-				Деньги работают кровью и потом
+					Курение вместо воды
+					Тебе биток не поможет прожить
+					FLочка вместо еды
+					Хотя мне биточки помогут прожить (е)
+					В ЧС закинул, попал, пропал
+					Данк закинул - пропал - попал
+					Деньги забрал, пропал пропал
+					Дурочки в ахуе как пропал
+					Поработил на работу ваших долбаебов - они обороты
+					Взял на понт работой бля с пол оборота
+					Не знаю завода, мне дорога нота
+					Я как Eddie Brock сую твоей малыхе прям в рот (е-e)
+					Не пройдя порог, проверю блокнот, она была уже (е-е)
+					Новый день, новый план
+					Коробка вещает - ты уебан
+					Снова лень, для тебя тлен
+					Для меня работа лишь only fun
 
-				Выхожу будто бы с офиса НАТО
-				Никому не нужен ты без доната
-				Всё что имеешь, бургер из Мака
-				Не можешь в меня поверить не надо
+					Разбудил утром всех - я папа
+					Привёл в дом девочку - пиздато
+					Важное дело отложим на потом
+					Деньги работают кровью и потом
 
-				Разбудил утром всех - я папа
-				Привёл в дом девочку - пиздато
-				Важное дело отложим на потом
-				Деньги работают кровью и потом
+					Выхожу будто бы с офиса НАТО
+					Никому не нужен ты без доната
+					Всё что имеешь, бургер из Мака
+					Не можешь в меня поверить не надо
 
-				Выхожу будто бы с офиса НАТО
-				Никому не нужен ты без доната
-				Всё что имеешь, бургер из Мака
-				Не можешь в меня поверить не надо
-				</span>
+					Разбудил утром всех - я папа
+					Привёл в дом девочку - пиздато
+					Важное дело отложим на потом
+					Деньги работают кровью и потом
 
+					Выхожу будто бы с офиса НАТО
+					Никому не нужен ты без доната
+					Всё что имеешь, бургер из Мака
+					Не можешь в меня поверить не надо
+				</div>
+				<div class="lyrics-card-expand-written-by"><b>Written by:</b>Twenty-4, Капитан Маршин</div>
+				<div id="lyrics-card-close-037" class="lyrics-card-close-exp"><a href="#lyrics">Close lyrics</a></div>
+				</div>
 			</div>
-		</div>
 
-		<div id="lyricsc-2">
-			<div class="cat_content_player">
-				<span class="lyrcis_short">
+			<div class="lyrics-card" id="lyrcis-card-036">
+				<div class="lyrics-card-name">Знаки</div>
+				<div id="lyrics-card-short-036" class="lyrics-card-text">
+					"Год подарит что желаю" - я подумал, войдя в дом
+					Жизнь проходит наяву, но состояние как сон
+				</div>
+				<div id="lyrics-card-opene-036" class="lyrics-card-expand">Show more...</div>
+				<div id="lyrics-card-expand-036">
+				<div class="lyrics-card-expanded-text">
 					"Год подарит что желаю" - я подумал, войдя в дом
 					Жизнь проходит наяву, но состояние как сон
 					Эти рэперы пытались, но у них не удалось
 					Столько полегло за правду чтобы верить в их пиздеж
-				</span>
-				<div class="lyrics_show_btn" id="lyrics_show_btn_2">Read more....</div>
-				<span class="lyrics_full" id="lyrics_full_2">
 					Это, сука, Маршин Prod, твоя сука вновь течёт
 					Я довольно мирный homie, но за мир пойду войной
 					All my Homies на connection, этот путь вновь за мечтой
 					И вся речь здесь не за бабки, хоть и речь на миллион
-
 					Мы читаем до утра, в косяке дымит трава
 					Снег осыпал города, мы меняем полюса
 					Этот Lifeway - чудеса, и моя вера не прошла
 					До сих огонь в глазах и горит внутри - азарт
-
 					Кто-то думал что я сдулся, кто-то умер не проснувшись
 					Я поставил снова всё, потому что знал, что будет
 					Эта сука хочет секса, выкупаю её будни
 					Но я знаю тебе цену, можешь завалиться, шлюха
-
 					Меня тянет свет софит, символы из головы 
 					Если кто-то бережёт, то надеюсь, что свои
 					Крест чернильный на груди, с неба видят все шаги
 					Мы тихонько в дворы, дела укроют фонари
 
-					Let’s Go
+					(Let’s Go)
 
 					Не провидец и не Ной,
 					Ты тут только поц не ной
@@ -340,38 +674,40 @@ Copyright. All rights reserved.
 					Эти знаки на полях говорят о внеземном
 					Нас ведёт куда-то свет
 					В темноте рычит чужой
-				</span>
-
+				</div>
+				<div class="lyrics-card-expand-written-by"><b>Written by:</b> Капитан Маршин</div>
+				<div id="lyrics-card-close-036" class="lyrics-card-close-exp"><a href="#lyrics">Close lyrics</a></div>
+				</div>
 			</div>
-		</div>
 
-		<div id="lyricsc-3">
-			<div class="cat_content_player">
-				<span class="lyrcis_short">
+			<div class="lyrics-card" id="lyrcis-card-035">
+				<div class="lyrics-card-name">City-17</div>
+				<div id="lyrics-card-short-035" class="lyrics-card-text">
+					Чёрные вороны с белыми глазами
+					Видя тебя они хотят стать разными
+				</div>
+				<div id="lyrics-card-opene-035" class="lyrics-card-expand">Show more...</div>
+				<div id="lyrics-card-expand-035">
+				<div class="lyrics-card-expanded-text">
 					Чёрные вороны с белыми глазами
 					Видя тебя они хотят стать разными
 					Всё делят по-ровну, ложаться пазлами
 					Вдруг темнота и глаза уже красные
-				</span>
-				<div class="lyrics_show_btn" id="lyrics_show_btn_3">Read more....</div>
-				<span class="lyrics_full" id="lyrics_full_3">
+
 					Сити-17 сжирает людей
 					Лень
 					Так как нету идей
 					Все их мечты
 					Горстка рублей
 					Им суки решают что в жизни важней
-
 					Свет от Луны упадёт на металл
 					На твоём районе я всё забрал
 					Тебе повезло, ты меня не встречал
 					Твоя сука течёт, я её отъебал
-
 					Биты вылетают как будто бы гильзы
 					3000 слов летят в твои мысли
 					Я тоже с трущеб, но не как твои киски
 					Ты думал ты топ, но твои фишки низкие
-
 					Фонари светят из глаза в глаз
 					За столом в покере скажешь "пас"
 					Моя собака злая - фас
@@ -386,26 +722,29 @@ Copyright. All rights reserved.
 					Видя тебя они хотят стать разными
 					Всё делят по-ровну, ложаться пазлами
 					Вдруг темнота и глаза уже красные
-				</span>
-
+				</div>
+				<div class="lyrics-card-expand-written-by"><b>Written by:</b> Twenty-4</div>
+				<div id="lyrics-card-close-035" class="lyrics-card-close-exp"><a href="#lyrics">Close lyrics</a></div>
+				</div>
 			</div>
-		</div>
 
-		<div id="lyricsc-4">
-			<div class="cat_content_player">
-				<span class="lyrcis_short">
+			<div class="lyrics-card" id="lyrcis-card-034">
+				<div class="lyrics-card-name">Набирай</div>
+				<div id="lyrics-card-short-034" class="lyrics-card-text">
+					Снова в запарах - истинный Маршин
+					Был бы не я, если б оставил всё так же
+				</div>
+				<div id="lyrics-card-opene-034" class="lyrics-card-expand">Show more...</div>
+				<div id="lyrics-card-expand-034">
+				<div class="lyrics-card-expanded-text">
 					Снова в запарах - истинный Маршин
 					Был бы не я, если б оставил всё так же
 					Медленно вверх по ступенькам этажек
 					Раньше по гашу, сейчас же лишь ганджик
-				</span>
-				<div class="lyrics_show_btn" id="lyrics_show_btn_4">Read more....</div>
-				<span class="lyrics_full" id="lyrics_full_4">
 					Пацы на связи, с района всё дальше
 					Это не грустно, это лишь дальше
 					Нам всё легко, хоть так и не скажешь
 					Новый день новый пусть всё как и раньше
-
 					С лыбой лицо
 					Но больше не мажет
 					Жить как в кинцо
@@ -485,22 +824,27 @@ Copyright. All rights reserved.
 					Набирай, набирай, ты мне набирай
 					Набирай, набирай, ты мне набирай
 					Набирай, набирай, ты мне набирай
-				</span>
-
+				</div>
+				<div class="lyrics-card-expand-written-by"><b>Written by:</b>Twenty-4, Капитан Маршин</div>
+				<div id="lyrics-card-close-034" class="lyrics-card-close-exp"><a href="#lyrics">Close lyrics</a></div>
+				</div>
 			</div>
-		</div>
 
-		<div id="lyricsc-5">
-			<div class="cat_content_player">
-				<span class="lyrcis_short">
+			<div class="lyrics-card" id="lyrcis-card-033">
+				<div class="lyrics-card-name">Lifelight</div>
+				<div id="lyrics-card-short-033" class="lyrics-card-text">
+					Я в это не могу поверить
+					Что утром ты мне не открыла двери
+				</div>
+				<div id="lyrics-card-opene-033" class="lyrics-card-expand">Show more...</div>
+				<div id="lyrics-card-expand-033">
+				<div class="lyrics-card-expanded-text">
 					Я в это не могу поверить
 					Что утром ты мне не открыла двери
 
 					Я в это не могу поверить
 					Что утром ты мне не открыла двери
-				</span>
-				<div class="lyrics_show_btn" id="lyrics_show_btn_5">Read more....</div>
-				<span class="lyrics_full" id="lyrics_full_5">
+					
 					Я сегодня не приду домой, ты меня прости мой Мумий Тролль
 					Ты меня радуешь порой, но нет, сегодня я бухой
 					Красный цвет, как быка манит,
@@ -531,12 +875,10 @@ Copyright. All rights reserved.
 					Про любовь читать не значит слёзы лить
 					На репите заиграл вдруг самый грустный бит
 					Мотивы не забыть, но надо с позитивом жить
-
 					Очередная Лера лезет в душу
 					Хочет суши, хочет ужин
 					Им всем чё-то нужно
 					Нахуй таких слушать
-
 					Я научился не любить, ведь с ними всегда душно
 					Девочка на мне мечтает лишь о дружбе (е)
 					Двери сучек на замках, но мы срываем их
@@ -550,44 +892,45 @@ Copyright. All rights reserved.
 
 					Я в это не могу поверить
 					Что утром ты мне не открыла двери
-				</span>
-
+				</div>
+				<div class="lyrics-card-expand-written-by"><b>Written by:</b>Twenty-4, Капитан Маршин</div>
+				<div id="lyrics-card-close-033" class="lyrics-card-close-exp"><a href="#lyrics">Close lyrics</a></div>
+				</div>
 			</div>
-		</div>
 
-		<div id="lyricsc-6">
-			<div class="cat_content_player">
-				<span class="lyrcis_short">
+			<div class="lyrics-card" id="lyrcis-card-032">
+				<div class="lyrics-card-name">Возраст</div>
+				<div id="lyrics-card-short-032" class="lyrics-card-text">
+					Нищета, но бывает хуже, верь мне
+					Не считали мы проёбы, не считали деньги
+				</div>
+				<div id="lyrics-card-opene-032" class="lyrics-card-expand">Show more...</div>
+				<div id="lyrics-card-expand-032">
+				<div class="lyrics-card-expanded-text">
 					Нищета, но бывает хуже, верь мне
 					Не считали мы проёбы, не считали деньги
 					Не считал весь твой пиздёж, не считал ступени
 					Не считали сколько хапок, не считались с теми
-				</span>
-				<div class="lyrics_show_btn" id="lyrics_show_btn_6">Read more....</div>
-				<span class="lyrics_full" id="lyrics_full_6">
 					Сколько стоит время, уделённое на масло с хлебом
 					Путь тернистый и тропа вся под кристальным снегом
 					Сколько Даш на утро провожал с своей постели
 					Сколько дашь нам быть свободным, сколько дашь за бремя?
-
 					Снова вокруг буря, в уши музыка чтоб стало лучше
 					Мы читали эти строки, чтобы лечить душу
 					Мы курили эти блоки, чтобы легче думать
 					Солнце слепит по утру и чувства в дыме плюхи
-
 					Растворились вовсе 
 					Кто-то хочет больше
 					кто-то просто что-то хочет
 					Кто-то уже кончил
 					Мы мечтали обо всём и знаешь, стали ближе
 					К тем мечтам, которые нас погубили
-
 					Мысли все в тетрадку, принесёт копейку точно завтра
 					Смайлики на лицах поменялись на простую маску
 					Дом был не трэпхата, но в нем так же делать нехуй, правда
 					С возрастом сложнее стало думать не о баксах
 
-					Twenty Four
+					(Twenty Four)
 
 					Пиздец девятнадцать
 					Каждый день кайфую, это всё имитация
@@ -605,51 +948,12 @@ Copyright. All rights reserved.
 					Покушали вкусно
 					Пожарили мясо на гриле
 					Пожарили мясо на гриле
-				</span>
-
+				</div>
+				<div class="lyrics-card-expand-written-by"><b>Written by:</b> Капитан Маршин, Twenty-4</div>
+				<div id="lyrics-card-close-032" class="lyrics-card-close-exp"><a href="#lyrics">Close lyrics</a></div>
+				</div>
 			</div>
-		</div>
 
-		<script type="text/javascript">
-
-		var buttons = document.querySelectorAll('[id^="lyrics-"]');
-			for (var i=0; i < buttons.length; i += 1){
-				  buttons[i].addEventListener("click", Page);
-			}
-
-		function HideAll(){
-			var pages = document.querySelectorAll('[id^="lyrics"]');
-			for (var i=0; i < pages.length; i += 1){
-			  pages[i].classList.remove('lpactive');
-			}
-
-			var lpages = document.querySelectorAll('[id^="lyricsc"]');
-			for (var i=0; i < lpages.length; i += 1){
-			  lpages[i].style.display = "none";
-			}
-		}	
-
-		function Page(){
-			var pressed = this.id;
-			var pagenum = pressed.substring(7);
-			HideAll();
-			document.getElementById(`lyrics-${pagenum}`).classList.toggle('lpactive');
-			document.getElementById(`lyricsc-${pagenum}`).style.display = "block";
-		}
-
-		var btnfull = document.querySelectorAll('[id^="lyrics_show_btn_"]');
-			for (var i=0; i < btnfull.length; i += 1){
-				  btnfull[i].addEventListener("click", ShowLyrics);
-			}
-
-		function ShowLyrics() {
-			var pressed = this.id;
-			var lyricsnum = pressed.substring(16);
-			// console.log(lyricsnum);
-			document.getElementById(`lyrics_full_${lyricsnum}`).style.display = "block";
-			document.getElementById(pressed).style.display = "none"
-		}
-				</script>
 
 		<div class="cat_line"></div>
 	</div>
@@ -717,7 +1021,7 @@ Copyright. All rights reserved.
 					<img class="item_cover" src="content/shop/hoodie_01_s.jpg">
 				</a>
 				<div class="item_name">Black Hoodie</div>
-				<div class="item_year">$18</div>
+				<div class="item_year">Out of stock</div>
 			</div>
 
 			<div class="cat_item">
@@ -725,7 +1029,7 @@ Copyright. All rights reserved.
 					<img class="item_cover" src="content/shop/tshirt_01_s.jpg">
 				</a>
 				<div class="item_name">Black T-Shirt</div>
-				<div class="item_year">$10</div>
+				<div class="item_year">Out of stock</div>
 			</div>
 
 			<div class="cat_item">
@@ -733,7 +1037,7 @@ Copyright. All rights reserved.
 					<img class="item_cover" src="content/shop/cap_01_s.jpg">
 				</a>
 				<div class="item_name">Black Cap</div>
-				<div class="item_year">$8</div>
+				<div class="item_year">Out of stock</div>
 			</div>
 
 			<div class="cat_item">
@@ -741,7 +1045,7 @@ Copyright. All rights reserved.
 					<img class="item_cover" src="content/shop/facemask_01_s.jpg">
 				</a>
 				<div class="item_name">Black Face Mask</div>
-				<div class="item_year">$5</div>
+				<div class="item_year">Out of stock</div>
 			</div>
 			
 		</div>
@@ -750,21 +1054,118 @@ Copyright. All rights reserved.
 
 
 
+	<!-- 
+	//
+	// Footer
+	//
+	 -->
+
 	<div class="footer">
 		Маршин Entertainment<br>
-		2014-2021 Copyright. All rights reserved.
+		2014-2022 Copyright. All rights reserved.
 
-		<div class="links"> <!-- Social Links -->
-			<a class="space-2" href="https://music.apple.com/artist/captain-marshin/1486687033">Apple Music</a>
-			<a class="space-2" href="https://open.spotify.com/artist/7jeV7Ofu7JdWCPqEohb8Uo">Spotify</a>
-<!-- 			<a class="space-2" href="https://vk.com/artist/kapitanmarshin">VK Music</a> -->
-<!-- 			<a class="space-2" href="https://vk.cc/avPZHv">BOOM</a> -->
-<!-- 			<a class="space-2" href="https://music.yandex.ru/artist/9716771">Yandex.Music</a> -->
-			<a class="space-2" href="https://www.youtube.com/channel/UCKSLYkGgjVIrLP-sPSSnygQ/featured">YouTube</a>
-			<a class="space-2" href="https://t.me/captainmarshin">Telegram</a>
-			<a class="space-2" href="https://www.instagram.com/captainmarshin/">Instagram</a>
-			<a class="space-2" href="https://vk.com/captainmarshin">VK</a>
-			<a class="space-2" href="https://twitter.com/captainmarshin">Twitter</a>
+		<div class="links">
+		<a class="space-2" href="https://music.apple.com/artist/captain-marshin/1486687033">Apple Music</a>
+		<a class="space-2" href="https://open.spotify.com/artist/7jeV7Ofu7JdWCPqEohb8Uo">Spotify</a>
+		<a class="space-2" href="https://www.youtube.com/channel/UCKSLYkGgjVIrLP-sPSSnygQ/featured">YouTube</a>
+		<a class="space-2" href="https://t.me/captainmarshin">Telegram</a>
+		<a class="space-2" href="https://www.instagram.com/captainmarshin/">Instagram</a>
+		<a class="space-2" href="https://twitter.com/captainmarshin">Twitter</a>
+		</div>
+
+		<!-- 
+		//
+		// Badges (hidden)
+		//
+		 -->
+
+		<!-- <div class="badges">
+			<a href="https://music.apple.com/us/artist/captain-marshin/1486687033?itsct=music_box_badge&amp;itscg=30200&amp;app=music&amp;ls=1"><img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-music/badge/en-us?size=250x83&h=cdbcefe9e23b0310ab61b31e72e2dcdb" alt="Listen on Apple Music" style=" width: 120px;"></a>
+
+			<a href="#"><img src="images/addtoapplewallet.png" alt="Add to Apple Wallet" style="width: 120px; height: auto;"></a>
+
+			<a href="#"><img src="images/paec.png" alt="Add to Apple Wallet" style="width: 55px; height: auto;"></a>
+		</div> -->
+
+		<!-- 
+		//
+		// Help Ukraine badge
+		//
+		 -->
+		
+		<br>
+		<a class="helpukraine" href="https://war.ukraine.ua/" target="_blank">🇺🇦❤️</a>
+	</div>
+
+
+	<!-- 
+	//
+	// Mini-player
+	// Don't forget to add new release here
+	//
+	 -->
+
+
+	<div id="mini-player-timeline" class="mini-player-timeline">
+		<progress id="mini-player-timeline-bar" value="0" max="100">
+		</progress>
+	</div>
+
+	<div id="mini-player" class="mini-player">
+
+		<!-- 
+		// This need to fast load page and fetch right first track on release page
+		 -->
+		<a style="display: none;" id="tracklink" href="https://dl.dropbox.com/s/r1qhsyay1gdl9e8/New%20Day.mp3"></a>
+
+		<audio id="mini-player-new-release" type="audio/mp3">
+    		<source id="mini-player-source" src="" type="audio/mp3">
+		</audio>
+
+		<div class="mini-player-row" id="mini-player-open">
+			<div class="mini-player-cover">
+				<img id="mini-player-cover" src="content/eps/302.jpg">
+			</div>
+			<div class="mini-player-meta">
+				<div class="mini-player-name"><span id="mini-player-trackname">New Day </span> <span class="material-icons">explicit</span></div>
+				<div class="mini-player-note"><span id="progress">EP</span></div>
+			</div>
+			<div class="mini-player-controls">
+				<div class="mini-player-controls-ctrl">
+					<div id="mini-player-like-btn"><span title="Share with friends" class="material-symbols-outlined">favorite</span></div>
+					<div id="mini-player-rewind-btn"><span title="Play song" class="material-symbols-outlined">fast_rewind</span></div>
+				</div>
+				<div class="mini-player-controls-ctrl" id="mini-player-ctrl-btns">
+					<div id="mini-player-start-btn"><span title="Play song" class="material-icons">play_arrow</span></div>
+					<div id="mini-player-loading"><span title="Song is loading" class="material-icons">autorenew</span></div>
+					<div id="mini-player-play-btn"><span title="Play song" class="material-icons">play_arrow</span></div>
+					<div id="mini-player-pause-btn"><span title="Stop playing" class="material-icons">pause</span></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- 
+	//
+	// Tabs menu
+	//
+	 -->
+
+
+	<div class="menu">
+		<div class="menu-item-1" id="open-music-tab">
+			<div class="music-btn active-music">
+				<div class="menu-item-icon"><span class="material-icons">album</span></div>
+				<div class="menu-item-name">Music</div>
+			</div>
+		</div>
+		<div class="menu-item-2">
+			<div class="shop-btn" id="open-shop-tab">
+				<div class="menu-item-icon"><span class="material-icons">local_mall</span></div>
+				<div class="menu-item-name">Shop</div>
+			</div>
 		</div>
 	</div>
 

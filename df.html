@@ -40,18 +40,352 @@ Copyright. All rights reserved.
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<!-- Google Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<!-- Plugins: -->
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<!-- Flip plugin for donation cards -->
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+	<!-- QR Code generator plugin -->
+	<script src="js/qrcode.min.js"></script>
+
+	<!-- Playercard -->
+	<script src="js/playercard.js"></script>
+
+	<!-- Like/share menu -->
+	<script src="js/share.js"></script>
+
+	<!-- Pages -->
+	<script src="js/pages.js"></script>
+
+	<!-- Tabs -->
+	<script src="js/tabs.js"></script>
+
+	<!-- Lyrics -->
+	<script src="js/lyrics.js"></script>
+
 </head>
 <body>
 
-	<a href="http://captainmarshin.com" class="title">
-		<div class="title">Капитан Маршин &nbsp;/&nbsp; Captain Marshin</div>
-	</a>
+	<!-- 
+	//
+	// Header
+	//
+	-->
+
+	<div class="header" id="header">
+
+		<div class="logo" id="close-all-windows">
+			<img src="images/cap_logo.png">
+		</div>
+
+		<div class="button">
+			<button id="open-page-001" class="donate"><span class="material-icons">monetization_on</span> Donate</button>
+			<button id="close-page" class="close-btn"><span class="material-icons">cancel</span> Close</button>
+		</div>
+
+	</div>
+
+	<!-- 
+	//
+	// UI: Notification
+	// Now used only for donate page, but can be used somewhere else in future
+	//
+	 -->
+
+	<div class="notification">
+		Copied!
+	</div>
+
+
+	<!-- 
+	//
+	// Page: Donate
+	// All methods how people can donate.
+	//
+	 -->
+
+	<div id="page-001" class="pages">
+
+		<div class="window-title">Donate</div>
+
+		<div class="all-services">
+
+		<div class="donate-block-1" id="donate-1">
+		<div class="front">
+			<div class="donate-block">
+				<div class="donate-service-logo ton-logo-fix">
+					<img src="images/ton.png">
+				</div>
+				<div class="donate-service-pay-options">
+					<div class="donate-service-pay-options-info">TON</div>
+					<div class="donate-service-pay-options-info">One-time</div>
+					<div class="donate-service-pay-options-info">Any amount</div>
+				</div>
+				<div class="donate-service-text">
+					Donate in Toncoin crypto.
+				</div>
+				<div class="donate-service-buttons">
+					<div class="donate-button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						    <path d="M16 13L0 7L16 1L32 7L16 13Z" fill="#45AEF5"/>
+						    <path opacity="0.6" d="M16 13L32 7L16 31V13Z" fill="#45AEF5"/>
+						    <path opacity="0.8" d="M16 13L0 7L16 31V13Z" fill="#45AEF5"/>
+						</svg>
+	 					Pay with Tonkeeper</div>
+				</div>
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Toncoin wallet
+				</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="donate-block">
+				<div class="qrcode" id="qrcode-ton"></div>
+				<div style="font-size: 11px; text-align: center; margin-top: 5px; color: lightgrey;">Scan QR with TON wallet</div>
+
+				<script type="text/javascript">
+					new QRCode("qrcode-ton", { text: "EQAgebhhR0er85-vn1S2sAMcNqYiFfZfV6uyMs7EeBkeAGV1", width: 100, height: 100 });
+				</script>
+
+				<div style="font-weight: bold; margin-top: 8px; text-align: center">OR</div>
+
+				<div class="donate-service-buttons">
+				<a href="ton://transfer/EQAgebhhR0er85-vn1S2sAMcNqYiFfZfV6uyMs7EeBkeAGV1" target="_blank">
+					<div class="donate-button">
+	 					<span class="material-icons">north_east</span> Open direct wallet link
+	 				</div>
+	 				</a>
+	 			</div>
+
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+					You need to install wallet what support ton:// link
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://t.me/CryptoBot?start=IVRqAb00BDL6" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/cryptobot.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">Crypto</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Any amount</div>
+			</div>
+			<div class="donate-service-text">
+				Donate in crypto and get special gift.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<img src="images/cryptobot_icn.png">
+ 					Open CryptoBot
+ 				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Telegram app
+				</div>
+			</a>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://boosty.to/captainmarshin" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/boosty.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">50₽/month</div>
+				<div class="donate-service-pay-options-info">Subscribtion</div>
+			</div>
+			<div class="donate-service-text">
+				Exclusive content and working process.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to boosty.to
+				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card
+				</div>
+			</a>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://qiwi.com/n/CAPTAINMARSHIN" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/qiwi.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">RUB</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Any amount</div>
+			</div>
+			<div class="donate-service-text">
+				Support in RUB currency.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to qiwi.com
+				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card or Qiwi wallet
+				</div>
+			</a>
+		</div>
+
+
+		<div class="donate-block-1" id="donate-2">
+		<div class="front">
+			<div class="donate-block">
+				<div class="donate-service-logo">
+					<img src="images/binance.png">
+				</div>
+				<div class="donate-service-pay-options">
+					<div class="donate-service-pay-options-info">Crypto</div>
+					<div class="donate-service-pay-options-info">One-time</div>
+					<div class="donate-service-pay-options-info">Any amount</div>
+				</div>
+				<div class="donate-service-text">
+					Support in any crypto you want.
+				</div>
+				<div class="donate-service-buttons">
+					<div class="donate-button">
+						<img src="images/binance.ico">
+	 					Pay with Binance Pay</div>
+				</div>
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Binance account
+				</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="donate-block">
+				<div class="qrcode" id="qrcode-binance"></div>
+				<div style="font-size: 11px; text-align: center; margin-top: 5px; color: lightgrey;">Scan QR in Binance app.</div>
+
+				<script type="text/javascript">
+					new QRCode("qrcode-binance", { text: "https://app.binance.com/qr/dplk5cb1330e11ec4288bd68297401d17fb5", width: 100, height: 100 });
+				</script>
+
+				<div style="font-weight: bold; margin-top: 8px; text-align: center">OR</div>
+
+				<div class="donate-service-buttons">
+					<div id="copy-payid" class="donate-button">
+	 					<span class="material-icons">content_copy</span> 205710163
+	 				</div>
+	 			</div>
+
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+					Input this Pay ID in Binance app.
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://buymeacoffee.com/captainmarshin" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/buymeacoffee.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">USD</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Fixed amount</div>
+			</div>
+			<div class="donate-service-text">
+				Support in cups of coffee.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to buymecoffee.com
+				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card
+				</div>
+			</a>
+		</div>
+
+
+
+		</div>
+
+		
+	</div>
+
+	<!-- 
+	//
+	// Function for rotate cards on donate page
+	// [!] On Android very strange animation :/ Need to check it.
+	//
+	 -->
+
+	<script type="text/javascript">
+		$("#donate-1").flip();
+		$("#donate-2").flip();
+
+		$("#copy-payid").click( event => {
+			navigator.clipboard.writeText("205710163");
+			$(".notification").show("slideUp", function() {
+				setTimeout(function(){
+					$(".notification").hide("slideDown")
+				}, 3000);
+			});
+		})
+	</script>
+
+	<!-- 
+	//
+	// Fix header fixed position
+	//
+	 -->
+
+	<div class="header-fix"></div>
+
 
 	<div class="playnow">
-		<div class="cat_title">Dynamite Freestyle</div>
+		<div class="cat_title">Tracklist</div>
 		<div class="cat_content_player">
 
-			<iframe src="https://open.spotify.com/embed/album/5vkwCny3KvspsyXjOUQuld" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+			<div class="player">
+
+				<div class="player-info">
+					<div class="player-cover">
+						<img src="content/singles/216.jpg">
+					</div>
+					<div class="player-release-info">
+						<div class="player-release-name">Dynamite Freestyle</div>
+						<div class="player-release-primary">Капитан Маршин</div>
+						<!-- <div class="player-release-feat"></div> -->
+						<div class="player-release-type">SINGLE ∙ RAP</div>
+					</div>
+				</div>
+
+				<div class="player-tracklist">
+
+					<div class="player-track" id="release_id_019">
+						<div class="player-track-number">1</div>
+						<div class="player-track-name">Dynamite Freestyle <span class="material-icons">explicit</span></div>
+						<div class="player-track-download-btn"><span id="download_id_019" class="material-icons" title="Download song">download</span></div>
+						<div class="player-track-play-btn"><span class="material-icons" title="Play song">play_arrow</span></div>
+					</div>
+				
+				</div>
+
+				<div class="player-release-year">2021 ℗ Капитан Маршин </div>
+
+			</div>
 			
 		</div>
 		<div class="cat_line"></div>
@@ -84,6 +418,18 @@ Copyright. All rights reserved.
 			<div class="cat_item_fix"></div>
 
 			<div class="cat_item">
+				<a href="https://dl.dropbox.com/s/5nkep98acf4y80d/Dynamite%20Freestyle.mp3" download title="Download">
+					<img class="more_item_cover" src="images/download.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="#" target="_blank" title="Telegram">
+					<img class="more_item_cover" src="images/telegram.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
 				<a href="https://music.apple.com/ru/album/dynamite-freestyle-single/1528373904" target="_blank" title="Apple Music">
 					<img class="more_item_cover" src="images/applemusic.jpg">
 				</a>
@@ -96,26 +442,8 @@ Copyright. All rights reserved.
 			</div>
 
 			<div class="cat_item">
-				<a href="https://vk.com/music/album/-2000478169_8478169_138f9c6e679c2aa5d8" target="_blank" title="VK Music">
-					<img class="more_item_cover" src="images/vkmusic.jpg">
-				</a>
-			</div>
-
-			<div class="cat_item">
-				<a href="https://vk.cc/ayBkhN" target="_blank" title="BOOM">
-					<img class="more_item_cover" src="images/boom.jpg">
-				</a>
-			</div>
-
-			<div class="cat_item">
 				<a href="https://youtu.be/sFfD4avD08I" target="_blank" title="YouTube">
 					<img class="more_item_cover" src="images/youtube.jpg">
-				</a>
-			</div>
-
-			<div class="cat_item">
-				<a href="https://music.yandex.ru/album/15624249/track/83145827" target="_blank" title="Yandex Music">
-					<img class="more_item_cover" src="images/yandexmusic.jpg">
 				</a>
 			</div>
 
@@ -133,93 +461,93 @@ Copyright. All rights reserved.
 	<a name="lyrics"></a>
 	<div class="lyrics">
 		<div class="cat_title">Lyrics</div>
-		<div class="cat_content_player">
-			<span class="lyrcis_short">А че за тема? 
-			Бро, я в деле, берусь за дело (WORK)
-			Мой shit как динамит 
-			От взрыва их задело (BOOM)
-			</span>
-			<div class="lyrics_show_btn" id="lyrics_show_btn" onclick="ShowLyrics();">Read more....</div>
-			<span class="lyrics_full" id="lyrics_full">Мне поебать ты парень или дева
-			Если ты мыслишь не как все значит мыслим в верном направлении (RIGHT)
+		<div class="cat_content">
 
-			Я врываюсь в твои уши
-			Это цепляет душу
-			Мою банду сушит от косово
-			Им твоё дерьмо не нужно (NAH)
+			<div class="cat_item_fix"></div>
+			
+			<div class="lyrics-card" id="lyrcis-card-019">
+				<div class="lyrics-card-name">Dynamite Freestyle</div>
+				<div id="lyrics-card-short-019" class="lyrics-card-text">
+					А че за тема? 
+					Бро, я в деле, берусь за дело (Work)
+					Мой shit как динамит 
+				</div>
+				<div id="lyrics-card-opene-019" class="lyrics-card-expand">Show more...</div>
+				<div id="lyrics-card-expand-019">
+				<div class="lyrics-card-expanded-text">
+					А че за тема? 
+					Бро, я в деле, берусь за дело (Work)
+					Мой shit как динамит 
+					От взрыва их задело (Boom)
+					Мне поебать ты парень или дева
+					Если ты мыслишь не как все, значит мыслим в верном направлении (Right)
+					Я врываюсь в твои уши
+					Это цепляет душу
+					Мою банду сушит от косово
+					Им твоё дерьмо не нужно (Nah)
+					Представляю Маршин Entertainment
+					Мои люди
+					Мы постепенно лишь на верх
+					Пока другие в лужу (Smash)
 
-			Представляю Маршин Entertainment
-			Мои люди
-			Мы постепенно лишь на верх
-			Пока другие в лужу (SMASH)
+					Пока каждый второй ноет на жизнь
+					MC взрывает shit
+					Macintosh хуярит скрипт 
+					А Санчез на район летит
+					Я на iPhone могу взорвать
+					Как не взорвет твоё CD
+					Парниша, бля, не ссы
+					Это музло в моей крови (Damn)
+					Пока каждый мечтает сладко жить - Design by sasha_bystr
+					Всем недорэперам кусок земли - Product by Алекс Чи
+					Мы тут не просто так и просто так читать рэпак
+					Ведь наша жизнь как Emma Watson - ее все хотят
 
-			Пока каждый второй ноет на жизнь
-			MC взрывает shit
-			Macintosh хуярит скрипт 
-			А Санчез на район летит
+					Выстрел с РПГ
+					И шума навели в каждом селе
+					Мой город СПб
+					Но под захватом и НВ
+					Наше время скоротечно
+					А у хейтеров бля течка
+					От того как мы ебашим
+					От того, как Маршин стелит
+					"Капитан, у нас проблемы"
+					Но не вижу я проблем
+					"Bullet зарядил обрез"
+					Цифры движутся наверх
+					Заряжаю словно Lightning
+					Как Арнольд - сношу ебальник
+					Каждый Homies - дикий стайл
+					Каждый близкий на угаре (Эй)
 
-			Я на iPhone могу взорвать
-			Как не взорвет твоё CD
-			Парниша, бля, не ссы
-			Это музло в моей крови!
+					Медленно к победе
+					Моя жизнь как фильм Скорсезе
+					Я просек что надо делать
+					Словно Ape под звездным небом
+					Этот стиль срывает двери
+					Я не тот кем был я прежде
+					Моя жизнь бля наслаждение
+					Нахуй ваше одобрение
 
-			Пока каждый мечтает сладко жить - Design by sasha_bystr
-			Всем недорэперам кусок земли - Product by Алекс Чи
+					Слышишь стучит my heart внутри 
+					Твой head качается под бит
+					Наш стиль взрывает - динамит
+					Oy Shit, Oy Shit, Oy Shit, Oy Shit (Ah, shit)
 
-			Мы тут не просто так и просто так читать рэпак
-			Ведь наша жизнь как Emma Watson - ее все хотят
+					Слышишь стучит my heart внутри 
+					Твой head качается под бит
+					Наш стиль взрывает - динамит
+					Oy Shit, Oy Shit, Oy Shit, Oy Shit (Ah, shit)
 
-			Выстрел с РПГ
-			И шума навели в каждом селе
-			Мой город СПб
-			Но под захватом и НВ
-
-			Наше время скоротечно
-			А у хейтеров бля течка
-			От того как мы ебашим
-			От того, как Маршин стелит
-
-			Капитан, у нас проблемы
-			Но не вижу я проблем
-			Bullet зарядил обрез 
-			Цифры движутся наверх
-			Заряжаю словно Lightning
-			Как Арнольд - сношу ебальник
-			Каждый Homies - дикий стайл
-			Каждый близкий на угаре (Эй)
-
-			Медленно к победе
-			Моя жизнь как фильм Скорсезе
-			Я просек что надо делать
-			Словно Ape под звездным небом
-
-			Этот стиль срывает двери
-			Я не тот кем был я прежде
-			Моя жизнь бля наслаждение
-			Нахуй ваше одобрение
-
-			Слышишь стучит my heart внутри 
-			Твой head качается под бит
-			Наш стиль взрывает - динамит
-			Oy Shit, Oy Shit, Oy Shit, Oy Shit (Ah, shit)
-
-			Слышишь стучит my heart внутри 
-			Твой head качается под бит
-			Наш стиль взрывает - динамит
-			Oy Shit, Oy Shit, Oy Shit, Oy Shit (Ah, shit)
-
-			Слышишь стучит my heart внутри 
-			Твой head качается под бит
-			Наш стиль взрывает - динамит
-			Oy Shit, Oy Shit, Oy Shit, Oy Shit
-			</span>
-
-			<script type="text/javascript">
-				function ShowLyrics() {
-					document.getElementById('lyrics_show_btn').style.display = "none";
-					document.getElementById('lyrics_full').style.display = "block";
-				}
-			</script>
+					Слышишь стучит my heart внутри 
+					Твой head качается под бит
+					Наш стиль взрывает - динамит
+					Oy Shit, Oy Shit, Oy Shit, Oy Shit
+				</div>
+				<div class="lyrics-card-expand-written-by"><b>Written by:</b> Капитан Маршин</div>
+				<div id="lyrics-card-close-019" class="lyrics-card-close-exp"><a href="#lyrics">Close lyrics</a></div>
+				</div>
+			</div>
 
 		</div>
 		<div class="cat_line"></div>
@@ -245,21 +573,118 @@ Copyright. All rights reserved.
 	</div>
 
 
+	<!-- 
+	//
+	// Footer
+	//
+	 -->
+
 	<div class="footer">
 		Маршин Entertainment<br>
-		2014-2021 Copyright. All rights reserved.
+		2014-2022 Copyright. All rights reserved.
 
-		<div class="links"> <!-- Social Links -->
-			<a class="space-2" href="https://music.apple.com/artist/captain-marshin/1486687033">Apple Music</a>
-			<a class="space-2" href="https://open.spotify.com/artist/7jeV7Ofu7JdWCPqEohb8Uo">Spotify</a>
-			<a class="space-2" href="https://vk.com/artist/kapitanmarshin">VK Music</a>
-			<a class="space-2" href="https://vk.cc/avPZHv">BOOM</a>
-			<a class="space-2" href="https://music.yandex.ru/artist/9716771">Yandex.Music</a>
-			<a class="space-2" href="https://www.youtube.com/channel/UCKSLYkGgjVIrLP-sPSSnygQ/featured">YouTube</a>
-			<a class="space-2" href="https://t.me/captainmarshin">Telegram</a>
-			<a class="space-2" href="https://www.instagram.com/captainmarshin/">Instagram</a>
-			<a class="space-2" href="https://vk.com/captainmarshin">VK</a>
-			<a class="space-2" href="https://twitter.com/captainmarshin">Twitter</a>
+		<div class="links">
+		<a class="space-2" href="https://music.apple.com/artist/captain-marshin/1486687033">Apple Music</a>
+		<a class="space-2" href="https://open.spotify.com/artist/7jeV7Ofu7JdWCPqEohb8Uo">Spotify</a>
+		<a class="space-2" href="https://www.youtube.com/channel/UCKSLYkGgjVIrLP-sPSSnygQ/featured">YouTube</a>
+		<a class="space-2" href="https://t.me/captainmarshin">Telegram</a>
+		<a class="space-2" href="https://www.instagram.com/captainmarshin/">Instagram</a>
+		<a class="space-2" href="https://twitter.com/captainmarshin">Twitter</a>
+		</div>
+
+		<!-- 
+		//
+		// Badges (hidden)
+		//
+		 -->
+
+		<!-- <div class="badges">
+			<a href="https://music.apple.com/us/artist/captain-marshin/1486687033?itsct=music_box_badge&amp;itscg=30200&amp;app=music&amp;ls=1"><img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-music/badge/en-us?size=250x83&h=cdbcefe9e23b0310ab61b31e72e2dcdb" alt="Listen on Apple Music" style=" width: 120px;"></a>
+
+			<a href="#"><img src="images/addtoapplewallet.png" alt="Add to Apple Wallet" style="width: 120px; height: auto;"></a>
+
+			<a href="#"><img src="images/paec.png" alt="Add to Apple Wallet" style="width: 55px; height: auto;"></a>
+		</div> -->
+
+		<!-- 
+		//
+		// Help Ukraine badge
+		//
+		 -->
+		
+		<br>
+		<a class="helpukraine" href="https://war.ukraine.ua/" target="_blank">🇺🇦❤️</a>
+	</div>
+
+
+	<!-- 
+	//
+	// Mini-player
+	// Don't forget to add new release here
+	//
+	 -->
+
+
+	<div id="mini-player-timeline" class="mini-player-timeline">
+		<progress id="mini-player-timeline-bar" value="0" max="100">
+		</progress>
+	</div>
+
+	<div id="mini-player" class="mini-player">
+
+		<!-- 
+		// This need to fast load page and fetch right first track on release page
+		 -->
+		<a style="display: none;" id="tracklink" href="https://dl.dropbox.com/s/5nkep98acf4y80d/Dynamite%20Freestyle.mp3"></a>
+
+		<audio id="mini-player-new-release" type="audio/mp3">
+    		<source id="mini-player-source" src="" type="audio/mp3">
+		</audio>
+
+		<div class="mini-player-row" id="mini-player-open">
+			<div class="mini-player-cover">
+				<img id="mini-player-cover" src="content/singles/216.jpg">
+			</div>
+			<div class="mini-player-meta">
+				<div class="mini-player-name"><span id="mini-player-trackname">Dynamite Freestyle </span> <span class="material-icons">explicit</span></div>
+				<div class="mini-player-note"><span id="progress">SINGLE</span></div>
+			</div>
+			<div class="mini-player-controls">
+				<div class="mini-player-controls-ctrl">
+					<div id="mini-player-like-btn"><span title="Share with friends" class="material-symbols-outlined">favorite</span></div>
+					<div id="mini-player-rewind-btn"><span title="Play song" class="material-symbols-outlined">fast_rewind</span></div>
+				</div>
+				<div class="mini-player-controls-ctrl" id="mini-player-ctrl-btns">
+					<div id="mini-player-start-btn"><span title="Play song" class="material-icons">play_arrow</span></div>
+					<div id="mini-player-loading"><span title="Song is loading" class="material-icons">autorenew</span></div>
+					<div id="mini-player-play-btn"><span title="Play song" class="material-icons">play_arrow</span></div>
+					<div id="mini-player-pause-btn"><span title="Stop playing" class="material-icons">pause</span></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- 
+	//
+	// Tabs menu
+	//
+	 -->
+
+
+	<div class="menu">
+		<div class="menu-item-1" id="open-music-tab">
+			<div class="music-btn active-music">
+				<div class="menu-item-icon"><span class="material-icons">album</span></div>
+				<div class="menu-item-name">Music</div>
+			</div>
+		</div>
+		<div class="menu-item-2">
+			<div class="shop-btn" id="open-shop-tab">
+				<div class="menu-item-icon"><span class="material-icons">local_mall</span></div>
+				<div class="menu-item-name">Shop</div>
+			</div>
 		</div>
 	</div>
 
