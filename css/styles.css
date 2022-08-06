@@ -1747,6 +1747,11 @@ Copyright. All rights reserved.
 /*		z-index: -1;*/
 	}
 
+	.lyrics-card a{
+		text-decoration: none;
+		color: inherit;
+	}
+
 	.lyrics-card-expanded{
 		width: 90%;
 		height: auto;
