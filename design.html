@@ -1,0 +1,490 @@
+<!-- 
+
+Captain Marshin Website.
+captainmarshin.com
+Desinged by Маршин Entertainment.
+Copyright. All rights reserved.
+2022
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Капитан Маршин / Captain Marshin</title>
+
+	<!-- iOS Launch Screens -->
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="favicon/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+
+
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  	<meta name="theme-color" content="#111111">
+  	<!-- <meta name="theme-color" content="#F1882E"> -->
+	<meta name="viewport" content="viewport-fit=cover width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="title" content="Капитан Маршин / Captain Marshin">
+	<meta name="description" content="Listen Капитан Маршин on Apple Music, Spotify, Telegram. Watch on YouTube. Read Song Lyrics. Follow Instagram, Twitter, Telegram, Facebook">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://captainmarshin.com">
+	<meta property="og:title" content="Капитан Маршин / Captain Marshin">
+	<meta property="og:description" content="Listen Капитан Маршин on Apple Music, Spotify, Telegram. Watch on YouTube. Read Song Lyrics. Follow Instagram, Twitter, Telegram, Facebook">
+	<meta property="og:image" content="favicon/preview012.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="http://captainmarshin.com/">
+	<meta property="twitter:title" content="Капитан Маршин / Captain Marshin">
+	<meta property="twitter:description" content="Listen Капитан Маршин on Apple Music, Spotify, Telegram. Watch on YouTube. Read Song Lyrics. Follow Instagram, Twitter, Telegram, Facebook">
+	<meta property="twitter:image" content="https://captainmarshin.com/favicon/preview012.jpg">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<!-- Google Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<!-- Plugins: -->
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<!-- Flip plugin for donation cards -->
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+	<!-- QR Code generator plugin -->
+	<script src="js/qrcode.min.js"></script>
+
+	<!-- MusicPlayer -->
+	<script src="js/player.js"></script>
+
+	<!-- Like/share menu -->
+	<script src="js/share.js"></script>
+
+	<!-- Pages -->
+	<script src="js/pages.js"></script>
+
+	<!-- Tabs -->
+	<script src="js/tabs.js"></script>
+
+</head>
+<body>
+
+	<!-- 
+	//
+	// Header
+	//
+	-->
+
+	<div class="header" id="header">
+
+		<div class="logo logo-design" id="close-all-windows">
+			<img src="images/design_logo.png">
+			<!-- <img src="images/design_logo_4.png"> -->
+		</div>
+
+		<div class="button">
+			<button id="open-page-001" class="contact"><span class="material-icons">comment</span> Contact</button>
+			<button id="close-page" class="close-btn"><span class="material-icons">cancel</span> Close</button>
+		</div>
+
+	</div>
+
+
+
+	<!-- 
+	//
+	// Fix header fixed position
+	//
+	 -->
+
+	<div class="header-fix"></div>
+
+
+
+	<div class="albums">
+		<div class="cat_title">Logos</div>
+
+		<div class="cat-content">
+			
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/payc_logo_design.png">
+				</div>
+				<div class="work-name">PayC Logo</div>
+				<div class="work-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/music_logo.png">
+				</div>
+				<div class="work-name">Music Logo</div>
+				<div class="work-descr">Simple logo designed in Resident Evil 1 font style.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/kusamahub_logo1_design.png">
+				</div>
+				<div class="work-name">KusamaHub Logo</div>
+				<div class="work-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/captainmarshin_logo_design_2.png">
+				</div>
+				<div class="work-name">Капитан Маршин Logo</div>
+				<div class="work-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/marshinshop_logo_design_2.png">
+				</div>
+				<div class="work-name">Маршин Shop Logo</div>
+				<div class="work-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/marshindesign_logo_design_2.png">
+				</div>
+				<div class="work-name">Маршин Design Logo</div>
+				<div class="work-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<!-- <div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/kusamahub_logo2_design.png">
+				</div>
+				<div class="work-name">KusamaHub Logo</div>
+				<div class="work-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div> -->
+
+			<!-- <div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/crptwme_logo_design.png">
+				</div>
+				<div class="work-name">crptw Logo</div>
+				<div class="work-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div> -->
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/elisbeatslogofireimg.png">
+				</div>
+				<div class="work-name">Elis Beats Logo</div>
+				<div class="work-descr">Simple logo designed in Resident Evil 1 font style.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/g&blogo.png">
+				</div>
+				<div class="work-name">Guns & Butter Logo</div>
+				<div class="work-descr">Simple logo designed in Resident Evil 1 font style.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/liberty_disrtct_logo.png">
+				</div>
+				<div class="work-name">Liberty Distric Logo</div>
+				<div class="work-descr">Simple logo designed in Resident Evil 1 font style.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/mcuradn_logo.png">
+				</div>
+				<div class="work-name">MCU Random Logo</div>
+				<div class="work-descr">Simple logo designed in Resident Evil 1 font style.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/wtsa_ogo.png">
+				</div>
+				<div class="work-name">WTSA Logo</div>
+				<div class="work-descr">Simple logo designed in Resident Evil 1 font style.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/themarketplace_logo.png">
+				</div>
+				<div class="work-name">The Marketplace Logo</div>
+				<div class="work-descr">Simple logo designed in Resident Evil 1 font style.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/glassofsky_logo.png">
+				</div>
+				<div class="work-name">Glass of Sky Logo</div>
+				<div class="work-descr">Simple logo designed in Resident Evil 1 font style.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/rapevening_logo.png">
+				</div>
+				<div class="work-name">Rap Вечер Logo</div>
+				<div class="work-descr">Simple logo designed in Resident Evil 1 font style.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/redbrick1710_logo.png">
+				</div>
+				<div class="work-name">RedBrick 1710 Logo</div>
+				<div class="work-descr">Simple logo designed in Resident Evil 1 font style.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/logos/crptwme_logo.png">
+				</div>
+				<div class="work-name">crptw.me Logo</div>
+				<div class="work-descr">Simple logo designed in Resident Evil 1 font style.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+		</div>
+		
+		<div class="cat_line"></div>
+	</div>
+
+
+	<div class="albums">
+		<div class="cat_title">Web</div>
+
+		<div class="cat-content">
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/web/captainmarshin_web.png">
+				</div>
+				<div class="work-name">Капитан Маршин Website</div>
+				<div class="work-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/web/marshinshop_web.png">
+				</div>
+				<div class="work-name">Маршин Shop Website</div>
+				<div class="work-descr">Simple logo designed in Resident Evil 1 font style.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/web/marshindesign_web.png">
+				</div>
+				<div class="work-name">Маршин Design Website</div>
+				<div class="work-descr">Simple logo designed in Resident Evil 1 font style.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+			
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/web/kusamahub_web.png">
+				</div>
+				<div class="work-name">KusamaHub</div>
+				<div class="work-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/web/mcurandom_web.png">
+				</div>
+				<div class="work-name">MCU Random</div>
+				<div class="work-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+			<div class="work-card">
+				<div class="work-cover">
+					<img src="design/content/web/themarketplace_web.png">
+				</div>
+				<div class="work-name">MCU Random</div>
+				<div class="work-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+		</div>
+		
+		<div class="cat_line"></div>
+	</div>
+
+
+	<div class="albums">
+		<div class="cat_title">Music Covers</div>
+
+		<div class="cat-content">
+			
+			<div class="work-card">
+				<div class="work-cover">
+					<!-- <img src="images/ton.png"> -->
+				</div>
+				<div class="work-name">PayC Logo</div>
+				<div class="work-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+		</div>
+		
+		<div class="cat_line"></div>
+	</div>
+
+
+	<div class="albums">
+		<div class="cat_title">Misc</div>
+
+		<div class="cat-content">
+			
+			<div class="work-card">
+				<div class="work-cover">
+					<!-- <img src="images/ton.png"> -->
+				</div>
+				<div class="work-name">PayC Logo</div>
+				<div class="work-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+				<div class="work-link"><span class="material-icons">north_east</span> Link</div>
+			</div>
+
+		</div>
+		
+		<div class="cat_line"></div>
+	</div>
+
+
+	<!-- 
+	//
+	// Footer
+	//
+	 -->
+
+	<div class="footer">
+		Маршин Entertainment<br>
+		2014-2022 Copyright. All rights reserved.
+
+		<div class="links">
+		<a class="space-2" href="https://music.apple.com/artist/captain-marshin/1486687033">Apple Music</a>
+		<a class="space-2" href="https://open.spotify.com/artist/7jeV7Ofu7JdWCPqEohb8Uo">Spotify</a>
+		<a class="space-2" href="https://www.youtube.com/channel/UCKSLYkGgjVIrLP-sPSSnygQ/featured">YouTube</a>
+		<a class="space-2" href="https://t.me/captainmarshin">Telegram</a>
+		<a class="space-2" href="https://www.instagram.com/captainmarshin/">Instagram</a>
+		<a class="space-2" href="https://twitter.com/captainmarshin">Twitter</a>
+		</div>
+
+		<!-- 
+		//
+		// Badges (hidden)
+		//
+		 -->
+
+		<!-- <div class="badges">
+			<a href="https://music.apple.com/us/artist/captain-marshin/1486687033?itsct=music_box_badge&amp;itscg=30200&amp;app=music&amp;ls=1"><img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-music/badge/en-us?size=250x83&h=cdbcefe9e23b0310ab61b31e72e2dcdb" alt="Listen on Apple Music" style=" width: 120px;"></a>
+
+			<a href="#"><img src="images/addtoapplewallet.png" alt="Add to Apple Wallet" style="width: 120px; height: auto;"></a>
+
+			<a href="#"><img src="images/paec.png" alt="Add to Apple Wallet" style="width: 55px; height: auto;"></a>
+		</div> -->
+
+		<!-- 
+		//
+		// Help Ukraine badge
+		//
+		 -->
+		
+		<br>
+		<style>
+		 .helpukraine { text-decoration: none; }
+		</style>
+		<a class="helpukraine" href="https://war.ukraine.ua/" target="_blank">🇺🇦❤️</a>
+	</div>
+
+
+
+	<!-- 
+	//
+	// Tabs menu
+	//
+	 -->
+
+
+	<div class="menu">
+		<div class="menu-item-1" id="open-music-tab">
+			<div class="music-btn">
+				<div class="menu-item-icon"><span class="material-icons">album</span></div>
+				<div class="menu-item-name">Music</div>
+			</div>
+		</div>
+		<div class="menu-item-2">
+			<div class="shop-btn" id="open-shop-tab">
+				<div class="menu-item-icon"><span class="material-icons">local_mall</span></div>
+				<div class="menu-item-name">Shop</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
