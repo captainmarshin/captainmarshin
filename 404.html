@@ -1,0 +1,1166 @@
+<!-- 
+
+Captain Marshin Website.
+captainmarshin.com
+Desinged by Маршин Entertainment.
+Copyright. All rights reserved.
+2022
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>404 - Капитан Маршин / Captain Marshin</title>
+
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  	<meta name="theme-color" content="#111111">
+  	<!-- <meta name="theme-color" content="#F1882E"> -->
+	<meta name="viewport" content="viewport-fit=cover width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="title" content="Капитан Маршин / Captain Marshin">
+	<meta name="description" content="Listen Капитан Маршин on Apple Music, Spotify, Telegram. Watch on YouTube. Read Song Lyrics. Follow Instagram, Twitter, Telegram, Facebook">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://captainmarshin.com">
+	<meta property="og:title" content="Капитан Маршин / Captain Marshin">
+	<meta property="og:description" content="Listen Капитан Маршин on Apple Music, Spotify, Telegram. Watch on YouTube. Read Song Lyrics. Follow Instagram, Twitter, Telegram, Facebook">
+	<meta property="og:image" content="favicon/preview012.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="http://captainmarshin.com/">
+	<meta property="twitter:title" content="Капитан Маршин / Captain Marshin">
+	<meta property="twitter:description" content="Listen Капитан Маршин on Apple Music, Spotify, Telegram. Watch on YouTube. Read Song Lyrics. Follow Instagram, Twitter, Telegram, Facebook">
+	<meta property="twitter:image" content="https://captainmarshin.com/favicon/preview012.jpg">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<!-- Google Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<!-- Plugins: -->
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<!-- Flip plugin for donation cards -->
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+	<!-- QR Code generator plugin -->
+	<script src="js/qrcode.min.js"></script>
+
+	<!-- MusicPlayer -->
+	<script src="js/player.js"></script>
+
+	<!-- Like/share menu -->
+	<script src="js/share.js"></script>
+
+	<!-- Pages -->
+	<script src="js/pages.js"></script>
+
+	<!-- Tabs -->
+	<script src="js/tabs.js"></script>
+
+</head>
+<body>
+
+	<!-- 
+	//
+	// Header
+	//
+	-->
+
+	<div class="header" id="header">
+
+		<div class="logo" id="close-all-windows">
+			<img src="images/cap_logo.png">
+		</div>
+
+		<div class="button">
+			<button id="open-page-001" class="donate"><span class="material-icons">monetization_on</span> Donate</button>
+			<button id="close-page" class="close-btn"><span class="material-icons">cancel</span> Close</button>
+		</div>
+
+	</div>
+
+	<!-- 
+	//
+	// UI: Notification
+	// Now used only for donate page, but can be used somewhere else in future
+	//
+	 -->
+
+	<div class="notification">
+		Copied!
+	</div>
+
+
+	<!-- 
+	//
+	// Page: Donate
+	// All methods how people can donate.
+	//
+	 -->
+
+	<div id="page-001" class="pages">
+
+		<div class="window-title">Donate</div>
+
+		<div class="all-services">
+
+		<div class="donate-block-1" id="donate-1">
+		<div class="front">
+			<div class="donate-block">
+				<div class="donate-service-logo ton-logo-fix">
+					<img src="images/ton.png">
+				</div>
+				<div class="donate-service-pay-options">
+					<div class="donate-service-pay-options-info">TON</div>
+					<div class="donate-service-pay-options-info">One-time</div>
+					<div class="donate-service-pay-options-info">Any amount</div>
+				</div>
+				<div class="donate-service-text">
+					Donate in Toncoin crypto.
+				</div>
+				<div class="donate-service-buttons">
+					<div class="donate-button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						    <path d="M16 13L0 7L16 1L32 7L16 13Z" fill="#45AEF5"/>
+						    <path opacity="0.6" d="M16 13L32 7L16 31V13Z" fill="#45AEF5"/>
+						    <path opacity="0.8" d="M16 13L0 7L16 31V13Z" fill="#45AEF5"/>
+						</svg>
+	 					Pay with Tonkeeper</div>
+				</div>
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Toncoin wallet
+				</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="donate-block">
+				<div class="qrcode" id="qrcode-ton"></div>
+				<div style="font-size: 11px; text-align: center; margin-top: 5px; color: lightgrey;">Scan QR with TON wallet</div>
+
+				<script type="text/javascript">
+					new QRCode("qrcode-ton", { text: "EQAgebhhR0er85-vn1S2sAMcNqYiFfZfV6uyMs7EeBkeAGV1", width: 100, height: 100 });
+				</script>
+
+				<div style="font-weight: bold; margin-top: 8px; text-align: center">OR</div>
+
+				<div class="donate-service-buttons">
+				<a href="ton://transfer/EQAgebhhR0er85-vn1S2sAMcNqYiFfZfV6uyMs7EeBkeAGV1" target="_blank">
+					<div class="donate-button">
+	 					<span class="material-icons">north_east</span> Open direct wallet link
+	 				</div>
+	 				</a>
+	 			</div>
+
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+					You need to install wallet what support ton:// link
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://t.me/CryptoBot?start=IVRqAb00BDL6" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/cryptobot.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">Crypto</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Any amount</div>
+			</div>
+			<div class="donate-service-text">
+				Donate in crypto and get special gift.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<img src="images/cryptobot_icn.png">
+ 					Open CryptoBot
+ 				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Telegram app
+				</div>
+			</a>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://boosty.to/captainmarshin" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/boosty.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">50₽/month</div>
+				<div class="donate-service-pay-options-info">Subscribtion</div>
+			</div>
+			<div class="donate-service-text">
+				Exclusive content and working process.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to boosty.to
+				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card
+				</div>
+			</a>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://qiwi.com/n/CAPTAINMARSHIN" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/qiwi.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">RUB</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Any amount</div>
+			</div>
+			<div class="donate-service-text">
+				Support in RUB currency.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to qiwi.com
+				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card or Qiwi wallet
+				</div>
+			</a>
+		</div>
+
+
+		<div class="donate-block-1" id="donate-2">
+		<div class="front">
+			<div class="donate-block">
+				<div class="donate-service-logo">
+					<img src="images/binance.png">
+				</div>
+				<div class="donate-service-pay-options">
+					<div class="donate-service-pay-options-info">Crypto</div>
+					<div class="donate-service-pay-options-info">One-time</div>
+					<div class="donate-service-pay-options-info">Any amount</div>
+				</div>
+				<div class="donate-service-text">
+					Support in any crypto you want.
+				</div>
+				<div class="donate-service-buttons">
+					<div class="donate-button">
+						<img src="images/binance.ico">
+	 					Pay with Binance Pay</div>
+				</div>
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				You need Binance account
+				</div>
+			</div>
+		</div>
+		<div class="back">
+			<div class="donate-block">
+				<div class="qrcode" id="qrcode-binance"></div>
+				<div style="font-size: 11px; text-align: center; margin-top: 5px; color: lightgrey;">Scan QR in Binance app.</div>
+
+				<script type="text/javascript">
+					new QRCode("qrcode-binance", { text: "https://app.binance.com/qr/dplk5cb1330e11ec4288bd68297401d17fb5", width: 100, height: 100 });
+				</script>
+
+				<div style="font-weight: bold; margin-top: 8px; text-align: center">OR</div>
+
+				<div class="donate-service-buttons">
+					<div id="copy-payid" class="donate-button">
+	 					<span class="material-icons">content_copy</span> 205710163
+	 				</div>
+	 			</div>
+
+				<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+					Input this Pay ID in Binance app.
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="donate-block">
+			<a href="https://buymeacoffee.com/captainmarshin" target="_blank">
+			<div class="donate-service-logo">
+				<img src="images/buymeacoffee.png">
+			</div>
+			<div class="donate-service-pay-options">
+				<div class="donate-service-pay-options-info">USD</div>
+				<div class="donate-service-pay-options-info">One-time</div>
+				<div class="donate-service-pay-options-info">Fixed amount</div>
+			</div>
+			<div class="donate-service-text">
+				Support in cups of coffee.
+			</div>
+			<div class="donate-service-buttons">
+				<div class="donate-button">
+					<span class="material-icons color-orange">north_east</span>Go to buymecoffee.com
+				</div>
+			</div>
+			<div style="font-size: 11px; text-align: center; margin-top: 0px; color: lightgrey;">
+				Bank card
+				</div>
+			</a>
+		</div>
+
+
+
+		</div>
+
+		
+	</div>
+
+	<!-- 
+	//
+	// Function for rotate cards on donate page
+	// [!] On Android very strange animation :/ Need to check it.
+	//
+	 -->
+
+	<script type="text/javascript">
+		$("#donate-1").flip();
+		$("#donate-2").flip();
+
+		$("#copy-payid").click( event => {
+			navigator.clipboard.writeText("205710163");
+			$(".notification").show("slideUp", function() {
+				setTimeout(function(){
+					$(".notification").hide("slideDown")
+				}, 3000);
+			});
+		})
+	</script>
+
+	<!-- 
+	//
+	// Fix header fixed position
+	//
+	 -->
+
+	<div class="header-fix"></div>
+
+	
+
+	<div class="page404">
+		<div class="page404-error"> 404 </div>
+		<div class="page404-error-text">🤔🤨🚧</div>
+		<div class="page404-error-text">Page not found</div>
+
+		<div class="page404-links">
+
+			<div class="cat_item">
+				<a href="https://t.me/captainmarshin" target="_blank" title="Telegram">
+					<img class="more_item_cover" src="images/telegram.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="https://music.apple.com/artist/captain-marshin/1486687033" target="_blank" title="Apple Music">
+					<img class="more_item_cover" src="images/applemusic.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="https://open.spotify.com/artist/7jeV7Ofu7JdWCPqEohb8Uo" target="_blank" title="Spotify">
+					<img class="more_item_cover" src="images/spotify.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="https://www.youtube.com/channel/UCKSLYkGgjVIrLP-sPSSnygQ/featured" target="_blank" title="YouTube">
+					<img class="more_item_cover" src="images/youtube.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="https://www.instagram.com/captainmarshin/" target="_blank" title="Instagram">
+					<img class="more_item_cover" src="images/instagram.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="https://music.apple.com/ru/artist/captain-marshin/1486687033" target="_blank" title="iTunes Store">
+					<img class="more_item_cover" src="images/itunes.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="https://www.shazam.com/artist/капитан-маршин/1486687033" target="_blank" title="Shazam">
+					<img class="more_item_cover" src="images/shazam.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="https://twitter.com/captainmarshin" target="_blank" title="Twitter">
+					<img class="more_item_cover" src="images/twitter.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="https://soundcloud.com/captainmarshin" target="_blank" title="SoundCloud">
+					<img class="more_item_cover" src="images/soundcloud.jpg">
+				</a>
+			</div>
+
+			<div class="cat_item">
+				<a href="https://facebook.com/captainmarshin" target="_blank" title="Facebook">
+					<img class="more_item_cover" src="images/facebook.jpg">
+				</a>
+			</div>
+
+		</div>
+
+
+
+	</div>	
+
+
+
+	
+	<!-- 
+	//
+	// Footer
+	//
+	 -->
+
+	<div class="footer">
+		Маршин Entertainment<br>
+		2014-2022 Copyright. All rights reserved.
+
+		<div class="links">
+		<a class="space-2" href="https://music.apple.com/artist/captain-marshin/1486687033">Apple Music</a>
+		<a class="space-2" href="https://open.spotify.com/artist/7jeV7Ofu7JdWCPqEohb8Uo">Spotify</a>
+		<a class="space-2" href="https://www.youtube.com/channel/UCKSLYkGgjVIrLP-sPSSnygQ/featured">YouTube</a>
+		<a class="space-2" href="https://t.me/captainmarshin">Telegram</a>
+		<a class="space-2" href="https://www.instagram.com/captainmarshin/">Instagram</a>
+		<a class="space-2" href="https://twitter.com/captainmarshin">Twitter</a>
+		</div>
+
+		<!-- 
+		//
+		// Badges (hidden)
+		//
+		 -->
+
+		<!-- <div class="badges">
+			<a href="https://music.apple.com/us/artist/captain-marshin/1486687033?itsct=music_box_badge&amp;itscg=30200&amp;app=music&amp;ls=1"><img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-music/badge/en-us?size=250x83&h=cdbcefe9e23b0310ab61b31e72e2dcdb" alt="Listen on Apple Music" style=" width: 120px;"></a>
+
+			<a href="#"><img src="images/addtoapplewallet.png" alt="Add to Apple Wallet" style="width: 120px; height: auto;"></a>
+
+			<a href="#"><img src="images/paec.png" alt="Add to Apple Wallet" style="width: 55px; height: auto;"></a>
+		</div> -->
+
+		<!-- 
+		//
+		// Help Ukraine badge
+		//
+		 -->
+		
+		<br>
+		<style>
+		 .helpukraine { text-decoration: none; }
+		</style>
+		<a class="helpukraine" href="https://war.ukraine.ua/" target="_blank">🇺🇦❤️</a>
+	</div>
+
+
+	<!-- 
+	//
+	// Mini-player
+	// Don't forget to add new release here
+	//
+	 -->
+
+
+	<div id="mini-player-timeline" class="mini-player-timeline">
+		<progress id="mini-player-timeline-bar" value="0" max="100">
+		</progress>
+	</div>
+
+	<div id="mini-player" class="mini-player">
+
+		<audio id="mini-player-new-release" type="audio/mp3">
+    		<source id="mini-player-source" src="" type="audio/mp3">
+		</audio>
+
+		<div class="mini-player-row" id="mini-player-open">
+			<div class="mini-player-cover">
+				<img id="mini-player-cover" src="content/singles/226.jpg">
+			</div>
+			<div class="mini-player-meta">
+				<div class="mini-player-name"><span id="mini-player-trackname">Indica</span> <span class="material-icons">explicit</span></div>
+				<div class="mini-player-note"><span id="progress">NEW RELEASE</span></div>
+			</div>
+			<div class="mini-player-controls">
+				<div class="mini-player-controls-ctrl">
+					<div id="mini-player-like-btn"><span title="Share with friends" class="material-symbols-outlined">favorite</span></div>
+					<div id="mini-player-rewind-btn"><span title="Play song" class="material-symbols-outlined">fast_rewind</span></div>
+				</div>
+				<div class="mini-player-controls-ctrl" id="mini-player-ctrl-btns">
+					<div id="mini-player-start-btn"><span title="Play song" class="material-icons">play_arrow</span></div>
+					<div id="mini-player-loading"><span title="Song is loading" class="material-icons">autorenew</span></div>
+					<div id="mini-player-play-btn"><span title="Play song" class="material-icons">play_arrow</span></div>
+					<div id="mini-player-pause-btn"><span title="Stop playing" class="material-icons">pause</span></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- 
+	//
+	// Mini-player expand (tracklist)
+	// Don't forget to add new tracks in this list at the top of div
+	//
+	 -->
+
+
+	<div class="mini-player-expand" id="mini-player-expand">
+
+		<div class="all-title">Tracklist</div>
+
+		<!-- <div class="mini-player-expand-row" id="release_id_  $NUMBER$  ">
+			<div class="mini-player-expand-cover">
+				<img src="	$RELEASE_COVER$	">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">$RELEASE_NAME$ <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span title="Play song" class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_  $NUMBER$  " title="Download song" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_  $NUMBER$  " title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div> -->
+
+		<div class="mini-player-expand-row" id="release_id_039">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/226.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Indica <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span title="Play song" class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_039" title="Download song" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_039" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_038">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/225.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">WTCMEBC <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_038" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_038" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_037">
+			<div class="mini-player-expand-cover">
+				<img src="content/eps/302.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">New Day <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин, Twenty-4</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_037" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_037" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_036">
+			<div class="mini-player-expand-cover">
+				<img src="content/eps/302.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Знаки <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин, Twenty-4</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_036" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_036" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_035">
+			<div class="mini-player-expand-cover">
+				<img src="content/eps/302.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">City-17 <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин, Twenty-4</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_035" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_035" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_034">
+			<div class="mini-player-expand-cover">
+				<img src="content/eps/302.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Набирай <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин, Twenty-4</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_034" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_034" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_033">
+			<div class="mini-player-expand-cover">
+				<img src="content/eps/302.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Lifelight <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин, Twenty-4</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_033" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_033" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_032">
+			<div class="mini-player-expand-cover">
+				<img src="content/eps/302.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Возраст <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин, Twenty-4</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_032" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_032" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_031">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/224.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Welcome to LS [Chopped & Screwed] <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_031" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_031" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_030">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/223.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Welcome to LS <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_030" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_030" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_029">
+			<div class="mini-player-expand-cover">
+				<img src="content/albums/101.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">The Game Album Prelude <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_029" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_029" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_028">
+			<div class="mini-player-expand-cover">
+				<img src="content/albums/101.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Феникс (другая версия) <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_028" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_028" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_027">
+			<div class="mini-player-expand-cover">
+				<img src="content/albums/101.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Южное гетто [Remastered] <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин (feat. fizerwa)</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_027" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_027" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_026">
+			<div class="mini-player-expand-cover">
+				<img src="content/albums/101.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Не могу полюбить [Remastered] <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин (feat. Twenty-4)</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_026" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_026" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_025">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/222.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Феникс <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_025" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_025" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_024">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/221.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Jordan II <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_024" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_024" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_023">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/220.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Южное гетто (feat. fizerwa) <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_023" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_023" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_022">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/219.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Блондинка (другая версия) <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_022" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_022" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_021">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/218.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Совместный движ <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_021" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_021" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_020">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/217.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Perfect Ass (feat. M3M) <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_020" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_020" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_019">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/216.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Dynamite Freestyle <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_019" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_019" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_018">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/215.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Девочка с падика <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_018" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_018" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+
+		<div class="mini-player-expand-row" id="release_id_017">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/214.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Не могу полюбить (feat. Twenty-4) <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_017" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_017" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_016">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/213.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Мистер 3 мульта <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_016" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_016" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_015">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/212.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Удивительный Капитан Маршин <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_015" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_015" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_014">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/211.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Рокет <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_014" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_014" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_013">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/210.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Part of our life <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_013" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_013" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_012">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/209.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Love Stories <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_012" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_012" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_011">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/208.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Встречаю рассвет <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_011" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_011" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_010">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/207.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Lifeway <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_010" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_010" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_009">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/206.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Просто почитаем рэп <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_009" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_009" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_008">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/205.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Спортболид <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_008" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_008" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_007">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/204.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Rise <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_007" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_007" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_006">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/203.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Jordan <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_006" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_006" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_005">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/202.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Клайд и Бонни <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_005" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_005" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_004">
+			<div class="mini-player-expand-cover">
+				<img src="content/singles/201.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Дай малышка мне огня <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_004" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_004" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_003">
+			<div class="mini-player-expand-cover">
+				<img src="content/eps/301.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Я ещё вернусь <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_003" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_003" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_002">
+			<div class="mini-player-expand-cover">
+				<img src="content/eps/301.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Я ещё вернусь (часть 1) <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_002" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_002" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+		<div class="mini-player-expand-row" id="release_id_001">
+			<div class="mini-player-expand-cover">
+				<img src="content/eps/301.jpg">
+			</div>
+			<div class="mini-player-expand-meta">
+				<div class="mini-player-expand-name">Я ещё вернусь (часть 2) <span class="material-icons">explicit</span></div>
+				<div class="mini-player-expand-artist">Капитан Маршин</div>
+			</div>
+			<div class="mini-player-expand-controls">
+				<div class="mini-player-expand-play"><span class="material-icons">play_arrow</span></div>
+				<div class="mini-player-expand-download"><span id="download_id_001" class="material-icons">download</span></div>
+				<div class="mini-player-expand-share"><span id="open_page_001" title="Open release page" class="material-icons">open_in_new</span></div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- 
+	//
+	// Tabs menu
+	//
+	 -->
+
+
+	<div class="menu">
+		<div class="menu-item-1" id="open-music-tab">
+			<div class="music-btn active-music">
+				<div class="menu-item-icon"><span class="material-icons">album</span></div>
+				<div class="menu-item-name">Music</div>
+			</div>
+		</div>
+		<div class="menu-item-2">
+			<div class="shop-btn" id="open-shop-tab">
+				<div class="menu-item-icon"><span class="material-icons">local_mall</span></div>
+				<div class="menu-item-name">Shop</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

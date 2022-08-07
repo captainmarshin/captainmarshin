@@ -1826,12 +1826,6 @@ Copyright. All rights reserved.
 	}
 
 
-
-	.helpukraine { 
-		text-decoration: none; 
-	}
-
-
 /* Events - Release Page */
 
 	.event-card{
@@ -1933,3 +1927,58 @@ Copyright. All rights reserved.
 	}
 
 
+
+/* Маршин Shop Styles */
+
+	.outofstock:hover{
+		cursor: not-allowed;
+	}
+
+
+
+/* 404 Page styles */
+
+	.page404{
+		padding: 20px;
+		text-align: center;
+	}
+
+	.page404-error{
+		font-weight: bold;
+		font-size: 130px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.page404-error-text{
+		font-weight: bold;
+		font-size: 30px;
+	}
+
+	.page404-links{
+		margin: 40px auto;
+		text-align: center;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+		grid-gap: 10px;
+		max-width: 400px;
+	}
+
+	.page404-links .cat_item{
+		margin-right: 0;
+	}
+
+	.page404-links .cat_item:last-child{
+		margin-right: 0;
+	}
+
+
+
+
+
+
+/* Help Ukraine badge */
+
+	.helpukraine { 
+		text-decoration: none; 
+	}
