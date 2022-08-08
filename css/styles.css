@@ -41,9 +41,6 @@ Copyright. All rights reserved.
 		-ms-user-select: none;
 		-o-user-select: none;
 		user-select: none;
-
-		image-rendering: crisp-edges;
-  		image-rendering: -webkit-optimize-contrast;
 	}
 
 
