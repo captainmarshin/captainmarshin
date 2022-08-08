@@ -1758,6 +1758,12 @@ Copyright. All rights reserved.
 	}
 
 	.lyrics-card-expanded-text{
+		-webkit-user-select: text;
+		-khtml-user-select: text;
+		-moz-user-select: text;
+		-ms-user-select: text;
+		-o-user-select: text;
+		user-select: text;
 		white-space: pre-line;
 		line-height: 23px;
 	}

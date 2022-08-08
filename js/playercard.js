@@ -75,15 +75,28 @@ $(document).ready(function () {
 			});
 
 
+			var rewindopen = false;
+
+
 			// This listener expand music player.
 
 			musicplayeropen.addEventListener("click", function() {
 
-			  if ((!$(event.target).closest('.player-track-download-btn').length) && (!$(event.target).closest('#mini-player-like-btn').length) && (!$(event.target).closest('#mini-player-rewind-btn').length)) {
-
-			  	$(".header-fix").get(0).scrollIntoView();
+			  if ((!$(event.target).closest('#mini-player-ctrl-btns').length) && (!$(event.target).closest('#mini-player-like-btn').length) && (!$(event.target).closest('#mini-player-rewind-btn').length)) {
+			  		
+			  		if(rewindopen === true){
+			  			return rewindHide();
+			  		}
+			  		
+			  		rewindopen = true;
+			  		document.getElementById("mini-player-timeline-bar").style = "height: 15px;"
 			   }
 			});
+
+			function rewindHide(){
+				rewindopen = false;
+			  	document.getElementById("mini-player-timeline-bar").style = "height: 1px;"
+			}
 
 
 
