@@ -2078,6 +2078,40 @@ Copyright. All rights reserved.
 
 
 
+.error_outos{
+	box-sizing: border-box;
+	padding: 20px;
+	text-align: center;
+	width: 160px;
+	height: 160px;
+	border-radius: 20px;
+	background: rgba(90, 90, 90, 0.8);
+	backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px);
+	z-index: 1;
+	font-weight: bold;
+	color: #222;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+}
+
+.error_outos_icon{
+	margin-top: 12px;
+}
+
+.error_outos_icon .material-icons{
+	font-size: 60px;
+}
+
+.error_outos_text{
+	margin-top: 10px;
+	font-size: 16px;
+}
+
+
 
 
 
