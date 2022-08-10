@@ -959,16 +959,18 @@ Copyright. All rights reserved.
 
 
 	.menu{
-		height: 90px;
+/*		height: 90px;*/
+		height: 63px;
 		width: 100%;
 		border-top: 1px solid #222;
 		position: fixed;
+		padding-bottom: 0 var(--padding-x) env(safe-area-inset-bottom);
 		bottom: 0;
 		display: flex;
 		align-items: top;
-    	justify-content: top;
-    	box-sizing: border-box;
-    	padding-top: 10px;
+    		justify-content: top;
+    		box-sizing: border-box;
+    		padding-top: 10px;
 /*		background: rgba(28, 28, 30, 0.6);*/
 		background: rgba(30, 30, 30, 0.6);
 		backdrop-filter: blur(30px);
@@ -1986,6 +1988,7 @@ Copyright. All rights reserved.
 /* Logo Styles */
 
 .logo-design img{
+		padding-top: 4px;
 		width: 140px;
   		height: auto;
 		border: 0;
