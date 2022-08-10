@@ -2078,6 +2078,8 @@ Copyright. All rights reserved.
 
 
 
+/* Error popup for Out of Stock items */
+
 .error_outos{
 	box-sizing: border-box;
 	padding: 20px;
@@ -2085,7 +2087,7 @@ Copyright. All rights reserved.
 	width: 160px;
 	height: 160px;
 	border-radius: 20px;
-	background: rgba(90, 90, 90, 0.8);
+	background: rgba(90, 90, 90, 0.7);
 	backdrop-filter: blur(30px);
 	-webkit-backdrop-filter: blur(30px);
 	z-index: 1;

@@ -17,11 +17,17 @@ $(document).ready(function() {
 	}
 
 	function ShowOutOfStock() {
-		$(".error_outos").show("slideUp", function() {
-				setTimeout(function(){
-					$(".error_outos").hide("slideDown")
+		// $(".error_outos").show("slideUp", function() {
+		// 		setTimeout(function(){
+		// 			$(".error_outos").hide("slideDown")
+		// 		}, 3000);
+		// 	});
+
+		$(".error_outos").css('display', 'block')
+		setTimeout(function(){
+					$(".error_outos").css('display', 'none')
 				}, 3000);
-			});
+
 	}
 
 });
