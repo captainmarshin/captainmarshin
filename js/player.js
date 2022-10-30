@@ -46,7 +46,7 @@ $(document).ready(function () {
 			// Set vars for track data
 			// This var updates from JSON when user select track in Tracklist (mini-player-expand)
 
-			var audio_url = "https://dl.dropbox.com/s/ja4fj90sbnlp7yk/Indica.mp3";
+			var audio_url = "https://dl.dropbox.com/s/frjcm6p3pd4s98p/Sticker.mp3";
 			var release_name = "";
 			var release_cover = "";
 
